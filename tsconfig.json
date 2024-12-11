@@ -40,6 +40,6 @@
       "esModuleInterop": true,
       "isolatedModules": true
     },
-    "include": ["src/**/**/*"],
+    "include": ["src/**/**/*", "../A_express_restApi/examplePostgresGraph.jsx", "../A_express_restApi/exampleNeo4Graph.jsx"],
     "exclude": ["node_modules"]
   }
