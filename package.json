@@ -2,8 +2,8 @@
   "name": "front_end",
   "version": "1.0.0",
   "description": "Front-end viewer for tool met webpack opzet",
-  "main": "index.js",
-  "homepage": "https://nieneb.github.io/participatory-tool/",
+  "homepage": "https://nieneb.github.io/participatory-tool",
+  "main": "bundje.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development",

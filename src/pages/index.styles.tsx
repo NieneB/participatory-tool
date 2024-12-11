@@ -49,6 +49,9 @@ export const Buttons = styled.div`
   @media only screen and (width <=600px) {
     flex-direction: column;
   }
+
+
+  
 `;
 
 export const Button = styled.button`
@@ -83,6 +86,10 @@ export const Button = styled.button`
     outline-offset: 0.3rem;
     border-radius: 0px;
   }
+
+
+}
+  
 `;
 
 // Complete covering screen
@@ -103,7 +110,7 @@ export const Left = styled.div`
   position: absolute;
   display: flex;
   height: auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   flex-direction: column;
 `;
