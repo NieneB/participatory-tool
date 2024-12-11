@@ -1,0 +1,18 @@
+[
+
+    {
+        "shortTitle": "Stakeholders",
+        "desc": "Lorum Ipsum",
+        "data": ["./nodes.json", "./relations.json"]
+    },
+    {
+        "shortTitle": "Places",
+        "desc": "Lorum Ipsum",
+        "data": ["./nodes.json", "./relations.json"]
+    },
+    {
+        "shortTitle": "Relations",
+        "desc": "Lorum Ipsum",
+        "data": ["./nodes.json", "./relations.json"]
+    }
+]

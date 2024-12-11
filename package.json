@@ -1,0 +1,46 @@
+{
+  "name": "front_end",
+  "version": "1.0.0",
+  "description": "Front-end viewer for tool met webpack opzet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "tscheck": "tsc"
+  },
+  "author": "Niene Boeijen",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.26.0",
+    "@babel/preset-env": "7.26.0",
+    "@babel/preset-react": "7.26.3",
+    "@babel/preset-typescript": "7.26.0",
+    "@types/d3": "^7.4.3",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
+    "babel-loader": "9.2.1",
+    "babel-plugin-styled-components": "^2.1.4",
+    "css-loader": "7.1.2",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.6.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sass-loader": "^16.0.2",
+    "style-loader": "4.0.0",
+    "typescript": "5.7.2",
+    "webpack": "5.97.1",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.1.0"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "iconoir": "^7.10.1",
+    "iconoir-react": "^7.10.1",
+    "neo4j-driver": "^5.26.0",
+    "react-router-dom": "^7.0.2",
+    "styled-components": "^6.1.13",
+    "vis-data": "^7.1.9",
+    "vis-network": "^9.1.9"
+  }
+}
