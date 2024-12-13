@@ -1,6 +1,6 @@
 import * as Styled from "./index.styles";
-import {  Link } from "react-router-dom";
-import {  ArrowUpRightSquare, MapsArrow } from "iconoir-react";
+import { Link } from "react-router-dom";
+import { ArrowDown, ArrowLeft, ArrowUpRightSquare, MapsArrow } from "iconoir-react";
 import Title from "src/components/Title";
 
 const Home = () => {
@@ -8,24 +8,36 @@ const Home = () => {
     <Styled.Main>
       <div className="bg-image"></div>
       <h1>WELCOME</h1>
-     <Title/>
+      <Title />
       <h2> Go to one of our 3 options :</h2>
       <Styled.Buttons>
-        <a href="" target="blank">
+        <Link to="/journey">
+          {" "}
           <Styled.Button>
-            Workshop Materials
-            <ArrowUpRightSquare color="black" width={36} height={36} />
+            <div>
+              <h3>Journeys</h3>
+              <p>for a participation approach</p>
+            </div>
+
+            <ArrowLeft color="black" width={36} height={36} />
           </Styled.Button>
-        </a>{" "}
-        <a href="" target="blank">
+        </Link>
+        <Link to="/positions">
           <Styled.Button>
-            Roadmap & Methods
-            <ArrowUpRightSquare color="black" width={36} height={36} />
+            <div>
+              <h3>Positions</h3>
+              <p>for a participation approach</p>
+            </div>
+
+            <ArrowDown color="black" width={36} height={36} />
           </Styled.Button>
-        </a>{" "}
+        </Link>
         <Link to="/info">
           <Styled.Button>
-            Actor Mapping Tool
+            <div>
+              <h3>Actions</h3>
+              <p>for a participation approach</p>
+            </div>
             <MapsArrow
               color="black"
               width={36}

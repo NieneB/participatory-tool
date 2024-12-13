@@ -1,17 +1,27 @@
 [
 
     {
-        "shortTitle": "Stakeholders",
-        "desc": "Lorum Ipsum",
-        "data": ["./nodes.json", "./relations.json"]
-    },
-    {
         "shortTitle": "Places",
         "desc": "Lorum Ipsum",
         "data": ["./nodes.json", "./relations.json"]
     },
     {
+        "shortTitle": "Stakeholders",
+        "desc": "Lorum Ipsum",
+        "data": ["./nodes.json", "./relations.json"]
+    },
+    {
+        "shortTitle": "Positions",
+        "desc": "Lorum Ipsum",
+        "data": ["./nodes.json", "./relations.json"]
+    },
+    {
         "shortTitle": "Relations",
+        "desc": "Lorum Ipsum",
+        "data": ["./nodes.json", "./relations.json"]
+    },
+    {
+        "shortTitle": "Possibilities",
         "desc": "Lorum Ipsum",
         "data": ["./nodes.json", "./relations.json"]
     }

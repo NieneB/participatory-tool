@@ -29,53 +29,37 @@ const Intro = () => {
   }
   window.setTimeout(toggleOpening, 5000);
 
-  const data = {
-    nodes: [
-      {
-        id: "Individual",
-        desc: "Lorem ipsum dolor sit amet. Sit excepturi nesciunt et tempora repudiandae est maxime similique et libero aperiam a consequatur modi vel consequatur ducimus. Eos quasi esse sed quos ipsum aut necessitatibus provident id doloremque adipisci qui aperiam enim. Aut dolorem voluptatem est praesentium labore sed suscipit enim.Non accusantium placeat id enim eligendi hic voluptatum veniam hic soluta minus. Eum magnam culpa qui fugiat eius et molestias aspernatur qui impedit veniam. Sit enim ducimus ad maiores nihil qui laudantium galisum. Ut galisum totam et molestiae fugit non porro fugit a labore officiis qui impedit cupiditate est quia eaque aut veniam sint. ",
-      },
-      {
-        id: "Community",
-        desc: "Lorem ipsum dolor sit amet. Sit excepturi nesciunt et tempora repudiandae est maxime similique et libero aperiam a consequatur modi vel consequatur ducimus. Eos quasi esse sed quos ipsum aut necessitatibus provident id doloremque adipisci qui aperiam enim. galisum. Ut galisum totam et molestiae fugit non porro fugit a labore officiis qui impedit cupiditate est quia eaque aut veniam sint. ",
-      },
-      {
-        id: "Governmental",
-        desc: "Lorem ipsum dolor sit amet. Sit excepturi nesciunt et tempora repudiandae est maxime similique et libero aperiam a consequatur modi vel consequatur duut necessitatibus provident id doloremque adipisci qui aperiam enim. Aut dolorem voluptatem est praesentium labore sed suscipit enim.Non accusantium placeat id enim eligendi hic voluptatum veniam hic soluta minus. Eum magnam culpa qui fugiat eius et molestias aspernatur qui impedit veniam. Sit enim ducimus ad maiores nihil qui laudantium galisum. Ut galisum totam et molestiae fugit non porro fugit a labore officiis qui impedit cupiditate est quia eaque aut veniam sint. ",
-      },
-    ],
-    links: [
-      { source: "Individual", target: "Governmental", value: 1 },
-      { source: "Community", target: "Individual", value: 1 },
-      { source: "Governmental", target: "Community", value: 1 },
-    ],
-  };
-
   return (
     <>
       <Styled.Left>
         <InteractivePanel>
           <Title></Title>
         </InteractivePanel>
-        <InteractivePanel>
-          <>
-            <h1> Importance of the 3 positions of stakeholders</h1>
-            <p>Click on one of the positions to explore there content</p>
-          </>
-        </InteractivePanel>
-        {infoOn && info && (
-          <InteractivePanel>
-            <>
-              <h1>{info.id}</h1>
-              <p>{info.desc} </p>
-            </>
-          </InteractivePanel>
-        )}
       </Styled.Left>
-      <Styled.PanelBack>
-        <GraphD3 data={data} toggleInfo={toggleInfo}></GraphD3>
-      </Styled.PanelBack>
-      <Styled.NavButton>
+      <Styled.Main>
+        <h1>Tools</h1>
+        <Styled.Buttons>
+          <Styled.Button>
+            <h2>Method</h2>
+          </Styled.Button>
+
+          <Styled.Button>
+            <h2>Workshop materials</h2>
+          </Styled.Button>
+          <Link className="bottom-right" to="/graph">
+            <Styled.Button>
+              <MapsArrow
+                color="black"
+                width={36}
+                height={36}
+                style={{ transform: "rotate(90deg)" }}
+              />
+              <h2>Mapping Tool</h2>
+            </Styled.Button>
+          </Link>
+        </Styled.Buttons>
+      </Styled.Main>
+      {/* <Styled.NavButton>
         <Link className="bottom-right" to="/graph">
           <Button>
             {" "}
@@ -88,7 +72,7 @@ const Intro = () => {
             />
           </Button>
         </Link>
-      </Styled.NavButton>
+      </Styled.NavButton> */}
     </>
   );
 };

@@ -9,7 +9,7 @@ export const Main = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin:auto;
+  margin: auto;
 
   /* >.bg-image {
     position:absolute;
@@ -23,10 +23,9 @@ export const Main = styled.div`
     filter: blur(3px);
     -webkit-filter: blur(3px);
   } */
-    @media only screen and (width <=992px) {
-      width: 70vw;
-
-    }
+  @media only screen and (width <=992px) {
+    width: 70vw;
+  }
   @media only screen and (width <=600px) {
     overflow-y: auto;
     height: auto;
@@ -49,9 +48,6 @@ export const Buttons = styled.div`
   @media only screen and (width <=600px) {
     flex-direction: column;
   }
-
-
-  
 `;
 
 export const Button = styled.button`
@@ -65,9 +61,16 @@ export const Button = styled.button`
   align-items: center;
   gap: 1rem;
 
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.1rem;
+  h3 {
+    font-weight: 800;
+    line-height: 1.1rem;
+    font-size: 1.1rem;
+  }
+   p {
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+
   margin: 0;
   outline: none;
   padding: 1rem 1.2rem;
@@ -87,8 +90,6 @@ export const Button = styled.button`
     border-radius: 0px;
   }
 
-
-}
   
 `;
 
@@ -119,9 +120,3 @@ export const InfoContainer = styled.div`
   pointer-events: auto;
 `;
 
-
-export const NavButton  =styled.div`
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-`
