@@ -8,6 +8,7 @@
         "Stakeholder"
       ],
       "properties": {
+        "position": "Individual",
         "Categorie": "overheid",
         "Belang": "politiek",
         "Oorsprong": "vanuit institutie",

@@ -1,116 +1,12 @@
 ﻿[
-  {
-    "n": {
-      "identity": 0,
-      "labels": [
-        "Phase"
-      ],
-      "properties": {
-        "phase_id": "PH-1",
-        "Punten": "begin",
-        "Duur": "dagen",
-        "Name": "assesment"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:0"
-    }
-  },
-  {
-    "n": {
-      "identity": 1,
-      "labels": [
-        "Phase"
-      ],
-      "properties": {
-        "phase_id": "PH-2",
-        "Punten": "begin",
-        "Duur": "dagen",
-        "Name": "inventatrisation"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:1"
-    }
-  },
-  {
-    "n": {
-      "identity": 2,
-      "labels": [
-        "Phase"
-      ],
-      "properties": {
-        "phase_id": "PH-3",
-        "Punten": "begin",
-        "Duur": "dagen",
-        "Name": "definition"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:2"
-    }
-  },
-  {
-    "n": {
-      "identity": 3,
-      "labels": [
-        "Phase"
-      ],
-      "properties": {
-        "phase_id": "PH-4",
-        "Punten": "begin",
-        "Duur": "dagen",
-        "Name": "research"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:3"
-    }
-  },
-  {
-    "n": {
-      "identity": 4,
-      "labels": [
-        "Phase"
-      ],
-      "properties": {
-        "phase_id": "PH-5",
-        "Punten": "begin",
-        "Duur": "dagen",
-        "Name": "collaboration"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:4"
-    }
-  },
-  {
-    "n": {
-      "identity": 5,
-      "labels": [
-        "Phase"
-      ],
-      "properties": {
-        "phase_id": "PH-6",
-        "Punten": "eind",
-        "Duur": "dagen",
-        "Name": "dessemination"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:5"
-    }
-  },
-  {
-    "n": {
-      "identity": 6,
-      "labels": [
-        "Phase"
-      ],
-      "properties": {
-        "phase_id": "PH-7",
-        "Punten": "milestone",
-        "Duur": "dagen",
-        "Name": "integration"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:6"
-    }
-  },
-  {
+   {
     "n": {
       "identity": 7,
       "labels": [
         "Stakeholder"
       ],
       "properties": {
+        "position": "Individual",
         "Categorie": "overheid",
         "Belang": "politiek",
         "Oorsprong": "vanuit institutie",

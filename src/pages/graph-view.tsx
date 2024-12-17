@@ -18,27 +18,32 @@ const GraphView = () => {
     setIsOpenCustom(!isOpenCustom);
   }
   function setInfo(element) {
+    console.log(element);
     setInfoContent(element);
   }
 
   function changeDataSet(story) {
-    // const nodes =  fetch(story.data[0])
-    // .then((response) => {
-    //   response.json()
-    // })
-    // .then((data) => {
-    //   console.log(data);
-    //   return data
-    // })
-    // console.log(nodes)
-    // const storyData = {
-    //   nodes: nodes,
-    //   links: fetch(story.data[1]).then((response) => {
-    //     return response.json();
-    //   }),
-    // };
-    // console.log(storyData);
-    // setDataSet(storyData);
+    console.log("update story data", story);
+    if (story.data) {
+      let storyData = {
+        nodes: [],
+        links: [],
+      };
+
+      // TODO fix this data getting 
+      fetch(story.data[0])
+        .then(async (response) => response.json())
+        .then(data => {
+          console.log(data)
+          storyData.nodes = data
+        });
+
+      fetch(story.data[1])
+        .then(async (response) => response.json())
+        .then(data => { storyData.links = data    });
+      
+        setDataSet(storyData);
+    }
   }
 
   useEffect(() => {
@@ -52,7 +57,9 @@ const GraphView = () => {
   return (
     <>
       <PanelBack key="graph">
-        {dataSet && <GraphD3 inputDataSet={dataSet} setInfo={setInfo}></GraphD3>}
+        {dataSet && (
+          <GraphD3 inputDataSet={dataSet} setInfo={setInfo}></GraphD3>
+        )}
       </PanelBack>
       <Styled.StoryCarrousel key="stories">
         {stories.map((story) => {

@@ -17,7 +17,6 @@ const StyledSVG = styled.svg`
 
 const GraphD3 = ({ inputDataSet, setInfo }) => {
   const visual = useRef();
-  const color = d3.scaleOrdinal(["#ca619d", "#5a70c0", "#f1ae23"]);
   const width = 750;
   const height = 750;
   const [selectedNode, setSelectedNode] = useState("");
@@ -42,6 +41,8 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
 
   useEffect(() => {
     if (inputDataSet) {
+      console.log("change dataset in Graph");
+
       interface CustomNode extends SimulationNodeDatum {
         id: string;
         name: string;
@@ -51,8 +52,8 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
         links: [],
         nodes: [],
       };
-      if (inputDataSet.nodes[0].n) {
-        console.log("initial dataset");
+      console.log(inputDataSet)
+      if (inputDataSet.nodes.length && inputDataSet.nodes[0].n) {
         inputDataSet.links.map((element) => {
           element.source = element.p.start.elementId;
           element.target = element.p.end.elementId;
@@ -67,7 +68,7 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
             return newData.nodes.push(d.n);
           }),
         ];
-      } else {
+      } else if( inputDataSet.nodes.length) {
         inputDataSet.nodes.map((element) => {
           element.label = element.labels[0];
         });
@@ -81,8 +82,10 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
           element.strength = 2;
         });
         newData.links = inputDataSet.relationships;
+      } else {
+        return
       }
-      console.log(newData);
+      console.log("new data" , newData)
       setGraphData(newData);
     }
   }, [inputDataSet]);
@@ -94,12 +97,21 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
       console.log(graphData.nodes);
 
       const labels = d3.group(graphData.nodes, (d) => d.label);
-      console.log(labels);
-      const color = d3.scaleOrdinal(labels.values(), [
+      const colorLabels = d3.scaleOrdinal(
+        labels.values(),
+        d3.schemeGreys[labels.size]
+      );
+      const positions = d3.group(graphData.nodes, (d) => d.properties.position);
+
+      const sizeLabels = d3
+        .scaleOrdinal()
+        .domain(labels.values())
+        .range([2, 8]);
+
+      const colorPositions = d3.scaleOrdinal(positions.values(), [
         "#ca619d",
         "#5a70c0",
         "#f1ae23",
-        "#1b5704",
       ]);
 
       // Force Simulation
@@ -136,6 +148,44 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
           (exit) => exit.call((exit) => exit.transition().remove())
         );
 
+      // Positions background on all nodes
+      svg
+        .selectAll(".nodes-background")
+        .data(graphData.nodes)
+        .join(
+          (enter) => {
+            enter
+              .append("circle")
+              .classed("nodes-background", true)
+              .style(" mix-blend-mode", "screen")
+              .attr("filter", "url(#blur)")
+              .attr("id", (d) => `position-${d.id}`)
+              .attr("r", (d) => {
+                return 60;
+              })
+              .style("fill", (d) => {
+                let color = d3.color(colorPositions(d.properties.position));
+                color.opacity = 0.6;
+                return d.properties.position ? color : "none";
+              })
+              .style("stroke", "none")
+              .style("stroke-width", 0);
+          },
+          (update) =>
+            update
+              .attr("id", (d) => `position-${d.id}`)
+              .attr("r", (d) => {
+                return 40;
+              })
+              .style("fill", (d) => {
+                let color = d3.color(colorPositions(d.properties.position));
+                color.opacity = 0.4;
+                return d.properties.position ? color : "none";
+              }),
+          (exit) => exit.call((exit) => exit.remove())
+        );
+
+      // Nodes
       svg
         .selectAll(".nodes")
         .data(graphData.nodes)
@@ -150,8 +200,8 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
               .attr("r", (d, i) => {
                 return d.label === "Place" ? 20 : 30;
               })
-              .attr("fill", (d) => color(d.label))
-              .on("click", (d) => {
+              .attr("fill", (d) => colorLabels(d.label))
+              .on("click", (e, d) => {
                 setSelectedNode(d.id);
                 setInfo(d);
               })
@@ -159,7 +209,7 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
                 return d.id === selectedNode ? "black" : "rgba(0, 0, 0, 0.15)";
               })
               .style("stroke-width", (d) => {
-                return d.id === selectedNode ? "4px" : "2px";
+                return `${sizeLabels(d.label)}px`;
               });
           },
           (update) =>
@@ -168,8 +218,8 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
               .attr("r", (d, i) => {
                 return d.label === "Place" ? 20 : 30;
               })
-              .attr("fill", (d) => color(d.label))
-              .on("click", (d) => {
+              .attr("fill", (d) => colorLabels(d.label))
+              .on("click", (e, d) => {
                 setSelectedNode(d.id);
                 setInfo(d);
               })
@@ -177,13 +227,13 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
                 return d.id === selectedNode ? "black" : "rgba(0, 0, 0, 0.15)";
               })
               .style("stroke-width", (d) => {
-                return d.id === selectedNode ? "4px" : "2px";
+                return `${sizeLabels(d.label)}px`;
               }),
           (exit) => exit.call((exit) => exit.remove())
         );
 
       svg
-        .selectAll("circle")
+        .selectAll(".nodes")
         .call(
           d3
             .drag()
@@ -270,18 +320,18 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
   useEffect(() => {
     if (selectedNode && visual.current) {
       d3.select(visual.current)
-        .selectAll("circle")
+        .selectAll(".nodes")
         .transition()
         .style("stroke", (d) => {
           if (d.id === selectedNode) {
-            return "black";
+            return "rgba(0, 0, 0, 0.65)";
           } else {
             return "rgba(0, 0, 0, 0.15)";
           }
         })
         .style("stroke-width", (d) => {
           if (d.id === selectedNode) {
-            return "4px";
+            return "15px";
           } else {
             return "2px";
           }
@@ -289,7 +339,16 @@ const GraphD3 = ({ inputDataSet, setInfo }) => {
     }
   }, [selectedNode]);
 
-  return <StyledSVG ref={(el) => (visual.current = el)}></StyledSVG>;
+  return (
+    <StyledSVG ref={(el) => (visual.current = el)}>
+      {" "}
+      <defs>
+        <filter id="blur">
+          <feGaussianBlur stdDeviation="5" />
+        </filter>
+      </defs>
+    </StyledSVG>
+  );
 };
 
 export default GraphD3;

@@ -102,7 +102,7 @@ export const PanelBack = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(181, 181, 181, 0.7);
+  background: rgba(181, 181, 181, 0.2);
   z-index: -1;
 `;
 
