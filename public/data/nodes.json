@@ -1,0 +1,372 @@
+﻿[
+ 
+
+  {
+    "n": {
+      "identity": 7,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "overheid",
+        "Belang": "politiek",
+        "Oorsprong": "vanuit institutie",
+        "Verplichting": "verantwoordelijkheid",
+        "Omvang": "groot",
+        "Participatie": "informeren",
+        "Grootte": "organisatie",
+        "Verantwoording": "politiek",
+        "stakeholder_id": "ST-1",
+        "Name": "Gemeente Oirschot",
+        "Besluitvorming": "vertegenwoordiging"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7"
+    }
+  },
+  {
+    "n": {
+      "identity": 8,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "huishouden",
+        "Belang": "cultureel",
+        "Oorsprong": "natuurlijk ontstaan",
+        "Verplichting": "verwachting",
+        "Omvang": "klein",
+        "Participatie": "samen handelen",
+        "Grootte": "persoon",
+        "Verantwoording": "maatschappij",
+        "stakeholder_id": "ST-2",
+        "Name": "Men en Mev van O",
+        "Besluitvorming": "compromis"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
+    }
+  },
+  {
+    "n": {
+      "identity": 9,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Belang": "cultureel",
+        "Oorsprong": "natuurlijk ontstaan",
+        "Omvang": "klein",
+        "stakeholder_id": "ST-3",
+        "Name": "Wilde Orchidee"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:9"
+    }
+  },
+  {
+    "n": {
+      "identity": 10,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "overheid",
+        "Belang": "politiek",
+        "Oorsprong": "in opdracht",
+        "Verplichting": "eis",
+        "Omvang": "groot",
+        "Participatie": "informeren",
+        "Grootte": "organisatie",
+        "Verantwoording": "maatschappij",
+        "stakeholder_id": "ST-4",
+        "Name": "Rijkswaterstaat",
+        "Besluitvorming": "vertegenwoordiging"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10"
+    }
+  },
+  {
+    "n": {
+      "identity": 11,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "organisatie zonder winstoogmerk",
+        "Belang": "maatschappelijk",
+        "Oorsprong": "vanuit belang",
+        "Verplichting": "wens",
+        "Omvang": "klein",
+        "Participatie": "ondersteunen",
+        "Grootte": "personen",
+        "Verantwoording": "maatschappij",
+        "stakeholder_id": "ST-6",
+        "Name": "De Water Engel"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11"
+    }
+  },
+  {
+    "n": {
+      "identity": 12,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "organisatie met winstoogmerk",
+        "Belang": "financieel",
+        "Oorsprong": "vanuit belang",
+        "Verplichting": "wens",
+        "Omvang": "middel",
+        "Grootte": "personen",
+        "stakeholder_id": "ST-7",
+        "Name": "City Carwash"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:12"
+    }
+  },
+  {
+    "n": {
+      "identity": 13,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "organisatie zonder winstoogmerk",
+        "Belang": "maatschappelijk",
+        "Oorsprong": "vanuit belang",
+        "Verplichting": "wens",
+        "Omvang": "middel",
+        "Participatie": "samen handelen",
+        "Grootte": "personen",
+        "Verantwoording": "maatschappij",
+        "stakeholder_id": "ST-8",
+        "Name": "Buurtgroep de Kemer",
+        "Besluitvorming": "vertegenwoordiging"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:13"
+    }
+  },
+  {
+    "n": {
+      "identity": 14,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "organisatie zonder winstoogmerk",
+        "Belang": "politiek",
+        "Oorsprong": "vanuit belang",
+        "Verplichting": "wens",
+        "Omvang": "middel",
+        "Participatie": "samen handelen",
+        "Grootte": "personen",
+        "Verantwoording": "maatschappij",
+        "stakeholder_id": "ST-9",
+        "Name": "Cooperatie Kloostersland",
+        "Besluitvorming": "vertegenwoordiging"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:14"
+    }
+  },
+  {
+    "n": {
+      "identity": 15,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "organisatie met winstoogmerk",
+        "Belang": "financieel",
+        "Oorsprong": "vanuit belang",
+        "Verplichting": "noodzaak",
+        "Omvang": "klein",
+        "Grootte": "personen",
+        "Verantwoording": "natuur",
+        "stakeholder_id": "ST-10",
+        "Name": "Biologische geiten boer"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:15"
+    }
+  },
+  {
+    "n": {
+      "identity": 16,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "organisatie met winstoogmerk",
+        "Belang": "financieel",
+        "Oorsprong": "natuurlijk ontstaan",
+        "Verplichting": "wens",
+        "Omvang": "klein",
+        "Participatie": "consulteren",
+        "Grootte": "personen",
+        "Verantwoording": "natuur",
+        "stakeholder_id": "ST-11",
+        "Name": "Vijver winkel"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:16"
+    }
+  },
+  {
+    "n": {
+      "identity": 17,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "overheid",
+        "Belang": "politiek",
+        "Oorsprong": "vanuit institutie",
+        "Verplichting": "verantwoordelijkheid",
+        "Omvang": "middel",
+        "Participatie": "ondersteunen",
+        "Grootte": "organisatie",
+        "Verantwoording": "natuur",
+        "stakeholder_id": "ST-12",
+        "Name": "Waterschap de Dommel",
+        "Besluitvorming": "vertegenwoordiging"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:17"
+    }
+  },
+  {
+    "n": {
+      "identity": 18,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "organisatie met winstoogmerk",
+        "Belang": "cultureel",
+        "Oorsprong": "vanuit belang",
+        "Verplichting": "noodzaak",
+        "Omvang": "middel",
+        "Grootte": "organisatie",
+        "Verantwoording": "natuur",
+        "stakeholder_id": "ST-13",
+        "Name": "Brabants landschap",
+        "Besluitvorming": "vertegenwoordiging"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:18"
+    }
+  },
+  {
+    "n": {
+      "identity": 19,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Belang": "cultureel",
+        "Oorsprong": "natuurlijk ontstaan",
+        "stakeholder_id": "ST-14",
+        "Name": "Groene en Bruine kikker"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:19"
+    }
+  },
+  {
+    "n": {
+      "identity": 20,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Categorie": "organisatie met winstoogmerk",
+        "Belang": "financieel",
+        "Oorsprong": "vanuit belang",
+        "Verplichting": "wens",
+        "Omvang": "klein",
+        "Verantwoording": "natuur",
+        "stakeholder_id": "ST-15",
+        "Name": "Bomenteler - Bressers"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:20"
+    }
+  },
+  {
+    "n": {
+      "identity": 21,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Belang": "financieel",
+        "Oorsprong": "vanuit belang",
+        "Verantwoording": "natuur",
+        "stakeholder_id": "ST-16",
+        "Name": "Heerlijke Oogst. Biologische boer - Oetelaar"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:21"
+    }
+  },
+  {
+    "n": {
+      "identity": 22,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "Belang": "financieel",
+        "Oorsprong": "vanuit belang",
+        "Verplichting": "wens",
+        "Verantwoording": "natuur",
+        "stakeholder_id": "ST-17",
+        "Name": "Voedselbos kattenbergsebroek"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:22"
+    }
+  },
+  {
+    "n": {
+      "identity": 23,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "stakeholder_id": "ST-18",
+        "Name": "Voetbalclub Oirschot vooruit"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:23"
+    }
+  },
+  {
+    "n": {
+      "identity": 24,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "stakeholder_id": "ST-19",
+        "Name": "Hockey club"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:24"
+    }
+  },
+  {
+    "n": {
+      "identity": 25,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "stakeholder_id": "ST-20",
+        "Name": "Bungalowpark stille wille"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:25"
+    }
+  },
+  {
+    "n": {
+      "identity": 26,
+      "labels": [
+        "Stakeholder"
+      ],
+      "properties": {
+        "stakeholder_id": "ST-21"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:26"
+    }
+  }
+]

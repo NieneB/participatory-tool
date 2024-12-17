@@ -8,7 +8,7 @@ export const StoryCarrousel = styled.div`
     justify-content:center;
     align-items:center;
     gap: 1rem;
-    padding:1rem;
+    /* padding:1rem; */
     position: absolute;
 `
 
@@ -27,15 +27,31 @@ export const TopPanel = styled.div`
     position:absolute;
     top:5vh;
     right: 5vw;
-    width: 90vw;
-    height: 90vh;
+    width: calc(90vw - 6rem);
+    height:calc(90vh - 6rem);
     background-color: rgba(181, 181, 181, 1);
     z-index: 1000;
 
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: left;
+
+    > #top-left {
+        position: absolute;
+        top:3rem;
+        right:3rem;
+    }
+`
+
+export const Step = styled.div`
+    margin-left: 30%;
+    margin-bottom: 3rem;
+    display:flex;
+    flex-direction:column;
+    justify-content: start;
+    gap: 2rem;
 `
 
 export const BlurPanel = styled.div`

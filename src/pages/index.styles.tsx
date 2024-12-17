@@ -38,7 +38,7 @@ export const Main = styled.div`
 
 export const Buttons = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   align-items: center;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -73,7 +73,7 @@ export const Button = styled.button`
 
   margin: 0;
   outline: none;
-  padding: 1rem 1.2rem;
+  padding: 3rem 1.5rem;
   position: relative;
   text-align: center;
   text-decoration: none;

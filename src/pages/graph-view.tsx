@@ -4,44 +4,71 @@ import nodeData from "../data/nodes.json";
 import relationData from "../data/relations.json";
 import stories from "../data/stories.json";
 import * as Styled from "./graph.styles";
-import Title from "src/components/Title";
 import { PanelBack, Left, Button } from "./index.styles";
-import {
-  ArrowDownCircle,
-  ArrowUpCircle,
-  MapsArrow,
-  Xmark,
-} from "iconoir-react";
-import { useState } from "react";
+import { ArrowDownCircle, MapsArrow, Xmark } from "iconoir-react";
+import { useEffect, useState } from "react";
+import UploadFile from "src/components/UploadDataSet";
 
 const GraphView = () => {
   const [isOpenCustom, setIsOpenCustom] = useState(false);
+  const [infoContent, setInfoContent] = useState("");
+  const [dataSet, setDataSet] = useState();
 
   function toggleMakingYourOwn(e) {
-    e.preventDefault();
     setIsOpenCustom(!isOpenCustom);
   }
+  function setInfo(element) {
+    setInfoContent(element);
+  }
 
-  const data = {
-    nodes: nodeData,
-    links: relationData,
-  };
+  function changeDataSet(story) {
+    // const nodes =  fetch(story.data[0])
+    // .then((response) => {
+    //   response.json()
+    // })
+    // .then((data) => {
+    //   console.log(data);
+    //   return data
+    // })
+    // console.log(nodes)
+    // const storyData = {
+    //   nodes: nodes,
+    //   links: fetch(story.data[1]).then((response) => {
+    //     return response.json();
+    //   }),
+    // };
+    // console.log(storyData);
+    // setDataSet(storyData);
+  }
+
+  useEffect(() => {
+    const data = {
+      nodes: nodeData,
+      links: relationData,
+    };
+    setDataSet(data);
+  }, []);
 
   return (
     <>
       <PanelBack key="graph">
-        <GraphD3 data={data}></GraphD3>
+        {dataSet && <GraphD3 inputDataSet={dataSet} setInfo={setInfo}></GraphD3>}
       </PanelBack>
       <Styled.StoryCarrousel key="stories">
         {stories.map((story) => {
           return (
-            <Styled.Story key={story.shortTitle}>
+            <Styled.Story
+              onClick={() => {
+                changeDataSet(story);
+              }}
+              key={story.shortTitle}
+            >
               <h1>{story.shortTitle}</h1>
             </Styled.Story>
           );
         })}
       </Styled.StoryCarrousel>
-      <Left key="left-panels" style={{ marginTop: "10rem" }}>
+      <Left key="left-panels">
         <InteractivePanel key="expl">
           <>
             <h1>Explanation</h1>
@@ -56,8 +83,18 @@ const GraphView = () => {
         </InteractivePanel>
         <InteractivePanel key="info">
           <>
-            <h1>InfoPanel</h1>
-            <p>description based on story</p>
+            <h1>
+              InfoPanel {infoContent.labels && ": " + infoContent.labels[0]}
+            </h1>
+            {infoContent.properties &&
+              Object.keys(infoContent.properties).map(function (key) {
+                return (
+                  <div key={key}>
+                    <h3 style={{ fontWeight: "bold" }}>{key} :</h3>
+                    <p>{infoContent.properties[key]}</p>
+                  </div>
+                );
+              })}
           </>
         </InteractivePanel>
       </Left>
@@ -85,19 +122,29 @@ const GraphView = () => {
       {isOpenCustom && (
         <Styled.TopPanel key="top-panel">
           <Xmark
+            id="top-left"
             color="black"
             width={36}
             height={36}
             onClick={(e) => toggleMakingYourOwn(e)}
             style={{ cursor: "pointer" }}
           ></Xmark>
-          <h1>Get the template</h1>
-          <ArrowDownCircle color="black" width={36} height={36} />
-          <h1>Make your own network</h1>
-          <h1>Import the network</h1>
-          <ArrowUpCircle color="black" width={36} height={36} />
-          
-          <button>Start</button>
+          <Styled.Step>
+            <h1>1. Get the template</h1>
+            <a href="/data/nodes.json">Click here to download </a>
+            <ArrowDownCircle color="black" width={36} height={36} />
+          </Styled.Step>
+          <Styled.Step>
+            <h1>2. Make your own network</h1>
+          </Styled.Step>
+
+          <Styled.Step>
+            <h1>3. Import the network</h1>
+            <UploadFile
+              setDataSet={setDataSet}
+              setIsOpenCustom={setIsOpenCustom}
+            />
+          </Styled.Step>
         </Styled.TopPanel>
       )}
     </>

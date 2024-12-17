@@ -13,7 +13,6 @@ const Intro = () => {
   const [info, setInfo] = useState({});
 
   function toggleInfo(e, d: string) {
-    e.preventDefault();
     console.log(d);
     if (d) {
       setInfoOn(true);
@@ -37,14 +36,22 @@ const Intro = () => {
         </InteractivePanel>
       </Styled.Left>
       <Styled.Main>
-        <h1>Tools</h1>
+        <h1>Actions</h1>
+        <p>
+          <p>
+            Nulla venenatis est et neque commodo pulvinar. Nam vel vestibulum
+            mauris. Nulla fringilla libero quam, nec pharetra ipsum pharetra eu.
+            Nullam in purus eget ipsum finibus gravida. Ut eu sem hendrerit,
+            tempus sem dignissim, ullamcorper nisi. Duis venenatis, metus eget
+            egestas aliquam, diam sapien porta metus, sed tristique erat risus
+            ut tortor. Duis placerat enim tellus, vitae laoreet tellus rutrum
+            non. Nunc urna diam, tristique eu malesuada sollicitudin, volutpat
+            sed nisl.{" "}
+          </p>
+        </p>
         <Styled.Buttons>
           <Styled.Button>
-            <h2>Method</h2>
-          </Styled.Button>
-
-          <Styled.Button>
-            <h2>Workshop materials</h2>
+            <h2>Method & Tools</h2>
           </Styled.Button>
           <Link className="bottom-right" to="/graph">
             <Styled.Button>
@@ -54,9 +61,12 @@ const Intro = () => {
                 height={36}
                 style={{ transform: "rotate(90deg)" }}
               />
-              <h2>Mapping Tool</h2>
+              <h2>Mapping approach</h2>
             </Styled.Button>
           </Link>
+          <Styled.Button>
+            <h2>Activation</h2>
+          </Styled.Button>
         </Styled.Buttons>
       </Styled.Main>
       {/* <Styled.NavButton>

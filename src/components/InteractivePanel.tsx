@@ -56,7 +56,6 @@ const InteractivePanel = ({ children }) => {
   const [isCollapsed, setIsCollasped] = useState(false);
 
   const collapseOnClick = (e) => {
-    e.preventDefault();
     setIsCollasped(!isCollapsed);
   };
 

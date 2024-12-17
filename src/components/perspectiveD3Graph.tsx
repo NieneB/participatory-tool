@@ -39,7 +39,6 @@ const GraphD3 = ({ data, toggleInfo }) => {
 
   useEffect(() => {
     d3.select("body").on("click", function (e) {
-      e.preventDefault();
       if (e.target.nodeName == "svg") {
         toggleInfo(e, "");
       }
