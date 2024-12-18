@@ -14,8 +14,6 @@ const UploadFile = function ({ setDataSet, setIsOpenCustom }) {
 
   return (
     <>
-      <p>Upload your graph file (json) to start mapping!</p>
-
       <InputFile
         setFileLoaded={setFileLoaded}
         fileLoaded={fileLoaded}

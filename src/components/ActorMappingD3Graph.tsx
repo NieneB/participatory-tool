@@ -35,7 +35,7 @@ const StyledSVG = styled.svg`
 
 const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
   const visual = useRef();
-  const width = 750;
+  const width = 1000;
   const height = 750;
   const [selectedNode, setSelectedNode] = useState("");
   const [graphData, setGraphData] = useState([]);
@@ -46,6 +46,8 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
       .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("width", "100%")
       .attr("height", "100%")
+      // .attr("viewBox", [-width / 2, -height / 2, width, height])
+      .attr("style", "max-width: 100%; height: auto;")
       .attr("viewBox", [0, 0, width, height]);
 
     // close all on click
@@ -112,7 +114,7 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
     if (graphData.nodes && visual.current) {
       console.log("update Graph");
       const svg = d3.select(visual.current);
-      console.log(graphData.nodes);
+      console.log(graphData.links);
 
       const labels = d3.group(graphData.nodes, (d) => d.label);
       // console.log("a",labels.size)
@@ -136,13 +138,16 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
           d3
             .forceLink(graphData.links)
             .id((d) => d.id)
-            .distance((d) => {
-              return d.p.segments[0].relationship.type === "closeto" ? 100 : 150;
-            })
+            // .distance((d) => {
+            //   return d.p.segments[0].relationship.type === "closeto"
+            //     ? 100
+            //     : 150;
+            // })
+            .strength(1)
         )
-        .force("x", d3.forceX(width).strength(0.03))
+        .force("x", d3.forceX(width / 2).strength(0.03))
         .force("y", d3.forceY(height / 2).strength(0.03))
-        .force("charge", d3.forceManyBody().strength(-150))
+        .force("charge", d3.forceManyBody().strength(-1000))
         .force(
           "collision",
           d3
@@ -511,7 +516,6 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
           .selectAll("text")
           .attr("x", (d) => {
             let l = d.properties.name ? d.properties.name.length : 0;
-            console.log(d);
             return d.label === "place" ? d.x - 100 : d.x + 25;
           })
           .attr("y", (d) => {

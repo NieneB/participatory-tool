@@ -5,7 +5,7 @@ import relationData from "../data/relations2.json";
 import stories from "../data/stories.json";
 import * as Styled from "./graph.styles";
 import { PanelBack, Left, Button } from "./index.styles";
-import { ArrowDownCircle, MapsArrow, Xmark } from "iconoir-react";
+import { ArrowDownCircle, ArrowRightCircle, MapsArrow, Xmark } from "iconoir-react";
 import { useEffect, useState } from "react";
 import UploadFile from "src/components/UploadDataSet";
 
@@ -14,7 +14,7 @@ const GraphView = () => {
   const [infoContent, setInfoContent] = useState("");
   const [dataSet, setDataSet] = useState();
   const [originalDataSet, setOriginalDataSet] = useState();
-  const [positionsOn, setPositionsOn] = useState(false)
+  const [positionsOn, setPositionsOn] = useState(false);
 
   function toggleMakingYourOwn(e) {
     setIsOpenCustom(!isOpenCustom);
@@ -25,8 +25,8 @@ const GraphView = () => {
 
   function changeDataSet(story) {
     console.log("update story data", story);
-    if(story.shortTitle === "Positions") {
-      setPositionsOn( !positionsOn)
+    if (story.shortTitle === "Positions") {
+      setPositionsOn(!positionsOn);
     }
     // if (story.data) {
     //   let storyData = {
@@ -95,7 +95,11 @@ const GraphView = () => {
     <>
       <PanelBack key="graph">
         {dataSet && (
-          <GraphD3 inputDataSet={dataSet} setInfo={setInfo} positionsOn={positionsOn}></GraphD3>
+          <GraphD3
+            inputDataSet={dataSet}
+            setInfo={setInfo}
+            positionsOn={positionsOn}
+          ></GraphD3>
         )}
       </PanelBack>
       <Styled.StoryCarrousel key="stories">
@@ -175,15 +179,26 @@ const GraphView = () => {
           ></Xmark>
           <Styled.Step>
             <h1>1. Get the template</h1>
-            <a href="/data/nodes.json">Click here to download </a>
-            <ArrowDownCircle color="black" width={36} height={36} />
+            <a
+              href="./data/framework.json"
+              title="framework for arrows app"
+              download
+            >
+              Click here to download the template{" "}
+              <ArrowDownCircle color="black" width={36} height={36} />
+            </a>
           </Styled.Step>
           <Styled.Step>
             <h1>2. Make your own network</h1>
+            <p>              <ArrowRightCircle color="black" width={36} height={36} />
+             Go to <a href="https://arrows.app/" target="blank"> arrows.app </a> </p>
+            <p>And import the framework.json file </p>
+            <p>edit the framework in the app, copy the existing nodes to create new ones</p>
+            <p>Done? Save the file as a .json format and then come back to this app</p>
           </Styled.Step>
 
           <Styled.Step>
-            <h1>3. Import the network</h1>
+            <h1>3. Import your custom network here</h1>
             <UploadFile
               setDataSet={setOriginalDataSet}
               setIsOpenCustom={setIsOpenCustom}
