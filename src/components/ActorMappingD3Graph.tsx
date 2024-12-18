@@ -135,7 +135,9 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
           d3
             .forceLink(graphData.links)
             .id((d) => d.id)
-            .distance(100)
+            .distance((d) => {
+              return d.label === "person" ? 50 : 100;
+            })
         )
         .force("center", d3.forceCenter(width, height / 2))
         .force("charge", d3.forceManyBody().strength(-100))
@@ -148,6 +150,8 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
             })
             .strength(-50)
         )
+        .force("x", d3.forceX().strength(0.03))
+        .force("y", d3.forceY().strength(0.03))
         .on("tick", ticked);
 
       const positions = d3.group(graphData.nodes, (d) => d.properties.position);
