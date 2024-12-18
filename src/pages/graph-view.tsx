@@ -1,7 +1,7 @@
 import GraphD3 from "../components/ActorMappingD3Graph";
 import InteractivePanel from "src/components/InteractivePanel";
-import nodeData from "../data/nodes.json";
-import relationData from "../data/relations.json";
+import nodeData from "../data/nodes2.json";
+import relationData from "../data/relations2.json";
 import stories from "../data/stories.json";
 import * as Styled from "./graph.styles";
 import { PanelBack, Left, Button } from "./index.styles";
@@ -13,37 +13,42 @@ const GraphView = () => {
   const [isOpenCustom, setIsOpenCustom] = useState(false);
   const [infoContent, setInfoContent] = useState("");
   const [dataSet, setDataSet] = useState();
+  const [originalDataSet, setOriginalDataSet] = useState();
+  const [positionsOn, setPositionsOn] = useState(false)
 
   function toggleMakingYourOwn(e) {
     setIsOpenCustom(!isOpenCustom);
   }
   function setInfo(element) {
-    console.log(element);
     setInfoContent(element);
   }
 
   function changeDataSet(story) {
     console.log("update story data", story);
-    if (story.data) {
-      let storyData = {
-        nodes: [],
-        links: [],
-      };
-
-      // TODO fix this data getting 
-      fetch(story.data[0])
-        .then(async (response) => response.json())
-        .then(data => {
-          console.log(data)
-          storyData.nodes = data
-        });
-
-      fetch(story.data[1])
-        .then(async (response) => response.json())
-        .then(data => { storyData.links = data    });
-      
-        setDataSet(storyData);
+    if(story.shortTitle === "Positions") {
+      setPositionsOn( !positionsOn)
     }
+    // if (story.data) {
+    //   let storyData = {
+    //     nodes: [],
+    //     links: [],
+    //   };
+
+    //   // TODO fix this data getting
+    //   fetch(story.data[0])
+    //     .then(async (response) => response.json())
+    //     .then((data) => {
+    //       storyData.nodes = data;
+    //     });
+
+    //   fetch(story.data[1])
+    //     .then(async (response) => response.json())
+    //     .then((data) => {
+    //       storyData.links = data;
+    //     });
+
+    //   setDataSet(storyData);
+    // }
   }
 
   useEffect(() => {
@@ -51,14 +56,46 @@ const GraphView = () => {
       nodes: nodeData,
       links: relationData,
     };
-    setDataSet(data);
+    setOriginalDataSet(data);
   }, []);
+
+  function toLowerCaseKeysAndValues(obj: any): any {
+    if (typeof obj !== "object" || obj === null) {
+      // If it's not an object, convert it to lowercase if it's a string.
+      return typeof obj === "string" ? obj.toLowerCase() : obj;
+    }
+
+    if (Array.isArray(obj)) {
+      // If it's an array, recursively process each element.
+      return obj.map(toLowerCaseKeysAndValues);
+    }
+
+    // Process object keys and values >> All but Name!
+    return Object.keys(obj).reduce((acc, key) => {
+      if (key !== "Name") {
+        const lowerCaseKey = key.toLowerCase();
+        acc[lowerCaseKey] = toLowerCaseKeysAndValues(obj[key]);
+        return acc;
+      } else {
+        const lowerCaseKey = key.toLowerCase();
+        acc[lowerCaseKey] = obj[key];
+        return acc;
+      }
+    }, {} as Record<string, any>);
+  }
+
+  useEffect(() => {
+    if (originalDataSet) {
+      const newObj = toLowerCaseKeysAndValues(originalDataSet);
+      setDataSet(newObj);
+    }
+  }, [originalDataSet]);
 
   return (
     <>
       <PanelBack key="graph">
         {dataSet && (
-          <GraphD3 inputDataSet={dataSet} setInfo={setInfo}></GraphD3>
+          <GraphD3 inputDataSet={dataSet} setInfo={setInfo} positionsOn={positionsOn}></GraphD3>
         )}
       </PanelBack>
       <Styled.StoryCarrousel key="stories">
@@ -148,7 +185,7 @@ const GraphView = () => {
           <Styled.Step>
             <h1>3. Import the network</h1>
             <UploadFile
-              setDataSet={setDataSet}
+              setDataSet={setOriginalDataSet}
               setIsOpenCustom={setIsOpenCustom}
             />
           </Styled.Step>

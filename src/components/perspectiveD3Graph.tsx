@@ -22,7 +22,6 @@ const GraphD3 = ({ data, toggleInfo }) => {
   const dataNodes = data.nodes;
 
   const dataLinks = data.links;
-  const color = d3.scaleOrdinal(["#ca619d", "#5a70c0", "#f1ae23"]);
 
   const width = 100;
   const height = 100;
