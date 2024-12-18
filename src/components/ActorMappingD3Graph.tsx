@@ -130,17 +130,19 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
       // Force Simulation
       const simulation = d3
         .forceSimulation(graphData.nodes)
+        // .force("center", d3.forceCenter(width, height / 2))
         .force(
           "link",
           d3
             .forceLink(graphData.links)
             .id((d) => d.id)
             .distance((d) => {
-              return d.label === "person" ? 50 : 100;
+              return d.p.segments[0].relationship.type === "closeto" ? 100 : 150;
             })
         )
-        .force("center", d3.forceCenter(width, height / 2))
-        .force("charge", d3.forceManyBody().strength(-100))
+        .force("x", d3.forceX(width).strength(0.03))
+        .force("y", d3.forceY(height / 2).strength(0.03))
+        .force("charge", d3.forceManyBody().strength(-150))
         .force(
           "collision",
           d3
@@ -148,10 +150,9 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
             .radius((d) => {
               return d.label === "place" ? 40 : 10;
             })
-            .strength(-50)
+            .strength(1)
         )
-        .force("x", d3.forceX().strength(0.03))
-        .force("y", d3.forceY().strength(0.03))
+
         .on("tick", ticked);
 
       const positions = d3.group(graphData.nodes, (d) => d.properties.position);
@@ -236,6 +237,7 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               .classed("nodes rect-nodes", true)
               .style("cursor", "pointer")
               .attr("id", (d) => d.id)
+              .attr("fill", "#525252")
               .attr("width", (d) => {
                 return d.properties.size === "organization"
                   ? "50"
@@ -256,7 +258,6 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               .attr("rx", (d) => {
                 return d.properties.size === "person" ? "3" : "8";
               })
-              .attr("fill", "#525252")
               .on("click", (e, d) => {
                 setSelectedNode(d.id);
                 setInfo(d);
@@ -280,6 +281,26 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               .on("click", (e, d) => {
                 setSelectedNode(d.id);
                 setInfo(d);
+              })
+              .attr("width", (d) => {
+                return d.properties.size === "organization"
+                  ? "50"
+                  : d.properties.size === "person"
+                  ? "20"
+                  : "40";
+              })
+              .attr("height", (d) => {
+                return d.properties.size === "organization"
+                  ? "50"
+                  : d.properties.size === "person"
+                  ? "20"
+                  : "40";
+              })
+              .attr("rx", (d) => {
+                return d.properties.size === "person" ? "3" : "8";
+              })
+              .attr("rx", (d) => {
+                return d.properties.size === "person" ? "3" : "8";
               }),
 
           (exit) => exit.call((exit) => exit.remove())
