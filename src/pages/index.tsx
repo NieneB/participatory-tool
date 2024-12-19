@@ -1,11 +1,14 @@
 import * as Styled from "./index.styles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRightSquare, MapsArrow } from "iconoir-react";
 import Title from "src/components/Title";
 
 const Home = () => {
+  const navigate = useNavigate()
   return (
     <Styled.Main>
+      <button onClick={()=> navigate(-1)}><ArrowLeft></ArrowLeft></button>
+
       <div className="bg-image"></div>
       <h1>WELCOME</h1>
       <Title />

@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import * as Styled from "./index.styles";
 import { ArrowDown } from "iconoir-react";
+import DefaultPage from "src/components/DefaultPage";
 
 const Journeys = () => {
   return (
     <Styled.Main>
-      <h1>Journeys</h1>
+      <DefaultPage title="Journeys" dataset=""></DefaultPage>
+
       <Styled.Buttons>
         <Link to="/positions/phases">
           <Styled.Button>
