@@ -55,10 +55,12 @@ const InteractivePanel = ({ children }) => {
   const [isCollapsed, setIsCollasped] = useState(false);
 
   const collapseOnClick = (e) => {
+    e.preventDefault()
     setIsCollasped(!isCollapsed);
   };
 
   useEffect(() => {
+    console.log("check childeren", children)
     if (children) {
       setIsCollasped(false);
     } else {
@@ -67,8 +69,8 @@ const InteractivePanel = ({ children }) => {
   }, [children]);
 
   return (
-    <Container className={isCollapsed ? "small" : "large"}>
-      <Content>{!isCollapsed && { ...children }}</Content>
+    <Container key={"1"} className={isCollapsed ? "small" : "large"}>
+      {!isCollapsed && <Content> {children}</Content>}
       <Folding
         className={isCollapsed ? "small" : "large"}
         onClick={(e) => collapseOnClick(e)}

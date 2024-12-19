@@ -5,7 +5,12 @@ import relationData from "../../data/relations2.json";
 import stories from "../../data/stories.json";
 import * as Styled from "./graph.styles";
 import { PanelBack, Left, Button } from "../index.styles";
-import { ArrowDownCircle, ArrowRightCircle, MapsArrow, Xmark } from "iconoir-react";
+import {
+  ArrowDownCircle,
+  ArrowRightCircle,
+  MapsArrow,
+  Xmark,
+} from "iconoir-react";
 import { useEffect, useState } from "react";
 import UploadFile from "src/components/UploadDataSet";
 
@@ -28,36 +33,7 @@ const GraphView = () => {
     if (story.shortTitle === "Positions") {
       setPositionsOn(!positionsOn);
     }
-    // if (story.data) {
-    //   let storyData = {
-    //     nodes: [],
-    //     links: [],
-    //   };
-
-    //   // TODO fix this data getting
-    //   fetch(story.data[0])
-    //     .then(async (response) => response.json())
-    //     .then((data) => {
-    //       storyData.nodes = data;
-    //     });
-
-    //   fetch(story.data[1])
-    //     .then(async (response) => response.json())
-    //     .then((data) => {
-    //       storyData.links = data;
-    //     });
-
-    //   setDataSet(storyData);
-    // }
   }
-
-  useEffect(() => {
-    const data = {
-      nodes: nodeData,
-      links: relationData,
-    };
-    setOriginalDataSet(data);
-  }, []);
 
   function toLowerCaseKeysAndValues(obj: any): any {
     if (typeof obj !== "object" || obj === null) {
@@ -83,6 +59,14 @@ const GraphView = () => {
       }
     }, {} as Record<string, any>);
   }
+
+  useEffect(() => {
+    const data = {
+      nodes: nodeData,
+      links: relationData,
+    };
+    setOriginalDataSet(data);
+  }, []);
 
   useEffect(() => {
     if (originalDataSet) {
@@ -117,12 +101,14 @@ const GraphView = () => {
         })}
       </Styled.StoryCarrousel>
       <Left key="left-panels">
-        <InteractivePanel key="expl">
-          <>
-            <h1>Explanation</h1>
-            <p>Actor Mapping Oirschot description</p>
-          </>
-        </InteractivePanel>
+        <div>
+          <InteractivePanel key="expl">
+            <>
+              <h1>Explanation</h1>
+              <p>Actor Mapping Oirschot description</p>
+            </>
+          </InteractivePanel>
+        </div>
         <InteractivePanel key="legend">
           <>
             <h1>Legend</h1>
@@ -190,11 +176,24 @@ const GraphView = () => {
           </Styled.Step>
           <Styled.Step>
             <h1>2. Make your own network</h1>
-            <p>              <ArrowRightCircle color="black" width={36} height={36} />
-             Go to <a href="https://arrows.app/" target="blank"> arrows.app </a> </p>
+            <p>
+              {" "}
+              <ArrowRightCircle color="black" width={36} height={36} />
+              Go to{" "}
+              <a href="https://arrows.app/" target="blank">
+                {" "}
+                arrows.app{" "}
+              </a>{" "}
+            </p>
             <p>And import the framework.json file </p>
-            <p>edit the framework in the app, copy the existing nodes to create new ones</p>
-            <p>Done? Save the file as a .json format and then come back to this app</p>
+            <p>
+              edit the framework in the app, copy the existing nodes to create
+              new ones
+            </p>
+            <p>
+              Done? Save the file as a .json format and then come back to this
+              app
+            </p>
           </Styled.Step>
 
           <Styled.Step>

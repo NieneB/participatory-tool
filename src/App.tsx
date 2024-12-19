@@ -1,7 +1,6 @@
-import {  Routes, Route, HashRouter, useNavigate } from "react-router-dom";
+import {  Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./pages";
 import GraphView from "./pages/actions/graph-view";
-import Intro from "./pages/actions";
 import Journeys from "./pages/journeys";
 import Positions from "./pages/positions";
 import Phases from "./pages/journeys/phases";
@@ -10,17 +9,12 @@ import People from "./pages/journeys/people";
 import Actions from "./pages/actions";
 import Activation from "./pages/actions/activation";
 import Methods from "./pages/actions/methods";
-import { ArrowLeft } from "iconoir-react";
 
 const App = () => {
 
-  
-
   return (
     <HashRouter > 
-        
-        
-        
+
         <Routes>
           <Route exact path="/" index element={<Home />} />
           <Route path="actions" element={<Actions />} />

@@ -1,8 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import styled from "styled-components";
-import { SimulationNodeDatum } from "d3";
-import { graph } from "neo4j-driver";
+import { count, SimulationNodeDatum } from "d3";
 
 const StyledSVG = styled.svg`
   /* font-family: "Inter"; */
@@ -35,20 +34,54 @@ const StyledSVG = styled.svg`
 
 const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
   const visual = useRef();
-  const width = 950;
+  const width = 750;
   const height = 750;
   const [selectedNode, setSelectedNode] = useState("");
   const [graphData, setGraphData] = useState([]);
   const iconSize = 40;
 
+  const simulation = d3
+    .forceSimulation(graphData.nodes)
+    .force("charge", d3.forceManyBody())
+    .force(
+      "link",
+      d3
+        .forceLink(graphData.links)
+        .id((d) => d.id)
+        .strength(1)
+    )
+    .force("x", d3.forceX(width / 2).strength(0.03))
+    .force("y", d3.forceY(height / 2).strength(0.03))
+    .force("charge", d3.forceManyBody().strength(-100))
+    .force(
+      "collision",
+      d3
+        .forceCollide()
+        .radius((d) => {
+          console.log(d);
+          switch (d.label) {
+            case "area":
+              return 70;
+            case "possibility":
+              return 50;
+            case "actor":
+              return 40;
+            default:
+              1;
+              break;
+          }
+        })
+        .strength(1)
+    )
+    .force("center", d3.forceCenter(width, height / 2).strength(0.04))
+  
   useEffect(() => {
     // inital setting up graph
     d3.select(visual.current)
       .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("width", "100%")
       .attr("height", "100%")
-      // .attr("viewBox", [-width / 2, -height / 2, width, height])
-      .attr("style", "max-width: 100%; height: auto;")
+      // .attr("style", "max-width: 100%; height: auto;")
       .attr("viewBox", [0, 0, width, height]);
 
     // close all on click
@@ -73,7 +106,6 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
         links: [],
         nodes: [],
       };
-      console.log("input", inputDataSet);
       if (inputDataSet.nodes.length && inputDataSet.nodes[0].n) {
         inputDataSet.links.map((element) => {
           element.source = element.p.start.elementid;
@@ -130,30 +162,8 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
         .domain(labels.values())
         .range([2, 8]);
 
-      // Force Simulation
-      const simulation = d3
-        .forceSimulation(graphData.nodes)
-        // .force("center", d3.forceCenter(width, height / 2))
-        .force(
-          "link",
-          d3
-            .forceLink(graphData.links)
-            .id((d) => d.id)
-            .distance((d) => {
-              return d.p.segments[0].relationship.type === "closeto" ? 90 : 100;
-            })
-            .strength(1)
-        )
-        .force("x", d3.forceX(width / 2).strength(0.1))
-        .force("y", d3.forceY(height / 3).strength(0.1))
-        .force("charge", d3.forceManyBody().strength(-100))
-        .force(
-          "collision",
-          d3.forceCollide().radius((d) => {
-            return d.label === "place" ? 40 : 10;
-          })
-        )
-        .on("tick", ticked);
+      // Start Force Simulation
+      simulation.on("tick", ticked);
 
       const positions = d3.group(graphData.nodes, (d) => d.properties.position);
       const colorPositions = d3.scaleOrdinal(positions.values(), [
@@ -173,13 +183,11 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               .style(" mix-blend-mode", "screen")
               .attr("filter", "url(#blur)")
               .attr("id", (d) => `position-${d.id}`)
-              .attr("r", (d) => {
-                return iconSize;
-              })
+              .attr("r", iconSize)
               .style("visibility", positionsOn ? "visible" : "hidden")
               .style("fill", (d) => {
                 let color = d3.color(colorPositions(d.properties.position));
-                color.opacity = 0.6;
+                color.opacity = 0.8;
                 return d.properties.position ? color : "none";
               })
               .style("stroke", "none")
@@ -356,7 +364,7 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               .classed("nodes circle-nodes", true)
               .style("cursor", "pointer")
               .attr("id", (d) => d.id)
-              .attr("r", iconSize-20)
+              .attr("r", iconSize - 20)
               .attr("fill", "#525252")
               .on("click", (e, d) => {
                 setSelectedNode(d.id);
@@ -430,21 +438,17 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
         );
 
       function ticked() {
-        svg
-          .selectAll(".nodes")
-          .attr("cx", (d) => d.x)
-          .attr("cy", (d) => d.y)
-          .attr("x", (d) => d.x - 20)
-          .attr("y", (d) => d.y - 20);
+        // Positions
         svg
           .selectAll(".nodes-background")
           .attr("cx", (d) => d.x)
-          .attr("cy", (d) => d.y)
-          .attr("x", (d) => d.x - 20)
-          .attr("y", (d) => d.y - 20);
+          .attr("cy", (d) => d.y);
+        // .attr("x", (d) => d.x - 20)
+        // .attr("y", (d) => d.y - 20);
+
+        // Actors
         svg
           .selectAll(".rect-nodes")
-
           .attr("x", (d) => {
             return d.properties.size === "organization"
               ? d.x - 25
@@ -459,6 +463,8 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               ? d.y - 10
               : d.y - 20;
           });
+
+        // Areas
         svg
           .selectAll(".ellipse-nodes")
           .attr("transform-origin", "150 150")
@@ -472,37 +478,8 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
           .attr("x1", (d) => d.source.x)
           .attr("y1", (d) => d.source.y)
           .attr("x2", (d) => d.target.x)
-          .attr("y2", (d) => d.target.y)
-          .attr("points", function (d) {
-            return [
-              d.source.x,
-              d.source.y,
-              // here i calculate midpoints where markers need to appear
-              d.source.x / 2 + d.target.x / 2,
-              d.source.y / 2 + d.target.y / 2,
-              d.target.x,
-              d.target.y,
-            ].join(",");
-          });
-        // .attr("d", function (d) {
-        //   var dx = d.target.x - d.source.x,
-        //     dy = d.target.y - d.source.y,
-        //     dr = Math.sqrt(dx * dx + dy * dy );
-        //   return (
-        //     "M" +
-        //     d.source.x +
-        //     "," +
-        //     d.source.y +
-        //     "A" +
-        //     dr +
-        //     "," +
-        //     dr +
-        //     " 0 0,1 " +
-        //     d.target.x +
-        //     "," +
-        //     d.target.y
-        //   );
-        // });
+          .attr("y2", (d) => d.target.y);
+
 
         svg
           .selectAll("text")
