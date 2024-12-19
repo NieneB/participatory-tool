@@ -13,6 +13,7 @@ import {
 } from "iconoir-react";
 import { useEffect, useState } from "react";
 import UploadFile from "src/components/UploadDataSet";
+import NavBack from "src/components/NavBack";
 
 const GraphView = () => {
   const [isOpenCustom, setIsOpenCustom] = useState(false);
@@ -100,6 +101,7 @@ const GraphView = () => {
           );
         })}
       </Styled.StoryCarrousel>
+        <NavBack/>
       <Left key="left-panels">
         <div>
           <InteractivePanel key="expl">
@@ -166,7 +168,7 @@ const GraphView = () => {
           <Styled.Step>
             <h1>1. Get the template</h1>
             <a
-              href="./data/framework.json"
+              href="https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/framework.json"
               title="framework for arrows app"
               download
             >

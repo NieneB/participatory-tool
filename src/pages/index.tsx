@@ -1,11 +1,9 @@
 import * as Styled from "./index.styles";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   ArrowDown,
   ArrowLeft,
   ArrowRight,
-  ArrowUpRightSquare,
-  MapsArrow,
 } from "iconoir-react";
 import Title from "src/components/Title";
 
@@ -17,11 +15,11 @@ const Home = () => {
       <Title />
       <h2> Follow one of our 3 paths :</h2>
       <Styled.Buttons>
-        <Link to="/journeys">
+        <Link to="/scope">
           {" "}
           <Styled.Button>
             <div>
-              <h3>Journeys</h3>
+              <h3>Scope</h3>
             </div>
 
             <ArrowLeft color="black" width={36} height={36} />

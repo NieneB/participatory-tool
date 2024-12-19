@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = {
   entry: path.join(__dirname, "src/index.tsx"),
   output: {
-    publicPath: '/', //widht ./ for deployment?
+    publicPath: './', //widht ./ for deployment?
     path: path.join(__dirname, "/dist"),
     filename: "bundle.js",
   },

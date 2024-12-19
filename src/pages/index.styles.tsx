@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-  width: 50vw;
+  min-width: 50vw;
   height: 100vh;
   overflow: hidden;
   display: flex;

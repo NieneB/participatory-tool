@@ -9,13 +9,13 @@ const Positions = () => {
       <h1>Positions</h1>
       <Styled.Buttons>
         <Styled.Button>
-          <h2>Individual</h2>
+          <h2>Non-organized</h2>
         </Styled.Button>
         <Styled.Button>
-          <h2>Community</h2>
+          <h2>Community organized</h2>
         </Styled.Button>
         <Styled.Button>
-          <h2>Governmental</h2>
+          <h2>Government organized</h2>
         </Styled.Button>
       </Styled.Buttons>
     </Styled.Main>

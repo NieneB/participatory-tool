@@ -74,7 +74,63 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
         .strength(1)
     )
     .force("center", d3.forceCenter(width, height / 2).strength(0.04))
-  
+    .tick(2000);
+
+  function ticked() {
+    const svg = d3.select(visual.current);
+    // Positions
+    svg
+      .selectAll(".nodes-background")
+      .attr("cx", (d) => d.x)
+      .attr("cy", (d) => d.y);
+    // .attr("x", (d) => d.x - 20)
+    // .attr("y", (d) => d.y - 20);
+
+    // Actors
+    svg
+      .selectAll(".rect-nodes")
+      .attr("x", (d) => {
+        return d.properties.size === "organization"
+          ? d.x - 25
+          : d.properties.size === "person"
+          ? d.x - 10
+          : d.x - 20;
+      })
+      .attr("y", (d) => {
+        return d.properties.size === "organization"
+          ? d.y - 25
+          : d.properties.size === "person"
+          ? d.y - 10
+          : d.y - 20;
+      });
+
+    // Areas
+    svg
+      .selectAll(".ellipse-nodes")
+      .attr("transform-origin", "150 150")
+      .attr(
+        "transform",
+        (d) => ` translate(${d.x - 150},${d.y - 140}) scale(0.3)`
+      );
+
+    svg
+      .selectAll(".links")
+      .attr("x1", (d) => d.source.x)
+      .attr("y1", (d) => d.source.y)
+      .attr("x2", (d) => d.target.x)
+      .attr("y2", (d) => d.target.y);
+
+    svg
+      .selectAll("text")
+      .attr("x", (d) => {
+        let l = d.properties.name ? d.properties.name.length : 0;
+        return d.label === "place" ? d.x - 100 : d.x + 25;
+      })
+      .attr("y", (d) => {
+        return d.y + 5;
+      });
+  }
+
   useEffect(() => {
     // inital setting up graph
     d3.select(visual.current)
@@ -83,6 +139,7 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
       .attr("height", "100%")
       // .attr("style", "max-width: 100%; height: auto;")
       .attr("viewBox", [0, 0, width, height]);
+
 
     // close all on click
     d3.select("body").on("click", function (e) {
@@ -144,26 +201,19 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
   }, [inputDataSet]);
 
   useEffect(() => {
+    simulation.on("tick", ticked);
+
     if (graphData.nodes && visual.current) {
-      console.log("update Graph");
       const svg = d3.select(visual.current);
-      console.log(graphData.links);
 
       const labels = d3.group(graphData.nodes, (d) => d.label);
-      // console.log("a",labels.size)
-      // const colorLabels = d3.scaleOrdinal(
-      //   labels.values(),
-      //   d3.schemeGreys[labels.size]
-      // );
-      // console.log("colorLabels")
-
+      
       const sizeLabels = d3
         .scaleOrdinal()
         .domain(labels.values())
         .range([2, 8]);
 
       // Start Force Simulation
-      simulation.on("tick", ticked);
 
       const positions = d3.group(graphData.nodes, (d) => d.properties.position);
       const colorPositions = d3.scaleOrdinal(positions.values(), [
@@ -437,61 +487,6 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
           (exit) => exit.call((exit) => exit.transition().remove())
         );
 
-      function ticked() {
-        // Positions
-        svg
-          .selectAll(".nodes-background")
-          .attr("cx", (d) => d.x)
-          .attr("cy", (d) => d.y);
-        // .attr("x", (d) => d.x - 20)
-        // .attr("y", (d) => d.y - 20);
-
-        // Actors
-        svg
-          .selectAll(".rect-nodes")
-          .attr("x", (d) => {
-            return d.properties.size === "organization"
-              ? d.x - 25
-              : d.properties.size === "person"
-              ? d.x - 10
-              : d.x - 20;
-          })
-          .attr("y", (d) => {
-            return d.properties.size === "organization"
-              ? d.y - 25
-              : d.properties.size === "person"
-              ? d.y - 10
-              : d.y - 20;
-          });
-
-        // Areas
-        svg
-          .selectAll(".ellipse-nodes")
-          .attr("transform-origin", "150 150")
-          .attr(
-            "transform",
-            (d) => ` translate(${d.x - 150},${d.y - 140}) scale(0.3)`
-          );
-
-        svg
-          .selectAll(".links")
-          .attr("x1", (d) => d.source.x)
-          .attr("y1", (d) => d.source.y)
-          .attr("x2", (d) => d.target.x)
-          .attr("y2", (d) => d.target.y);
-
-
-        svg
-          .selectAll("text")
-          .attr("x", (d) => {
-            let l = d.properties.name ? d.properties.name.length : 0;
-            return d.label === "place" ? d.x - 100 : d.x + 25;
-          })
-          .attr("y", (d) => {
-            return d.y + 5;
-          });
-      }
-
       // Reheat the simulation when drag starts, and fix the subject position.
       function dragstarted(event) {
         if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -512,9 +507,7 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
         event.subject.fx = null;
         event.subject.fy = null;
       }
-      return () => {
-        simulation.stop();
-      };
+     simulation.restart()
     }
   }, [graphData, positionsOn]);
 
@@ -540,6 +533,8 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
         });
     }
   }, [selectedNode]);
+
+
 
   return (
     <StyledSVG ref={(el) => (visual.current = el)}>

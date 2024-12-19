@@ -1,37 +1,35 @@
 import { Link } from "react-router-dom";
 import * as Styled from "./index.styles";
-import { ArrowDown } from "iconoir-react";
-import DefaultPage from "src/components/DefaultPage";
+import { ArrowDown, ArrowLeft, ArrowRight } from "iconoir-react";
 import NavBack from "src/components/NavBack";
 
-const Journeys = () => {
+const Scope = () => {
   return (
     <Styled.Main>
       <NavBack/>
-    <h1>Journeys</h1>
+    <h1>Scope</h1>
       <Styled.Buttons>
-        <Link to="/positions/phases">
+        <Link to="/scope/phases">
           <Styled.Button>
-            <ArrowDown></ArrowDown>
+            <ArrowLeft></ArrowLeft>
             <h2>Phases</h2>
           </Styled.Button>
         </Link>
-        <Link to="/positions/conditions">
+        <Link to="/scope/infrastructure">
           <Styled.Button>
             <ArrowDown></ArrowDown>
 
-            <h2>Conditions</h2>
+            <h2>Infrastructure</h2>
           </Styled.Button>
         </Link>
-        <Link to="/positions/people">
+        <Link to="/scope/representative">
           <Styled.Button>
-            <ArrowDown></ArrowDown>
-
-            <h2>People</h2>
+            <ArrowRight></ArrowRight>
+            <h2>Representative</h2>
           </Styled.Button>
         </Link>
       </Styled.Buttons>
     </Styled.Main>
   );
 };
-export default Journeys;
+export default Scope;

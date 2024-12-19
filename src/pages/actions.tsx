@@ -32,19 +32,17 @@ const Actions = () => {
   return (
     <>
       <Styled.Main>
-        <NavBack/>
+        <NavBack />
         <h1>Actions</h1>
-        <p>
-          <p>
-            Nulla venenatis est et neque commodo pulvinar. Nam vel vestibulum
-            mauris. Nulla fringilla libero quam, nec pharetra ipsum pharetra eu.
-            Nullam in purus eget ipsum finibus gravida. Ut eu sem hendrerit,
-            tempus sem dignissim, ullamcorper nisi. Duis venenatis, metus eget
-            egestas aliquam, diam sapien porta metus, sed tristique erat risus
-            ut tortor. Duis placerat enim tellus, vitae laoreet tellus rutrum
-            non. Nunc urna diam, tristique eu malesuada sollicitudin, volutpat
-            sed nisl.{" "}
-          </p>
+        <p style={{ width: "50vw" }}>
+          Nulla venenatis est et neque commodo pulvinar. Nam vel vestibulum
+          mauris. Nulla fringilla libero quam, nec pharetra ipsum pharetra eu.
+          Nullam in purus eget ipsum finibus gravida. Ut eu sem hendrerit,
+          tempus sem dignissim, ullamcorper nisi. Duis venenatis, metus eget
+          egestas aliquam, diam sapien porta metus, sed tristique erat risus ut
+          tortor. Duis placerat enim tellus, vitae laoreet tellus rutrum non.
+          Nunc urna diam, tristique eu malesuada sollicitudin, volutpat sed
+          nisl.{" "}
         </p>
         <Styled.Buttons>
           <Link className="bottom-right" to="/actions/methods">

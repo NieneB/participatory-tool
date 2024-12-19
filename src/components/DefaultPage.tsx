@@ -17,11 +17,16 @@ const Element = styled.div`
 `;
 
 const List = styled.ol`
-  margin-top: 5rem;
+  margin: 2rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-`;
+  flex-wrap: no-wrap;
+  row-gap: 100px;
+  width: 90%;
+  font-size: smaller;
+  justify-content:center;
+  `;
+
 const DefaultPage = ({ title, dataset }) => {
   const navigate = useNavigate();
   const [panelTitle, setPanelTitle] = useState("");
