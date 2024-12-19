@@ -7,7 +7,7 @@ import Title from "src/components/Title";
 import InteractivePanel from "src/components/InteractivePanel";
 import { MapsArrow } from "iconoir-react";
 
-const Intro = () => {
+const Actions = () => {
   const [infoOn, setInfoOn] = useState(false);
   const [opening, setOpening] = useState(true);
   const [info, setInfo] = useState({});
@@ -50,10 +50,12 @@ const Intro = () => {
           </p>
         </p>
         <Styled.Buttons>
-          <Styled.Button>
-            <h2>Method & Tools</h2>
-          </Styled.Button>
-          <Link className="bottom-right" to="/graph">
+          <Link className="bottom-right" to="/actions/methods">
+            <Styled.Button>
+              <h2>Method & Tools</h2>
+            </Styled.Button>
+          </Link>
+          <Link className="bottom-right" to="/actions/mapping">
             <Styled.Button>
               <MapsArrow
                 color="black"
@@ -64,9 +66,11 @@ const Intro = () => {
               <h2>Mapping approach</h2>
             </Styled.Button>
           </Link>
-          <Styled.Button>
-            <h2>Activation</h2>
-          </Styled.Button>
+          <Link className="bottom-right" to="/actions/activation">
+            <Styled.Button>
+              <h2>Activation</h2>
+            </Styled.Button>
+          </Link>
         </Styled.Buttons>
       </Styled.Main>
       {/* <Styled.NavButton>
@@ -87,4 +91,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default Actions;

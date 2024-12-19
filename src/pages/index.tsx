@@ -9,9 +9,9 @@ const Home = () => {
       <div className="bg-image"></div>
       <h1>WELCOME</h1>
       <Title />
-      <h2> Go to one of our 3 options :</h2>
+      <h2> Follow one of our 3 paths :</h2>
       <Styled.Buttons>
-        <Link to="/journey">
+        <Link to="/journeys">
           {" "}
           <Styled.Button>
             <div>
@@ -31,7 +31,7 @@ const Home = () => {
           </Styled.Button>
           
         </Link>
-        <Link to="/info">
+        <Link to="/actions">
           <Styled.Button>
             <div>
               <h3>Actions</h3>

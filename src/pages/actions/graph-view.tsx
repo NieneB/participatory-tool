@@ -1,10 +1,10 @@
-import GraphD3 from "../components/ActorMappingD3Graph";
+import GraphD3 from "../../components/ActorMappingD3Graph";
 import InteractivePanel from "src/components/InteractivePanel";
-import nodeData from "../data/nodes2.json";
-import relationData from "../data/relations2.json";
-import stories from "../data/stories.json";
+import nodeData from "../../data/nodes2.json";
+import relationData from "../../data/relations2.json";
+import stories from "../../data/stories.json";
 import * as Styled from "./graph.styles";
-import { PanelBack, Left, Button } from "./index.styles";
+import { PanelBack, Left, Button } from "../index.styles";
 import { ArrowDownCircle, ArrowRightCircle, MapsArrow, Xmark } from "iconoir-react";
 import { useEffect, useState } from "react";
 import UploadFile from "src/components/UploadDataSet";
