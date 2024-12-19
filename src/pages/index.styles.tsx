@@ -50,6 +50,22 @@ export const Buttons = styled.div`
   }
 `;
 
+
+export const Nav = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem;
+  
+  @media only screen and (width <=992px) {
+  }
+  /* Small screen */
+  @media only screen and (width <=600px) {
+    flex-direction: column;
+  }
+`;
+
+
 export const Button = styled.button`
   background-color: #ffffff;
   border: 1px solid #000;
@@ -73,7 +89,7 @@ export const Button = styled.button`
 
   margin: 0;
   outline: none;
-  padding: 3rem 1.5rem;
+  padding: 1rem 1.5rem;
   position: relative;
   text-align: center;
   text-decoration: none;

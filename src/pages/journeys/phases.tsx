@@ -1,26 +1,45 @@
 import InteractivePanel from "src/components/InteractivePanel";
 import * as Styled from "../index.styles";
+import DefaultPage from "src/components/DefaultPage";
 
 const Phases = () => {
-  return (
-    <Styled.Main>
-      <h1>Phases</h1>
-      <InteractivePanel>
-        <>
-          <h2>Phase description</h2>
-          <p>Extra info here</p>
-        </>
-      </InteractivePanel>
-      <ol>
-        <li>Assesment</li>
-        <li>Inventarisation</li>
-        <li>Definition</li>
-        <li>Research</li>
-        <li>Creation</li>
-        <li>Dessimination</li>
-        <li>Adaptation</li>
-      </ol>
-    </Styled.Main>
-  );
+  const dataset = [
+    {
+      title: "Assesment",
+      content: "Explenation about phase Assesment here",
+      info: "More info about Assesment here",
+    },
+    {
+      title: "Inventarisation",
+      content: "Explenation about phase Inventarisation here",
+      info: "More info about Inventarisation here",
+    },
+    {
+      title: "Definition",
+      content: "Explenation about phase Definition here",
+      info: "More info about Definition here",
+    },
+    {
+      title: "Research",
+      content: "Explenation about phase Research here",
+      info: "More info about Research here",
+    },
+    {
+      title: "Creation",
+      content: "Explenation about phase Creation here",
+      info: "More info about Creation here",
+    },
+    {
+      title: "Dessimination",
+      content: "Explenation about phase Dessimination here",
+      info: "More info about Dessimination here",
+    },
+    {
+      title: "Adaptation",
+      content: "Explenation about phase Adaptation here",
+      info: "More info about Adaptation here",
+    },
+  ];
+  return <DefaultPage title="Phases" dataset={dataset}></DefaultPage>;
 };
 export default Phases;

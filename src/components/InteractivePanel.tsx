@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FastArrowLeft, FastArrowRight } from "iconoir-react";
 
@@ -12,12 +12,11 @@ const Container = styled.div`
   &.small {
     padding: 0.8rem;
     height: 66px;
-    max-width: 2vw;
-
+    width: fit-content;
   }
 
   &.large {
-    max-width: 33vw;
+    max-width: 50vw;
     display: grid;
     grid-template-columns: 9fr 1fr;
     padding: 1rem;
@@ -58,6 +57,14 @@ const InteractivePanel = ({ children }) => {
   const collapseOnClick = (e) => {
     setIsCollasped(!isCollapsed);
   };
+
+  useEffect(() => {
+    if (children) {
+      setIsCollasped(false);
+    } else {
+      setIsCollasped(true);
+    }
+  }, [children]);
 
   return (
     <Container className={isCollapsed ? "small" : "large"}>

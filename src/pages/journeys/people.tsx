@@ -1,15 +1,13 @@
 import InteractivePanel from "src/components/InteractivePanel";
 import * as Styled from "../index.styles";
+import DefaultPage from "src/components/DefaultPage";
 
 const People = () => {
-  return (
-     <Styled.Main>
-     <h1>People</h1>
-     <div>Image here</div>
-     <InteractivePanel>
-      <h1>Role in proces </h1>
-     </InteractivePanel>
-   </Styled.Main>
-  );
+  const dataset = [{ title: "Individual", content: "", info: "" },
+    { title: "Community", content: "", info: "" },
+    { title: "Government", content: "", info: "" }
+  ];
+
+  return <DefaultPage title="People" dataset={dataset}></DefaultPage>;
 };
 export default People;

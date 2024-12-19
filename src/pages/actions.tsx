@@ -6,6 +6,7 @@ import { Button } from "./index.styles";
 import Title from "src/components/Title";
 import InteractivePanel from "src/components/InteractivePanel";
 import { MapsArrow } from "iconoir-react";
+import NavBack from "src/components/NavBack";
 
 const Actions = () => {
   const [infoOn, setInfoOn] = useState(false);
@@ -30,12 +31,8 @@ const Actions = () => {
 
   return (
     <>
-      <Styled.Left>
-        <InteractivePanel>
-          <Title></Title>
-        </InteractivePanel>
-      </Styled.Left>
       <Styled.Main>
+        <NavBack/>
         <h1>Actions</h1>
         <p>
           <p>
@@ -73,20 +70,6 @@ const Actions = () => {
           </Link>
         </Styled.Buttons>
       </Styled.Main>
-      {/* <Styled.NavButton>
-        <Link className="bottom-right" to="/graph">
-          <Button>
-            {" "}
-            Go to the Actor Mapping{" "}
-            <MapsArrow
-              color="black"
-              width={36}
-              height={36}
-              style={{ transform: "rotate(90deg)" }}
-            />
-          </Button>
-        </Link>
-      </Styled.NavButton> */}
     </>
   );
 };

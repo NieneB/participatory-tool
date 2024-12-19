@@ -1,8 +1,11 @@
+import NavBack from "src/components/NavBack";
 import * as Styled from "./index.styles";
 
 const Positions = () => {
   return (
     <Styled.Main>
+      <NavBack />
+
       <h1>Positions</h1>
       <Styled.Buttons>
         <Styled.Button>

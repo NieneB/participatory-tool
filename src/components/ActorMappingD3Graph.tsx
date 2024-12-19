@@ -35,10 +35,11 @@ const StyledSVG = styled.svg`
 
 const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
   const visual = useRef();
-  const width = 1000;
+  const width = 950;
   const height = 750;
   const [selectedNode, setSelectedNode] = useState("");
   const [graphData, setGraphData] = useState([]);
+  const iconSize = 40;
 
   useEffect(() => {
     // inital setting up graph
@@ -138,26 +139,20 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
           d3
             .forceLink(graphData.links)
             .id((d) => d.id)
-            // .distance((d) => {
-            //   return d.p.segments[0].relationship.type === "closeto"
-            //     ? 100
-            //     : 150;
-            // })
-            .strength(1)
-        )
-        .force("x", d3.forceX(width / 2).strength(0.03))
-        .force("y", d3.forceY(height / 2).strength(0.03))
-        .force("charge", d3.forceManyBody().strength(-1000))
-        .force(
-          "collision",
-          d3
-            .forceCollide()
-            .radius((d) => {
-              return d.label === "place" ? 40 : 10;
+            .distance((d) => {
+              return d.p.segments[0].relationship.type === "closeto" ? 90 : 100;
             })
             .strength(1)
         )
-
+        .force("x", d3.forceX(width / 2).strength(0.1))
+        .force("y", d3.forceY(height / 3).strength(0.1))
+        .force("charge", d3.forceManyBody().strength(-100))
+        .force(
+          "collision",
+          d3.forceCollide().radius((d) => {
+            return d.label === "place" ? 40 : 10;
+          })
+        )
         .on("tick", ticked);
 
       const positions = d3.group(graphData.nodes, (d) => d.properties.position);
@@ -179,7 +174,7 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               .attr("filter", "url(#blur)")
               .attr("id", (d) => `position-${d.id}`)
               .attr("r", (d) => {
-                return 40;
+                return iconSize;
               })
               .style("visibility", positionsOn ? "visible" : "hidden")
               .style("fill", (d) => {
@@ -193,9 +188,6 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
           (update) =>
             update
               .attr("id", (d) => `position-${d.id}`)
-              .attr("r", (d) => {
-                return 40;
-              })
               .style("visibility", positionsOn ? "visible" : "hidden")
               .style("fill", (d) => {
                 let color = d3.color(colorPositions(d.properties.position));
@@ -245,17 +237,17 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               .attr("fill", "#525252")
               .attr("width", (d) => {
                 return d.properties.size === "organization"
-                  ? "50"
+                  ? iconSize + 10
                   : d.properties.size === "person"
-                  ? "20"
-                  : "40";
+                  ? iconSize - 10
+                  : iconSize;
               })
               .attr("height", (d) => {
                 return d.properties.size === "organization"
-                  ? "50"
+                  ? iconSize + 10
                   : d.properties.size === "person"
-                  ? "20"
-                  : "40";
+                  ? iconSize - 10
+                  : iconSize;
               })
               .attr("rx", (d) => {
                 return d.properties.size === "person" ? "3" : "8";
@@ -364,7 +356,7 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               .classed("nodes circle-nodes", true)
               .style("cursor", "pointer")
               .attr("id", (d) => d.id)
-              .attr("r", "20")
+              .attr("r", iconSize-20)
               .attr("fill", "#525252")
               .on("click", (e, d) => {
                 setSelectedNode(d.id);

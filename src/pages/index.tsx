@@ -1,14 +1,17 @@
 import * as Styled from "./index.styles";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRightSquare, MapsArrow } from "iconoir-react";
+import {
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight,
+  ArrowUpRightSquare,
+  MapsArrow,
+} from "iconoir-react";
 import Title from "src/components/Title";
 
 const Home = () => {
-  const navigate = useNavigate()
   return (
     <Styled.Main>
-      <button onClick={()=> navigate(-1)}><ArrowLeft></ArrowLeft></button>
-
       <div className="bg-image"></div>
       <h1>WELCOME</h1>
       <Title />
@@ -32,18 +35,13 @@ const Home = () => {
 
             <ArrowDown color="black" width={36} height={36} />
           </Styled.Button>
-          
         </Link>
         <Link to="/actions">
           <Styled.Button>
             <div>
               <h3>Actions</h3>
             </div>
-            <ArrowRight
-              color="black"
-              width={36}
-              height={36}
-            />
+            <ArrowRight color="black" width={36} height={36} />
           </Styled.Button>
         </Link>
       </Styled.Buttons>
