@@ -14,6 +14,9 @@ export const StoryCarrousel = styled.div`
 
 export const Story = styled.button`
     padding: 0.5rem;
+    &.selected {
+        color: red;
+    }
 `
 
 export const NavButton = styled.div`

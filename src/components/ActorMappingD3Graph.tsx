@@ -34,57 +34,34 @@ const StyledSVG = styled.svg`
 
 const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
   const visual = useRef();
-  const width = 750;
+  const width = 1000;
   const height = 750;
   const [selectedNode, setSelectedNode] = useState("");
   const [graphData, setGraphData] = useState([]);
-  const iconSize = 40;
+  const iconSize = 30;
 
+  // Simulation settings
   const simulation = d3
     .forceSimulation(graphData.nodes)
-    .force("charge", d3.forceManyBody())
     .force(
       "link",
-      d3
-        .forceLink(graphData.links)
-        .id((d) => d.id)
-        .strength(1)
+      d3.forceLink(graphData.links).id((d) => d.id)
     )
-    .force("x", d3.forceX(width / 2).strength(0.03))
-    .force("y", d3.forceY(height / 2).strength(0.03))
-    .force("charge", d3.forceManyBody().strength(-100))
-    .force(
-      "collision",
-      d3
-        .forceCollide()
-        .radius((d) => {
-          console.log(d);
-          switch (d.label) {
-            case "area":
-              return 70;
-            case "possibility":
-              return 50;
-            case "actor":
-              return 40;
-            default:
-              1;
-              break;
-          }
-        })
-        .strength(1)
-    )
-    .force("center", d3.forceCenter(width, height / 2).strength(0.04))
-    .tick(2000);
+    .force("collide", d3.forceCollide(iconSize * 1.5))
+    .force("charge", d3.forceManyBody().strength(-250))
+    .force("x", d3.forceX())
+    .force("y", d3.forceY())
+    // .stop();
+
 
   function ticked() {
     const svg = d3.select(visual.current);
+
     // Positions
     svg
       .selectAll(".nodes-background")
       .attr("cx", (d) => d.x)
       .attr("cy", (d) => d.y);
-    // .attr("x", (d) => d.x - 20)
-    // .attr("y", (d) => d.y - 20);
 
     // Actors
     svg
@@ -134,12 +111,10 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
   useEffect(() => {
     // inital setting up graph
     d3.select(visual.current)
-      .attr("preserveAspectRatio", "xMinYMin meet")
-      .attr("width", "100%")
-      .attr("height", "100%")
-      // .attr("style", "max-width: 100%; height: auto;")
-      .attr("viewBox", [0, 0, width, height]);
-
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [-width / 2, -height / 2, width, height])
+      .attr("style", "max-width: 100%; height: auto;");
 
     // close all on click
     d3.select("body").on("click", function (e) {
@@ -148,8 +123,15 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
         setSelectedNode("");
       }
     });
+    simulation.tick(2000)
+
+    // Start Force Simulation
+    // simulation.on("tick", ticked);
+    // simulation.stop()
   }, []);
 
+
+  // Clean up input dataset
   useEffect(() => {
     if (inputDataSet) {
       console.log("change dataset in Graph");
@@ -195,26 +177,20 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
       } else {
         return;
       }
-      console.log("new data", newData);
+      // console.log("new data", newData);
       setGraphData(newData);
     }
   }, [inputDataSet]);
 
+  // DRAW graph nodes and link here
   useEffect(() => {
-    simulation.on("tick", ticked);
-
     if (graphData.nodes && visual.current) {
       const svg = d3.select(visual.current);
-
       const labels = d3.group(graphData.nodes, (d) => d.label);
-      
       const sizeLabels = d3
         .scaleOrdinal()
         .domain(labels.values())
         .range([2, 8]);
-
-      // Start Force Simulation
-
       const positions = d3.group(graphData.nodes, (d) => d.properties.position);
       const colorPositions = d3.scaleOrdinal(positions.values(), [
         "#ca619d",
@@ -380,8 +356,8 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
               )
               .classed("nodes ellipse-nodes", true)
               .style("cursor", "pointer")
-              .attr("ry", "25")
-              .attr("rx", "40")
+              .attr("ry", iconSize / 2)
+              .attr("rx", iconSize)
               .attr("fill", "#525252")
               .on("click", (e, d) => {
                 setSelectedNode(d.id);
@@ -489,7 +465,7 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
 
       // Reheat the simulation when drag starts, and fix the subject position.
       function dragstarted(event) {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
+        if (!event.active) simulation.alphaTarget(0.1).restart();
         event.subject.fx = event.subject.x;
         event.subject.fy = event.subject.y;
       }
@@ -503,11 +479,10 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
       // Restore the target alpha so the simulation cools after dragging ends.
       // Unfix the subject position now that it’s no longer being dragged.
       function dragended(event) {
-        if (!event.active) simulation.alphaTarget(0);
+        if (!event.active) simulation.alphaTarget(-0.1);
         event.subject.fx = null;
         event.subject.fy = null;
       }
-     simulation.restart()
     }
   }, [graphData, positionsOn]);
 
@@ -533,8 +508,6 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
         });
     }
   }, [selectedNode]);
-
-
 
   return (
     <StyledSVG ref={(el) => (visual.current = el)}>

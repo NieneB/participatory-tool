@@ -1,4 +1,4 @@
-import GraphD3 from "../../components/ActorMappingD3Graph";
+import GraphD3 from "../../components/ActorMappingD3Graph_v2";
 import InteractivePanel from "src/components/InteractivePanel";
 import nodeData from "../../data/nodes2.json";
 import relationData from "../../data/relations2.json";
@@ -14,24 +14,29 @@ import {
 import { useEffect, useState } from "react";
 import UploadFile from "src/components/UploadDataSet";
 import NavBack from "src/components/NavBack";
+import { SimulationNodeDatum } from "d3";
 
 const GraphView = () => {
   const [isOpenCustom, setIsOpenCustom] = useState(false);
   const [infoContent, setInfoContent] = useState("");
-  const [dataSet, setDataSet] = useState();
   const [originalDataSet, setOriginalDataSet] = useState();
-  const [positionsOn, setPositionsOn] = useState(false);
+  const [dataSet, setDataSet] = useState();
 
+  const [positionsOn, setPositionsOn] = useState(false);
+  const [extraCollapse, setExtraCollapse] = useState([]);
+  const [activeStory, setActiveStory] = useState("")
   function toggleMakingYourOwn(e) {
     setIsOpenCustom(!isOpenCustom);
   }
   function setInfo(element) {
+    setExtraCollapse(["info", element ? true : false]);
     setInfoContent(element);
   }
 
-  function changeDataSet(story) {
-    console.log("update story data", story);
+  function changeStory(story) {
+    setActiveStory(story.shortTitle)
     if (story.shortTitle === "Positions") {
+      setExtraCollapse(["legend", true]);
       setPositionsOn(!positionsOn);
     }
   }
@@ -72,7 +77,52 @@ const GraphView = () => {
   useEffect(() => {
     if (originalDataSet) {
       const newObj = toLowerCaseKeysAndValues(originalDataSet);
-      setDataSet(newObj);
+      if (newObj) {
+        console.log("change dataset in Graph");
+
+        interface CustomNode extends SimulationNodeDatum {
+          id: string;
+          name: string;
+        }
+
+        let newData = {
+          links: [],
+          nodes: [],
+        };
+        if (newObj.nodes.length && newObj.nodes[0].n) {
+          newObj.links.map((element) => {
+            element.source = element.p.start.elementid;
+            element.target = element.p.end.elementid;
+            element.value = 1;
+            element.strength = 2;
+          });
+          newData.links = newObj.links;
+          const initNodes: CustomNode[] = [
+            newObj.nodes.map((d) => {
+              d.n.id = d.n.elementid;
+              d.n.label = d.n.labels[0];
+              return newData.nodes.push(d.n);
+            }),
+          ];
+        } else if (newObj.nodes.length) {
+          newObj.nodes.map((element) => {
+            element.label = element.labels[0];
+          });
+
+          newData.nodes = newObj.nodes;
+
+          newObj.relationships.map((element) => {
+            element.source = element.fromid;
+            element.target = element.toid;
+            element.value = 1;
+            element.strength = 2;
+          });
+          newData.links = newObj.relationships;
+        } else {
+          return;
+        }
+        setDataSet(newData);
+      }
     }
   }, [originalDataSet]);
 
@@ -81,9 +131,9 @@ const GraphView = () => {
       <PanelBack key="graph">
         {dataSet && (
           <GraphD3
-            inputDataSet={dataSet}
+            graphData={dataSet}
             setInfo={setInfo}
-            positionsOn={positionsOn}
+            activeStory={activeStory}
           ></GraphD3>
         )}
       </PanelBack>
@@ -91,33 +141,49 @@ const GraphView = () => {
         {stories.map((story) => {
           return (
             <Styled.Story
-              onClick={() => {
-                changeDataSet(story);
+              onClick={(e) => {
+                changeStory(story);
               }}
               key={story.shortTitle}
+              className={activeStory === story.shortTitle ? "selected" : ""}
             >
               <h1>{story.shortTitle}</h1>
             </Styled.Story>
           );
         })}
       </Styled.StoryCarrousel>
-        <NavBack/>
+      <NavBack />
       <Left key="left-panels">
         <div>
-          <InteractivePanel key="expl">
+          <InteractivePanel
+            key="expl"
+            id="expl"
+            extraCollapse={extraCollapse[0] === "expl" && extraCollapse[1]}
+            setExtraCollapse={setExtraCollapse}
+          >
             <>
               <h1>Explanation</h1>
               <p>Actor Mapping Oirschot description</p>
             </>
           </InteractivePanel>
         </div>
-        <InteractivePanel key="legend">
+        <InteractivePanel
+          key="legend"
+          id="legend"
+          extraCollapse={extraCollapse[0] === "legend" && extraCollapse[1]}
+          setExtraCollapse={setExtraCollapse}
+        >
           <>
             <h1>Legend</h1>
             <p>Items based on Story</p>
           </>
         </InteractivePanel>
-        <InteractivePanel key="info">
+        <InteractivePanel
+          key="info"
+          id="info"
+          extraCollapse={extraCollapse[0] === "info" && extraCollapse[1]}
+          setExtraCollapse={setExtraCollapse}
+        >
           <>
             <h1>
               InfoPanel {infoContent.labels && ": " + infoContent.labels[0]}

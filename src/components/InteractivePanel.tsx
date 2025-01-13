@@ -51,22 +51,20 @@ const Content = styled.div`
   grid-column: 1 / span 1;
 `;
 
-const InteractivePanel = ({ children }) => {
+const InteractivePanel = ({ id, extraCollapse, setExtraCollapse, children }) => {
   const [isCollapsed, setIsCollasped] = useState(false);
 
   const collapseOnClick = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setIsCollasped(!isCollapsed);
+    console.log("collapse on click,", isCollapsed, id);
+    setExtraCollapse(false)
   };
 
   useEffect(() => {
-    console.log("check childeren", children)
-    if (children) {
-      setIsCollasped(false);
-    } else {
-      setIsCollasped(true);
-    }
-  }, [children]);
+    console.log("collapse extra,", extraCollapse, id)
+    isCollapsed  && extraCollapse ?  setIsCollasped(false) : ''
+  }, [extraCollapse]);
 
   return (
     <Container key={"1"} className={isCollapsed ? "small" : "large"}>

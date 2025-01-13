@@ -120,6 +120,10 @@ export const PanelBack = styled.div`
   left: 0;
   background: rgba(181, 181, 181, 0.2);
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  
 `;
 
 // On the left
