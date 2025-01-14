@@ -1,7 +1,6 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, act } from "react";
 import * as d3 from "d3";
 import styled from "styled-components";
-import { SimulationNodeDatum } from "d3";
 
 const StyledSVG = styled.svg`
   /* font-family: "Inter"; */
@@ -18,11 +17,18 @@ const StyledSVG = styled.svg`
   .nodes {
     /* mix-blend-mode: multiply; */
     stroke-width: 0px;
-    stroke: rgba(0, 0, 0, 0);
+    stroke: var(--color-pink-dark);
+    fill: var(--color-pink);
   }
+
   .nodes.clicked {
-    stroke: #eeff00 !important;
+    stroke: var(--color-pink-dark) !important;
     stroke-width: 10px;
+  }
+
+  .links {
+    stroke: var(--color-pink);
+    stroke-width: 1.2;
   }
 
   text {
@@ -53,6 +59,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
   }
 
   function setSelected(e, d) {
+    simulation.stop();
     setInfo(d);
     d3.select(visual.current)
       .selectAll(`.nodes`)
@@ -64,64 +71,58 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
       .classed("clicked", true)
       .transition();
   }
+
+  const simulation = d3
+    .forceSimulation()
+    .force("collide", d3.forceCollide(iconSize * 1.5))
+    .force("charge", d3.forceManyBody().strength(-250))
+    .force("x", d3.forceX())
+    .force("y", d3.forceY())
+    .stop();
+
   useEffect(() => {
     d3.select("body").on("click", function (e) {
       if (e.target.nodeName == "svg") {
         cleanSelection();
       }
     });
-  });
+  }, []);
 
   // DRAW graph nodes and link here
   useEffect(() => {
     if (graphData.nodes && visual.current) {
-      const simulation = d3
-        .forceSimulation(graphData.nodes)
-        .force(
-          "link",
-          d3
-            .forceLink(graphData.links)
-            .id((d) => d.id)
-            .distance(function (link) {
-              let m =
-                link.source.properties.position ===
-                link.target.properties.position
-                  ? 10
-                  : 0;
-              m =
-                link.source.properties.size === link.target.properties.size
-                  ? m * 1.1
-                  : m * 1;
-              return m;
-            })
-            .strength(function (link) {
-              // Multiplier depending on position and size of the nodes
-              let m =
-                link.source.properties.position ===
-                link.target.properties.position
-                  ? 0.01
-                  : 0;
-              m =
-                link.source.properties.size === link.target.properties.size
-                  ? m * 10
-                  : m * 1;
-              return m;
-            })
-        )
-        .force("collide", d3.forceCollide(iconSize * 1.5))
-        .force("charge", d3.forceManyBody().strength(-250))
-        .force("x", d3.forceX())
-        .force("y", d3.forceY())
-        .stop();
-
+      simulation.nodes(graphData.nodes).force(
+        "link",
+        d3
+          .forceLink(graphData.links)
+          .id((d) => d.id)
+          .distance(function (link) {
+            let m =
+              link.source.properties.position ===
+              link.target.properties.position
+                ? 10
+                : 0;
+            m =
+              link.source.properties.size === link.target.properties.size
+                ? m * 1.1
+                : m * 1;
+            return m;
+          })
+          .strength(function (link) {
+            // Multiplier depending on position and size of the nodes
+            let m =
+              link.source.properties.position ===
+              link.target.properties.position
+                ? 0.01
+                : 0;
+            m =
+              link.source.properties.size === link.target.properties.size
+                ? m * 10
+                : m * 1;
+            return m;
+          })
+      );
       simulation.tick(300);
-
-      const positions = d3.group(graphData.nodes, (d) => d.properties.position);
-      const colorPositions = d3.scaleOrdinal(positions.values(), [
-        "#ca619d",
-        "#5a70c0",
-        "#f1ae23",
-      ]);
 
       const svg = d3.select(visual.current);
       svg
@@ -132,17 +133,13 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
             enter
               .append("line")
               .classed("links", true)
-              .attr("stroke", "#484444")
-              .attr("stroke-opacity", 0.5)
-              .attr("fill", "transparent")
-              .attr("stroke-width", 1.2)
               .attr("x1", (d) => d.source.x)
               .attr("y1", (d) => d.source.y)
               .attr("x2", (d) => d.target.x)
               .attr("y2", (d) => d.target.y);
           },
           (update) => {
-            update.attr("stroke-width", (d) => Math.sqrt(d.value));
+            update;
           },
           (exit) => exit.call((exit) => exit.transition().remove())
         );
@@ -155,40 +152,40 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
               .append("circle")
               .classed("nodes", true)
               .attr("id", (d) => `position-${d.identity}`)
-              .attr("r", iconSize)
+              .attr("r", (d) => {
+                if (activeStory === "Stakeholders") {
+                  return d.properties.size === "organization"
+                    ? iconSize + 10
+                    : d.properties.size === "person"
+                    ? iconSize - 10
+                    : iconSize;
+                } else {
+                  return iconSize;
+                }
+              })
               .attr("cx", function (d) {
                 return d.x;
               })
               .attr("cy", function (d) {
                 return d.y;
               })
-              .style("fill", (d) => {
-                let color = d3.color(colorPositions(d.properties.position));
-                color.opacity = 1;
-                // return d.properties.position ? color : "none";
-                return "#000fff";
-              })
-              .style("stroke", (d) => {
-                return d3
-                  .color(colorPositions(d.properties.position))
-                  ?.darker(0.8);
-              })
               .on("click", (e, d) => setSelected(e, d));
           },
           (update) =>
             update
-              .attr("id", (d) => `position-${d.id}`)
-              .style("fill", (d) => {
-                let color = d3.color(colorPositions(d.properties.position));
-                color.opacity = 0.4;
-                // return d.properties.position ? color : "none";
-                return "#000fff";
+              .attr("id", (d) => `position-${d.identity}`)
+              .attr("r", (d) => {
+                if (activeStory === "Stakeholders") {
+                  return d.properties.size === "organization"
+                    ? iconSize + 10
+                    : d.properties.size === "person"
+                    ? iconSize - 10
+                    : iconSize;
+                } else {
+                  return iconSize;
+                }
               })
-              .style("stroke", (d) => {
-                return d3
-                  .color(colorPositions(d.properties.position))
-                  ?.darker(0.8);
-              }),
+              .on("click", (e, d) => setSelected(e, d)),
           (exit) =>
             exit.call((exit) =>
               exit.transition().style("fill", "transparant").remove()
@@ -251,25 +248,57 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
       // }
       // zoom_handler(svg);
     }
-  }, [graphData]);
+  }, [graphData, activeStory]);
 
-  useEffect(() => {
-    console.log(activeStory);
-    // Reset to default graph and then do specific things. 
-    
-    if (activeStory === "Stakeholders") {
-      d3.select(visual.current)
-        .selectAll(".nodes")
-        .transition()
-        .attr("r", (d) => {
-          return d.properties.size === "organization"
-            ? iconSize + 10
-            : d.properties.size === "person"
-            ? iconSize - 10
-            : iconSize;
-        });
-    }
-  }, [activeStory]);
+  // useEffect(() => {
+  //   console.log(activeStory);
+  //   // Reset to default graph and then do specific things.
+
+  //   if (activeStory === "Stakeholders") {
+  //     console.log("hello stakeholders")
+  //     d3.select(visual.current)
+  //       .selectAll(".nodes")
+  //       .transition()
+  //       .attr("r", (d) => {
+  //         return d.properties.size === "organization"
+  //           ? iconSize + 10
+  //           : d.properties.size === "person"
+  //           ? iconSize - 10
+  //           : iconSize;
+  //       });
+  //   } else {
+  //     d3.select(visual.current)
+  //       .selectAll(".nodes")
+  //       .transition()
+  //       .attr("r", iconSize);
+  //   }
+
+  //   if (activeStory === "Positions") {
+  //     const positions = d3.group(graphData.nodes, (d) => d.properties.position);
+  //     const colorPositions = d3.scaleOrdinal(positions.values(), [
+  //       "#ca619d",
+  //       "#5a70c0",
+  //       "#f1ae23",
+  //     ]);
+
+  //     d3.select(visual.current)
+  //       .selectAll(".nodes")
+  //       .transition()
+  //       .style("fill", (d) => {
+  //         let color = d3.color(colorPositions(d.properties.position));
+  //         return d.properties.position ? color : "none";
+  //       })
+  //       .style("stroke", (d) => {
+  //         return d3.color(colorPositions(d.properties.position))?.darker(0.8);
+  //       });
+  //   } else {
+  //     d3.select(visual.current)
+  //       .selectAll(".nodes")
+  //       .transition()
+  //       .style("fill", "")
+  //   }
+
+  // }, [activeStory]);
   return (
     <StyledSVG
       ref={(el) => (visual.current = el)}

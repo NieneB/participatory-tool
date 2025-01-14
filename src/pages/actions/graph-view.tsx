@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import UploadFile from "src/components/UploadDataSet";
 import NavBack from "src/components/NavBack";
 import { SimulationNodeDatum } from "d3";
+import LegendD3 from "src/components/Legend";
 
 const GraphView = () => {
   const [isOpenCustom, setIsOpenCustom] = useState(false);
@@ -176,6 +177,7 @@ const GraphView = () => {
           <>
             <h1>Legend</h1>
             <p>Items based on Story</p>
+            <LegendD3 activeStory={activeStory}/>
           </>
         </InteractivePanel>
         <InteractivePanel
