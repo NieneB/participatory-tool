@@ -33,23 +33,23 @@ const LegendD3 = ({ activeStory }) => {
     "possibility",
   ];
 
-  useEffect(() => {
-    console.log(activeStory);
-    // Reset to default graph and then do specific things.
-
-    if (activeStory === "Stakeholders") {
-      d3.select(visual.current)
-        .selectAll(".nodes")
-        .transition()
-        .attr("r", (d) => {
-          return d.properties.size === "organization"
-            ? iconSize + 10
-            : d.properties.size === "person"
-            ? iconSize - 10
-            : iconSize;
-        });
-    }
-  }, [activeStory]);
+//   useEffect(() => {
+//     console.log(activeStory);
+//     // Reset to default graph and then do specific things.
+//       d3.select(visual.current)
+//         .selectAll(".item")
+//         .transition()
+//         .style("fill", (e,d) => {
+//           if (activeStory === "Places") {
+//             console.log("hello", e)
+//             return d.id === "place" ? "black" : "var(--color-pink)";
+//           } else {
+//             return "var(--color-pink)";
+//           }
+//         })
+        
+    
+//   }, [activeStory]);
 
   return (
     <StyledSVG
@@ -69,7 +69,7 @@ const LegendD3 = ({ activeStory }) => {
               cy={i * 25 + 10}
               r="10"
             />
-            <text x={25} y={(i * 25) + 15}>
+            <text x={25} y={i * 25 + 15}>
               {item}
             </text>
           </g>

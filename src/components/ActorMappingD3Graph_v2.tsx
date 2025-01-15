@@ -33,12 +33,13 @@ const StyledSVG = styled.svg`
 
   text {
     font-family: arial;
-    font-size: 0.5rem;
+    font-size: 1rem;
     paint-order: stroke;
     stroke: #fff;
-    stroke-width: 1px;
-    stroke-linecap: butt;
-    stroke-linejoin: miter;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-opacity: 0.8;
     font-weight: 800;
   }
 `;
@@ -72,10 +73,34 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
       .transition();
   }
 
+  // Amount of links per node is the connections. This can be used to set the size of a circle
+  const relationsWeightScale = d3
+    .scaleLog(
+      [
+        1,
+        d3.max(graphData.nodes, function (d) {
+          return d.properties.connections;
+        }),
+      ],
+      [iconSize / 3, iconSize * 2]
+    )
+    .base(1);
+
   const simulation = d3
     .forceSimulation()
-    .force("collide", d3.forceCollide(iconSize * 1.5))
-    .force("charge", d3.forceManyBody().strength(-250))
+    // .force("collide", d3.forceCollide(iconSize * 1.5))
+    .force("charge", d3.forceManyBody().strength(-150))
+    .force(
+      "collide",
+      d3
+        .forceCollide()
+        .radius((d) => {
+          return relationsWeightScale(d.properties.connections + 1) * 2;
+        })
+        .iterations(1)
+        // .radius(iconSize * 1.5)
+        .iterations(1)
+    )
     .force("x", d3.forceX())
     .force("y", d3.forceY())
     .stop();
@@ -91,37 +116,70 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
   // DRAW graph nodes and link here
   useEffect(() => {
     if (graphData.nodes && visual.current) {
-      simulation.nodes(graphData.nodes).force(
-        "link",
-        d3
-          .forceLink(graphData.links)
-          .id((d) => d.id)
-          .distance(function (link) {
-            let m =
-              link.source.properties.position ===
-              link.target.properties.position
-                ? 10
-                : 0;
-            m =
-              link.source.properties.size === link.target.properties.size
-                ? m * 1.1
-                : m * 1;
-            return m;
-          })
-          .strength(function (link) {
-            // Multiplier depending on position and size of the nodes
-            let m =
-              link.source.properties.position ===
-              link.target.properties.position
-                ? 0.01
-                : 0;
-            m =
-              link.source.properties.size === link.target.properties.size
-                ? m * 10
-                : m * 1;
-            return m;
-          })
-      );
+      const positions = d3.group(graphData.nodes, (d) => d.properties.position);
+      const colorPositions = d3.scaleOrdinal(positions.values(), [
+        "#ca619d",
+        "#5a70c0",
+        "#f1ae23",
+      ]);
+
+      simulation
+        .nodes(graphData.nodes)
+        .force(
+          "link",
+          d3
+            .forceLink(graphData.links)
+            .id((d) => d.id)
+            .strength(0.3)
+        )
+        // simulation.restart();
+
+        // if (activeStory === "Relations") {
+        //   console.log("R aan ");
+        //   simulation.force(
+        //     "collide",
+        //     d3
+        //       .forceCollide()
+        //       .radius((d) => {
+        //         return relationsWeightScale(d.properties.connections) * 1.5;
+        //       })
+        //       .iterations(1)
+        //   );
+        //   // simulation.restart();
+        // }
+
+        .force(
+          "link",
+          d3
+            .forceLink(graphData.links)
+            .id((d) => d.id)
+            .distance(function (link) {
+              let m =
+                link.source.properties.position ===
+                link.target.properties.position
+                  ? 10
+                  : 0;
+              m =
+                link.source.properties.size === link.target.properties.size
+                  ? m * 1.1
+                  : m * 1;
+              return m;
+            })
+            .strength(1)
+          // .strength(function (link) {
+          //   // Multiplier depending on position and size of the nodes
+          //   let m =
+          //     link.source.properties.position ===
+          //     link.target.properties.position
+          //       ? 0.01
+          //       : 0;
+          //   m =
+          //     link.source.properties.size === link.target.properties.size
+          //       ? m * 10
+          //       : m * 1;
+          //   return m;
+          // })
+        );
       simulation.tick(300);
 
       const svg = d3.select(visual.current);
@@ -163,6 +221,29 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                   return iconSize;
                 }
               })
+              .style("fill", (d) => {
+                if (activeStory === "Positions") {
+                  let color = d3.color(colorPositions(d.properties.position));
+                  return d.properties.position ? color : "none";
+                } else if (activeStory === "Places") {
+                  return d.labels[0] === "area" ? "black" : "var(--color-pink)";
+                } else if (activeStory === "Stakeholders") {
+                  return d.labels[0] === "actor"
+                    ? "black"
+                    : "var(--color-pink)";
+                } else {
+                  return "var(--color-pink)";
+                }
+              })
+              .style("stroke", (d) => {
+                if (activeStory === "Positions") {
+                  return d3
+                    .color(colorPositions(d.properties.position))
+                    ?.darker(0.8);
+                } else {
+                  return "var(--color-pink-dark)";
+                }
+              })
               .attr("cx", function (d) {
                 return d.x;
               })
@@ -181,8 +262,33 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                     : d.properties.size === "person"
                     ? iconSize - 10
                     : iconSize;
+                } else if (activeStory === "Relations") {
+                  return relationsWeightScale(d.properties.connections + 1);
                 } else {
                   return iconSize;
+                }
+              })
+              .style("fill", (d) => {
+                if (activeStory === "Positions") {
+                  let color = d3.color(colorPositions(d.properties.position));
+                  return d.properties.position ? color : "none";
+                } else if (activeStory === "Places") {
+                  return d.labels[0] === "area" ? "black" : "var(--color-pink)";
+                } else if (activeStory === "Stakeholders") {
+                  return d.labels[0] === "actor"
+                    ? "black"
+                    : "var(--color-pink)";
+                } else {
+                  return "var(--color-pink)";
+                }
+              })
+              .style("stroke", (d) => {
+                if (activeStory === "Positions") {
+                  return d3
+                    .color(colorPositions(d.properties.position))
+                    ?.darker(0.8);
+                } else {
+                  return "var(--color-pink-dark)";
                 }
               })
               .on("click", (e, d) => setSelected(e, d)),
@@ -190,6 +296,67 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
             exit.call((exit) =>
               exit.transition().style("fill", "transparant").remove()
             )
+        );
+
+      svg
+        .selectAll("text")
+        .data(graphData.nodes)
+        .join(
+          (enter) => {
+            enter
+              .append("text")
+              .classed("text", true)
+              .attr("id", (d) => `text${d.id}`)
+              .text((d) => {
+                return d.properties.name;
+              })
+              .attr("x", (d) => {
+                if (activeStory === "Stakeholders") {
+                  return d.properties.size === "organization"
+                    ? d.x + iconSize + 10
+                    : d.properties.size === "person"
+                    ? d.x + iconSize - 10
+                    : d.x + iconSize;
+                } else if (activeStory === "Relations") {
+                  return (
+                    d.x + relationsWeightScale(d.properties.connections + 1)
+                  );
+                } else {
+                  return d.x + iconSize;
+                }
+
+                // let l = d.properties.name ? d.properties.name.length : 0;
+                // return   d.x + iconSize;
+              })
+              .attr("y", (d) => {
+                return d.y + 5;
+              });
+          },
+          (update) =>
+            update
+              .attr("id", (d) => `text${d.id}`)
+              .text((d) => {
+                return d.properties.name;
+              })
+              .attr("x", (d) => {
+                if (activeStory === "Stakeholders") {
+                  return d.properties.size === "organization"
+                    ? d.x + iconSize + 10
+                    : d.properties.size === "person"
+                    ? d.x + iconSize - 10
+                    : d.x + iconSize;
+                } else if (activeStory === "Relations") {
+                  return (
+                    d.x + relationsWeightScale(d.properties.connections + 1)
+                  );
+                } else {
+                  return d.x + iconSize;
+                }
+
+                // let l = d.properties.name ? d.properties.name.length : 0;
+                // return   d.x + iconSize;
+              }),
+          (exit) => exit.call((exit) => exit.transition().remove())
         );
 
       svg
@@ -216,11 +383,33 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
             .selectAll(".nodes")
             .attr("cx", (d) => d.x)
             .attr("cy", (d) => d.y);
+
+          svg
+            .selectAll(".text")
+            .attr("x", (d) => {
+              if (activeStory === "Stakeholders") {
+                return d.properties.size === "organization"
+                  ? d.x + iconSize + 10
+                  : d.properties.size === "person"
+                  ? d.x + iconSize - 10
+                  : d.x + iconSize;
+              } else if (activeStory === "Relations") {
+                return d.x + relationsWeightScale(d.properties.connections + 1);
+              } else {
+                return d.x + iconSize;
+              }
+            })
+            .attr("y", (d) => d.y + 5);
         })
+
         .alphaTarget(-0.1);
+
       simulation.nodes().forEach(function (d) {
+        d.fx = d.x;
+        d.fy = d.y;
         d.fixed = true;
       });
+
       // Reheat the simulation when drag starts, and fix the subject position.
       function dragstarted(event) {
         if (!event.active) simulation.alphaTarget(0.1).restart();
@@ -241,64 +430,9 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
         event.subject.fx = event.x;
         event.subject.fy = event.y;
       }
-
-      // var zoom_handler = d3.zoom().on("zoom", zoom_actions);
-      // function zoom_actions() {
-      //   svg.attr("transform", d3.event.transform);
-      // }
-      // zoom_handler(svg);
     }
   }, [graphData, activeStory]);
 
-  // useEffect(() => {
-  //   console.log(activeStory);
-  //   // Reset to default graph and then do specific things.
-
-  //   if (activeStory === "Stakeholders") {
-  //     console.log("hello stakeholders")
-  //     d3.select(visual.current)
-  //       .selectAll(".nodes")
-  //       .transition()
-  //       .attr("r", (d) => {
-  //         return d.properties.size === "organization"
-  //           ? iconSize + 10
-  //           : d.properties.size === "person"
-  //           ? iconSize - 10
-  //           : iconSize;
-  //       });
-  //   } else {
-  //     d3.select(visual.current)
-  //       .selectAll(".nodes")
-  //       .transition()
-  //       .attr("r", iconSize);
-  //   }
-
-  //   if (activeStory === "Positions") {
-  //     const positions = d3.group(graphData.nodes, (d) => d.properties.position);
-  //     const colorPositions = d3.scaleOrdinal(positions.values(), [
-  //       "#ca619d",
-  //       "#5a70c0",
-  //       "#f1ae23",
-  //     ]);
-
-  //     d3.select(visual.current)
-  //       .selectAll(".nodes")
-  //       .transition()
-  //       .style("fill", (d) => {
-  //         let color = d3.color(colorPositions(d.properties.position));
-  //         return d.properties.position ? color : "none";
-  //       })
-  //       .style("stroke", (d) => {
-  //         return d3.color(colorPositions(d.properties.position))?.darker(0.8);
-  //       });
-  //   } else {
-  //     d3.select(visual.current)
-  //       .selectAll(".nodes")
-  //       .transition()
-  //       .style("fill", "")
-  //   }
-
-  // }, [activeStory]);
   return (
     <StyledSVG
       ref={(el) => (visual.current = el)}

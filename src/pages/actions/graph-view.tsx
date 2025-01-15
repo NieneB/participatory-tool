@@ -25,7 +25,7 @@ const GraphView = () => {
 
   const [positionsOn, setPositionsOn] = useState(false);
   const [extraCollapse, setExtraCollapse] = useState([]);
-  const [activeStory, setActiveStory] = useState("")
+  const [activeStory, setActiveStory] = useState("");
   function toggleMakingYourOwn(e) {
     setIsOpenCustom(!isOpenCustom);
   }
@@ -35,7 +35,7 @@ const GraphView = () => {
   }
 
   function changeStory(story) {
-    setActiveStory(story.shortTitle)
+    setActiveStory(story.shortTitle);
     if (story.shortTitle === "Positions") {
       setExtraCollapse(["legend", true]);
       setPositionsOn(!positionsOn);
@@ -102,6 +102,15 @@ const GraphView = () => {
             newObj.nodes.map((d) => {
               d.n.id = d.n.elementid;
               d.n.label = d.n.labels[0];
+              d.n.properties.connections = newObj.links.reduce((acc, l) => {
+                if (
+                  l.source === d.n.id ||
+                  l.target === d.n.id
+                ) {
+                  acc = acc + 1;
+                }
+                return acc;
+              }, 0);
               return newData.nodes.push(d.n);
             }),
           ];
@@ -163,8 +172,8 @@ const GraphView = () => {
             setExtraCollapse={setExtraCollapse}
           >
             <>
-              <h1>Explanation</h1>
-              <p>Actor Mapping Oirschot description</p>
+              <h1>Explanation {activeStory}</h1>
+              <p>{activeStory ? activeStory : "This"} shows .. </p>
             </>
           </InteractivePanel>
         </div>
@@ -177,7 +186,7 @@ const GraphView = () => {
           <>
             <h1>Legend</h1>
             <p>Items based on Story</p>
-            <LegendD3 activeStory={activeStory}/>
+            <LegendD3 activeStory={activeStory} />
           </>
         </InteractivePanel>
         <InteractivePanel
@@ -190,15 +199,21 @@ const GraphView = () => {
             <h1>
               InfoPanel {infoContent.labels && ": " + infoContent.labels[0]}
             </h1>
-            {infoContent.properties &&
-              Object.keys(infoContent.properties).map(function (key) {
-                return (
-                  <div key={key}>
-                    <h3 style={{ fontWeight: "bold" }}>{key} :</h3>
-                    <p>{infoContent.properties[key]}</p>
-                  </div>
-                );
-              })}
+            <table>
+              {infoContent.properties &&
+                Object.keys(infoContent.properties).map(function (key) {
+                  return (
+                    <tr key={key}>
+                      <td>
+                        <h3 style={{ fontWeight: "bold" }}>{key}</h3>
+                      </td>
+                      <td style={{ paddingLeft: "1rem" }}>
+                        <p>{infoContent.properties[key]}</p>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </table>
           </>
         </InteractivePanel>
       </Left>
