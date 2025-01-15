@@ -103,10 +103,7 @@ const GraphView = () => {
               d.n.id = d.n.elementid;
               d.n.label = d.n.labels[0];
               d.n.properties.connections = newObj.links.reduce((acc, l) => {
-                if (
-                  l.source === d.n.id ||
-                  l.target === d.n.id
-                ) {
+                if (l.source === d.n.id || l.target === d.n.id) {
                   acc = acc + 1;
                 }
                 return acc;
@@ -135,6 +132,39 @@ const GraphView = () => {
       }
     }
   }, [originalDataSet]);
+
+  
+  const saveFile = async (fileUrl) => {
+    try {
+      // Fetch the content from the URL
+      const response = await fetch(fileUrl);
+  
+      // Check if the response is OK
+      if (!response.ok) {
+        throw new Error(`Failed to fetch file: ${response.statusText}`);
+      }
+  
+      // Extract the content as a Blob
+      const blob = await response.blob();
+  
+      // Derive a default filename from the URL
+      const fileName = fileUrl.split('/').pop() || "download.txt";
+  
+      // Create a link element for downloading the file
+      const a = document.createElement("a");
+      const url = URL.createObjectURL(blob);
+      a.href = url;
+      a.download = fileName; // Set the file name
+  
+      // Trigger a click event on the link to initiate the download
+      a.click();
+  
+      // Cleanup: release the URL object
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Error saving the file:", error);
+    }
+  };
 
   return (
     <>
@@ -251,9 +281,15 @@ const GraphView = () => {
           <Styled.Step>
             <h1>1. Get the template</h1>
             <a
-              href="https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/framework.json"
+              onClick={(e) => {
+                saveFile(
+                  "https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/framework.json"
+                );
+              }}
+              // href="https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/framework.json"
               title="framework for arrows app"
-              download
+              // download
+              // target="blank"
             >
               Click here to download the template{" "}
               <ArrowDownCircle color="black" width={36} height={36} />
