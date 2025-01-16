@@ -16,6 +16,7 @@ import UploadFile from "src/components/UploadDataSet";
 import NavBack from "src/components/NavBack";
 import { SimulationNodeDatum } from "d3";
 import LegendD3 from "src/components/Legend";
+import legendData from "../../data/legend_places.json";
 
 const GraphView = () => {
   const [isOpenCustom, setIsOpenCustom] = useState(false);
@@ -133,7 +134,7 @@ const GraphView = () => {
     }
   }, [originalDataSet]);
 
-  
+
   const saveFile = async (fileUrl) => {
     try {
       // Fetch the content from the URL
@@ -216,7 +217,7 @@ const GraphView = () => {
           <>
             <h1>Legend</h1>
             <p>Items based on Story</p>
-            <LegendD3 activeStory={activeStory} />
+            <LegendD3 data={legendData} activeStory={activeStory} />
           </>
         </InteractivePanel>
         <InteractivePanel

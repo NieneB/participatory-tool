@@ -221,29 +221,8 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                   return iconSize;
                 }
               })
-              .style("fill", (d) => {
-                if (activeStory === "Positions") {
-                  let color = d3.color(colorPositions(d.properties.position));
-                  return d.properties.position ? color : "none";
-                } else if (activeStory === "Places") {
-                  return d.labels[0] === "area" ? "black" : "var(--color-pink)";
-                } else if (activeStory === "Stakeholders") {
-                  return d.labels[0] === "actor"
-                    ? "black"
-                    : "var(--color-pink)";
-                } else {
-                  return "var(--color-pink)";
-                }
-              })
-              .style("stroke", (d) => {
-                if (activeStory === "Positions") {
-                  return d3
-                    .color(colorPositions(d.properties.position))
-                    ?.darker(0.8);
-                } else {
-                  return "var(--color-pink-dark)";
-                }
-              })
+              .style("fill", "var(--color-pink)")
+              .style("stroke", "var(--color-pink-dark)")
               .attr("cx", function (d) {
                 return d.x;
               })
@@ -272,13 +251,9 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                 if (activeStory === "Positions") {
                   let color = d3.color(colorPositions(d.properties.position));
                   return d.properties.position ? color : "none";
-                } else if (activeStory === "Places") {
+                } else if (activeStory === "Places" || activeStory === "Stakeholders") {
                   return d.labels[0] === "area" ? "black" : "var(--color-pink)";
-                } else if (activeStory === "Stakeholders") {
-                  return d.labels[0] === "actor"
-                    ? "black"
-                    : "var(--color-pink)";
-                } else {
+                }  else {
                   return "var(--color-pink)";
                 }
               })

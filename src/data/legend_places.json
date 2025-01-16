@@ -88,7 +88,8 @@
         "accessibility": "public",
         "purpose": "facilitate",
         "Name": "Possibility 1",
-        "P_id": "P_1"
+        "P_id": "P_1",
+        "position": "community organized" 
       },
       "style": {}
     },

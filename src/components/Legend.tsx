@@ -18,12 +18,13 @@ const StyledSVG = styled.svg`
   }
 `;
 
-const LegendD3 = ({ activeStory }) => {
+const LegendD3 = ({ data, activeStory }) => {
+  const [legendData, setLegendData] = useState();
   // Draw graph
   const visual = useRef();
   const width = 150;
   const height = 150;
-  const iconSize = 30;
+  const iconSize = 10;
 
   const legendItems = [
     "stakeholder",
@@ -33,23 +34,109 @@ const LegendD3 = ({ activeStory }) => {
     "possibility",
   ];
 
-//   useEffect(() => {
-//     console.log(activeStory);
-//     // Reset to default graph and then do specific things.
-//       d3.select(visual.current)
-//         .selectAll(".item")
-//         .transition()
-//         .style("fill", (e,d) => {
-//           if (activeStory === "Places") {
-//             console.log("hello", e)
-//             return d.id === "place" ? "black" : "var(--color-pink)";
-//           } else {
-//             return "var(--color-pink)";
-//           }
-//         })
-        
-    
-//   }, [activeStory]);
+  useEffect(() => {
+    const newData = data.nodes.filter((el) => {
+      return el.labels[0] === "Possibilities";
+    });
+
+    let categories = d3.groups(data.nodes, (d) => d.labels[0]);
+    setLegendData(categories);
+  }, [data, activeStory]);
+
+  useEffect(() => {
+    if (legendData) {
+      // Reset to default graph and then do specific things.
+      d3.select(visual.current)
+        .selectAll(".item")
+        .data(legendData)
+        .join((enter) => {
+          enter
+            .append("circle")
+            .classed("item", true)
+            .attr("id", (d) => `legend${d[0]}`)
+            .attr("r", 10)
+            .style("fill", (d) => {
+              if (activeStory === "Places") {
+                return d[0] === "Area" ? "black" : "var(--color-pink)";
+              } else {
+                return "var(--color-pink)";
+              }
+            })
+            .attr("cx", 10)
+            .attr("cy", (d, i) => {
+              return i * 25 + 10;
+            });
+        });
+
+      d3.select(visual.current)
+        .selectAll("text")
+        .data(legendData)
+        .join((enter) => {
+          enter
+            .append("text")
+            .classed("text", true)
+            .attr("id", (d) => `text${d}`)
+            .text((d) => {
+              return d[0];
+            })
+            .attr("x", 25)
+            .attr("y", (d, i) => {
+              return i * 25 + 15;
+            });
+        });
+
+      if (activeStory) {
+        const positions = d3.group(
+          legendData,
+          (d) => d[1][0].properties.position
+        );
+        const colorPositions = d3.scaleOrdinal(positions.values(), [
+          "#ca619d",
+          "#5a70c0",
+          "#f1ae23",
+        ]);
+
+        d3.select(visual.current)
+          .selectAll(".item")
+          .style("fill", (d) => {
+            if (activeStory === "Positions") {
+              let color = d3.color(colorPositions(d[1][0].properties.position));
+              return d[1][0].properties.position ? color : "none";
+            } else if (
+              activeStory === "Places" ||
+              activeStory === "Stakeholders"
+            ) {
+              return d[0] === "Area" ? "black" : "var(--color-pink)";
+            } else {
+              return "var(--color-pink)";
+            }
+          });
+        //   .attr("r", (d) => {
+        //     if (activeStory === "Stakeholders") {
+        //       // return d[1]properties.size === "organization"
+        //       //   ? iconSize + 10
+        //       //   : d.properties.size === "person"
+        //       //   ? iconSize - 10
+        //       //   : iconSize;
+        //       return 10;
+        //     } else if (activeStory === "Relations") {
+        //       return 20;
+        //       // return relationsWeightScale(d.properties.connections + 1);
+        //     } else {
+        //       return iconSize;
+        //     }
+        //   });
+
+        d3.select(visual.current)
+          .selectAll("text")
+          .text((d) => {
+            return activeStory === "Positions"
+              ? d[1][0].properties.position
+              : d[0];
+          });
+      }
+    }
+  }, [legendData, activeStory]);
 
   return (
     <StyledSVG
@@ -59,7 +146,7 @@ const LegendD3 = ({ activeStory }) => {
       viewBox={[0, 0, width, height]}
       style={{ maxWidth: "100%", height: "auto" }}
     >
-      {legendItems.map((item, i) => {
+      {/* {legendItems.map((item, i) => {
         return (
           <g key={item} className="legendItem">
             <circle
@@ -74,7 +161,7 @@ const LegendD3 = ({ activeStory }) => {
             </text>
           </g>
         );
-      })}
+      })} */}
     </StyledSVG>
   );
 };
