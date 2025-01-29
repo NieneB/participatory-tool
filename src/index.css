@@ -54,59 +54,71 @@ root {
 /* Color variables */
 
 :root {
-    --color-background: #edeed0;
-    --color-brown: #787141;
-    --color-brown-dark: #2f2a1a;
-    --color-pink: #ef2a6b;
-    --color-purple: #666bbc;
-    --color-yellow: #f0a221;
-    --color-pink-light: #e589b2;
-    --color-purple-light: #c6b9e3;
-    --color-yellow-light: #edc992;
-    --color-pink-dark: #753167;
-    --color-purple-dark: #1f2345;
-    --color-yellow-dark: #7e5a17;
+    --color-background: #f2f0dd;
+    --color-brown-main: #3c351e;
+    --color-brown-light: #8b7c4b;
+    --color-purple-light: #cec7e4;
+    --color-purple-dark: #272448;
+    --color-purple-main: #6e72b4;
+    --color-pink-light-: #e6a2b8;
+    --color-pink-dark: #823d67;
+    --color-pink-main: #e83c67;
+    --color-yellow-light: #f2d3a7;
+    --color-yellow-dark: #8e6714;
+    --color-yellow-main: #f2ac22;
 }
+
 
 /* CUSTOM FONTS  */
 
+
 @font-face {
-    font-family: 'MadSansDAE';
-    src: url(./fonts/DAEMADSansFill-Regular.otf) format('opentype');
+    font-family: 'Accanthis ADF Std';
+    src: url(./fonts/accanthis-adf-std/AccanthisADFStdNo2-Regular.otf) format('opentype');
     /* other formats include: 'woff2', 'truetype, 'opentype',
                               'embedded-opentype', and 'svg' */
 }
 
+
 @font-face {
-    font-family: 'Inter';
-    src: url(./fonts/inter/inter.css);
-    /* other formats include: 'woff2', 'truetype, 'opentype',
-                              'embedded-opentype', and 'svg' */
+    font-family: 'Helvetica Light';
+    src: url(./fonts/Helvetica-Light.woff) format('woff');
 }
+
 
 
 html {
     /* Root size */
-    font-size: 12pt;
-    font-family: 'MadSansDAE';
-    color: var(--color-brown-dark);
+    font-size: 14pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--color-brown-main);
 }
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'MadSansDAE';
+    font-family: 'Helvetica Light';
     line-height: 1.5;
     font-weight: normal;
 }
 
+p, a {
+    font-family: 'Accanthis ADF Std';
+}
+
 a {
-    text-decoration: underline var(--color-brown-dark);
+    text-decoration: underline var(--color-yellow-main) 3px;
+
+}
+
+a:hover {
+    background-color: var(--color-yellow-main);
+    color: white;
 }
 
 /* Intermediate screen */
 @media only screen and (width <=992px) {
     html {
-        font-size: 11pt;
+        font-size: 13pt;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -118,7 +130,7 @@ a {
 /* Small screen */
 @media only screen and (width <=600px) {
     html {
-        font-size: 10pt;
+        font-size: 12pt;
     }
 
     h1, h2, h3, h4, h5, h6 {

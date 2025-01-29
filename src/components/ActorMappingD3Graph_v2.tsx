@@ -18,7 +18,7 @@ const StyledSVG = styled.svg`
     /* mix-blend-mode: multiply; */
     stroke-width: 0px;
     stroke: var(--color-pink-dark);
-    fill: var(--color-pink);
+    fill: var(--color-pink-main);
   }
 
   .nodes.clicked {
@@ -27,7 +27,7 @@ const StyledSVG = styled.svg`
   }
 
   .links {
-    stroke: var(--color-pink);
+    stroke: var(--color-pink-main);
     stroke-width: 1.2;
   }
 
@@ -49,7 +49,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
 
   // Draw graph
   const visual = useRef();
-  const width = 1000;
+  const width = 1500;
   const height = 750;
   const iconSize = 30;
 
@@ -134,7 +134,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
         )
         // simulation.restart();
 
-        // if (activeStory === "Relations") {
+        // if (activeStory === "Connections") {
         //   console.log("R aan ");
         //   simulation.force(
         //     "collide",
@@ -211,7 +211,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
               .classed("nodes", true)
               .attr("id", (d) => `position-${d.identity}`)
               .attr("r", (d) => {
-                if (activeStory === "Stakeholders") {
+                if (activeStory === "Actors") {
                   return d.properties.size === "organization"
                     ? iconSize + 10
                     : d.properties.size === "person"
@@ -221,7 +221,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                   return iconSize;
                 }
               })
-              .style("fill", "var(--color-pink)")
+              .style("fill", "var(--color-pink-main)")
               .style("stroke", "var(--color-pink-dark)")
               .attr("cx", function (d) {
                 return d.x;
@@ -235,13 +235,13 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
             update
               .attr("id", (d) => `position-${d.identity}`)
               .attr("r", (d) => {
-                if (activeStory === "Stakeholders") {
+                if (activeStory === "Actors" || activeStory === "Positions") {
                   return d.properties.size === "organization"
                     ? iconSize + 10
                     : d.properties.size === "person"
                     ? iconSize - 10
                     : iconSize;
-                } else if (activeStory === "Relations") {
+                } else if (activeStory === "Connections") {
                   return relationsWeightScale(d.properties.connections + 1);
                 } else {
                   return iconSize;
@@ -250,11 +250,11 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
               .style("fill", (d) => {
                 if (activeStory === "Positions") {
                   let color = d3.color(colorPositions(d.properties.position));
-                  return d.properties.position ? color : "none";
-                } else if (activeStory === "Places" || activeStory === "Stakeholders") {
-                  return d.labels[0] === "area" ? "black" : "var(--color-pink)";
+                  return d.labels[0] === "area" ? "black" : d.properties.position ? color : "none";
+                } else if (activeStory === "Areas" || activeStory === "Actors") {
+                  return d.labels[0] === "area" ? "black" : "var(--color-pink-main)";
                 }  else {
-                  return "var(--color-pink)";
+                  return "var(--color-pink-main)";
                 }
               })
               .style("stroke", (d) => {
@@ -286,13 +286,13 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                 return d.properties.name;
               })
               .attr("x", (d) => {
-                if (activeStory === "Stakeholders") {
+                if (activeStory === "Actors") {
                   return d.properties.size === "organization"
                     ? d.x + iconSize + 10
                     : d.properties.size === "person"
                     ? d.x + iconSize - 10
                     : d.x + iconSize;
-                } else if (activeStory === "Relations") {
+                } else if (activeStory === "Connections") {
                   return (
                     d.x + relationsWeightScale(d.properties.connections + 1)
                   );
@@ -314,13 +314,13 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                 return d.properties.name;
               })
               .attr("x", (d) => {
-                if (activeStory === "Stakeholders") {
+                if (activeStory === "Actors") {
                   return d.properties.size === "organization"
                     ? d.x + iconSize + 10
                     : d.properties.size === "person"
                     ? d.x + iconSize - 10
                     : d.x + iconSize;
-                } else if (activeStory === "Relations") {
+                } else if (activeStory === "Connections") {
                   return (
                     d.x + relationsWeightScale(d.properties.connections + 1)
                   );
@@ -362,13 +362,13 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
           svg
             .selectAll(".text")
             .attr("x", (d) => {
-              if (activeStory === "Stakeholders") {
+              if (activeStory === "Actors") {
                 return d.properties.size === "organization"
                   ? d.x + iconSize + 10
                   : d.properties.size === "person"
                   ? d.x + iconSize - 10
                   : d.x + iconSize;
-              } else if (activeStory === "Relations") {
+              } else if (activeStory === "Connections") {
                 return d.x + relationsWeightScale(d.properties.connections + 1);
               } else {
                 return d.x + iconSize;

@@ -63,7 +63,7 @@
         "Area"
       ],
       "properties": {
-        "position": "Institutional",
+        "position": "government organized",
         "borders": "aministrative",
         "Name": "Area 1 ",
         "A_id": "A_1",
@@ -73,26 +73,7 @@
         "node-color": "#fcc400"
       }
     },
-    {
-      "id": "n3",
-      "position": {
-        "x": 665.8509812106462,
-        "y": 216.58374477725647
-      },
-      "labels": [
-        "Possibilities"
-      ],
-      "properties": {
-        "form": "material",
-        "usability": "constant",
-        "accessibility": "public",
-        "purpose": "facilitate",
-        "Name": "Possibility 1",
-        "P_id": "P_1",
-        "position": "community organized" 
-      },
-      "style": {}
-    },
+   
     {
       "id": "n6",
       "position": {

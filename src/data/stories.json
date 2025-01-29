@@ -1,12 +1,12 @@
 [
 
     {
-        "shortTitle": "Places",
+        "shortTitle": "Areas",
         "desc": "Lorum Ipsum",
         "data": ["./data/nodes.json", "./data/relations.json"]
     },
     {
-        "shortTitle": "Stakeholders",
+        "shortTitle": "Actors",
         "desc": "Lorum Ipsum",
         "data": ["./data/nodes.json", "./data/relations.json"]
     },
@@ -16,7 +16,7 @@
         "data": ["./data/nodes.json", "./data/relations.json"]
     },
     {
-        "shortTitle": "Relations",
+        "shortTitle": "Connections",
         "desc": "Lorum Ipsum",
         "data": ["./data/nodes.json", "./data/relations.json"]
     },

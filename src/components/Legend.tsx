@@ -8,7 +8,7 @@ const StyledSVG = styled.svg`
     /* mix-blend-mode: multiply; */
     stroke-width: 0px;
     stroke: rgba(0, 0, 0, 0);
-    fill: var(--color-pink);
+    fill: var(--color-pink-main);
   }
 
   text {
@@ -22,7 +22,7 @@ const LegendD3 = ({ data, activeStory }) => {
   const [legendData, setLegendData] = useState();
   // Draw graph
   const visual = useRef();
-  const width = 150;
+  const width = 300;
   const height = 150;
   const iconSize = 10;
 
@@ -35,12 +35,18 @@ const LegendD3 = ({ data, activeStory }) => {
   ];
 
   useEffect(() => {
-    const newData = data.nodes.filter((el) => {
-      return el.labels[0] === "Possibilities";
-    });
+    if (activeStory !== "Positions") {
+      const newData = data.nodes.filter((el) => {
+        return el.labels[0] === "Possibilities";
+      });
 
-    let categories = d3.groups(data.nodes, (d) => d.labels[0]);
-    setLegendData(categories);
+      let categories = d3.groups(data.nodes, (d) => d.labels[0]);
+      setLegendData(categories);
+    } else {
+      let categories = d3.groups(data.nodes, (d) => d.properties.position);
+      console.log(categories);
+      setLegendData(categories);
+    }
   }, [data, activeStory]);
 
   useEffect(() => {
@@ -56,10 +62,10 @@ const LegendD3 = ({ data, activeStory }) => {
             .attr("id", (d) => `legend${d[0]}`)
             .attr("r", 10)
             .style("fill", (d) => {
-              if (activeStory === "Places") {
-                return d[0] === "Area" ? "black" : "var(--color-pink)";
+              if (activeStory === "Areas") {
+                return d[0] === "Area" ? "black" : "var(--color-pink-main)";
               } else {
-                return "var(--color-pink)";
+                return "var(--color-pink-main)";
               }
             })
             .attr("cx", 10)
@@ -91,9 +97,9 @@ const LegendD3 = ({ data, activeStory }) => {
           (d) => d[1][0].properties.position
         );
         const colorPositions = d3.scaleOrdinal(positions.values(), [
+          "#f1ae23",
           "#ca619d",
           "#5a70c0",
-          "#f1ae23",
         ]);
 
         d3.select(visual.current)
@@ -102,24 +108,21 @@ const LegendD3 = ({ data, activeStory }) => {
             if (activeStory === "Positions") {
               let color = d3.color(colorPositions(d[1][0].properties.position));
               return d[1][0].properties.position ? color : "none";
-            } else if (
-              activeStory === "Places" ||
-              activeStory === "Stakeholders"
-            ) {
-              return d[0] === "Area" ? "black" : "var(--color-pink)";
+            } else if (activeStory === "Areas" || activeStory === "Actors") {
+              return d[0] === "Area" ? "black" : "var(--color-pink-main)";
             } else {
-              return "var(--color-pink)";
+              return "var(--color-pink-main)";
             }
           });
         //   .attr("r", (d) => {
-        //     if (activeStory === "Stakeholders") {
+        //     if (activeStory === "Actors") {
         //       // return d[1]properties.size === "organization"
         //       //   ? iconSize + 10
         //       //   : d.properties.size === "person"
         //       //   ? iconSize - 10
         //       //   : iconSize;
         //       return 10;
-        //     } else if (activeStory === "Relations") {
+        //     } else if (activeStory === "Connections") {
         //       return 20;
         //       // return relationsWeightScale(d.properties.connections + 1);
         //     } else {
