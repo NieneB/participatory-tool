@@ -89,9 +89,16 @@ root {
 
 html {
     /* Root size */
-    font-size: 14pt;
+    font-size: 16pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--color-brown-main);
+    background-color: var(--color-background);
+}
+
+#logo {
+    padding: 2rem;
+    position: absolute;
+    width: 7vw;
 }
 
 
@@ -103,10 +110,12 @@ h1, h2, h3, h4, h5, h6 {
 
 p, a {
     font-family: 'Accanthis ADF Std';
+    font-size: 1rem;
 }
 
 a {
-    text-decoration: underline var(--color-yellow-main) 3px;
+    /* text-decoration: underline var(--color-yellow-main) 3px; */
+    text-decoration: none;
 
 }
 
@@ -139,6 +148,5 @@ a:hover {
 
 }
 
-body {
-    background-color: var(--color-background);
-}
+
+

@@ -1,4 +1,4 @@
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, HashRouter, Link } from "react-router-dom";
 import Home from "./pages";
 import Scope from "./pages/scope";
 import Infrastructure from "./pages/scope/infrastructure";
@@ -9,12 +9,16 @@ import Actions from "./pages/actions";
 import Activation from "./pages/actions/activation";
 import GraphView from "./pages/actions/graph-view";
 import Methods from "./pages/actions/methods";
+import Home2 from "./pages/index_2";
 
 const App = () => {
   return (
-    <HashRouter>
+    <HashRouter>      
+             <Link to="/">
+             <img id="logo" src="img/logo-go-cawh.svg"/> </Link>
       <Routes>
         <Route exact path="/" index element={<Home />} />
+        <Route path="index2" element={<Home2 />} />
         <Route path="scope" element={<Scope />} />
         <Route path="positions" element={<Positions />} />
         <Route path="actions" element={<Actions />} />
@@ -27,6 +31,7 @@ const App = () => {
 
         {/* <Route path="graph" element={<GraphView />} /> */}
       </Routes>
+     
     </HashRouter>
   );
 };

@@ -48,9 +48,7 @@ const DefaultPage = ({ title, dataset }) => {
       <Styled.Left>
         <Styled.Nav>
           <NavBack></NavBack>
-          <Styled.Button onClick={() => navigate("/")}>
-            <Home></Home>
-          </Styled.Button>
+         
         </Styled.Nav>
         {panelContent && (
           <InteractivePanel>

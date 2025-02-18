@@ -1,55 +1,37 @@
 import * as Styled from "./index.styles";
 import { Link } from "react-router-dom";
 import {
-  ArrowDown,
-  ArrowLeft,
   ArrowRight,
 } from "iconoir-react";
-import Title from "src/components/Title";
 
 const Home = () => {
   return (
-    <Styled.Main>
-      <div className="bg-image"></div>
-      <h1>WELCOME</h1>
-      <Title />
-      <h2> Follow one of our 3 paths :</h2>
-      <Styled.Buttons>
-        <Link to="/scope">
-          {" "}
-          <Styled.Button>
+    <>
+      <Styled.BackGround/>
+      <Styled.Main>
+        <h1>Participatory approach to a complex spatially integrated design process
+        </h1>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.:</p>
+        <div>
+          <p>This tool is develop for: Design Academy Eindhoven</p>
+          <p>This tool is develop by: Anne Vader, Niene Boeijen & Naomi Bueno de Mesquita</p>
+          <p>License : CC-by</p>
+          <p>Github repository: github.com/nieneb/participatory-tool</p>
+        </div>
+        <Link to="/index2">
+          <Styled.EnterButton>
             <div>
-              <h3>Scope</h3>
+              <h3>enter </h3>
             </div>
-
-            <ArrowLeft color="black" width={36} height={36} />
-          </Styled.Button>
+            <ArrowRight color="var(--color-brown-main)" width={36} height={36} />
+          </Styled.EnterButton>
         </Link>
-        <Link to="/positions">
-          <Styled.Button>
-            <div>
-              <h3>Positions</h3>
-            </div>
-
-            <ArrowDown color="black" width={36} height={36} />
-          </Styled.Button>
-        </Link>
-        <Link to="/actions">
-          <Styled.Button>
-            <div>
-              <h3>Actions</h3>
-            </div>
-            <ArrowRight color="black" width={36} height={36} />
-          </Styled.Button>
-        </Link>
-      </Styled.Buttons>
-      <div>
-        <h5>This tool is develop for:</h5>
-        <h5>This tool is develop by:</h5>
-        <h5>License</h5>
-        <h5>Github repository</h5>
-      </div>
-    </Styled.Main>
+      </Styled.Main>
+    </>
   );
 };
 
