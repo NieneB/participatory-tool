@@ -66,7 +66,6 @@ const DefaultPage = ({ title, dataset }) => {
   return (
     <>
       <Styled.Left>
-
         {panelContent && (
           <InteractiveSidePanel>
             <>
