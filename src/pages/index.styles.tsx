@@ -15,12 +15,13 @@ export const BackGround = styled.div`
 `
 export const Main = styled.div`
   width: 40vw;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   gap: 2rem;
   margin: auto;
   

@@ -51,7 +51,7 @@ const Content = styled.div`
   grid-column: 1 / span 1;
 `;
 
-const InteractivePanel = ({ id, extraCollapse, setExtraCollapse, children }) => {
+const InteractiveSidePanel = ({ id, extraCollapse, setExtraCollapse, children }) => {
   const [isCollapsed, setIsCollasped] = useState(false);
 
   const collapseOnClick = (e) => {
@@ -83,4 +83,4 @@ const InteractivePanel = ({ id, extraCollapse, setExtraCollapse, children }) => 
   );
 };
 
-export default InteractivePanel;
+export default InteractiveSidePanel;

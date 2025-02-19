@@ -2,13 +2,14 @@
   "name": "front_end",
   "version": "1.0.0",
   "description": "Front-end viewer for tool met webpack opzet",
+  "homepage": "https://nieneb.github.io/participatory-tool",
   "main": "bundje.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist",
+    "deploy" : "gh-pages -d dist ",
     "tscheck": "tsc"
   },
   "author": "Niene Boeijen",

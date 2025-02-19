@@ -1,4 +1,4 @@
-import InteractivePanel from "src/components/InteractivePanel";
+import InteractivePanel from "src/components/InteractiveSidePanel";
 import * as Styled from "../index.styles";
 import DefaultPage from "src/components/DefaultPage";
 

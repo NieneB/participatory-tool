@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = {
   entry: path.join(__dirname, "src/index.tsx"),
   output: {
-    publicPath: './', //with ./ for deployment?
+    publicPath: 'auto', //with ./ for deployment?
     path: path.join(__dirname, "/dist"),
     filename: "bundle.js",
   },
@@ -26,6 +26,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
+        type: "asset/resource",
         exclude: /node_modules/,
         use: ["file-loader"]
       }, 

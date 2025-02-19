@@ -1,5 +1,5 @@
 import GraphD3 from "../../components/ActorMappingD3Graph_v2";
-import InteractivePanel from "src/components/InteractivePanel";
+import InteractivePanel from "src/components/InteractiveSidePanel";
 import nodeData from "../../data/nodes2.json";
 import relationData from "../../data/relations2.json";
 import stories from "../../data/stories.json";

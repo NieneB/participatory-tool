@@ -4,7 +4,7 @@ import GraphD3 from "../components/perspectiveD3Graph";
 import { Link } from "react-router-dom";
 import { Button } from "./index.styles";
 import Title from "src/components/Title";
-import InteractivePanel from "src/components/InteractivePanel";
+import InteractivePanel from "src/components/InteractiveSidePanel";
 import { MapsArrow } from "iconoir-react";
 import NavBack from "src/components/NavBack";
 import Panel from "src/components/Panel";
