@@ -193,7 +193,6 @@ const GraphView = () => {
           );
         })}
       </Styled.StoryCarrousel>
-      <NavBack />
       <Left key="left-panels">
         <div>
           <InteractivePanel

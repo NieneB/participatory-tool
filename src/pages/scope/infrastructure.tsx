@@ -9,7 +9,7 @@ const TextPanel = styled.div`
 `;
 
 const Main = styled.div`
-   width: 50vw;
+  width: 50vw;
   height: auto;
   overflow-y: scroll;
   display: flex;

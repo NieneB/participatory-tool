@@ -7,6 +7,7 @@ import Title from "src/components/Title";
 import InteractivePanel from "src/components/InteractivePanel";
 import { MapsArrow } from "iconoir-react";
 import NavBack from "src/components/NavBack";
+import Panel from "src/components/Panel";
 
 const Actions = () => {
   const [infoOn, setInfoOn] = useState(false);
@@ -32,7 +33,6 @@ const Actions = () => {
   return (
     <>
       <Styled.Main>
-        <NavBack />
         <h1>Actions</h1>
         <p style={{ width: "50vw" }}>
           Nulla venenatis est et neque commodo pulvinar. Nam vel vestibulum
@@ -45,27 +45,32 @@ const Actions = () => {
           nisl.{" "}
         </p>
         <Styled.Buttons>
-          <Link className="bottom-right" to="/actions/methods">
-            <Styled.Button>
-              <h2>Method & Tools</h2>
-            </Styled.Button>
+
+          <Link to="/actions/methods">
+            {" "}
+            <Panel color='yellow' title='Method & Tools' >
+              <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
+            </Panel>
           </Link>
-          <Link className="bottom-right" to="/actions/mapping">
-            <Styled.Button>
+          <Link to="/actions/mapping">
+            <Panel color='purple' title='Mapping approach' >
+              <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
               <MapsArrow
-                color="black"
+                color="var(--color-purple-main)"
                 width={36}
                 height={36}
                 style={{ transform: "rotate(90deg)" }}
               />
-              <h2>Mapping approach</h2>
-            </Styled.Button>
+            </Panel>
+
           </Link>
-          <Link className="bottom-right" to="/actions/activation">
-            <Styled.Button>
-              <h2>Activation</h2>
-            </Styled.Button>
+          <Link to="/actions/activation">
+            <Panel color='pink' title='Activation' >
+              <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
+
+            </Panel>
           </Link>
+
         </Styled.Buttons>
       </Styled.Main>
     </>
