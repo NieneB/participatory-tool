@@ -9,24 +9,23 @@ import Panel from "./Panel";
 
 
 
-const List = styled.ol`
+const List = styled.div`
   display: flex;
   flex-direction: column;
- justify-content: start;
+  justify-content: start;
+
+ 
   `;
 
 const Element = styled.div`
   /* padding: 3rem; */
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   display: grid;
-  grid-template-columns: 1.5fr 2fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr auto;
   
-  >p{
-    grid-row: 2;
-    grid-column: 1/span 2;
-  }
+  
 `;
 
 const ElementHeader = styled.div`
@@ -46,9 +45,17 @@ const ElementLinks = styled.div`
   line-height: 1.5rem;
 `;
 
+const ElementContent = styled.div`
+ grid-row: 2;
+ grid-column: 1 / span 2;
+ line-height: 1.5rem;
+ & ul {
+    list-style: circle;
+    list-style-position: inside;
+  }
+`
 
-const DefaultPage = ({ title, dataset }) => {
-  const navigate = useNavigate();
+const DefaultPage = ({ title, desc, dataset }) => {
   const [panelTitle, setPanelTitle] = useState("");
   const [panelContent, setPanelContent] = useState("");
 
@@ -77,28 +84,38 @@ const DefaultPage = ({ title, dataset }) => {
       </Styled.Left>
       <Styled.Main>
         <h1>{title}</h1>
-        <Panel title={title} color="yellow" solid='solid'><p>Lorem ipsum
-          dolor sit amet,
-          consectetur
-          adipiscing elit</p></Panel>
-        <List>
-          {dataset.map((element, i) => {
-            return (
-              <Element key={element.title} onClick={() => fillPanelContent(element)}>
-                  <ElementHeader key={'li' + element.title}>
-                    <h1>{element.title}</h1>
-                    <h2>{element.subtitle}</h2>
-                  </ElementHeader>
-                  <ElementLinks>
-                    <li>1. clickable</li>
-                    <li>1. clickable</li>
-                    <li>1. clickable</li>
-                  </ElementLinks>
-                  <p>{element.content}</p>
-              </Element>
-            );
-          })}
-        </List>
+        <p>{desc}</p>
+        <Panel title={title} color="yellow" solid='solid'></Panel>
+        {dataset.map((element, i) => {
+          return (
+            <Element key={element.title} onClick={() => fillPanelContent(element)}>
+              <ElementHeader key={'li' + element.title}>
+                <h1>{element.title}</h1>
+                <h2>{element.subtitle}</h2>
+              </ElementHeader>
+              <ElementLinks>
+                <li>1. clickable</li>
+                <li>1. clickable</li>
+                <li>1. clickable</li>
+              </ElementLinks>
+              <ElementContent>
+                {element.goal && <p>Goal: {element.goal}</p>}
+                {element.assignment && <p>Assignment: {element.assignment}</p>}
+                {element.using && <><p>By using:</p>
+                  <ul>
+                    {element.using.map((el) => {
+                      return (<li key={el}>{el}</li>)
+                    })}
+                  </ul>
+                  </>
+                }
+                { element.output && <p>Output: {element.output}</p> }
+                { element.iteration && <p>Iteration: {element.iteration}</p> }
+
+              </ElementContent>
+            </Element>
+          );
+        })}
       </Styled.Main>
     </>
   );

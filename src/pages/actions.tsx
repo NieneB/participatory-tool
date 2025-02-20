@@ -34,27 +34,20 @@ const Actions = () => {
     <>
       <Styled.Main>
         <h1>Actions</h1>
-        <p style={{ width: "50vw" }}>
-          Nulla venenatis est et neque commodo pulvinar. Nam vel vestibulum
-          mauris. Nulla fringilla libero quam, nec pharetra ipsum pharetra eu.
-          Nullam in purus eget ipsum finibus gravida. Ut eu sem hendrerit,
-          tempus sem <a href="" >dignissim, ullamcorper</a> nisi. Duis venenatis, metus eget
-          egestas aliquam, diam sapien porta metus, sed tristique erat risus ut
-          tortor. Duis placerat enim tellus, vitae laoreet tellus rutrum non.
-          Nunc urna diam, tristique eu malesuada sollicitudin, volutpat sed
-          nisl.{" "}
+        <p >
+        How can you act on the questions and participation opportunities that arise?
         </p>
         <Styled.Buttons>
 
           <Link to="/actions/methods">
             {" "}
             <Panel color='yellow' title='Method & Tools' >
-              <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
+              <p>Identifying participation opportunities</p>
             </Panel>
           </Link>
           <Link to="/actions/mapping">
             <Panel color='purple' title='Mapping approach' >
-              <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
+              <p>Collecting participation opportunities </p>
               <MapsArrow
                 color="var(--color-purple-main)"
                 width={36}
@@ -66,8 +59,7 @@ const Actions = () => {
           </Link>
           <Link to="/actions/activation">
             <Panel color='pink' title='Activation' >
-              <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
-
+              <p>Acting on the participation opportunities</p>
             </Panel>
           </Link>
 

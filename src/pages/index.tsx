@@ -26,7 +26,7 @@ const Home = () => {
           <p>License : CC-by</p>
           <p>Github repository: github.com/nieneb/participatory-tool</p>
         </div>
-        <Link to="/index2">
+        <Link to="/overview">
           <Styled.EnterButton>
             <div>
               <h3>enter </h3>
