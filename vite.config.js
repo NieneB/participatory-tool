@@ -2,8 +2,14 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-    base: '/participatory-tool/',
+  base: '/participatory-tool/',
 
-  plugins: [react()],
+  plugins: [react({
+    babel: {
+      plugins: ["styled-components"],
+      babelrc: false,
+      configFile: false
+    }
+  })],
   assetsInclude: ['**/*.md']
 })

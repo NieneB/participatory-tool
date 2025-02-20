@@ -2,6 +2,7 @@ import { Circle } from "iconoir-react";
 import styled from "styled-components";
 
 const Button = styled.div`
+  margin: auto;
   background-color: rgba(0,0,0,0);
   border-radius: 2px;
   box-sizing: border-box;

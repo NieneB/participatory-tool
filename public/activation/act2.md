@@ -1,17 +1,26 @@
+# Sharing information 
 
-# Online ethnography  
+
+Connecting and exchanging data with the other perspectives
+
 
 - Connecting to Participatory Phase: Exploration Phase 
+
 - Objective: 
+
+
 - Description: 
+
 - Proposed audience: 
+
 - Proposed use: 
+
 - Source:
 
 
 Connection to Mapping Approach: filling up the generic template to create a contextual actor network map
 
-Connection to Activation: connecting and exchanging data with the other perspectives
+Connection to Methods: 
 
 
 Goal: studying what actors are there and how are they related

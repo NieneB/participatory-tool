@@ -16,12 +16,19 @@ import styled from "styled-components";
 
 export const MainContent = styled.div`
   width: 40vw;
-  min-height: 100vh;
+  min-height: calc(100vh - 2rem);
   overflow-x: hidden;
   overflow-y: auto;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap : 1rem;
   margin: auto;
-    @media only screen and (width <=1500px) {
+  padding-top: 2rem;
+
+  
+  @media only screen and (width <=1500px) {
     width: 60vw;
   }
   @media only screen and (width <=992px) {
@@ -35,13 +42,23 @@ export const MainContent = styled.div`
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
+  
+
 `;
+
+const Logo = styled.img`
+    padding: 2rem;
+    position: fixed;
+    width: 7vw;
+
+`
 
 const App = () => {
   return (
     <HashRouter>
       <Link to="/">
-        <img id="logo" src='./img/logo-go-cawh.svg' /> </Link>
+        <Logo id="logo" src='./img/logo-go-cawh.svg' /> </Link>
       <MainContent>
         <Routes>
           <Route exact path="/" index element={<Home />} />

@@ -15,16 +15,6 @@ export const BackGround = styled.div`
     -webkit-filter: blur(1px); */
   
 `
-export const Main = styled.div`
-  width:100%;
-  min-height: 100vh;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 2rem;
-`;
 
 export const EnterButton = styled.button`
   background-color: rgba(0,0,0,0);

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import InteractiveSidePanel from "./InteractiveSidePanel";
 import { data, useNavigate } from "react-router-dom";
 import { ArrowLeft, Home } from "iconoir-react";
-import { useEffect, useState } from "react";
+import { Children, useEffect, useState } from "react";
 import * as Styled from "./../pages/index.styles";
 import NavBack from "./NavBack";
 import Panel from "./Panel";
@@ -55,7 +55,7 @@ const ElementContent = styled.div`
   }
 `
 
-const DefaultPage = ({ title, desc, dataset }) => {
+const DefaultPage = ({ title, desc, dataset, children }) => {
   const [panelTitle, setPanelTitle] = useState("");
   const [panelContent, setPanelContent] = useState("");
 
@@ -72,6 +72,40 @@ const DefaultPage = ({ title, desc, dataset }) => {
 
   return (
     <>
+      <h1 >{title}</h1>
+      <p>{desc}</p>
+      <Panel title={title} color="yellow" solid='solid'></Panel>
+      <p>{children}</p>
+      {dataset.map((element, i) => {
+        return (
+          <Element key={element.title} onClick={() => fillPanelContent(element)}>
+            <ElementHeader key={'li' + element.title}>
+              <h1 id={element.title.replace(/\s+/g, '-').toLowerCase()} >{element.title}</h1>
+              {element.subtitle && <h2>{element.subtitle}</h2>}
+            </ElementHeader>
+            <ElementLinks>
+              <li>1. clickable</li>
+              <li>1. clickable</li>
+              <li>1. clickable</li>
+            </ElementLinks>
+            <ElementContent>
+              {element.goal && <p>Goal: {element.goal}</p>}
+              {element.assignment && <p>Assignment: {element.assignment}</p>}
+              {element.using && <><p>By using:</p>
+                <ul>
+                  {element.using.map((el) => {
+                    return (<li key={el}>{el}</li>)
+                  })}
+                </ul>
+              </>
+              }
+              {element.output && <p>Output: {element.output}</p>}
+              {element.iteration && <p>Iteration: {element.iteration}</p>}
+
+            </ElementContent>
+          </Element>
+        );
+      })}
       <Styled.Left>
         {panelContent && (
           <InteractiveSidePanel>
@@ -82,41 +116,6 @@ const DefaultPage = ({ title, desc, dataset }) => {
           </InteractiveSidePanel>
         )}
       </Styled.Left>
-      <Styled.Main>
-        <h1 >{title}</h1>
-        <p>{desc}</p>
-        <Panel title={title} color="yellow" solid='solid'></Panel>
-        {dataset.map((element, i) => {
-          return (
-            <Element key={element.title} onClick={() => fillPanelContent(element)}>
-              <ElementHeader key={'li' + element.title}>
-                <h1  id={element.title.replace(/\s+/g, '-').toLowerCase()} >{element.title}</h1>
-                <h2>{element.subtitle}</h2>
-              </ElementHeader>
-              <ElementLinks>
-                <li>1. clickable</li>
-                <li>1. clickable</li>
-                <li>1. clickable</li>
-              </ElementLinks>
-              <ElementContent>
-                {element.goal && <p>Goal: {element.goal}</p>}
-                {element.assignment && <p>Assignment: {element.assignment}</p>}
-                {element.using && <><p>By using:</p>
-                  <ul>
-                    {element.using.map((el) => {
-                      return (<li key={el}>{el}</li>)
-                    })}
-                  </ul>
-                  </>
-                }
-                { element.output && <p>Output: {element.output}</p> }
-                { element.iteration && <p>Iteration: {element.iteration}</p> }
-
-              </ElementContent>
-            </Element>
-          );
-        })}
-      </Styled.Main>
     </>
   );
 };

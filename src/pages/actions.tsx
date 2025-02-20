@@ -29,18 +29,14 @@ const Actions = () => {
     setOpening(false);
   }
   window.setTimeout(toggleOpening, 5000);
-
   return (
     <>
-      <Styled.Main>
         <h1>Actions</h1>
         <p >
         How can you act on the questions and participation opportunities that arise?
         </p>
         <Styled.Buttons>
-
           <Link to="/actions/methods">
-            {" "}
             <Panel color='yellow' title='Method & Tools' >
               <p>Identifying participation opportunities</p>
             </Panel>
@@ -55,16 +51,13 @@ const Actions = () => {
                 style={{ transform: "rotate(90deg)" }}
               />
             </Panel>
-
           </Link>
           <Link to="/actions/activation">
             <Panel color='pink' title='Activation' >
               <p>Acting on the participation opportunities</p>
             </Panel>
           </Link>
-
         </Styled.Buttons>
-      </Styled.Main>
     </>
   );
 };

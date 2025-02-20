@@ -4,7 +4,7 @@ import Panel from "../components/Panel";
 
 const Positions = () => {
   return (
-    <Styled.Main>
+    <>
 
       <h1>Positions</h1>
       <h2>Why, what and who are the three positions involved in the water focussed innovation projects? </h2>
@@ -44,7 +44,7 @@ The institutional analysis provides a systematic framework that helps to underst
         </Link>
       </Styled.Buttons> */}
 
-    </Styled.Main>
+    </>
   );
 };
 export default Positions;

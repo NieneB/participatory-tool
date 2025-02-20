@@ -11,7 +11,7 @@ const Methods = () => {
 
 
   return (
-    <Styled.Main>
+    <>
       <div>
         {listFiles.map((fileName, i) => {
           return (
@@ -22,6 +22,6 @@ const Methods = () => {
           )
         })}
       </div>
-    </Styled.Main>)
+    </>)
 };
 export default Methods;

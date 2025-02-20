@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <>
       <Styled.BackGround />
-      <Styled.Main>
         <h1>Participatory approach to a complex spatially integrated design process
         </h1>
         <h1>Welcome</h1>
@@ -34,7 +33,6 @@ const Home = () => {
             <ArrowRight color="var(--color-brown-main)" width={36} height={36} />
           </Styled.EnterButton>
         </Link>
-      </Styled.Main>
     </>
   );
 };
