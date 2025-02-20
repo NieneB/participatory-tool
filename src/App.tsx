@@ -11,6 +11,7 @@ import Methods from "./pages/actions/methods";
 import Overview from "./pages/overview";
 import Community from "./pages/positions/community-organized";
 import Conditions from "./pages/scope/conditions";
+import DefaultMarkdownPage from "./components/DefaultMarkdownPage";
 
 const App = () => {
   return (
@@ -32,7 +33,7 @@ const App = () => {
         <Route path="positions/non-organized" element={<Community />} />
         <Route path="positions/community-organized" element={<Community />} />
         <Route path="positions/government-organized" element={<Community />} />
-        {/* <Route path="graph" element={<GraphView />} /> */}
+        <Route path="/:filename" element={<DefaultMarkdownPage />} />
       </Routes>
 
     </HashRouter>

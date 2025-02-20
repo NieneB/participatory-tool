@@ -5,4 +5,5 @@ export default defineConfig({
     base: '/participatory-tool/',
 
   plugins: [react()],
+  assetsInclude: ['**/*.md']
 })

@@ -1,12 +1,20 @@
-import DefaultPage from "../../components/DefaultPage";
+import { Link } from "react-router-dom";
+import DefaultMarkdownPage from "../../components/DefaultMarkdownPage";
+import * as Styled from "./../index.styles";
 
 const Methods = () => {
-  const dataset = [
-    { title: "Method 1", content: "Lorum ipsum" , info: "Lorum ipsum more 1"},
-    { title: "Method 2", content: "Lorum ipsum" , info: "Lorum ipsum more 2"},
-    { title: "Method 3", content: "Lorum ipsum" , info: "Lorum ipsum more 3"},
-    { title: "Method 4", content: "Lorum ipsum" , info: "Lorum ipsum more 4"},
-  ];
-  return <DefaultPage title="Methods & Tools" dataset={dataset}></DefaultPage>;
+  const listFiles = []
+    for (let i = 0; i <= 1 ; i++) {
+      let name = `/method${i+1}`
+      listFiles.push(name)
+    }
+  
+
+  return (
+    <Styled.Main>
+      {listFiles.map((fileName, i) => {
+        return <Link to={fileName}> Method {i+1} </Link>
+      })}
+    </Styled.Main>)
 };
 export default Methods;
