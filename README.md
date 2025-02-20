@@ -1,10 +1,9 @@
-
-
 For development:
 
     npm install 
 
-    npm start
+    npm run dev
+
 
 
 # Deployment 
@@ -16,4 +15,12 @@ In webpack.config.js change `publicPath: '/'` to  `publicPath: './'`
 Then run: 
 
     npm run build
+
+By default, the build output will be placed at dist
+
+    npm run preview 
+
+It is important to note that vite preview is intended for previewing the build locally and not meant as a production server.
+The vite preview command will boot up a local static web server that serves the files from dist at http://localhost:4173. It's an easy way to check if the production build looks OK in your local environment.
+
     npm run deploy

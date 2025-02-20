@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import * as Styled from "../index.styles";
-import NavBack from "src/components/NavBack";
-import Panel from "src/components/Panel";
+import NavBack from "../../components/NavBack";
+import Panel from "../../components/Panel";
 
 const TextPanel = styled.div`
   border: solid 1px #929292;

@@ -11,12 +11,11 @@ import GraphView from "./pages/actions/graph-view";
 import Methods from "./pages/actions/methods";
 import Home2 from "./pages/index_2";
 import Community from "./pages/positions/community-organized";
-
 const App = () => {
   return (
-    <HashRouter>      
-             <Link to="/">
-             <img id="logo" src="./img/logo-go-cawh.svg"/> </Link>
+    <HashRouter>
+      <Link to="/">
+        <img id="logo" src='./img/logo-go-cawh.svg' /> </Link>
       <Routes>
         <Route exact path="/" index element={<Home />} />
         <Route path="index2" element={<Home2 />} />
@@ -30,11 +29,11 @@ const App = () => {
         <Route path="actions/mapping" element={<GraphView />} />
         <Route path="actions/activation" element={<Activation />} />
         <Route path="positions/non-organized" element={<Community />} />
-        <Route path="positions/community-organized" element={<Community/>} />
+        <Route path="positions/community-organized" element={<Community />} />
         <Route path="positions/government-organized" element={<Community />} />
         {/* <Route path="graph" element={<GraphView />} /> */}
       </Routes>
-     
+
     </HashRouter>
   );
 };

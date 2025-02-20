@@ -1,5 +1,5 @@
 import GraphD3 from "../../components/ActorMappingD3Graph_v2";
-import InteractivePanel from "src/components/InteractiveSidePanel";
+import InteractivePanel from "../../components/InteractiveSidePanel";
 import nodeData from "../../data/nodes2.json";
 import relationData from "../../data/relations2.json";
 import stories from "../../data/stories.json";
@@ -12,10 +12,10 @@ import {
   Xmark,
 } from "iconoir-react";
 import { useEffect, useState } from "react";
-import UploadFile from "src/components/UploadDataSet";
-import NavBack from "src/components/NavBack";
+import UploadFile from "../../components/UploadDataSet";
+import NavBack from "../../components/NavBack";
 import { SimulationNodeDatum } from "d3";
-import LegendD3 from "src/components/Legend";
+import LegendD3 from "../../components/Legend";
 import legendData from "../../data/legend_places.json";
 
 const GraphView = () => {

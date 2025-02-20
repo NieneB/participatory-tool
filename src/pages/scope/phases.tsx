@@ -1,6 +1,6 @@
-import InteractivePanel from "src/components/InteractiveSidePanel";
+import InteractivePanel from "../../components/InteractiveSidePanel";
 import * as Styled from "../index.styles";
-import DefaultPage from "src/components/DefaultPage";
+import DefaultPage from "../../components/DefaultPage";
 
 const Phases = () => {
   const dataset = [
