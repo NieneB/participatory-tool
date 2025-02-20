@@ -1,4 +1,4 @@
-import DefaultPage from "src/components/DefaultPage";
+import DefaultPage from "../../components/DefaultPage";
 
 const Methods = () => {
   const dataset = [

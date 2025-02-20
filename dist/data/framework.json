@@ -1,0 +1,257 @@
+{
+  "style": {
+    "font-family": "sans-serif",
+    "background-color": "#ffffff",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#ffffff",
+    "border-width": 4,
+    "border-color": "#000000",
+    "radius": 50,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#000000",
+    "caption-font-size": 50,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "pill",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#000000",
+    "label-border-width": 4,
+    "label-font-size": 40,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "inline",
+    "detail-orientation": "parallel",
+    "arrow-width": 5,
+    "arrow-color": "#000000",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#000000",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#000000",
+    "type-border-width": 0,
+    "type-font-size": 16,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#000000",
+    "property-font-size": 16,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "position": {
+        "x": -515.9962351712157,
+        "y": -301.06834633163095
+      },
+      "labels": [
+        "Area"
+      ],
+      "properties": {
+        "position": "Institutional",
+        "borders": "aministrative",
+        "Name": "Area 1 ",
+        "A_id": "A_1",
+        "": ""
+      },
+      "style": {
+        "node-color": "#fcc400"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": -898.0270891189575,
+        "y": -48.5
+      },
+      "labels": [
+        "Actor"
+      ],
+      "properties": {
+        "position": "community",
+        "interest": "ST-1",
+        "size": "person",
+        "decision making": "majority",
+        "urgency": "responible",
+        "representation": "resident",
+        "Name": "Actor 1 ",
+        "ST_id": "ST_1"
+      },
+      "style": {
+        "node-color": "#68ccca"
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": -515.9962351712157,
+        "y": -525.0765107853572
+      },
+      "labels": [
+        "Possibilities"
+      ],
+      "properties": {
+        "form": "material",
+        "usability": "constant",
+        "accessibility": "public",
+        "purpose": "facilitate",
+        "Name": "Possibility 1",
+        "P_id": "P_1"
+      },
+      "style": {}
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": -1002.2265669079105,
+        "y": -194.52388454099324
+      },
+      "labels": [
+        "Actor"
+      ],
+      "properties": {
+        "position": "government organized",
+        "interest": "nature",
+        "size": "unknown",
+        "decision making": "unknown",
+        "urgency": "wish",
+        "representation": "manager",
+        "Name": "Actor 4 ",
+        "ST_id": "ST_4"
+      },
+      "style": {
+        "node-color": "#68ccca"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": -1052.847216381862,
+        "y": -398.01226540457566
+      },
+      "labels": [
+        "Actor"
+      ],
+      "properties": {
+        "position": "non-organized",
+        "interest": "financial",
+        "size": "organization",
+        "decision making": "unanimous",
+        "urgency": "necessity",
+        "representation": "public servant",
+        "Name": "Actor 3 ",
+        "ST_id": "ST_3"
+      },
+      "style": {
+        "node-color": "#68ccca"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": -927.6898570875722,
+        "y": -600.7842352142796
+      },
+      "labels": [
+        "Actor"
+      ],
+      "properties": {
+        "position": "organized",
+        "interest": "social",
+        "size": "group",
+        "decision making": "representation",
+        "urgency": "demand",
+        "representation": "governance",
+        "Name": "Actor 2 ",
+        "ST_id": "ST_2"
+      },
+      "style": {
+        "node-color": "#68ccca"
+      }
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": -628.5216947951884,
+        "y": -745.6602555626137
+      },
+      "labels": [
+        "Possibilities"
+      ],
+      "properties": {
+        "form": "material",
+        "usability": "constant",
+        "accessibility": "public",
+        "purpose": "facilitate",
+        "Name": "Possibility 1",
+        "P_id": "P_1"
+      },
+      "style": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "type": "explorative",
+      "style": {},
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n1"
+    },
+    {
+      "id": "n1",
+      "type": "informative",
+      "style": {},
+      "properties": {},
+      "fromId": "n4",
+      "toId": "n1"
+    },
+    {
+      "id": "n2",
+      "type": "illustrative",
+      "style": {},
+      "properties": {},
+      "fromId": "n5",
+      "toId": "n1"
+    },
+    {
+      "id": "n3",
+      "type": "directing",
+      "style": {},
+      "properties": {},
+      "fromId": "n6",
+      "toId": "n1"
+    },
+    {
+      "id": "n4",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n3",
+      "toId": "n6"
+    },
+    {
+      "id": "n5",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n7",
+      "toId": "n6"
+    }
+  ]
+}

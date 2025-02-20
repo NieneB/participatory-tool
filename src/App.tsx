@@ -11,12 +11,12 @@ import GraphView from "./pages/actions/graph-view";
 import Methods from "./pages/actions/methods";
 import Home2 from "./pages/index_2";
 import Community from "./pages/positions/community-organized";
-
+import imgLogoUrl from '/img/logo-go-cawh.svg';
 const App = () => {
   return (
     <HashRouter>      
              <Link to="/">
-             <img id="logo" src="./img/logo-go-cawh.svg"/> </Link>
+             <img id="logo" src={imgLogoUrl}/> </Link>
       <Routes>
         <Route exact path="/" index element={<Home />} />
         <Route path="index2" element={<Home2 />} />

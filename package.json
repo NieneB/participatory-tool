@@ -9,7 +9,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite serve",
     "build": "vite build",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist ",
     "tscheck": "tsc"
   },
@@ -34,6 +33,7 @@
     "style-loader": "4.0.0",
     "typescript": "5.7.2",
     "vite-plugin-html": "^3.2.2",
+    "vite-svg-loader": "^5.1.0",
     "webpack-dev-server": "5.1.0"
   },
   "dependencies": {
@@ -48,5 +48,12 @@
     "vis-data": "^7.1.9",
     "vis-network": "^9.1.9",
     "vite": "^6.1.1"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.js",
+      "require": "./dist/my-lib.umd.cjs"
+    },
+    "./style.css": "./dist/my-lib.css"
   }
 }

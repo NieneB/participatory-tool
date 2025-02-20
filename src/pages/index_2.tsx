@@ -1,6 +1,6 @@
 import * as Styled from "./index.styles";
 import { Link } from "react-router-dom";
-import Panel from "src/components/Panel";
+import Panel from "../components/Panel";
 
 const Home2 = () => {
   return (
@@ -17,18 +17,18 @@ const Home2 = () => {
       <Styled.Buttons>
         <Link to="/scope">
           {" "}
-          <Panel color='yellow' title='Scope' >
+          <Panel color='yellow' title='Scope' solid='not'>
             <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
           </Panel>
         </Link>
         <Link to="/positions">
-        <Panel color='purple' title='Positions' >
+        <Panel color='purple' title='Positions' solid='not' >
             <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
           </Panel>
          
         </Link>
         <Link to="/actions">
-        <Panel color='pink' title='Actions' >
+        <Panel color='pink' title='Actions' solid='not' >
             <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit</p>
           </Panel>
         </Link>

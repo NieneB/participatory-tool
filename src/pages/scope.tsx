@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import * as Styled from "./index.styles";
 import { ArrowDown, ArrowLeft, ArrowRight, Circle } from "iconoir-react";
-import NavBack from "src/components/NavBack";
-import Panel from "src/components/Panel";
+import NavBack from "../components/NavBack";
+import Panel from "../components/Panel";
 
 const Scope = () => {
   return (

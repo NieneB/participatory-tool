@@ -1,6 +1,6 @@
 import * as Styled from "./index.styles";
 import { Link } from "react-router-dom";
-import Panel from "src/components/Panel";
+import Panel from "../components/Panel";
 
 const Positions = () => {
   return (
