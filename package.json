@@ -40,7 +40,6 @@
     "d3": "^7.9.0",
     "iconoir": "^7.10.1",
     "iconoir-react": "^7.10.1",
-    "list-react-files": "^0.2.0",
     "neo4j-driver": "^5.26.0",
     "react-markdown": "^9.1.0",
     "react-router-dom": "^7.0.2",

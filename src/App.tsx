@@ -33,7 +33,7 @@ const App = () => {
         <Route path="positions/non-organized" element={<Community />} />
         <Route path="positions/community-organized" element={<Community />} />
         <Route path="positions/government-organized" element={<Community />} />
-        <Route path="/:filename" element={<DefaultMarkdownPage />} />
+        <Route path="/:filename" element={<DefaultMarkdownPage fileInput={''} />} />
       </Routes>
 
     </HashRouter>
