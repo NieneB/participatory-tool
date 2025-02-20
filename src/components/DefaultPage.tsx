@@ -83,14 +83,14 @@ const DefaultPage = ({ title, desc, dataset }) => {
         )}
       </Styled.Left>
       <Styled.Main>
-        <h1>{title}</h1>
+        <h1 >{title}</h1>
         <p>{desc}</p>
         <Panel title={title} color="yellow" solid='solid'></Panel>
         {dataset.map((element, i) => {
           return (
             <Element key={element.title} onClick={() => fillPanelContent(element)}>
               <ElementHeader key={'li' + element.title}>
-                <h1>{element.title}</h1>
+                <h1  id={element.title.replace(/\s+/g, '-').toLowerCase()} >{element.title}</h1>
                 <h2>{element.subtitle}</h2>
               </ElementHeader>
               <ElementLinks>

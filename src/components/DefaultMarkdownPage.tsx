@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import * as Styled from "./../pages/index.styles";
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 

@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const BackGround = styled.div`
     position:fixed;
-    z-index:-1;
-    width: 100vw;
+    left:0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
     height: 100vh;
     background-image: url("./img/achtergrond_stippen.svg");
     background-position: bottom right;
@@ -14,48 +16,14 @@ export const BackGround = styled.div`
   
 `
 export const Main = styled.div`
-  width: 40vw;
+  width:100%;
   min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   gap: 2rem;
-  margin: auto;
-  
-    @media only screen and (width <=1500px) {
-    width: 60vw;
-  }
-  @media only screen and (width <=992px) {
-    width: 70vw;
-  }
-  @media only screen and (width <=600px) {
-    overflow-y: auto;
-    height: auto;
-    width: 80vw;
-
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-`;
-
-
-
-
-export const Nav = styled.div`
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin: 1rem;
-  
-  @media only screen and (width <=992px) {
-  }
-  /* Small screen */
-  @media only screen and (width <=600px) {
-    flex-direction: column;
-  }
 `;
 
 export const EnterButton = styled.button`

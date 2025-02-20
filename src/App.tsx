@@ -12,30 +12,55 @@ import Overview from "./pages/overview";
 import Community from "./pages/positions/community-organized";
 import Conditions from "./pages/scope/conditions";
 import DefaultMarkdownPage from "./components/DefaultMarkdownPage";
+import styled from "styled-components";
+
+export const MainContent = styled.div`
+  width: 40vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  margin: auto;
+    @media only screen and (width <=1500px) {
+    width: 60vw;
+  }
+  @media only screen and (width <=992px) {
+    width: 70vw;
+  }
+  @media only screen and (width <=600px) {
+    overflow-y: auto;
+    height: auto;
+    width: 80vw;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+`;
 
 const App = () => {
   return (
     <HashRouter>
       <Link to="/">
         <img id="logo" src='./img/logo-go-cawh.svg' /> </Link>
-      <Routes>
-        <Route exact path="/" index element={<Home />} />
-        <Route path="overview" element={<Overview />} />
-        <Route path="scope" element={<Scope />} />
-        <Route path="positions" element={<Positions />} />
-        <Route path="actions" element={<Actions />} />
-        <Route path="scope/phases" element={<Phases />} />
-        <Route path="scope/conditions" element={<Conditions />} />
-        <Route path="scope/representative" element={<Representative />} />
-        <Route path="actions/methods" element={<Methods />} />
-        <Route path="actions/mapping" element={<GraphView />} />
-        <Route path="actions/activation" element={<Activation />} />
-        <Route path="positions/non-organized" element={<Community />} />
-        <Route path="positions/community-organized" element={<Community />} />
-        <Route path="positions/government-organized" element={<Community />} />
-        <Route path="/:filename" element={<DefaultMarkdownPage fileInput={''} />} />
-      </Routes>
-
+      <MainContent>
+        <Routes>
+          <Route exact path="/" index element={<Home />} />
+          <Route path="overview" element={<Overview />} />
+          <Route path="scope" element={<Scope />} />
+          <Route path="positions" element={<Positions />} />
+          <Route path="actions" element={<Actions />} />
+          <Route path="scope/phases" element={<Phases />} />
+          <Route path="scope/conditions" element={<Conditions />} />
+          <Route path="scope/representative" element={<Representative />} />
+          <Route path="actions/methods" element={<Methods />} />
+          <Route path="actions/mapping" element={<GraphView />} />
+          <Route path="actions/activation" element={<Activation />} />
+          <Route path="positions/non-organized" element={<Community />} />
+          <Route path="positions/community-organized" element={<Community />} />
+          <Route path="positions/government-organized" element={<Community />} />
+          <Route path="/:filename" element={<DefaultMarkdownPage fileInput={''} />} />
+        </Routes>
+      </MainContent>
     </HashRouter>
   );
 };

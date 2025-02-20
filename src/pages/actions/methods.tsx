@@ -4,7 +4,7 @@ import * as Styled from "./../index.styles";
 
 const Methods = () => {
   const listFiles = []
-  for (let i = 0; i <= 2 - 1; i++) {
+  for (let i = 0; i <= 22 - 1; i++) {
     let name = `method${i + 1}`
     listFiles.push(name)
   }
@@ -15,7 +15,10 @@ const Methods = () => {
       <div>
         {listFiles.map((fileName, i) => {
           return (
+            <>
+            <h3><Link to={`/${fileName}`}> Method {i+1}</Link></h3>
             <DefaultMarkdownPage key={fileName} fileInput={fileName}> </DefaultMarkdownPage>
+            </>
           )
         })}
       </div>
