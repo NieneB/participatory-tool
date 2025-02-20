@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const MainGraphPage = styled.div`
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left:0;
+    top:0;
+`
 export const StoryCarrousel = styled.div`
     width: 100vw;
     height:100px;

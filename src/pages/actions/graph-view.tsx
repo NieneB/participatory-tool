@@ -168,7 +168,7 @@ const GraphView = () => {
   };
 
   return (
-    <>
+    <Styled.MainGraphPage>
       <PanelBack key="graph">
         {dataSet && (
           <GraphD3
@@ -326,7 +326,7 @@ const GraphView = () => {
           </Styled.Step>
         </Styled.TopPanel>
       )}
-    </>
+    </Styled.MainGraphPage>
   );
 };
 
