@@ -38,9 +38,11 @@ export const MainContent = styled.div`
     overflow-y: auto;
     height: auto;
     width: 80vw;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    align-items: center;
+
   }
 
   
@@ -51,6 +53,12 @@ const Logo = styled.img`
     padding: 2rem;
     position: fixed;
     width: 7vw;
+
+
+  @media only screen and (width <=600px) {
+    padding: 1rem;
+
+  }
 
 `
 
