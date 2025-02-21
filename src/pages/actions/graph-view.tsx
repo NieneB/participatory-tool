@@ -4,7 +4,7 @@ import nodeData from "../../data/nodes2.json";
 import relationData from "../../data/relations2.json";
 import stories from "../../data/stories.json";
 import * as Styled from "./graph.styles";
-import { PanelBack, Left, Button } from "../index.styles";
+import { PanelBack, Left, EnterButton } from "../index.styles";
 import {
   ArrowDownCircle,
   ArrowRightCircle,
@@ -249,7 +249,7 @@ const GraphView = () => {
       </Left>
       <Styled.NavButton key="button-next">
         <div className="bottom-right">
-          <Button onClick={(e) => toggleMakingYourOwn(e)}>
+          <EnterButton onClick={(e) => toggleMakingYourOwn(e)}>
             {" "}
             Start your own Actor Mapping{" "}
             <MapsArrow
@@ -258,7 +258,7 @@ const GraphView = () => {
               height={36}
               style={{ transform: "rotate(90deg)" }}
             />
-          </Button>
+          </EnterButton>
         </div>
       </Styled.NavButton>
       {isOpenCustom && (

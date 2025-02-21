@@ -1,12 +1,7 @@
 import { useState } from "react";
 import * as Styled from "./index.styles";
-import GraphD3 from "../components/perspectiveD3Graph";
 import { Link } from "react-router-dom";
-import { Button } from "./index.styles";
-import Title from "../components/Title";
-import InteractivePanel from "../components/InteractiveSidePanel";
 import { MapsArrow } from "iconoir-react";
-import NavBack from "../components/NavBack";
 import Panel from "../components/Panel";
 
 const Actions = () => {

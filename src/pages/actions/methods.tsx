@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import DefaultMarkdownPage from "../../components/DefaultMarkdownPage";
-import * as Styled from "./../index.styles";
+import CenterPanelSolid from "../../components/CenterPanelSolid";
 
 const Methods = () => {
   const listFiles = []
@@ -12,12 +12,15 @@ const Methods = () => {
 
   return (
     <>
+      <CenterPanelSolid title={"Methods"} color="yellow"></CenterPanelSolid>
+      <h1>Methods</h1>
+      <p>Lorum ipsum </p>
       <div>
         {listFiles.map((fileName, i) => {
           return (
             <>
-            <h3><Link to={`/${fileName}`}> Method {i+1}</Link></h3>
-            <DefaultMarkdownPage key={fileName} fileInput={fileName}> </DefaultMarkdownPage>
+              <h3><Link to={`/${fileName}`}> Method {i + 1}</Link></h3>
+              <DefaultMarkdownPage key={fileName} fileInput={fileName}> </DefaultMarkdownPage>
             </>
           )
         })}

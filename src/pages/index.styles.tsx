@@ -53,82 +53,77 @@ export const EnterButton = styled.button`
 
 export const Buttons = styled.div`
   display: flex;
-  gap: 2.5rem;
-  align-items: flex-start;
-  
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: space-between;
+  /* gap: 2.5rem; */
+  width: 100%;
+  height: auto;
+
   @media only screen and (width <=992px) {
-    gap: 2rem;
+    /* gap: 2rem; */
 
   }
   /* Small screen */
   @media only screen and (width <=600px) {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
 
   }
 `;
 
-export const Button = styled.button`
-  background-color: rgba(0,0,0,0);
-  border: 2px solid var(--color-yellow-main);
-  border-radius: 2px;
-  box-sizing: border-box;
-  width: auto;
-  color: #000;
-  cursor: pointer;
+// export const Button = styled.button`
+//   width: auto;
+//   height: 300px;
+//   background-color: rgba(0,0,0,0);
+//   border: 2px solid var(--color-yellow-main);
+//   border-radius: 2px;
+//   box-sizing: border-box;
+//   color: #000;
+//   cursor: pointer;
+//   display: flex;
+//   flex-direction:column;
+//   align-items: center;
+//   gap: 1rem;
+//   margin: 0;
 
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  gap: 1rem;
+//   user-select: none;
+//   -webkit-user-select: none;
 
-  &#pink {
-    border: 1px solid var(--color-pink-main);
-  }
-  &#purple {
-    border: 1px solid var(--color-purple-main);
-  }
-  &#yellow {
-    border: 1px solid var(--color-yellow-main);
-  }
-  h1 {
-    text-transform: uppercase;
-  }
+//   &#pink {
+//     border: 1px solid var(--color-pink-main);
+//   }
+//   &#purple {
+//     border: 1px solid var(--color-purple-main);
+//   }
+//   &#yellow {
+//     border: 1px solid var(--color-yellow-main);
+//   }
+//   h1 {
+//     text-transform: uppercase;
+//   }
 
-  margin: 0;
-  padding: 1rem 1.5rem;
-  
-  user-select: none;
-  -webkit-user-select: none;
-
-  &:hover {
-    /* outline: 5px solid #000;
-    outline-offset: 0.3rem;
-    border-radius: 0px; */
-    background-color: var(--color-yellow-main);
-    color: #ffffff;
-    border: 0px solid #000;
-
-
-    &#pink {
-    border: 1px solid var(--color-pink-main);
-    background-color: var(--color-pink-main);
-
-  }
-  &#purple {
-    border: 1px solid var(--color-purple-main);
-    background-color: var(--color-purple-main);
-
-  }
-  &#yellow {
-    border: 1px solid var(--color-yellow-main);
-    background-color: var(--color-yellow-main);
-
-  }
-  }
+//   &:hover {
+//     background-color: var(--color-yellow-main);
+//     color: #ffffff;
+//     border: 0px solid #000;
+//     &#pink {
+//     border: 1px solid var(--color-pink-main);
+//     background-color: var(--color-pink-main);
+//     }
+//     &#purple {
+//       border: 1px solid var(--color-purple-main);
+//       background-color: var(--color-purple-main);
+//     }
+//     &#yellow {
+//       border: 1px solid var(--color-yellow-main);
+//       background-color: var(--color-yellow-main);
+//     }
+//   }
  
   
-`;
+// `;
 
 
 

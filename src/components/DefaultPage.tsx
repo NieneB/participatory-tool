@@ -1,13 +1,9 @@
 import styled from "styled-components";
 import InteractiveSidePanel from "./InteractiveSidePanel";
-import { data, useNavigate } from "react-router-dom";
-import { ArrowLeft, Home } from "iconoir-react";
-import { Children, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import * as Styled from "./../pages/index.styles";
-import NavBack from "./NavBack";
-import Panel from "./Panel";
-
-
+import CenterPanelSolid from "./CenterPanelSolid";
+import { HashLink } from 'react-router-hash-link';
 
 const List = styled.div`
   display: flex;
@@ -53,6 +49,16 @@ const ElementContent = styled.div`
     list-style: circle;
     list-style-position: inside;
   }
+
+  & p >b {
+    text-transform: capitalize;
+    font-weight: 800;
+  }
+  & p  {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 0.5rem;
+  }
 `
 
 const DefaultPage = ({ title, desc, dataset, children }) => {
@@ -72,40 +78,50 @@ const DefaultPage = ({ title, desc, dataset, children }) => {
 
   return (
     <>
-      <h1 >{title}</h1>
-      <p>{desc}</p>
-      <Panel title={title} color="yellow" solid='solid'></Panel>
-      <p>{children}</p>
-      {dataset.map((element, i) => {
-        return (
-          <Element key={element.title} onClick={() => fillPanelContent(element)}>
-            <ElementHeader key={'li' + element.title}>
-              <h1 id={element.title.replace(/\s+/g, '-').toLowerCase()} >{element.title}</h1>
-              {element.subtitle && <h2>{element.subtitle}</h2>}
-            </ElementHeader>
-            <ElementLinks>
-              <li>1. clickable</li>
-              <li>1. clickable</li>
-              <li>1. clickable</li>
-            </ElementLinks>
-            <ElementContent>
-              {element.goal && <p>Goal: {element.goal}</p>}
-              {element.assignment && <p>Assignment: {element.assignment}</p>}
-              {element.using && <><p>By using:</p>
-                <ul>
-                  {element.using.map((el) => {
-                    return (<li key={el}>{el}</li>)
-                  })}
-                </ul>
-              </>
-              }
-              {element.output && <p>Output: {element.output}</p>}
-              {element.iteration && <p>Iteration: {element.iteration}</p>}
-
-            </ElementContent>
-          </Element>
-        );
-      })}
+      <CenterPanelSolid title={title} color="yellow"><p>{desc}</p></CenterPanelSolid>
+      {title && <h1 >{title}</h1>}
+      {desc && <p>{desc}</p>}
+      {children && <p>{children}</p>}
+      <>
+        {/* Rendering cards */}
+        {dataset && dataset.map((element, i) => {
+          return (
+            <Element key={element.title} onClick={() => fillPanelContent(element)}>
+              <ElementHeader key={'li' + element.title}>
+                <h1 id={element.title.replace(/\s+/g, '-').toLowerCase()} >{element.title}</h1>
+                {element.subtitle && <h2>{element.subtitle}</h2>}
+              </ElementHeader>
+              <ElementLinks>
+                {element.phase && <HashLink  smooth to={`/scope/phases/#${element.phase.replace(/\s+/g, '-').toLowerCase()}`}>{element.phase}</HashLink>}
+                <li>1. clickable</li>
+                <li>1. clickable</li>
+                <li>1. clickable</li>
+              </ElementLinks>
+              <ElementContent>
+                {element.desc && <p>{element.desc}</p>}
+                {element.audience && <p><b>audience:</b> {element.audience}</p>}
+                {element.mapping && <p><b>Connection to Mapping Approach:</b> {element.mapping}</p>}
+                {element.methods && <p><b>Connection to Methods:</b> {element.methods}</p>}
+                {element.goal && <p><b>Goal:</b> {element.goal}</p>}
+                {element.assignment && <p><b>Assignment:</b> {element.assignment}</p>}
+                {element.using && <p><b>By using:</b>
+                  <ul>
+                    {element.using.map((el) => {
+                      return (<li key={el}>{el}</li>)
+                    })}
+                  </ul>
+                </p>
+                }
+                {element.output && <p><b>Output:</b> {element.output}</p>}
+                {element.iteration && <p><b>Iteration:</b> {element.iteration}</p>}
+                {element.role && <p><b>Role:</b> {element.role}</p>}
+                {element.objective && <p><b>Objective:</b> {element.objective}</p>}
+                {element.links && <p><b>Link:</b> {element.links}</p>}
+              </ElementContent>
+            </Element>
+          )
+        })}
+      </>
       <Styled.Left>
         {panelContent && (
           <InteractiveSidePanel>

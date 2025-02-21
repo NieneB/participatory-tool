@@ -1,6 +1,6 @@
 # Structured Interviews 
 
-- Connecting to Participatory Phase: [Assessment Phase](participatory-tool#/scope/phases/#assessment-phase)
+- Connecting to Participatory Phase: [Assessment Phase](/scope/phases/#assessment-phase)
 - Objective: 
 - Description: 
 - Proposed audience: 

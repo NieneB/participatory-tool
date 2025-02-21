@@ -11,7 +11,6 @@ const Overview = () => {
       <p>We've organized our approach in these three chapters: </p>
       <Styled.Buttons>
         <Link to="/scope">
-          {" "}
           <Panel color='yellow' title='Scope' solid='not'>
             <p>What are the steps, conditions and people involved in the participatory process?</p>
           </Panel>
@@ -20,7 +19,6 @@ const Overview = () => {
         <Panel color='purple' title='Positions' solid='not' >
             <p>Why, what and who are the three positions involved in the water focussed innovation projects? </p>
           </Panel>
-         
         </Link>
         <Link to="/actions">
         <Panel color='pink' title='Actions' solid='not' >

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 const Section = styled.div`
   width: 100%;
@@ -35,7 +36,16 @@ const DefaultMarkdownPage = ({ fileInput }) => {
 
     return (
         <Section>
-            <ReactMarkdown>{markdownContent}</ReactMarkdown>
+            <ReactMarkdown
+                components={{
+                    a(props) {
+                        return <HashLink to={`${props.href}`} smooth >{props.children} </HashLink>
+                    }
+                }}
+            >{markdownContent}
+
+
+            </ReactMarkdown>
         </Section>
     );
 };

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Panel from "../../components/Panel";
+import CenterPanelSolid from "../../components/CenterPanelSolid";
 
 const TextPanel = styled.div`
   border: solid 1px #929292;
@@ -11,9 +11,9 @@ const Conditions = () => {
   return (
     <>
       <h1>Conditions</h1>
-      <Panel color='yellow' solid="solid" title='Conditions' >
+      <CenterPanelSolid color='yellow' solid="solid" title='Conditions' >
         <p>Lorum ipsum</p>
-      </Panel>
+      </CenterPanelSolid>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia,
         massa vel lacinia auctor, est leo ullamcorper ligula, vitae vehicula

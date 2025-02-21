@@ -3,7 +3,7 @@ import DefaultPage from "../../components/DefaultPage";
 const Phases = () => {
   const dataset = [
     {
-      title: "Assesment Phase",
+      title: "Assessment Phase",
       subtitle: "In this phase the main focus is to answer the question: why are we starting this participation process?",
       goal: "mapping the expectations of the participation process ahead",
       assignment: "to collect and verify the requirements available and/ or needed for the participation process",
