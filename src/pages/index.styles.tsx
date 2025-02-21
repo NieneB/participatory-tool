@@ -13,10 +13,15 @@ export const BackGround = styled.div`
     background-repeat: no-repeat;
     /* filter: blur(0.5px);
     -webkit-filter: blur(1px); */
-  
+    @media only screen and (width <=600px) {
+      background-position: top right;
+
+    }
 `
 
 export const EnterButton = styled.button`
+   
+   width: auto;
   background-color: rgba(0,0,0,0);
   border: 1px solid var(--color-purple-main);
   border-radius: 2px;
@@ -26,50 +31,39 @@ export const EnterButton = styled.button`
   display: flex;
   align-items: center;
   gap: 1rem;
+  outline: none;
+  padding: 1rem 1.5rem;
 
   h3 {
-  
     font-size: 1.5rem;
     text-decoration: unset;
   }
-
-
-  margin: 0;
-  outline: none;
-  padding: 1rem 1.5rem;
-  
-    transform 0.1s;
-  user-select: none;
-  -webkit-user-select: none;
-  width: auto;
-
-  &:hover {
-  
-  }
-
-  
-`;
+  `;
 
 
 export const Buttons = styled.div`
   display: flex;
   align-items: stretch;
   align-content: stretch;
-  justify-content: space-between;
-  /* gap: 2.5rem; */
+  justify-content: center;
+  gap: 5rem;
   width: 100%;
   height: auto;
+  margin-top: 2rem;
 
+    /* Normal HD screen (mijn comp)*/
+  @media only screen and (width <= 1950px) {
+    justify-content: space-between;
+    gap: 1rem;
+  }
   @media only screen and (width <=992px) {
     /* gap: 2rem; */
-
   }
   /* Small screen */
   @media only screen and (width <=600px) {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-
   }
 `;
 
@@ -121,8 +115,8 @@ export const Buttons = styled.div`
 //       background-color: var(--color-yellow-main);
 //     }
 //   }
- 
-  
+
+
 // `;
 
 

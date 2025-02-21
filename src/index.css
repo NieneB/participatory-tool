@@ -86,10 +86,11 @@ root {
 }
 
 
+/* Large HD scherm  standaard*/
 
 html {
     /* Root size */
-    font-size: 16pt;
+    font-size: 20pt;
     font-family: 'Accanthis ADF Std';
     color: var(--color-brown-main);
     background-color: var(--color-background);
@@ -104,13 +105,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, a {
+    color: var(--color-brown-main);
     font-size: 1rem;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.2rem;
 }
 
 a {
     /* text-decoration: underline var(--color-yellow-main) 3px; */
     text-decoration: none;
-
 }
 
 a:hover {
@@ -118,6 +121,18 @@ a:hover {
     color: white;
 }
 
+
+
+/* Normal HD screen (mijn comp)*/
+@media only screen and (width <= 1950px) {
+    html {
+        font-size: 16pt;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.5;
+    }
+}
 
 /* Intermediate screen */
 @media only screen and (width <=992px) {
@@ -141,7 +156,8 @@ a:hover {
         line-height: 1.1;
     }
 
+    p {
+        text-align: justify;
+    }
+
 }
-
-
-

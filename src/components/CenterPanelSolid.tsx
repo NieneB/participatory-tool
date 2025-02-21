@@ -1,17 +1,15 @@
-import { Circle } from "iconoir-react";
 import styled from "styled-components";
 
 const Button = styled.div`
   margin: 0;
-  padding: 1rem ;
-  max-width: 15rem;
+  padding: 0.5rem ;
+  width: auto;
   height: auto;
-  margin:auto;
   border-radius: 2px;
   box-sizing: border-box;
 
   display: flex;
-  flex-direction:column;
+  flex-direction:row;
   align-items: center;
   gap: 1rem;
 
@@ -28,20 +26,12 @@ const Button = styled.div`
     background-color: var(--color-yellow-main);
     border: 1px solid var(--color-yellow-main);
   }
-
-
-  h1 {
-    font-size:1rem;
-    text-transform: uppercase;
-  }
 `;
 
 const CenterPanelSolid = ({ title, color, children }) => {
   return (
     <Button className={`${color}` }>
-      <h1>{title} </h1>
-      <Circle color={`white`} width={36} height={36} />
-      {children && <p>{children}</p>}
+      <h3>{title} </h3>
     </Button>
   );
 };

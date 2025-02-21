@@ -5,8 +5,8 @@ const Button = styled.div`
   margin: 0;
   padding: 1rem ;
   max-width: 10rem;
-  min-height: 15rem;
-
+  min-height: 16rem;
+  overflow: hidden;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -34,7 +34,9 @@ const Button = styled.div`
     font-size:1rem;
     text-transform: uppercase;
   }
-
+  p {
+    text-align:center;
+  }
   &:hover {
     background-color: var(--color-yellow-main);
     color: #ffffff;

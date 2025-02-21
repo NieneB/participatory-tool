@@ -17,146 +17,123 @@ const StyledSVG = styled.svg`
   }
 `;
 
-const GraphD3 = ({ data, toggleInfo }) => {
-  const visual = useRef();
+const PositionsGraphD3 = ({ data, toggleInfo, inputWidth, inputHeight }) => {
+  const visualPositions = useRef();
   const dataNodes = data.nodes;
-
   const dataLinks = data.links;
 
-  const width = 100;
-  const height = 100;
-
-  // https://observablehq.com/@d3/disjoint-force-directed-graph/2
-  //   const links = data.links.map(d => ({...d}));
-  //   const nodes = data.nodes.map(d => ({...d}));
+  const width = inputWidth || 100;
+  const height = inputHeight || 100;
+  const color = d3.scaleOrdinal([
+    "#ca619d",
+    "#5a70c0",
+    "#f1ae23",
+  ]);
 
   const simulation = d3
     .forceSimulation()
-    // .force("charge", d3.forceManyBody().strength(10))
-    .force("collision", d3.forceCollide().radius(17))
-    .force("center", d3.forceCenter(width / 3 + width / 3, height / 2));
+    .force("x", d3.forceX())
+    .force("y", d3.forceY())
+    .force("collision", d3.forceCollide().radius(20))
+    // .force("charge", d3.forceManyBody().strength(-150))
+    ;
 
   useEffect(() => {
-    d3.select("body").on("click", function (e) {
-      if (e.target.nodeName == "svg") {
-        toggleInfo(e, "");
-      }
-    });
-
     const svg = d3
-      .select(visual.current)
+      .select(visualPositions.current)
       .attr("width", "100%")
-      .attr("height", "100%")
-      .attr("viewBox", [0, 0, width, height]);
+      .attr("height", "50vh")
+      .attr("viewBox", [-width / 2, -height / 2, width, height]);
 
-    simulation.nodes(dataNodes);
-    simulation.force(
-      "link",
-      d3.forceLink(dataLinks).id((d) => d.id)
-    );
-    simulation.on("tick", ticked);
-    const groups = svg
-      .append("g")
-      .attr("class", "groups")
-      .selectAll("g")
+    simulation.nodes(dataNodes)
+
+
+    svg
+      .selectAll(".nodes")
       .data(dataNodes)
-      .enter();
+      .join(
+        (enter) => {
+          enter
+            .append("circle")
+            .classed("nodes", true)
+            .attr("id", (d) => `position-${d.id}`)
+            .attr("r", 20)
+            .style("fill", (d, i) => color(i))
+            .style("stroke", (d, i) => color(i))
+            .attr("cx", function (d) {
+              return d.x;
+            })
+            .attr("cy", function (d) {
+              return d.y;
+            })
+        }
+      )
 
-    const link = groups
-      .append("g")
-      .attr("stroke", "#484444")
-      .attr("stroke-opacity", 0)
-      .selectAll()
-      .data(dataLinks)
-      .join("line")
-      .attr("stroke-width", (d) => Math.sqrt(d.value));
+    svg
+      .selectAll("text")
+      .data(dataNodes)
+      .join(
+        (enter) => {
+          enter
+            .append("text")
+            .classed("text", true)
+            .attr("id", (d) => `text${d.id}`)
+            .text((d) => {
+              return d.id;
+            })
+            .attr("x", (d) => {
+              d.x + 10
+            })
+            .attr("y", (d) => {
+              return d.y + 5;
+            });
+        }
+      )
+    svg
+      .selectAll(".nodes")
+      .call(
+        d3
+          .drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended)
+      );
+    // Set the position attributes of links and nodes each time the simulation ticks.
+    simulation
+      .on("tick", () => {
+        svg
+          .selectAll(".links")
+          .attr("x1", (d) => d.source.x)
+          .attr("y1", (d) => d.source.y)
+          .attr("x2", (d) => d.target.x)
+          .attr("y2", (d) => d.target.y);
 
-    const node = groups
-      .append("g")
-      .attr("class", "node")
-      .attr("id", (d) => d.id)
-      .on("click", (d, i) => {
-        toggleInfo(d, i);
+        svg
+          .selectAll(".nodes")
+          .attr("cx", (d) => d.x)
+          .attr("cy", (d) => d.y);
 
-        // Add 10 new nodes
-        const newNodes = Array.from({ length: 10 }, (_, i) => ({
-          id: `new-node-${Date.now()}-${i}`, // Ensure unique ID
-          x: d.x + Math.random() * 20 - 10, // Random nearby position
-          y: d.y + Math.random() * 20 - 10,
-        }));
-        data.nodes.push(...newNodes);
-
-        // Rebind data and restart simulation
-        const updatedNodes = svg.selectAll("g.node").data(data.nodes);
-        const updatedNodeEnter = updatedNodes
-          .enter()
-          .append("g")
-          .attr("class", "node");
-
-        updatedNodeEnter
-          .append("circle")
-          .classed("node-circle", true)
-          .attr("r", 20)
-          .attr("fill", (d, i) => color(i))
-          .style("mix-blend-mode", "multiply")
-          .style("stroke", "rgba(0, 0, 0, 0.15)")
-          .style("stroke-width", "3.95px");
-
-        updatedNodeEnter
-          .append("text")
-          .text((d) => d.id)
-          .style("font-size", "0.5em");
-
-        updatedNodes.exit().remove();
-
-        simulation.nodes(data.nodes);
-        simulation.alpha(1).restart();
+        svg
+          .selectAll(".text")
+          .attr("x", (d) => {
+            d.x + 10;
+          })
+          .attr("y", (d) => d.y + 5);
       })
-      .style("cursor", "pointer");
 
-    node
-      .append("circle")
-      .classed("node-circle", true)
-      .attr("r", 20)
-      .attr("fill", (d, i) => color(i))
-      .style("stroke", "rgba(0, 0, 0, 0.15)")
-      .style("stroke-width", "3.95px");
+      .alphaTarget(-0.1);
 
-    node
-      .append("text")
-      .text((d, i) => {
-        return d.id;
-      })
-      .style("font-size", "0.5em");
-
-    node.call(
-      d3
-        .drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended)
-    );
-    function ticked() {
-      node
-        .selectAll("circle")
-        .attr("cx", (d) => d.x)
-        .attr("cy", (d) => d.y);
-      node
-        .selectAll("text")
-        .attr("x", (d) => d.x)
-        .attr("y", (d) => d.y);
-      link
-        .attr("x1", (d) => d.source.x)
-        .attr("y1", (d) => d.source.y)
-        .attr("x2", (d) => d.target.x)
-        .attr("y2", (d) => d.target.y);
-    }
+    simulation.nodes().forEach(function (d) {
+      d.fx = d.x;
+      d.fy = d.y;
+      d.fixed = true;
+    });
 
     // Reheat the simulation when drag starts, and fix the subject position.
     function dragstarted(event) {
-      if (!event.active) simulation.alphaTarget(0.3).restart();
-      event.subject.fx = event.subject.x;
-      event.subject.fy = event.subject.y;
+      if (!event.active) simulation.alphaTarget(0.1).restart();
+      event.subject.fx = event.x;
+      event.subject.fy = event.y;
     }
 
     // Update the subject (dragged node) position during drag.
@@ -168,23 +145,14 @@ const GraphD3 = ({ data, toggleInfo }) => {
     // Restore the target alpha so the simulation cools after dragging ends.
     // Unfix the subject position now that it’s no longer being dragged.
     function dragended(event) {
-      if (!event.active) simulation.alphaTarget(0);
-      event.subject.fx = null;
-      event.subject.fy = null;
+      if (!event.active) simulation.alphaTarget(-0.1);
+      event.subject.fx = event.x;
+      event.subject.fy = event.y;
     }
-  }, []);
 
-  useEffect(() => {
-    const svg = d3.select(visual.current);
+  }, [])
 
-    simulation.stop();
-
-    simulation.restart();
-
-    // invalidation.then(() => simulation.stop());
-  }, [data]);
-
-  return <StyledSVG ref={visual}></StyledSVG>;
+  return <StyledSVG ref={visualPositions}></StyledSVG>;
 };
 
-export default GraphD3;
+export default PositionsGraphD3;

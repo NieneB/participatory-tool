@@ -52,7 +52,7 @@ const ElementContent = styled.div`
 
   & p >b {
     text-transform: capitalize;
-    font-weight: 800;
+    font-weight: bold;
   }
   & p  {
     display: grid;
@@ -64,7 +64,8 @@ const ElementContent = styled.div`
 const DefaultPage = ({ title, desc, dataset, children }) => {
   const [panelTitle, setPanelTitle] = useState("");
   const [panelContent, setPanelContent] = useState("");
-
+  const url = window.location.hash;
+  
   useEffect(() => {
     //find all elements with more info and onclick element fill panel content
     // Dataset
@@ -78,7 +79,7 @@ const DefaultPage = ({ title, desc, dataset, children }) => {
 
   return (
     <>
-      <CenterPanelSolid title={title} color="yellow"><p>{desc}</p></CenterPanelSolid>
+      <CenterPanelSolid title={url} color="yellow"><p>{desc}</p></CenterPanelSolid>
       {title && <h1 >{title}</h1>}
       {desc && <p>{desc}</p>}
       {children && <p>{children}</p>}

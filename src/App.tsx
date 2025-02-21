@@ -15,7 +15,7 @@ import DefaultMarkdownPage from "./components/DefaultMarkdownPage";
 import styled from "styled-components";
 
 export const MainContent = styled.div`
-  width: 40vw;
+  width: 50vw;
   min-height: calc(100vh - 2rem);
   overflow-x: hidden;
   overflow-y: auto;
@@ -27,7 +27,12 @@ export const MainContent = styled.div`
   margin: auto;
   padding-top: 2rem;
 
-  
+  /* Normal HD screen (mijn comp)*/
+@media only screen and (width <= 1950px) {
+  width: 40vw;
+
+}
+
   @media only screen and (width <=1500px) {
     width: 60vw;
   }
