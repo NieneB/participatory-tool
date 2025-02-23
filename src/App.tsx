@@ -13,6 +13,7 @@ import Community from "./pages/positions/community-organized";
 import Conditions from "./pages/scope/conditions";
 import DefaultMarkdownPage from "./components/DefaultMarkdownPage";
 import styled from "styled-components";
+import NavBack from "./components/NavBack";
 
 export const MainContent = styled.div`
   width: 50vw;

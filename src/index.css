@@ -110,7 +110,10 @@ p, a {
     -webkit-tap-highlight-color: transparent;
     line-height: 1.2rem;
 }
+p:after{
+    margin-bottom: 1rem;
 
+}
 a {
     /* text-decoration: underline var(--color-yellow-main) 3px; */
     text-decoration: none;

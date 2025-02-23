@@ -1,13 +1,28 @@
 import { ArrowLeft } from "iconoir-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import CenterPanelSolid from "./CenterPanelSolid";
+import styled from "styled-components";
 
+
+const StyledNavBack = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`
 const NavBack = () => {
   const navigate = useNavigate();
-  console.log(navigate)
+  const url = window.location.hash;
+  console.log(window.location)
   return (
-    <button onClick={() => navigate(-1)}>
-      <ArrowLeft></ArrowLeft>
-    </button>
+    <StyledNavBack>
+      <Link to={'..'} onClick={(e) => {
+        e.preventDefault();
+        navigate(-1);
+      }}>
+        <ArrowLeft></ArrowLeft>
+      </Link>
+      <CenterPanelSolid title={url} color="yellow"><p>{url}</p></CenterPanelSolid>
+    </StyledNavBack>
   );
 };
 

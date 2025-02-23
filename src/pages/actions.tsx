@@ -1,31 +1,32 @@
-import { useState } from "react";
 import * as Styled from "./index.styles";
 import { Link } from "react-router-dom";
 import { MapsArrow } from "iconoir-react";
 import Panel from "../components/Panel";
+import NavBack from "../components/NavBack";
 
 const Actions = () => {
-  const [infoOn, setInfoOn] = useState(false);
-  const [opening, setOpening] = useState(true);
-  const [info, setInfo] = useState({});
+  // const [infoOn, setInfoOn] = useState(false);
+  // const [opening, setOpening] = useState(true);
+  // const [info, setInfo] = useState({});
 
-  function toggleInfo(e, d: string) {
-    console.log(d);
-    if (d) {
-      setInfoOn(true);
-      setInfo(d);
-      setOpening(false);
-    } else {
-      setInfoOn(false);
-    }
-  }
+  // function toggleInfo(e, d: string) {
+  //   console.log(d);
+  //   if (d) {
+  //     setInfoOn(true);
+  //     setInfo(d);
+  //     setOpening(false);
+  //   } else {
+  //     setInfoOn(false);
+  //   }
+  // }
 
-  function toggleOpening() {
-    setOpening(false);
-  }
-  window.setTimeout(toggleOpening, 5000);
+  // function toggleOpening() {
+  //   setOpening(false);
+  // }
+  // window.setTimeout(toggleOpening, 5000);
   return (
     <>
+          <NavBack />
         <h1>Actions</h1>
         <p >
         How can you act on the questions and participation opportunities that arise?

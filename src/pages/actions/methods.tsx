@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import DefaultMarkdownPage from "../../components/DefaultMarkdownPage";
-import CenterPanelSolid from "../../components/CenterPanelSolid";
+import NavBack from "../../components/NavBack";
 
 const Methods = () => {
   const listFiles = []
@@ -12,7 +12,7 @@ const Methods = () => {
 
   return (
     <>
-      <CenterPanelSolid title={"Methods"} color="yellow"></CenterPanelSolid>
+      <NavBack/>
       <h1>Methods</h1>
       <p>Lorum ipsum </p>
       <div>

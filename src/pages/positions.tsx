@@ -2,6 +2,7 @@ import * as Styled from "./index.styles";
 import { Link } from "react-router-dom";
 import Panel from "../components/Panel";
 import PositionsGraphD3 from "../components/perspectiveD3Graph";
+import NavBack from "../components/NavBack";
 
 
 
@@ -31,6 +32,8 @@ const Positions = () => {
 
   return (
     <div>
+      <NavBack />
+
       <h1>Positions</h1>
       <PositionsGraphD3 data={data} />
       <h2>Why, what and who are the three positions involved in the water focussed innovation projects? </h2>
