@@ -15,12 +15,14 @@ const Methods = () => {
       <NavBack/>
       <h1>Methods</h1>
       <p>Lorum ipsum </p>
+      <img src="./img/methods & tools.png"/>
       <div>
         {listFiles.map((fileName, i) => {
           return (
             <>
               <h3><Link to={`/${fileName}`}> Method {i + 1}</Link></h3>
-              <DefaultMarkdownPage key={fileName} fileInput={fileName}> </DefaultMarkdownPage>
+              <DefaultMarkdownPage key={fileName} fileInput={fileName}>
+                 </DefaultMarkdownPage>
             </>
           )
         })}

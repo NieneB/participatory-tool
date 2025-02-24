@@ -35,7 +35,7 @@ const Representative = () => {
       </p>
       <p>
         Each perspective has their own version of ‘The Nightmare of Participation’ and just like any other project, we believe that clearly defining the roles of the involved people, creates a work environment where people don’t have to guess who does what. </p>
-      <img src="" />
+      <img src="./img/representatives.png" />
     </DefaultPage>)
 };
 export default Representative;

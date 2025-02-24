@@ -11,7 +11,7 @@ const StyledNavBack = styled.div`
 `
 const NavBack = () => {
   const navigate = useNavigate();
-  const url = window.location.hash;
+  const url = window.location.pathname;
   console.log(window.location)
   return (
     <StyledNavBack>
@@ -21,7 +21,7 @@ const NavBack = () => {
       }}>
         <ArrowLeft></ArrowLeft>
       </Link>
-      <CenterPanelSolid title={url} color="yellow"><p>{url}</p></CenterPanelSolid>
+      <CenterPanelSolid title={url} color="pink"><p>{url}</p></CenterPanelSolid>
     </StyledNavBack>
   );
 };

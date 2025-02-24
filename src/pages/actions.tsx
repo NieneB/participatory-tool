@@ -1,5 +1,5 @@
 import * as Styled from "./index.styles";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { MapsArrow } from "iconoir-react";
 import Panel from "../components/Panel";
 import NavBack from "../components/NavBack";
@@ -32,13 +32,13 @@ const Actions = () => {
         How can you act on the questions and participation opportunities that arise?
         </p>
         <Styled.Buttons>
-          <Link to="/actions/methods">
-            <Panel color='yellow' title='Method & Tools' >
+          <NavLink to="/approach/actions/methods">
+            <Panel color='second-rank' title='Method & Tools' >
               <p>Identifying participation opportunities</p>
             </Panel>
-          </Link>
-          <Link to="/actions/mapping">
-            <Panel color='purple' title='Mapping approach' >
+          </NavLink>
+          <NavLink to="/approach/actions/mapping">
+            <Panel color='second-rank' title='Mapping approach' >
               <p>Collecting participation opportunities </p>
               <MapsArrow
                 color="var(--color-purple-main)"
@@ -47,12 +47,12 @@ const Actions = () => {
                 style={{ transform: "rotate(90deg)" }}
               />
             </Panel>
-          </Link>
-          <Link to="/actions/activation">
-            <Panel color='pink' title='Activation' >
+          </NavLink>
+          <NavLink to="/approach/actions/activation">
+            <Panel color='second-rank' title='Activation' >
               <p>Acting on the participation opportunities</p>
             </Panel>
-          </Link>
+          </NavLink>
         </Styled.Buttons>
     </>
   );

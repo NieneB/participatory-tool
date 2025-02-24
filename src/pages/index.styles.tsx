@@ -19,21 +19,20 @@ export const BackGround = styled.div`
     }
 `
 
-export const EnterButton = styled.button`
-   
+export const EnterButton = styled.div`
    width: auto;
   background-color: rgba(0,0,0,0);
+
+  padding: 1rem 1.5rem;
   border: 1px solid var(--color-purple-main);
   border-radius: 2px;
-  box-sizing: border-box;
   color: var(--color-brown-main);
   cursor: pointer;
+  
   display: flex;
   align-items: center;
   gap: 1rem;
-  outline: none;
-  padding: 1rem 1.5rem;
-
+   
   h3 {
     font-size: 1.5rem;
     text-decoration: unset;
@@ -66,60 +65,6 @@ export const Buttons = styled.div`
     align-items: center;
   }
 `;
-
-// export const Button = styled.button`
-//   width: auto;
-//   height: 300px;
-//   background-color: rgba(0,0,0,0);
-//   border: 2px solid var(--color-yellow-main);
-//   border-radius: 2px;
-//   box-sizing: border-box;
-//   color: #000;
-//   cursor: pointer;
-//   display: flex;
-//   flex-direction:column;
-//   align-items: center;
-//   gap: 1rem;
-//   margin: 0;
-
-//   user-select: none;
-//   -webkit-user-select: none;
-
-//   &#pink {
-//     border: 1px solid var(--color-pink-main);
-//   }
-//   &#purple {
-//     border: 1px solid var(--color-purple-main);
-//   }
-//   &#yellow {
-//     border: 1px solid var(--color-yellow-main);
-//   }
-//   h1 {
-//     text-transform: uppercase;
-//   }
-
-//   &:hover {
-//     background-color: var(--color-yellow-main);
-//     color: #ffffff;
-//     border: 0px solid #000;
-//     &#pink {
-//     border: 1px solid var(--color-pink-main);
-//     background-color: var(--color-pink-main);
-//     }
-//     &#purple {
-//       border: 1px solid var(--color-purple-main);
-//       background-color: var(--color-purple-main);
-//     }
-//     &#yellow {
-//       border: 1px solid var(--color-yellow-main);
-//       background-color: var(--color-yellow-main);
-//     }
-//   }
-
-
-// `;
-
-
 
 // Complete covering screen
 export const PanelBack = styled.div`
