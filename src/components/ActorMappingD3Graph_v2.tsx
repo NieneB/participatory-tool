@@ -250,9 +250,9 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
               .style("fill", (d) => {
                 if (activeStory === "Positions") {
                   let color = d3.color(colorPositions(d.properties.position));
-                  return d.labels[0] === "area" ? "black" : d.properties.position ? color : "none";
+                  return d.labels[0] === "area" ? "#1a1a1a" : d.properties.position ? color : "none";
                 } else if (activeStory === "Areas" || activeStory === "Actors") {
-                  return d.labels[0] === "area" ? "black" : "var(--color-pink-main)";
+                  return d.labels[0] === "area" ? "#1a1a1a" : "var(--color-pink-main)";
                 }  else {
                   return "var(--color-pink-main)";
                 }
@@ -444,7 +444,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
           markerHeight="5"
           orient="auto"
         >
-          <polygon points="0,5 1.67,2.5 0,0 5,2.5" fill="#000"></polygon>
+          <polygon points="0,5 1.67,2.5 0,0 5,2.5" fill="#1a1a1a"></polygon>
         </marker>
 
         <pattern

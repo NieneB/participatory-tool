@@ -99,3 +99,5 @@ links kloppen niet - ids nakijken .
 svg op groter scherm! 
 
 Connections berekenen toevoegen aan de ge-uploaded dataset 
+
+legenda als plaatjes maken in de mapping approach! 

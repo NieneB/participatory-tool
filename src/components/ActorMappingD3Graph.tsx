@@ -540,7 +540,7 @@ const GraphD3 = ({ inputDataSet, setInfo, positionsOn }) => {
           markerHeight="5"
           orient="auto"
         >
-          <polygon points="0,5 1.67,2.5 0,0 5,2.5" fill="#000"></polygon>
+          <polygon points="0,5 1.67,2.5 0,0 5,2.5" fill="#1a1a1a"></polygon>
         </marker>
 
         <pattern

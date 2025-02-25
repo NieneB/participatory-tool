@@ -10,8 +10,7 @@ import {
 } from "iconoir-react";
 import { useState } from "react";
 import UploadFile from "../../components/UploadDataSet";
-import LegendD3 from "../../components/Legend";
-import legendData from "../../data/legend_places.json";
+import Legend from "../../components/Legend";
 import MappingDataContent from "../../components/MappingDataContent";
 import NavBack from "../../components/NavBack";
 
@@ -110,8 +109,7 @@ const GraphView = () => {
         >
           <>
             <h1>Legend</h1>
-            <p>Items based on Story</p>
-            <LegendD3 data={legendData} activeStory={activeStory} />
+            <Legend activeStory={activeStory} />
           </>
         </InteractivePanel>
         <InteractivePanel
@@ -168,7 +166,7 @@ const GraphView = () => {
           <Styled.TopPanel key="top-panel">
             <Xmark
               id="top-left"
-              color="black"
+              color="#1a1a1a"
               width={36}
               height={36}
               onClick={(e) => toggleMakingYourOwn(e)}

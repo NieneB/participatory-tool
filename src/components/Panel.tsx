@@ -55,7 +55,7 @@ const Button = styled.div`
   &:hover {
     background-color: var(--color-pink-main);
     color: #ffffff;
-    border: 0px solid #000;
+    border: 0px solid #1a1a1a;
     svg {
       color: white;
     }
