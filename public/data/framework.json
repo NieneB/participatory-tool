@@ -198,8 +198,8 @@
         "usability": "constant",
         "accessibility": "public",
         "purpose": "facilitate",
-        "Name": "Possibility 1",
-        "P_id": "P_1"
+        "Name": "Possibility 2",
+        "P_id": "P_2"
       },
       "style": {}
     }
@@ -207,7 +207,7 @@
   "relationships": [
     {
       "id": "n0",
-      "type": "explorative",
+      "type": "",
       "style": {},
       "properties": {},
       "fromId": "n2",
@@ -215,7 +215,7 @@
     },
     {
       "id": "n1",
-      "type": "informative",
+      "type": "",
       "style": {},
       "properties": {},
       "fromId": "n4",
@@ -223,7 +223,7 @@
     },
     {
       "id": "n2",
-      "type": "illustrative",
+      "type": "",
       "style": {},
       "properties": {},
       "fromId": "n5",
@@ -231,7 +231,7 @@
     },
     {
       "id": "n3",
-      "type": "directing",
+      "type": "",
       "style": {},
       "properties": {},
       "fromId": "n6",
@@ -239,19 +239,19 @@
     },
     {
       "id": "n4",
-      "type": "",
-      "style": {},
-      "properties": {},
       "fromId": "n3",
-      "toId": "n6"
+      "toId": "n6",
+      "type": "",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n5",
-      "type": "",
-      "style": {},
-      "properties": {},
       "fromId": "n7",
-      "toId": "n6"
+      "toId": "n6",
+      "type": "",
+      "properties": {},
+      "style": {}
     }
   ]
 }

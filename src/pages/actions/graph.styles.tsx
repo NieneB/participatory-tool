@@ -6,6 +6,7 @@ export const MainGraphPage = styled.div`
     height: 100vh;
     left:0;
     top:0;
+    z-index: 10000000;
 `
 export const StoryCarrousel = styled.div`
     width: 100vw;

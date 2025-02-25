@@ -67,3 +67,35 @@ titels in panelen centreren bij actions, 2 regels?? uitzoeken
 Pijltje mapping approach paneel gevuld en groter, meer ruimte 
 
 Mapping pagina's maken en beschrijving toevoegen. 
+
+
+
+mouse over 
+
+Mosterd - groen beginnen  of overal groen. 
+mosterd groen en hover roze ?
+kleur aanpassen 
+
+
+Nieuwe versie teksten: 
+phases 
+conditions
+representatives 
+Methods en tools
+activation 
+
+Voor los: 
+mapping approach - niet 
+
+van alles even de code opsturen! 
+
+
+## Mapping approach 
+framework download verbeteren en weer uploaden dat het werkt! 
+
+mapping approach uplaod werk niet. 
+links kloppen niet - ids nakijken .  
+
+svg op groter scherm! 
+
+Connections berekenen toevoegen aan de ge-uploaded dataset 

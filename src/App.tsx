@@ -23,7 +23,7 @@ const router = createHashRouter(
       <Route path="approach/scope" element={<Scope />} />
       <Route path="approach/positions" element={<Positions />} />
       <Route path="approach/actions" element={<Actions />} />
-      <Route path="approach/scope/phases/" element={<Phases />} />
+      <Route path="approach/scope/phases" element={<Phases />} />
       <Route path="approach/scope/conditions" element={<Conditions />} />
       <Route path="approach/scope/representative" element={<Representative />} />
       <Route path="approach/actions/methods" element={<Methods />} />
