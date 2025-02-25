@@ -29,9 +29,6 @@ const router = createHashRouter(
       <Route path="approach/actions/methods" element={<Methods />} />
       <Route path="approach/actions/mapping" element={<GraphView />} />
       <Route path="approach/actions/activation" element={<Activation />} />
-      <Route path="approach/positions/non-organized" element={<Community />} />
-      <Route path="approach/positions/community-organized" element={<Community />} />
-      <Route path="approach/positions/government-organized" element={<Community />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )

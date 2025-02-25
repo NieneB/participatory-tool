@@ -83,14 +83,19 @@ const DefaultPageParagraph = ({ element }) => {
       <ElementHeader key={'li' + element.title}>
         <h1>{element.title}</h1>
         {element.subtitle && <h3>{element.subtitle}</h3>}
+        {element.desc && <p>{element.desc}</p>}
+        {element.description && <p>{element.description}</p>}
       </ElementHeader>
       <ElementContent>
         <Collapsible titel={element.title}>
-          {element.desc && <p>{element.desc}</p>}
-          {element.audience && <p><b>audience:</b> {element.audience}</p>}
-          {element.mapping && <p><b>Connection to Mapping Approach:</b> {element.mapping}</p>}
+          {element.phase && <p><b>Connection to Phase:</b> {element.phase}</p>}
+          {element.approach && <p><b>Connection to Approach:</b> {element.approach}</p>}
           {element.methods && <p><b>Connection to Methods:</b> {element.methods}</p>}
-          {element.goal && <p><b>Goal:</b> {element.goal}</p>}
+          {element.mapping && <p><b>Connection to Mapping Approach:</b> {element.mapping}</p>}
+
+          {element.objective && <p><b>objective:</b> {element.objective}</p>}
+          {element.goal && <p><b>objective:</b> {element.goal}</p>}
+          {element.audience && <p><b>audience:</b> {element.audience}</p>}
           {element.assignment && <p><b>Assignment:</b> {element.assignment}</p>}
           {element.using && <p><b>By using:</b>
             <ul>
@@ -103,7 +108,6 @@ const DefaultPageParagraph = ({ element }) => {
           {element.output && <p><b>Output:</b> {element.output}</p>}
           {element.iteration && <p><b>Iteration:</b> {element.iteration}</p>}
           {element.role && <p><b>Role:</b> {element.role}</p>}
-          {element.objective && <p><b>Objective:</b> <span id="objective" ></span></p>}
           {element.links && <p><b>Link:</b> {element.links}</p>}
         </Collapsible>
       </ElementContent>

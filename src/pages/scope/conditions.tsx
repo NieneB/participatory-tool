@@ -1,9 +1,6 @@
-import styled from "styled-components";
 import DefaultPage from "../../components/DefaultPage";
+import dataset from "../content/conditions.json"
 
-
-const dataset = [
-]
 
 const Conditions = () => {
   return (

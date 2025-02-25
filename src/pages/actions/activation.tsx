@@ -1,72 +1,8 @@
 import DefaultPage from "../../components/DefaultPage";
+import dataset from "../content/activation.json"
 
 const Activation = () => {
-  const dataset = [
-    {
-      title: "Written proposal",
-      phase: "Assessment Phase (underline: hyperlink to page phases)",
-      approach: "using the parameters of the actor network map as input for the assessment (underline: hyperlink to page mapping approach)",
-      methods: "Structured interviews, Participatory Mapping (underline: hyperlink to page methods & tools)",
-      objective: "matching the requirements and expectations in a written project proposal to create a supported and realistic approach <a href''>test link</a> [test link 2](/link)",
-      description: "communicating a projectplan, constructed by examining the gathered insights, data and information through a text document, to check if all involved parties are aligned on their roles and expectations is not only useful for project management purposes, but also very important to explicitly determine the expectations of the participation perspective and it’s representative. Checking the reporting requests and demands.",
-      audience: "initiator, project team, representatives (underline: hyperlink to page representatives)",
-    },
-    {
-      title: "Sharing data",
-      phase: "Exploration Phase (underline: hyperlink to page phases)",
-      approach: "filling up the generic template to create a contextual actor network map (underline: hyperlink to page mapping approach)",
-      methods: "Actor Mapping, Surveys, Online Ethnography, Web Scraping Tool (underline: hyperlink to page methods & tools)",
-      objective: "connecting and exchanging data with the other perspectives",
-      description: "data visualizatiosn can easily identify patterns and anomalies from the data available. They allow the audience to quickly recognize an occurrence over time, follow your predications and support decision making. Well presented data can be a very persuasive tool to connect actors.",
-      audience: "all internal and external actors",
-    },
-    {
-      title: "Onboarding",
-      phase: "Exploration Phase + Definition Phase (underline: hyperlink to page phases)",
-      approach: "analyzing the actor network map (underline: hyperlink to page mapping approach)",
-      methods: "Mind Mapping, Personas, Journey Mapping, Relational Mapping, Focus Groups (underline: hyperlink to page methods & tools)",
-      objective: "helping the actors understand the steps and possibilities ahead",
-      description: "taking the time and not overstepping the importance of involving the perspectives in the process can be key in working well together with the other representatives. Please be aware that this is a collective effort and not one only to be made or initiated by the participatory representative. Not properly and actively informing the actors and other involved parties of the activities ahead may lead to unwanted tensions.",
-      audience: "actors, initiator, project team, representatives (underline: hyperlink to page representatives)",
-    },
-    {
-      title: "Sharing insights",
-      phase: "Research Phase (underline: hyperlink to page phases)",
-      approach: "using the available visual stories to identify the focus for the sessions (underline: hyperlink to page mapping approach)",
-      methods: "Behavior Mapping, Data Visualization, Forecasting (underline: hyperlink to page methods & tools)",
-      objective: "sharing the new findings with the actors",
-      description: "taking the initiative to share insights with the other perspectives or actors is essential for the collaboration. Not only for providing the other party with input, but also for sparking conversations and creating new connections. By sharing findings, actors can be inspired to share stories or knowledge they have not yet before.",
-      audience: "actors, initiator, project team, representatives (underline: hyperlink to page representatives)",
-    },
-    {
-      title: "Feedback Sessions",
-      phase: "Co-creation Phase (underline: hyperlink to page phases)",
-      approach: "using the available visual stories for informative purposes (underline: hyperlink to page mapping approach)",
-      methods: "Participatory Mapping, Scenario Building, Empathy Mapping, Serious Games, Tangible Tools, Cultural Probes (underline: hyperlink to page methods & tools)",
-      objective: "creating space for the differences and connections between the actors and actively inviting them to reflect on a specified topic",
-      description: "getting together with small groups in a structured setting to provide each other constructive feedback is essential for an iterative process. Responding to the ever moving reality of an innovative process and aligning expectations is done when it’s taking serious and not seen as a given.",
-      audience: "actors, initiator, project team, representatives (underline: hyperlink to page representatives)",
-    },
-    {
-      title: "Presentation in person",
-      phase: "Dessimination Phase (underline: hyperlink to page phases)",
-      approach: "using the available visual stories for illustrative purposes (underline: hyperlink to page mapping approach)",
-      methods: "Data Visualization, Storytelling (underline: hyperlink to page methods & tools)",
-      objective: "presenting the insights to other use cases by an interactive presentation (lecture/ workshop/ live presentation) where feedback and potential adaptations can be collected",
-      description: "adapting the findings to a logical storyline, specifically targeted to the audience in mind. Please keep in mind that (digital) presentations in person are not the same as proposals, reports or any of the other activations. When giving a presentation with the same format as would be in for example, a report, the audience will experience the presentation as the presentation of a report. Sharing reports is not meant for all audiences, so choose your design wisely, adjusted to the people who need to hear what you have to say. Giving a good presentation is a skill that requires preparation. Prepare in time, check the technical means and rehearse.",
-      audience: "actors, project team",
-    },
-    {
-      title: "Reporting",
-      phase: "Adaptation Phase (underline: hyperlink to page phases)",
-      approach: "using the collected data as input for the design team (underline: hyperlink to page mapping approach)",
-      methods: "Backcasting, Prototyping (underline: hyperlink to page methods & tools)",
-      objective: "sharing findings and the registration of the process that led to them, covering a specific timeframe <a href=''>test link</a>",
-      description: "communicating the gathered insights, data and information through a document, to reflect, inspire or deliver feedback on the process. The format of the document can be designed to the context and audience, but please keep in mind the reporting requests and demands agreed upon in the beginning of the process. Reporting can be used as a conclusion of a collaboration or for a specific purpose, for example to share findings or ideas with a specific target audience.",
-      audience: "initiator",
-    }
 
-  ];
   return <>
     <DefaultPage key="activation" title="Activation" desc="Acting on the participation opportunities" dataset={dataset}>
       <p>How can you identify the participation opportunities during the participatory process?
