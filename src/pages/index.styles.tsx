@@ -20,11 +20,11 @@ export const BackGround = styled.div`
 `
 
 export const EnterButton = styled.div`
-   width: auto;
-  background-color: rgba(0,0,0,0);
+  width: auto;
 
   padding: 1rem 1.5rem;
   border: 1px solid var(--color-purple-main);
+  background-color: var(--color-background);
   border-radius: 2px;
   color: var(--color-brown-main);
   cursor: pointer;
@@ -50,7 +50,9 @@ export const Buttons = styled.div`
   height: auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
-
+  text-decoration: none;
+  a {    text-decoration: none;
+  }
     /* Normal HD screen (mijn comp)*/
   @media only screen and (width <= 1950px) {
     justify-content: space-between;
@@ -84,15 +86,6 @@ export const PanelBack = styled.div`
   
 `;
 
-// On the left
-export const Left = styled.div`
-  position: absolute;
-  display: flex;
-  height: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
-  flex-direction: column;
-`;
 
 export const InfoContainer = styled.div`
   pointer-events: auto;

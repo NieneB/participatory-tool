@@ -6,7 +6,7 @@
         "approach": " using the parameters of the actor network map as input for the assessment (underline: hyperlink to page mapping approach)",
         "activation": "Written proposal (underline: hyperlink to page activations)",
         "objective": " collecting expectations for the participation process ahead",
-        "description": "by asking questions you get answers. If we only collect what we already know or someone might say, we also agree to not knowing a lot. Not knowing more often than not creates the situation where you will have to respond on the moment and making the decision making process potentially very stressful for all participants, which does not support participation. This toolis not a replacement of a client brief or contract, it is a tool to gather information about the expectations and available resources (see conditions) so the representative(s) can make a clear estimation of the possibilities and perhaps necessities, before heading into the process. We suggest to use structured interview here because the objective is not to explore the unknown, but the known. ",
+        "description": "by asking questions you get answers. If we only collect what we already know or someone might say, we also agree to not knowing a lot. Not knowing more often than not creates the situation where you will have to respond on the moment and making the decision making process potentially very stressful for all participants, which does not support participation. This tool is not a replacement of a client brief or contract, it is a tool to gather information about the expectations and available resources (see conditions) so the representative(s) can make a clear estimation of the possibilities and perhaps necessities, before heading into the process. We suggest to use structured interview here because the objective is not to explore the unknown, but the known. ",
         "participants": "initiator, project team, representatives (underline: hyperlink to pagerepresentatives)"
     },
     {
@@ -17,7 +17,7 @@
         "activation": "Written proposal & Feedback Sessions  (underline: hyperlink to page activations)",
         "objective": " collecting interpretations for the participation process ahead",
         "description": "mapping problems or ideas to a physical location, whether it's a room or an area. Giving each participant the same questions (for example; what defines the area we are working in?) and visually mapping out the differences and/or connections. This technique can be quite effective when the perspective of one position appears to the dominant perspective or there seems to be an assumption about a specific topic related to the area. This method can potentially uncover new tensions or connections that can be used as input for new workshops. Please aware that the objective of this workshop is not to solve or pick a perspective, but the merely uncover the differences. ",
-        "participants": "initiator, project team, representatives (underline: hyperlink to pagerepresentatives) "
+        "participants": "initiator, project team, representatives (underline: hyperlink to page representatives) "
     },
     {
         "title": "Actor Mapping",
@@ -36,7 +36,7 @@
         "approach": " filling up the generic template to create a contextual actor network map (underline: hyperlink to page mapping approach)",
         "activation": "Sharing Data (underline: hyperlink to page activations)",
         "objective": " collecting data on the known actors and their relations in and to the area ",
-        "description": "providing participants with a list of specific questions to capture demographicinformation and insights into their lived experience. Creating surveys with specific questions can activate reflection or even sharing lived experiences. Surveys can also be a tool to gather data on specific topics. We encourage to use surveys for more open questions or to uncover blind spots. If multiple perspectives are involved with creating the survey, the results are more often than not steered too much towards a desired result. Surveys can be used by all perspectives, when not used too much and anonymous, they can be very effective. Digital tools like 'google forms' or others depending of the available resources can be very effective for quick gathering of data. ",
+        "description": "providing participants with a list of specific questions to capture demographic information and insights into their lived experience. Creating surveys with specific questions can activate reflection or even sharing lived experiences. Surveys can also be a tool to gather data on specific topics. We encourage to use surveys for more open questions or to uncover blind spots. If multiple perspectives are involved with creating the survey, the results are more often than not steered too much towards a desired result. Surveys can be used by all perspectives, when not used too much and anonymous, they can be very effective. Digital tools like 'google forms' or others depending of the available resources can be very effective for quick gathering of data. ",
         "participants": "actors in the area, (incl. initiator, project team) "
     },
     {
@@ -66,7 +66,7 @@
         "approach": " analyzing the actor network map (underline: hyperlink to page mapping approach)",
         "activation": "Onboarding (underline: hyperlink to page activations)",
         "objective": " connecting insights to uncover research needs or possibilities for participation ",
-        "description": "creating a diagram of key issues or components, drawing links to represent the relationship between them. Mind mapping is a great tool for exploring, ideating and sense making. Spidermaps are the most known version of a mind map, but both circle maps or flow maps can be useful mind mapping tools as well. The great benefit of mind mapping is that it's fast, relatively known and it doesn't require much materials. ",
+        "description": "creating a diagram of key issues or components, drawing links to represent the relationship between them. Mind mapping is a great tool for exploring, ideating and sense making. Spider maps are the most known version of a mind map, but both circle maps or flow maps can be useful mind mapping tools as well. The great benefit of mind mapping is that it's fast, relatively known and it doesn't require much materials. ",
         "participants": "project team, representatives (underline: hyperlink to page representatives)"
     },
     {
@@ -86,7 +86,7 @@
         "approach": " analyzing the actor network map (underline: hyperlink to page mapping approach)",
         "activation": "Onboarding (underline: hyperlink to page activations)",
         "objective": " identify potentials for participation by collectively sketching the proces ahead ",
-        "description": "creating a visual story of how a specific person would interact with your product or service in a given scenario. This method can be used in many ways, depending on the context and audience. The best place to start with a journey mapping is deciding on a timeframe; will this journey map be of a future journey, a current one, a 'day in the life of' or perhaps of a journey from the past. ",
+        "description": "creating a visual story of how a specific person would interact with your product or service in a given scenario. This method can be used in many ways, depending on the context and audience. The best place to start with a journey mapping is deciding on a time frame; will this journey map be of a future journey, a current one, a 'day in the life of' or perhaps of a journey from the past. ",
         "participants": "participatory representative (underline: hyperlink to page representatives)"
     },
     {
@@ -106,7 +106,7 @@
         "approach": " analyzing the actor network map (underline: hyperlink to page mapping approach)",
         "activation": "Onboarding (underline: hyperlink to page activations)",
         "objective": " identifying possibilities for participation or research needs ",
-        "description": "gathering a small group of participants to engage in a free-flowing conversationabout a chosen topic. The focus here lies on the facilitating of the discussion to better understand the lived experience. Presenting participants with prototypes of potential solutions,prompting feedback in a structured setting. This technique can be very useful to support the designing of the final innovation. Gaining insights by observing nd listening to group discussions. ",
+        "description": "gathering a small group of participants to engage in a free-flowing conversation about a chosen topic. The focus here lies on the facilitating of the discussion to better understand the lived experience. Presenting participants with prototypes of potential solutions,prompting feedback in a structured setting. This technique can be very useful to support the designing of the final innovation. Gaining insights by observing nd listening to group discussions. ",
         "participants": "actors in the area"
     },
     {
@@ -116,7 +116,7 @@
         "approach": " using the available visual stories to identify the focus for the sessions (underline: hyperlink to page mapping approach)",
         "activation": "Sharing Insights (underline: hyperlink to page activations)",
         "objective": " filling the knowledge gaps between the actors ",
-        "description": "structured observation combining different techniques for documentation, mapping and counting of activities performed by people passing and occupying a defined space in chosen moments of time. It helps to explore the quantity and the quality of various activities performed at the place observed, the nonmotorized moving, staying, recreating or playing. The process of gathering of data through observations and data analysis and visualization can reveal the ways of presence of different targeted groups in the study area and their behaviour. This information can present overall pictures of health, wellbeing, socialization, time budget and physical activity",
+        "description": "structured observation combining different techniques for documentation, mapping and counting of activities performed by people passing and occupying a defined space in chosen moments of time. It helps to explore the quantity and the quality of various activities performed at the place observed, the non motorized moving, staying, recreating or playing. The process of gathering of data through observations and data analysis and visualization can reveal the ways of presence of different targeted groups in the study area and their behaviour. This information can present overall pictures of health, wellbeing, socialization, time budget and physical activity",
         "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
     },
     {
@@ -126,7 +126,7 @@
         "approach": " using the available visual stories to identify the focus for the sessions (underline: hyperlink to page mapping approach)",
         "activation": "Sharing Insights & Presentation in person (underline: hyperlink to page activations)",
         "objective": " sharing the insights to connect the possibilities to the actors ",
-        "description": "creating a communicative research visualization by using a set of data as the input. Starting with a specific question or description and using the data to support, question or explain creates a much larger understanding. Data as a perspective can sometimes diffuse the tensions, assumptions or naivety of the participants. Please be aware that the correctvisualization is used for the intended purpose. Depending on the present digital resources, data visualization libraries are widely available. ",
+        "description": "creating a communicative research visualization by using a set of data as the input. Starting with a specific question or description and using the data to support, question or explain creates a much larger understanding. Data as a perspective can sometimes diffuse the tensions, assumptions or naivety of the participants. Please be aware that the correct visualization is used for the intended purpose. Depending on the present digital resources, data visualization libraries are widely available. ",
         "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
     },
     {
@@ -136,7 +136,7 @@
         "approach": " using the available visual stories to identify the focus for the sessions (underline: hyperlink to page mapping approach)",
         "activation": "Sharing Insights (underline: hyperlink to page activations)",
         "objective": " researching possible outcomes for the area",
-        "description": "creating a scenario, starting with today and working towards a specific future. Please be aware that when using this method in a workshop setting, the situation needs to be under the direction of a workshop leader and the group should be very aware of the program. Not following clear steps can easily create a chaotic situation, which will leave participants moredistanced than before the start of the workshop. Forecasting is a tool that can be very useful to uncover the potentials of the available actors, resources, etc. Having a specific gaol is sight and looking for the first connection that could possibly steer towards that point can create a world of possibilities. This method can be connected to the personas and other insights gathered. ",
+        "description": "creating a scenario, starting with today and working towards a specific future. Please be aware that when using this method in a workshop setting, the situation needs to be under the direction of a workshop leader and the group should be very aware of the program. Not following clear steps can easily create a chaotic situation, which will leave participants more distanced than before the start of the workshop. Forecasting is a tool that can be very useful to uncover the potentials of the available actors, resources, etc. Having a specific gaol is sight and looking for the first connection that could possibly steer towards that point can create a world of possibilities. This method can be connected to the personas and other insights gathered. ",
         "participants": "participatory representative (underline: hyperlink to page representatives)"
     },
     {
@@ -176,7 +176,7 @@
         "approach": " using the available visual stories for informative purposes (underline: hyperlink to page mapping approach)",
         "activation": "Feedback sessions (underline: hyperlink to page activations)",
         "objective": " creating physical prototypes to explore possibilities ",
-        "description": "creating a rough sketch of an idea by making a prototype, early in the design process can spark the creativity of the participants. Working together on a physical object cancreate valuable platform for the actors to share their skills and knowledge. Depending on the available resources and contextual needs the prototype can be very playful or very serious in nature. Please keep in mind that prototyping has no technical purposes in this setting. ",
+        "description": "creating a rough sketch of an idea by making a prototype, early in the design process can spark the creativity of the participants. Working together on a physical object can create valuable platform for the actors to share their skills and knowledge. Depending on the available resources and contextual needs the prototype can be very playful or very serious in nature. Please keep in mind that prototyping has no technical purposes in this setting. ",
         "participants": "actors in the area "
     },
     {
@@ -186,7 +186,7 @@
         "approach": " using the available visual stories for informative purposes (underline: hyperlink to page mapping approach)",
         "activation": "Feedback sessions (underline: hyperlink to page activations)",
         "objective": " registration of the insights of the actors ",
-        "description": "cultural phrases are documentation tools that are sent to participants so they cancapture their day-to-day experiences. The representative of the participatory perspective will design the cultural probe kit and interpret the returned outcomes. Getting to know the actors by playful tasks. This technique is used for exploring and provoking. It can capture live experiences when and where they're happening, and create personal prompts to inspire reflective discussions. When using data and insights via a cultural probe, the story of a live experience can be easily shared with stakeholders. ",
+        "description": "cultural phrases are documentation tools that are sent to participants so they can capture their day-to-day experiences. The representative of the participatory perspective will design the cultural probe kit and interpret the returned outcomes. Getting to know the actors by playful tasks. This technique is used for exploring and provoking. It can capture live experiences when and where they're happening, and create personal prompts to inspire reflective discussions. When using data and insights via a cultural probe, the story of a live experience can be easily shared with stakeholders. ",
         "participants": "actors in the area "
     },
     {
@@ -200,7 +200,7 @@
         "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
     },
     {
-        "title": "Backcasting   ",
+        "title": "Backcasting",
         "subtitle": "",
         "phase": " Adaptation Phase (underline: hyperlink to page phases)",
         "approach": " using the collected data as input for the design team (underline: hyperlink to page mapping approach)",

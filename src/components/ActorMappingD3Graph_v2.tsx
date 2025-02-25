@@ -411,8 +411,8 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
   return (
     <StyledSVG
       ref={(el) => (visual.current = el)}
-      width={width}
-      height={height}
+      width={'100vw'}
+      height={'90vh'}
       viewBox={[-width / 2, -height / 2, width, height]}
       style={{ maxWidth: "100%", height: "auto" }}
     >

@@ -1,6 +1,7 @@
 
 import NavBack from "./NavBack";
 import DefaultPageParagraph from "./DefaultPageParagraph";
+import { Link } from "react-router-dom";
 
 const DefaultPage = ({ title, desc, dataset, children }) => {
 

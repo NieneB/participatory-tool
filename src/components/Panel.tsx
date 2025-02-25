@@ -14,6 +14,8 @@ const Button = styled.div`
   background-color: rgba(0,0,0,0);
   border-radius: 2px;
   box-sizing: border-box;
+  
+  text-decoration: none;
 
   display: flex;
   flex-direction:column;
@@ -45,6 +47,9 @@ const Button = styled.div`
   }
   p {
     text-align:center;
+  }
+  a {
+    text-decoration: none;
   }
 
   &:hover {

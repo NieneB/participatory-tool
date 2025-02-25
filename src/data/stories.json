@@ -2,12 +2,12 @@
 
     {
         "shortTitle": "Areas",
-        "desc": "Lorum Ipsum",
+        "desc": " A surface where the participation proces takes place",
         "data": ["./data/nodes.json", "./data/relations.json"]
     },
     {
         "shortTitle": "Actors",
-        "desc": "Lorum Ipsum",
+        "desc": "An actor is a person, group or organization that has a position in the participation proces",
         "data": ["./data/nodes.json", "./data/relations.json"]
     },
     {
@@ -22,7 +22,7 @@
     },
     {
         "shortTitle": "Possibilities",
-        "desc": "Lorum Ipsum",
+        "desc": " A possibility is a resource to explore in the participation proces ",
         "data": ["./data/nodes.json", "./data/relations.json"]
     }
 ]

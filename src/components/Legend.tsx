@@ -44,7 +44,6 @@ const LegendD3 = ({ data, activeStory }) => {
       setLegendData(categories);
     } else {
       let categories = d3.groups(data.nodes, (d) => d.properties.position);
-      console.log(categories);
       setLegendData(categories);
     }
   }, [data, activeStory]);

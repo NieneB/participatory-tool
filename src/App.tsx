@@ -6,7 +6,7 @@ import Phases from "./pages/scope/phases";
 import Positions from "./pages/positions";
 import Actions from "./pages/actions";
 import Activation from "./pages/actions/activation";
-import GraphView from "./pages/actions/graph-view";
+import GraphView from "./pages/actions/mapping-view";
 import Methods from "./pages/actions/methods";
 import Overview from "./pages/overview";
 import Community from "./pages/positions/community-organized";

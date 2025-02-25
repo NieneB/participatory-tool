@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "title": "Access",
+        "description": "To the information To the location To the actors To the resources To the internet"
+    },
+    {
+        "title": "Exchange",
+        "description": "Of information available Of insights gathered Of decisions made Of sources"
+    },
+    {
+        "title": "Communication",
+        "description": "Overview of contact information Overview of local languagesOverview of local customs Indication of possible tensions in the area"
+    },
+    {
+        "title": "Proces",
+        "description": "Agreed upon roles and role stability Agreed upon assignments and deliverables Agreed upon objectives and clear expectations Signed contracts/ agreements with all professionals involved"
+    }
+]

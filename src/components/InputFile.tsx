@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { EnterButton } from "../pages/index.styles";
 
 const InputFile = ({ setFileName, fileLoaded, setFileLoaded, setDataSet }: any) => {
   const inputFile = useRef(null);
@@ -8,12 +9,10 @@ const InputFile = ({ setFileName, fileLoaded, setFileLoaded, setDataSet }: any) 
   };
 
   const readFile = (filePath) => {
-    console.log("check");
     const reader = new FileReader();
     reader.onload = (evt) => {
       setDataSet();
       const rawdata = evt.target.result;
-      console.log(rawdata)
       setDataSet(JSON.parse(rawdata));
     };
     reader.readAsText(filePath);
@@ -21,7 +20,7 @@ const InputFile = ({ setFileName, fileLoaded, setFileLoaded, setDataSet }: any) 
 
   return (
     <div>
-      <button onClick={openfile}>{fileLoaded ? "Re-" : ""}Start Uploading graph document</button>
+      <EnterButton onClick={openfile}>{fileLoaded ? "Re-" : ""}Start Uploading graph document</EnterButton>
       <input
         ref={inputFile}
         style={{ display: "none" }}

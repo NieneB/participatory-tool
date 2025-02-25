@@ -67,9 +67,9 @@ root {
     --color-yellow-dark: #8e6714;
     --color-yellow-main: #f2ac22;
 
-    --color-brown-second: #422F27;
-    --color-brown-third: #8b5c4b;
-    --color-brown-fourth: #965d6a
+    --color-brown-second: #8b7c4b;
+    --color-brown-third: #9c8b54;
+    --color-brown-fourth: #a99860
 }
 
 
@@ -125,8 +125,8 @@ p:after {
 }
 
 a {
-    /* text-decoration: underline var(--color-pink-main) 3px; */
-    text-decoration: none;
+    text-decoration: underline var(--color-pink-main) 3px;
+    /* text-decoration: none; */
 }
 
 a:hover {
@@ -186,7 +186,7 @@ img {
 
 
 #logo {
-    /* padding-top: 4rem; */
+    padding-top: 4rem;
     padding-left: 2rem;
     position: fixed;
     width: 7vw;

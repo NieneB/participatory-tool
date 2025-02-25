@@ -1,6 +1,7 @@
 import { Play, Xmark } from "iconoir-react";
 import { useState } from "react";
 import InputFile from "./InputFile";
+import { EnterButton } from "../pages/index.styles";
 
 const UploadFile = function ({ setDataSet, setIsOpenCustom }) {
   const [fileLoaded, setFileLoaded] = useState(false);
@@ -28,9 +29,9 @@ const UploadFile = function ({ setDataSet, setIsOpenCustom }) {
           </h4>
           <Xmark onClick={resetAll} alt="remove file" />
           {fileLoaded && (
-            <button onClick={() => setIsOpenCustom(false)}>
+            <EnterButton onClick={() => setIsOpenCustom(false)}>
               Start <Play />
-            </button>
+            </EnterButton>
           )}
         </div>
       )}

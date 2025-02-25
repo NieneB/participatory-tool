@@ -1,8 +1,8 @@
 [
     {
         "title": "Written proposal",
-        "phase": "<a href='/approach/scope/phases#assesment-phase'> Assessment Phase </a> ",
-        "approach": "using the parameters of the <a href='approach/actions/mapping-approach'> actor network map </a> as input for the assessment",
+        "phase": "<a href='/approach/scope/phases#assessment-phase'> Assessment Phase </a> ",
+        "approach": "using the parameters of the <a href='/approach/actions/mapping-approach'> actor network map </a> as input for the assessment",
         "methods": "<a href='' >Structured interviews</a>, <a href='' >Participatory Mapping </a>",
         "objective": "matching the requirements and expectations in a written project proposal to create a supported and realistic approach",
         "description": "communicating a projectplan, constructed by examining the gathered insights, data and information through a text document, to check if all involved parties are aligned on their roles and expectations is not only useful for project management purposes, but also very important to explicitly determine the expectations of the participation perspective and it’s representative. Checking the reporting requests and demands.",
