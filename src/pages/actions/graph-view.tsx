@@ -13,7 +13,6 @@ import {
 } from "iconoir-react";
 import { useEffect, useState } from "react";
 import UploadFile from "../../components/UploadDataSet";
-import NavBack from "../../components/NavBack";
 import { SimulationNodeDatum } from "d3";
 import LegendD3 from "../../components/Legend";
 import legendData from "../../data/legend_places.json";
@@ -27,6 +26,7 @@ const GraphView = () => {
   const [positionsOn, setPositionsOn] = useState(false);
   const [extraCollapse, setExtraCollapse] = useState([]);
   const [activeStory, setActiveStory] = useState("");
+
   function toggleMakingYourOwn(e) {
     setIsOpenCustom(!isOpenCustom);
   }
@@ -92,6 +92,7 @@ const GraphView = () => {
           nodes: [],
         };
         if (newObj.nodes.length && newObj.nodes[0].n) {
+          console.log("framework ? ")
           newObj.links.map((element) => {
             element.source = element.p.start.elementid;
             element.target = element.p.end.elementid;
@@ -113,6 +114,8 @@ const GraphView = () => {
             }),
           ];
         } else if (newObj.nodes.length) {
+          console.log("framework 22 ? ")
+
           newObj.nodes.map((element) => {
             element.label = element.labels[0];
           });
@@ -126,10 +129,21 @@ const GraphView = () => {
             element.strength = 2;
           });
           newData.links = newObj.relationships;
+          newData.nodes.map((d) => {
+            console.log(d)
+            d.properties.connections = newData.links.reduce((acc, l) => {
+              if (l.source === d.id || l.target === d.id) {
+                acc = acc + 1;
+              }
+              return acc;
+            }, 0);
+          }
+          )
+          setDataSet(newData);
+
         } else {
           return;
         }
-        setDataSet(newData);
       }
     }
   }, [originalDataSet]);
@@ -139,27 +153,27 @@ const GraphView = () => {
     try {
       // Fetch the content from the URL
       const response = await fetch(fileUrl);
-  
+
       // Check if the response is OK
       if (!response.ok) {
         throw new Error(`Failed to fetch file: ${response.statusText}`);
       }
-  
+
       // Extract the content as a Blob
       const blob = await response.blob();
-  
+
       // Derive a default filename from the URL
       const fileName = fileUrl.split('/').pop() || "download.txt";
-  
+
       // Create a link element for downloading the file
       const a = document.createElement("a");
       const url = URL.createObjectURL(blob);
       a.href = url;
       a.download = fileName; // Set the file name
-  
+
       // Trigger a click event on the link to initiate the download
       a.click();
-  
+
       // Cleanup: release the URL object
       URL.revokeObjectURL(url);
     } catch (error) {
@@ -288,8 +302,8 @@ const GraphView = () => {
               }}
               // href="https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/framework.json"
               title="framework for arrows app"
-              // download
-              // target="blank"
+            // download
+            // target="blank"
             >
               Click here to download the template{" "}
               <ArrowDownCircle color="black" width={36} height={36} />
