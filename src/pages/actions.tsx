@@ -1,6 +1,5 @@
 import * as Styled from "./index.styles";
 import { NavLink } from "react-router-dom";
-import { MapsArrow } from "iconoir-react";
 import Panel from "../components/Panel";
 import NavBack from "../components/NavBack";
 
@@ -25,7 +24,7 @@ const Actions = () => {
   // }
   // window.setTimeout(toggleOpening, 5000);
   return (
-    <>
+    <div className={window.location.hash.split("/").length <= 2 ? "center" :"top" }>
           <NavBack />
         <h1>Actions</h1>
         <p >
@@ -40,12 +39,7 @@ const Actions = () => {
           <NavLink to="/approach/actions/mapping">
             <Panel color='second-rank' title='Mapping approach' >
               <p>Collecting participation opportunities </p>
-              <MapsArrow
-                color="var(--color-purple-main)"
-                width={36}
-                height={36}
-                style={{ transform: "rotate(90deg)" }}
-              />
+             
             </Panel>
           </NavLink>
           <NavLink to="/approach/actions/activation">
@@ -54,7 +48,7 @@ const Actions = () => {
             </Panel>
           </NavLink>
         </Styled.Buttons>
-    </>
+    </div>
   );
 };
 

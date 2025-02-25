@@ -11,11 +11,11 @@ const Methods = () => {
 
 
   return (
-    <>
+    <div className={window.location.hash.split("/").length <= 2 ? "center" :"top" }>
       <NavBack/>
       <h1>Methods</h1>
       <p>Lorum ipsum </p>
-      <img src="./img/methods & tools.png"/>
+      <img src="./img/methods.png"/>
       <div>
         {listFiles.map((fileName, i) => {
           return (
@@ -27,6 +27,6 @@ const Methods = () => {
           )
         })}
       </div>
-    </>)
+    </div>)
 };
 export default Methods;

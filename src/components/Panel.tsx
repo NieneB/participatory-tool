@@ -1,4 +1,5 @@
 import { Circle } from "iconoir-react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Button = styled.div`
@@ -18,6 +19,8 @@ const Button = styled.div`
   flex-direction:column;
   align-items: center;
   gap: 1rem;
+
+  text-align: center;
 
   &.pink {
     border: 1px solid var(--color-pink-main);
@@ -48,16 +51,19 @@ const Button = styled.div`
     background-color: var(--color-pink-main);
     color: #ffffff;
     border: 0px solid #000;
+    svg {
+      color: white;
+    }
     p {
       color: white;
     }
       &.first-rank {
-      border: 4px solid var(--color-brown-second);
+      border: 2px solid var(--color-brown-second);
       background-color: var(--color-brown-second);
       color: white;
     }
     &.second-rank {
-      border: 4px solid var(--color-brown-third);
+      border: 2px solid var(--color-brown-third);
       background-color: var(--color-brown-third);
       color: white;
     }
@@ -76,9 +82,17 @@ const Button = styled.div`
 }
 `;
 
-const colorIcon = "white"
 
 const Panel = ({ title, color, children }) => {
+
+  const [colorIcon, setColorIcon] = useState("var(--color-brown-second)")
+
+  useEffect(() => {
+    setColorIcon(window.location.hash.split("/").length <= 2 ? "var(--color-brown-second)" : "var(--color-brown-third)"
+    )
+
+  }, [])
+
   return (
     <Button className={`${color}`}>
       <h1>{title} </h1>

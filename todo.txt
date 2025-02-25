@@ -1,0 +1,69 @@
+# kleuren 3 posities die representeren 
+
+# Navigatie knop terug! Simpel pijltje als go-cawh 
+Wish: Menu onder go-cawh? Navigatie mist. 
+hyperlinks /waar je bent 
+
+# Openingsscherm
+
+tekst is heel klein - safari 
+Anne: 13.6inch
+2560 x 1664 px
+
+knop margin top groter
+
+voor hd groot scherm css trap maken! Breedte app ook groter. 50vw? 60vw? 
+
+regelgrootte iets groter. 
+paragraaf ruimte groter. 
+
+
+# overview pagina 
+in chrome / safari is text blauw!! css uitzoeken daarvoor. 
+
+****
+overdracht: waar kan je het vinden en overdragen? github link in de website. Readme.md in orde maken! 
+stappen nodig voor oplevering: 
+- website staat en wordt gehost op github. Op https://github.com/NieneB/participatory-tool 
+- Er zijn twee manieren voor het beheer van de website: 
+    1. De website repository kan zelf gekopieerd(fork) en gehost worden op een andere plek
+
+
+Panel: gele balk maken met de hyperlink locatie. uitproberen. De centerpanel werkt niet > Niene 
+
+
+lijsten methods enz een inhoudsopgave, of een fold out lijst met titels. 
+Fold outs 
+en icoontjes maken . 
+
+teams meeting naar icloud adres
+maandag middag en dinsdag middag
+
+
+
+<!-- nieuwe -->
+
+- hash urls op scroll maken? 
+plaatjes de goede **kleuren**
+
+
+Overview pagina - 3 knoppen - ietsje breder. 
+
+afstand tussen tekst en knoppen overview is goed. deze ook voor de enter knop gebruiken. 
+
+pagina's  alles zelfde afstand vanaf boven. zoals overview pagina. navigeren dus overal hetzelfde kan klikken . 
+
+# dropdown:
+pijl uitlijnen met tekst. groter en dikker de pijl. kleur gebruiken.
+
+3 clickable weg . links naar elkaar linken in de tekst. Mag meerdere methodes fases zijn. 
+subtitel breed iets meer ruimte tussen titel en subtitel. 
+
+groen-mosterd basis bruin voor navigatie. 
+highlight roze - omdat we participatory zijn. hyperlinks roze! 
+
+titels in panelen centreren bij actions, 2 regels?? uitzoeken 
+
+Pijltje mapping approach paneel gevuld en groter, meer ruimte 
+
+Mapping pagina's maken en beschrijving toevoegen. 

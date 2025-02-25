@@ -49,6 +49,7 @@ export const Buttons = styled.div`
   width: 100%;
   height: auto;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 
     /* Normal HD screen (mijn comp)*/
   @media only screen and (width <= 1950px) {

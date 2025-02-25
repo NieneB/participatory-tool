@@ -6,7 +6,7 @@ import {
 
 const Home = () => {
   return (
-    <>
+    <div className={window.location.hash.split("/").length <= 2 ? "center" :"top" }>
       <Styled.BackGround />
       <h1>Participatory approach to a complex spatially integrated design process
       </h1>
@@ -31,7 +31,7 @@ const Home = () => {
           <ArrowRight color="var(--color-brown-main)" width={36} height={36} />
         </Styled.EnterButton>
       </NavLink>
-    </>
+    </div>
   );
 };
 

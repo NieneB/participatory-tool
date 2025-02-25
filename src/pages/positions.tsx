@@ -1,13 +1,7 @@
-import * as Styled from "./index.styles";
-import { Link } from "react-router-dom";
-import Panel from "../components/Panel";
 import PositionsGraphD3 from "../components/perspectiveD3Graph";
 import NavBack from "../components/NavBack";
 
-
-
 const Positions = () => {
-
   const data = {
     nodes: [
       {
@@ -31,7 +25,7 @@ const Positions = () => {
   };
 
   return (
-    <div>
+    <div className={window.location.hash.split("/").length <= 2 ? "center" :"top" }>
       <NavBack />
 
       <h1>Positions</h1>
