@@ -1,7 +1,7 @@
 import { Play, Xmark } from "iconoir-react";
 import { useState } from "react";
 import InputFile from "./InputFile";
-import { EnterButton } from "../pages/index.styles";
+import CustomActionButton from "./CustomActionButton";
 
 const UploadFile = function ({ setDataSet, setIsOpenCustom }) {
   const [fileLoaded, setFileLoaded] = useState(false);
@@ -21,19 +21,17 @@ const UploadFile = function ({ setDataSet, setIsOpenCustom }) {
         setDataSet={setDataSet}
         setFileName={setFileName}
       />
-
       {fileLoaded && (
-        <div style={{ display: "flex" }}>
-          <h4 style={{ marginRight: "1rem", marginLeft: "1rem" }}>
-            Your file: {fileName}
-          </h4>
-          <Xmark onClick={resetAll} alt="remove file" />
+        <>
+          {/* <h3 >
+            You uploaded the file: {fileName} <Xmark onClick={resetAll} alt="remove file" />
+          </h3> */}
           {fileLoaded && (
-            <EnterButton onClick={() => setIsOpenCustom(false)}>
-              Start <Play />
-            </EnterButton>
+            <div onClick={() => setIsOpenCustom(false)}>
+              <CustomActionButton text={`Start mapping ${fileName}`}> </CustomActionButton>
+            </div>
           )}
-        </div>
+        </>
       )}
     </>
   );

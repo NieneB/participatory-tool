@@ -3,6 +3,7 @@ import { NavLink, } from "react-router-dom";
 import {
   ArrowRight,
 } from "iconoir-react";
+import CustomNavButton from "../components/CustomNavButton";
 
 const Home = () => {
   return (
@@ -25,12 +26,7 @@ const Home = () => {
         <p>License : CC-by</p>
         <p>Github repository: github.com/nieneb/participatory-tool</p>
       </div>
-      <NavLink to="approach" style={{ marginTop: "2rem" }}>
-        <Styled.EnterButton>
-          <h3>enter</h3>
-          <ArrowRight color="var(--color-brown-main)" width={36} height={36} />
-        </Styled.EnterButton>
-      </NavLink>
+      <CustomNavButton linkTo="approach" text="enter"/>
     </div>
   );
 };

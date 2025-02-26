@@ -11,19 +11,53 @@ export const MainGraphPage = styled.div`
 
 `
 export const Header = styled.div`
-    width: calc(100vw - 1rem);
-    height:100px;
+    width: calc(100vw - 2rem);
     background-color:  rgba(181, 181, 181, 0.3);
     display:flex;
     justify-content: space-between;
     align-items:center;
-    padding-left: 1rem;
+    padding: 1rem;
+
+    @media only screen and (width <=1500px) {
+        height:auto;
+        padding: 0.5rem;
+        width: 100vw;
+
+    }
+
+    
+   
    
 `
 export const StoryCarrousel = styled.div`
  display: flex;
  gap: 3rem;
  margin-right: 4rem;
+
+    /* Normal HD screen (mijn comp)*/
+    @media only screen and (width <=1950px) {
+
+    }
+
+    @media only screen and (width <=1500px) {
+        gap: 1rem;
+        overflow-x: scroll;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+
+    /* Intermediate screen */
+    @media only screen and (width <=992px) {
+        gap: 0.5rem;
+
+
+    }
+
+     /* Small screen */
+     @media only screen and (width <=600px) {
+        display:none;
+    }
 
 `
 export const Story = styled.a`
@@ -42,6 +76,10 @@ export const Story = styled.a`
     background-color: var(--color-pink-main);
         color: white;
     }
+
+    @media only screen and (width <=992px) {
+        padding: 1rem ;
+    }
 `
 
 
@@ -55,13 +93,11 @@ export const Left = styled.div`
 `;
 
 // Start button 
-export const NavButton = styled.a`
+export const NavButton = styled.div`
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  text-decoration: none;
-  :hover{color: white;}
-  :hover > svg {color:white;}
+  
 `;
 
 export const TopPanel = styled.div`
@@ -71,8 +107,9 @@ export const TopPanel = styled.div`
     width: calc(90vw - 6rem);
     height:calc(90vh - 6rem);
     padding: 3rem;
-    
+    overflow-y: scroll;
     background-color: var(--color-brown-light);
+    border-radius: 3px;
     color: white;
     z-index: 1000;
 
@@ -80,7 +117,7 @@ export const TopPanel = styled.div`
     flex-direction: column;
     justify-content: start;
     align-items: left;
-    gap: 3rem;
+    gap: 2rem;
 
     > #top-left {
         position: absolute;
@@ -91,13 +128,14 @@ export const TopPanel = styled.div`
 `
 
 export const Step = styled.div`
+    /* width: 50%; */
     display:flex;
     flex-direction:column;
     justify-content: start;
-    p,a, svg {
+    gap: 0.5rem;
+    p,a {
         color:white;
     }
-    /* gap: 2rem; */
 `
 
 export const BlurPanel = styled.div`

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { EnterButton } from "../pages/index.styles";
+import CustomActionButton from "./CustomActionButton";
 
 const InputFile = ({ setFileName, fileLoaded, setFileLoaded, setDataSet }: any) => {
   const inputFile = useRef(null);
@@ -19,8 +19,10 @@ const InputFile = ({ setFileName, fileLoaded, setFileLoaded, setDataSet }: any) 
   };
 
   return (
-    <div>
-      <EnterButton onClick={openfile}>{fileLoaded ? "Re-" : ""}Start Uploading graph document</EnterButton>
+    <>
+      <div onClick={openfile}>
+        <CustomActionButton text={fileLoaded ? "Upload new graph document" : "Start Uploading graph document"} ></CustomActionButton>
+      </div>
       <input
         ref={inputFile}
         style={{ display: "none" }}
@@ -34,7 +36,7 @@ const InputFile = ({ setFileName, fileLoaded, setFileLoaded, setDataSet }: any) 
         }}
         accept=".json"
       />
-    </div>
+    </>
   );
 };
 

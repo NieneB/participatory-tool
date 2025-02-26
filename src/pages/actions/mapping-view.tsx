@@ -1,11 +1,8 @@
 import InteractivePanel from "../../components/InteractiveSidePanel";
 import stories from "../../data/stories.json";
 import * as Styled from "./mapping.styles";
-import { EnterButton } from "../index.styles";
 import {
   ArrowDownCircle,
-  ArrowRightCircle,
-  MapsArrow,
   Xmark,
 } from "iconoir-react";
 import { useState } from "react";
@@ -13,6 +10,8 @@ import UploadFile from "../../components/UploadDataSet";
 import Legend from "../../components/Legend";
 import MappingDataContent from "../../components/MappingDataContent";
 import NavBack from "../../components/NavBack";
+import CustomActionButton from "../../components/CustomActionButton";
+import CustomNavButton from "../../components/CustomNavButton";
 
 const GraphView = () => {
   const [isOpenCustom, setIsOpenCustom] = useState(false);
@@ -141,16 +140,9 @@ const GraphView = () => {
         </InteractivePanel>
       </Styled.Left>
       <MappingDataContent inputDataSet={inputDataSet} activeStory={activeStory} setInfoContent={setInfoContent} setExtraCollapse={setExtraCollapse}> </MappingDataContent>
-      <Styled.NavButton key="button-next">
-        <EnterButton className="bottom-right" onClick={(e) => toggleMakingYourOwn(e)}>
-          <h4> Start your own Actor Mapping </h4>
-          <MapsArrow
-            color="var(--color-pink-main)"
-            width={44}
-            height={44}
-            style={{ transform: "rotate(90deg)" }}
-          />
-        </EnterButton>
+
+      <Styled.NavButton key="button-next" onClick={(e) => toggleMakingYourOwn(e)}>
+        <CustomActionButton text="Start your own Actor Mapping"></CustomActionButton>
       </Styled.NavButton>
       {
         isOpenCustom && (
@@ -173,42 +165,37 @@ const GraphView = () => {
               style={{ cursor: "pointer" }}
             ></Xmark>
             <Styled.Step>
-              <h1>1. Get the template</h1>
-              <a
+              <h1>1. Get the template 
+              </h1>
+              <p>Download our example template to get started</p>
+              <div
                 onClick={(e) => {
                   saveFile(
                     "https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/framework.json"
                   );
                 }}
-                // href="https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/framework.json"
                 title="framework for arrows app"
               // download
               // target="blank"
               >
-                Click here to download the template{" "}
-                <ArrowDownCircle color="black" width={36} height={36} />
-              </a>
+                <CustomActionButton text="Download"></CustomActionButton>
+
+              </div>
             </Styled.Step>
             <Styled.Step>
               <h1>2. Make your own network</h1>
-              <p>
-                {" "}
-                <ArrowRightCircle color="black" width={36} height={36} />
-                Go to{" "}
-                <a href="https://arrows.app/" target="blank">
-                  {" "}
-                  arrows.app{" "}
-                </a>{" "}
-              </p>
-              <p>And import the framework.json file </p>
-              <p>
-                edit the framework in the app, copy the existing nodes to create
-                new ones
-              </p>
-              <p>
-                Done? Save the file as a .json format and then come back to this
-                app
-              </p>
+              <ol>
+                <li>Go to
+                  <a href="https://arrows.app/" target="blank">
+                    arrows.app
+                  </a></li>
+                <li>And import the framework.json file</li>
+                <li>edit the framework in the app, copy the existing nodes to create
+                  new ones</li>
+                <li>  Done? Save the file as a .json format and then come back to this
+                  app</li>
+              </ol>
+              <CustomNavButton linkTo="https://arrows.app/" text="Arrows.app" target="blank"></CustomNavButton>
             </Styled.Step>
 
             <Styled.Step>
