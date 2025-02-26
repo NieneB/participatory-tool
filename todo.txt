@@ -62,7 +62,7 @@ subtitel breed iets meer ruimte tussen titel en subtitel.
 groen-mosterd basis bruin voor navigatie. 
 highlight roze - omdat we participatory zijn. hyperlinks roze! 
 
-titels in panelen centreren bij actions, 2 regels?? uitzoeken 
+titels in panelen centreren bij actions, 2 regels?? uitzoeken  done
 
 Pijltje mapping approach paneel gevuld en groter, meer ruimte 
 
@@ -72,7 +72,7 @@ Mapping pagina's maken en beschrijving toevoegen.
 
 mouse over 
 
-Mosterd - groen beginnen  of overal groen. 
+Mosterd - groen beginnen  of overal groen.  done
 mosterd groen en hover roze ?
 kleur aanpassen 
 
@@ -87,17 +87,52 @@ activation
 Voor los: 
 mapping approach - niet 
 
-van alles even de code opsturen! 
+van alles even de code opsturen! done
 
 
 ## Mapping approach 
-framework download verbeteren en weer uploaden dat het werkt! 
+framework download verbeteren en weer uploaden dat het werkt!  done
 
-mapping approach uplaod werk niet. 
-links kloppen niet - ids nakijken .  
+mapping approach uplaod werk niet. done
+links kloppen niet - ids nakijken .  done
 
 svg op groter scherm! 
 
-Connections berekenen toevoegen aan de ge-uploaded dataset 
+done Connections berekenen toevoegen aan de ge-uploaded dataset 
+done legenda als plaatjes maken in de mapping approach! 
+done Fix id's voor select with custom dataset upload. 
+d3 zoom toevoegen? ?
 
-legenda als plaatjes maken in de mapping approach! 
+auto collapse selected section ?? 
+
+
+- teksten vervangen 
+- 
+
+conditions sub tiel en de lijst in de dropdowon. 
+titel 
+subtitel
+description
+dropdown
+- details 
+
+x img voor positions toevoegen!! 
+x img algemeen links uitlijnen en boven en onder marge 
+
+Mapping: 
+- bolletjes en tekst kleiner 
+- in en uit zomen toevoegen? 
+- framework 2 voor download zetten. 
+- start your own mapping - info er in zetten. 
+- possibilities pas op de laatste knop er bij (wilde orchidee als possibility )
+- tekst in panelen alles wit. 
+- Anne maakt titel per story voor in paneel 
+- zwart vervangen door het hele donkere bruin. 
+- possibilities en connections opdraaien. 
+- roze bij positions nakijken!!! 
+- onderste paneel wit en zelfde lettertype ! 
+- legenda tekst wit !! 
+- regel afstand tussen titel en inhoud. 
+- titel omhoog in paneel 
+
+- Overdracht -> handleiding schrijven voor ontwikkelaars README.md

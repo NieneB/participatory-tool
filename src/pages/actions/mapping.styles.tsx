@@ -133,8 +133,13 @@ export const Step = styled.div`
     flex-direction:column;
     justify-content: start;
     gap: 0.5rem;
-    p,a {
+    p, a, li{
         color:white;
+        line-height: 1.2rem;
+    }
+    li {
+        list-style-type: circle;
+        list-style-position: inside;
     }
 `
 

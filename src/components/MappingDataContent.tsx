@@ -1,6 +1,6 @@
 import GraphD3 from "./ActorMappingD3Graph_v2";
-import nodeData from "../data/nodes2.json";
-import relationData from "../data/relations2.json";
+import nodeData from "../data/nodes.json";
+import relationData from "../data/relations.json";
 import { PanelBack } from "../pages/index.styles";
 import { useEffect, useState } from "react";
 import { SimulationNodeDatum } from "d3";

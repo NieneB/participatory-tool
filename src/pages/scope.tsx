@@ -8,12 +8,12 @@ const Scope = () => {
     <div className={window.location.hash.split("/").length <= 2 ? "center" :"top" }>
       <NavBack />
       <h1>Scope</h1>
-      <p>What are the steps, conditions and people involved in the participatory process? This roadmap is a guideline for a participation process. Please be aware that all steps, conditions and people involved are very much dependent on the context. These are all general descriptions, that always need to be adjusted to the context in question. We offer actions to accompany these generic steps, to adjust the process to the context. Therefore a close collaboration with the institutional and community perspective is essential. </p>
-      <p>The timeline, budget and impact of the participation are conditional on the innovation project process. The participation process (just as the community- and institutional), supports the technical innovation process that is always reliant on local circumstances.</p>
+      <p>What are the steps, conditions and people involved in this participatory approach? Our roadmap is a guideline for a participation process. We use the term guideline deliberately, because the descriptions are all generic. Since the nature of the spatial design processes will always be contextual, the roadmap will have to be adjusted to the situation at hand. We provide you with as much information and tools to respond to the ever changing reality of the context. The phases are closely linked to the activations and positions, which will be visible in the descriptions. A close collaboration with the institutional and community perspective is essential for a successful process. </p>
+      <p>The timeline and available budget are all factors that impact the actual impact of the participatory approach. The participation approach (just as the community- and institutional), supports the technical innovation process that is always reliant on local resources.</p>
       <Styled.Buttons>
         <NavLink to="phases">
           <Panel color='second-rank' title='Phases'  >
-            <p>Determining, analyzing, adjusting and upscaling the involvement of actors</p>
+            <p>Determining, analyzing, adjusting and up scaling the involvement of actors</p>
           </Panel>
         </NavLink>
         <NavLink to="conditions">

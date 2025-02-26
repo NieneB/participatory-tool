@@ -1,0 +1,22 @@
+[
+    {
+        "shortTitle": "Areas",
+        "desc": "You are viewing the amount of area’s in the use case and the actors connected to the area(s). "
+    },
+    {
+        "shortTitle": "Actors",
+        "desc": "You are viewing the differences in size of the actors. "
+    },
+    {
+        "shortTitle": "Positions",
+        "desc": "You are viewing which actors belong to which positions and the amount of actors per position. "
+    },
+    {
+        "shortTitle": "Possibilities",
+        "desc": "You are viewing the possibilities for participation that are connected to the actor(s). "
+    },
+    {
+        "shortTitle": "Connections",
+        "desc": "You are viewing the differences in connections between the actors. "
+    }
+]

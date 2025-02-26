@@ -1,9 +1,8 @@
 import InteractivePanel from "../../components/InteractiveSidePanel";
-import stories from "../../data/stories.json";
+import stories from "../content/stories.json";
 import * as Styled from "./mapping.styles";
 import {
-  ArrowDownCircle,
-  Xmark,
+  Xmark
 } from "iconoir-react";
 import { useState } from "react";
 import UploadFile from "../../components/UploadDataSet";
@@ -93,11 +92,23 @@ const GraphView = () => {
           setExtraCollapse={setExtraCollapse}
         >
           <>
-            <h1>Explanation {activeStory}</h1>
-            <p>
-              Collecting and organizing the data to identify the possibilities for participation. This actor mapping will always be in development, because your information will change over time. You will upload and adjust your actor network multiple times during this process.
+            <h2>Explanation {activeStory}</h2>
+            {!activeStory && <><p>
+              With this tool you can collect and organise the data with the goal to support, visualize and complement the possibilities for participation. Your actor mapping will always be in development, because your data will grow and change over time.
             </p>
-            <p>This story, {activeStory ? activeStory : "This"}, shows .. </p>
+              <p>
+                You can make, upload and adjust your actor network multiple times. There is no limit to the amount of downloads or uploads. </p>
+              {isOpenCustom ? <p>
+                You are looking at your own actor mapping.</p> : <p>
+                You are looking at the actor mapping this team created for the GO CAWH case study.</p>}</>
+            }
+            {activeStory && <p>
+              {stories.map((story) => {
+                return activeStory === story.shortTitle ? story.desc : ""
+              })
+              }
+            </p>
+            }
           </>
         </InteractivePanel>
         <InteractivePanel
@@ -107,7 +118,7 @@ const GraphView = () => {
           setExtraCollapse={setExtraCollapse}
         >
           <>
-            <h1>Legend</h1>
+            <h2>Legend</h2>
             <Legend activeStory={activeStory} />
           </>
         </InteractivePanel>
@@ -118,9 +129,9 @@ const GraphView = () => {
           setExtraCollapse={setExtraCollapse}
         >
           {infoContent ? <>
-            <h1>
+            <h2>
               Clicked Node {infoContent.labels && ": " + infoContent.labels[0]}
-            </h1>
+            </h2>
             <table>
               {infoContent.properties &&
                 Object.keys(infoContent.properties).map(function (key) {
@@ -165,41 +176,60 @@ const GraphView = () => {
               style={{ cursor: "pointer" }}
             ></Xmark>
             <Styled.Step>
-              <h1>1. Get the template 
-              </h1>
-              <p>Download our example template to get started</p>
+              <h1>Instructions</h1>
+              <p>With this tool you can collect and organise the data with the goal to support, visualize and complement the possibilities for participation. Your actor mapping will always be in development, because your data will grow and change over time.
+              </p>
+              <p>
+                You can make, upload and adjust your actor network multiple times. There is no limit to the amount of downloads or uploads.
+              </p>
+              <p>
+                Let’s get started!
+              </p>
+            </Styled.Step>
+            <Styled.Step>
+              <h1>Step 1. Collect the data</h1>
+              <ol>
+                <li>Collect your data using the methods and tools and information from the other representatives</li>
+                <li>Organise your data by node, property and value</li>
+                <li>If the value is unknown, either leave it empty or pick the ‘unknown’ value</li>
+              </ol>
               <div
                 onClick={(e) => {
                   saveFile(
-                    "https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/framework.json"
+                    "https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/Nodes-properties-values.pdf"
                   );
                 }}
-                title="framework for arrows app"
-              // download
-              // target="blank"
-              >
-                <CustomActionButton text="Download"></CustomActionButton>
-
+                title="Template actor mapping GO CAWH">
+                <CustomActionButton text="Download the list of nodes, properties and values"></CustomActionButton>
               </div>
+          
             </Styled.Step>
             <Styled.Step>
-              <h1>2. Make your own network</h1>
+              <h1>Step 2. Make your actor network </h1>
               <ol>
-                <li>Go to
+                <li>Click below on the button
                   <a href="https://arrows.app/" target="blank">
-                    arrows.app
+                    'arrows.app'
                   </a></li>
-                <li>And import the framework.json file</li>
+                <li>Edit the framework in the app, using the exact descriptions of the values listed in the list above</li>
                 <li>edit the framework in the app, copy the existing nodes to create
                   new ones</li>
-                <li>  Done? Save the file as a .json format and then come back to this
-                  app</li>
+                <li>Done? Save the file as a .json format and then come back to this app!</li>
               </ol>
-              <CustomNavButton linkTo="https://arrows.app/" text="Arrows.app" target="blank"></CustomNavButton>
+              <div
+                onClick={(e) => {
+                  saveFile(
+                    "https://raw.githubusercontent.com/NieneB/participatory-tool/refs/heads/main/public/data/template actor mapping GO CAWH.json"
+                  );
+                }}
+                title="Template actor mapping GO CAWH">
+                <CustomActionButton text="Download example framework for the Arrows.app"></CustomActionButton>
+              </div>
+              <CustomNavButton linkTo="https://arrows.app/" text="Go to the Arrows.app" target="blank"></CustomNavButton>
             </Styled.Step>
 
             <Styled.Step>
-              <h1>3. Import your custom network here</h1>
+              <h1>Step 3. Import your custom netwerk </h1>
               <UploadFile
                 setDataSet={setInputDataSet}
                 setIsOpenCustom={setIsOpenCustom}

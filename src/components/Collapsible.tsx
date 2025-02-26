@@ -28,11 +28,10 @@ const Arrow = styled.div`
         color: white;
     }
 `
-const Collapsible = ({ titel, children }) => {
-    const [open, setOPen] = useState(false);
+const Collapsible = ({ titel, open, setOpen , children }) => {
 
     const toggle = () => {
-        setOPen(!open);
+        setOpen(!open);
     };
 
     return (

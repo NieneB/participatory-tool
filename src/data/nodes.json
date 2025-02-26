@@ -1,556 +1,566 @@
 ﻿[
-   {
+  {
     "n": {
-      "identity": 7,
+      "identity": 184,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
-        "position": "Individual",
         "Categorie": "overheid",
+        "Interest": "politics",
         "Belang": "politiek",
-        "Oorsprong": "vanuit institutie",
-        "Verplichting": "verantwoordelijkheid",
+        "size": "organization",
+        "Position": "government organized",
+        "Decision making": "representation",
+        "urgency": "responsible",
         "Omvang": "groot",
         "Participatie": "informeren",
-        "Grootte": "organisatie",
-        "Verantwoording": "politiek",
-        "stakeholder_id": "ST-1",
-        "Name": "Gemeente Oirschot",
-        "Besluitvorming": "vertegenwoordiging"
+        "representation": "governance",
+        "stakeholder_id": "AC-5",
+        "Name": "Gemeente Oirschot"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184"
     }
   },
   {
     "n": {
-      "identity": 8,
+      "identity": 185,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "huishouden",
+        "Interest": "nature",
         "Belang": "cultureel",
-        "Oorsprong": "natuurlijk ontstaan",
-        "Verplichting": "verwachting",
+        "size": "person",
+        "Position": "non-organized",
+        "Decision making": "compromise",
+        "urgency": "expectation",
         "Omvang": "klein",
         "Participatie": "samen handelen",
-        "Grootte": "persoon",
-        "Verantwoording": "maatschappij",
-        "stakeholder_id": "ST-2",
-        "Name": "Men en Mev van O",
-        "Besluitvorming": "compromis"
+        "representation": "owner",
+        "stakeholder_id": "AC-4",
+        "Name": "Men en Mev van O"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185"
     }
   },
   {
     "n": {
-      "identity": 9,
+      "identity": 186,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
+        "Interest": "nature",
         "Belang": "cultureel",
-        "Oorsprong": "natuurlijk ontstaan",
+        "size": "person",
+        "Position": "non-organized",
+        "urgency": "unknown",
         "Omvang": "klein",
-        "stakeholder_id": "ST-3",
+        "representation": "owner",
+        "stakeholder_id": "AC-17",
         "Name": "Wilde Orchidee"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:9"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:186"
     }
   },
   {
     "n": {
-      "identity": 10,
+      "identity": 187,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "overheid",
+        "Interest": "politics",
         "Belang": "politiek",
-        "Oorsprong": "in opdracht",
-        "Verplichting": "eis",
+        "size": "organization",
+        "Position": "government organized",
+        "Decision making": "representation",
+        "urgency": "demand",
         "Omvang": "groot",
         "Participatie": "informeren",
-        "Grootte": "organisatie",
-        "Verantwoording": "maatschappij",
-        "stakeholder_id": "ST-4",
-        "Name": "Rijkswaterstaat",
-        "Besluitvorming": "vertegenwoordiging"
+        "representation": "governance",
+        "stakeholder_id": "AC-1",
+        "Name": "Rijkswaterstaat"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187"
     }
   },
   {
     "n": {
-      "identity": 11,
+      "identity": 188,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "organisatie zonder winstoogmerk",
+        "Interest": "social",
         "Belang": "maatschappelijk",
-        "Oorsprong": "vanuit belang",
-        "Verplichting": "wens",
+        "size": "group",
+        "Position": "community organized",
+        "Decision making": "anticipation",
+        "urgency": "wish",
         "Omvang": "klein",
         "Participatie": "ondersteunen",
-        "Grootte": "personen",
-        "Verantwoording": "maatschappij",
-        "stakeholder_id": "ST-6",
+        "representation": "enforcer",
+        "stakeholder_id": "AC-19",
         "Name": "De Water Engel"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:188"
     }
   },
   {
     "n": {
-      "identity": 12,
+      "identity": 189,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "organisatie met winstoogmerk",
+        "Interest": "financial",
         "Belang": "financieel",
-        "Oorsprong": "vanuit belang",
-        "Verplichting": "wens",
+        "size": "group",
+        "urgency": "wish",
         "Omvang": "middel",
-        "Grootte": "personen",
-        "stakeholder_id": "ST-7",
+        "representation": "user",
+        "stakeholder_id": "AC-2",
         "Name": "City Carwash"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:12"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:189"
     }
   },
   {
     "n": {
-      "identity": 13,
+      "identity": 190,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "organisatie zonder winstoogmerk",
+        "Interest": "cultural",
         "Belang": "maatschappelijk",
-        "Oorsprong": "vanuit belang",
-        "Verplichting": "wens",
+        "size": "group",
+        "Position": "community organized",
+        "Decision making": "representation",
+        "urgency": "wish",
         "Omvang": "middel",
         "Participatie": "samen handelen",
-        "Grootte": "personen",
-        "Verantwoording": "maatschappij",
-        "stakeholder_id": "ST-8",
-        "Name": "Buurtgroep de Kemer",
-        "Besluitvorming": "vertegenwoordiging"
+        "representation": "user",
+        "stakeholder_id": "AC-12",
+        "Name": "Buurtgroep de Kemer"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:13"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:190"
     }
   },
   {
     "n": {
-      "identity": 14,
+      "identity": 191,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "organisatie zonder winstoogmerk",
+        "Interest": "social",
         "Belang": "politiek",
-        "Oorsprong": "vanuit belang",
-        "Verplichting": "wens",
+        "size": "group",
+        "Position": "community organized",
+        "Decision making": "representation",
+        "urgency": "wish",
         "Omvang": "middel",
         "Participatie": "samen handelen",
-        "Grootte": "personen",
-        "Verantwoording": "maatschappij",
-        "stakeholder_id": "ST-9",
-        "Name": "Cooperatie Kloostersland",
-        "Besluitvorming": "vertegenwoordiging"
+        "representation": "user",
+        "stakeholder_id": "AC-3",
+        "Name": "Cooperatie Kloostersland"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:14"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:191"
     }
   },
   {
     "n": {
-      "identity": 15,
+      "identity": 192,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "organisatie met winstoogmerk",
+        "Interest": "nature",
         "Belang": "financieel",
-        "Oorsprong": "vanuit belang",
-        "Verplichting": "noodzaak",
+        "size": "group",
+        "Position": "non-organized",
+        "urgency": "necessity",
         "Omvang": "klein",
-        "Grootte": "personen",
-        "Verantwoording": "natuur",
-        "stakeholder_id": "ST-10",
+        "representation": "user",
+        "stakeholder_id": "AC-16",
         "Name": "Biologische geiten boer"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:15"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:192"
     }
   },
   {
     "n": {
-      "identity": 16,
+      "identity": 193,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "organisatie met winstoogmerk",
+        "Interest": "financial",
         "Belang": "financieel",
-        "Oorsprong": "natuurlijk ontstaan",
-        "Verplichting": "wens",
+        "size": "group",
+        "Position": "non-organized",
+        "urgency": "wish",
         "Omvang": "klein",
         "Participatie": "consulteren",
-        "Grootte": "personen",
-        "Verantwoording": "natuur",
-        "stakeholder_id": "ST-11",
+        "representation": "owner",
+        "stakeholder_id": "AC-8",
         "Name": "Vijver winkel"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:16"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:193"
     }
   },
   {
     "n": {
-      "identity": 17,
+      "identity": 194,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "overheid",
+        "Interest": "politics",
         "Belang": "politiek",
-        "Oorsprong": "vanuit institutie",
-        "Verplichting": "verantwoordelijkheid",
+        "size": "organization",
+        "Position": "government organized",
+        "Decision making": "representation",
+        "urgency": "responsible",
         "Omvang": "middel",
         "Participatie": "ondersteunen",
-        "Grootte": "organisatie",
-        "Verantwoording": "natuur",
-        "stakeholder_id": "ST-12",
-        "Name": "Waterschap de Dommel",
-        "Besluitvorming": "vertegenwoordiging"
+        "representation": "governance",
+        "stakeholder_id": "AC-20",
+        "Name": "Waterschap de Dommel"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:17"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:194"
     }
   },
   {
     "n": {
-      "identity": 18,
+      "identity": 195,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "organisatie met winstoogmerk",
+        "Interest": "nature",
         "Belang": "cultureel",
-        "Oorsprong": "vanuit belang",
-        "Verplichting": "noodzaak",
+        "size": "organization",
+        "Position": "government organized",
+        "Decision making": "representation",
+        "urgency": "necessity",
         "Omvang": "middel",
-        "Grootte": "organisatie",
-        "Verantwoording": "natuur",
-        "stakeholder_id": "ST-13",
-        "Name": "Brabants landschap",
-        "Besluitvorming": "vertegenwoordiging"
+        "representation": "user",
+        "stakeholder_id": "AC-6",
+        "Name": "Brabants landschap"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:18"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:195"
     }
   },
   {
     "n": {
-      "identity": 19,
+      "identity": 196,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
+        "Interest": "nature",
         "Belang": "cultureel",
-        "Oorsprong": "natuurlijk ontstaan",
-        "stakeholder_id": "ST-14",
+        "size": "person",
+        "urgency": "unknown",
+        "Position": "non-organized",
+        "representation": "user",
+        "stakeholder_id": "AC-14",
         "Name": "Groene en Bruine kikker"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:19"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:196"
     }
   },
   {
     "n": {
-      "identity": 20,
+      "identity": 197,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
         "Categorie": "organisatie met winstoogmerk",
+        "Interest": "financial",
         "Belang": "financieel",
-        "Oorsprong": "vanuit belang",
-        "Verplichting": "wens",
+        "size": "organization",
+        "Position": "community organized",
+        "urgency": "wish",
         "Omvang": "klein",
-        "Verantwoording": "natuur",
-        "stakeholder_id": "ST-15",
+        "representation": "user",
+        "stakeholder_id": "AC-18",
         "Name": "Bomenteler - Bressers"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:20"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:197"
     }
   },
   {
     "n": {
-      "identity": 21,
+      "identity": 198,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
+        "Interest": "nature",
         "Belang": "financieel",
-        "Oorsprong": "vanuit belang",
-        "Verantwoording": "natuur",
-        "stakeholder_id": "ST-16",
+        "size": "organization",
+        "urgency": "wish",
+        "Position": "community organized",
+        "representation": "user",
+        "stakeholder_id": "AC-10",
         "Name": "Heerlijke Oogst. Biologische boer - Oetelaar"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:21"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:198"
     }
   },
   {
     "n": {
-      "identity": 22,
+      "identity": 199,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
+        "Interest": "nature",
         "Belang": "financieel",
-        "Oorsprong": "vanuit belang",
-        "Verplichting": "wens",
-        "Verantwoording": "natuur",
-        "stakeholder_id": "ST-17",
+        "size": "organization",
+        "urgency": "wish",
+        "Position": "community organized",
+        "representation": "user",
+        "stakeholder_id": "AC-15",
         "Name": "Voedselbos kattenbergsebroek"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:22"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:199"
     }
   },
   {
     "n": {
-      "identity": 23,
+      "identity": 200,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
-        "stakeholder_id": "ST-18",
+        "Interest": "cultural",
+        "size": "organization",
+        "urgency": "unknown",
+        "Position": "community organized",
+        "representation": "user",
+        "stakeholder_id": "AC-13",
         "Name": "Voetbalclub Oirschot vooruit"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:23"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:200"
     }
   },
   {
     "n": {
-      "identity": 24,
+      "identity": 201,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
-        "stakeholder_id": "ST-19",
+        "Interest": "cultural",
+        "size": "organization",
+        "urgency": "unknown",
+        "Position": "community organized",
+        "representation": "user",
+        "stakeholder_id": "AC-7",
         "Name": "Hockey club"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:24"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:201"
     }
   },
   {
     "n": {
-      "identity": 25,
+      "identity": 202,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
-        "stakeholder_id": "ST-20",
+        "Interest": "financial",
+        "size": "organization",
+        "urgency": "unknown",
+        "Position": "community organized",
+        "representation": "user",
+        "stakeholder_id": "AC-9",
         "Name": "Bungalowpark stille wille"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:25"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:202"
     }
   },
   {
     "n": {
-      "identity": 26,
+      "identity": 203,
       "labels": [
-        "Stakeholder"
+        "Actor"
       ],
       "properties": {
-        "stakeholder_id": "ST-21"
+        "Interest": "politics",
+        "size": "organization",
+        "Decision making": "unanimous",
+        "urgency": "necessity",
+        "Position": "government organized",
+        "representation": "governance",
+        "stakeholder_id": "AC-11",
+        "Name": "Defensie"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:26"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:203"
     }
   },
   {
     "n": {
-      "identity": 27,
+      "identity": 204,
       "labels": [
-        "Place"
+        "Actor"
       ],
       "properties": {
-        "Perspectief": "beheerder",
-        "Grenzen": "juridisch",
-        "place_id": "PL-1",
-        "Name": "A58"
+        "stakeholder_id": "AC-21"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:204"
     }
   },
   {
     "n": {
-      "identity": 28,
+      "identity": 205,
       "labels": [
-        "Place"
+        "Area"
       ],
       "properties": {
-        "Perspectief": "onderzoeker",
-        "Grenzen": "juridisch",
-        "place_id": "PL-2",
-        "Name": "Innovatiestrook Kloosters"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:28"
-    }
-  },
-  {
-    "n": {
-      "identity": 29,
-      "labels": [
-        "Place"
-      ],
-      "properties": {
-        "Perspectief": "beheerder",
-        "Grenzen": "juridisch",
-        "place_id": "PL-3",
+        "Position": "government-organized",
+        "Borders": "judicial",
+        "place_id": "AR-1",
         "Name": "Whilhelmina kanaal"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
     }
   },
   {
     "n": {
-      "identity": 30,
+      "identity": 206,
       "labels": [
-        "Place"
+        "Area"
       ],
       "properties": {
-        "Perspectief": "bezitter",
-        "Grenzen": "juridisch",
-        "place_id": "PL-4",
-        "Name": "Haven (gemeentelijk)"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-    }
-  },
-  {
-    "n": {
-      "identity": 31,
-      "labels": [
-        "Place"
-      ],
-      "properties": {
-        "Perspectief": "bestuurder",
-        "Grenzen": "administratief",
-        "place_id": "PL-5",
+        "Position": "government-organized",
+        "Borders": "administrative",
+        "place_id": "AR-2",
         "Name": "Gemeente Orischot"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:31"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:206"
     }
   },
   {
     "n": {
-      "identity": 32,
+      "identity": 207,
       "labels": [
-        "Place"
+        "Area"
       ],
       "properties": {
-        "Perspectief": "bewoner",
-        "Grenzen": "natuurlijk",
-        "place_id": "PL-7",
+        "Position": "government-organized",
+        "Borders": "judicial",
+        "place_id": "AR-3",
+        "Name": "A58"
+      },
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+    }
+  },
+  {
+    "n": {
+      "identity": 208,
+      "labels": [
+        "Area"
+      ],
+      "properties": {
+        "Position": "community organized",
+        "Borders": "natural",
+        "place_id": "AR-4",
         "Name": "De Kemmer"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
     }
   },
   {
     "n": {
-      "identity": 33,
+      "identity": 209,
       "labels": [
-        "Method"
+        "Area"
       ],
       "properties": {
-        "Doel": "sturen",
-        "middel_id": "MD-1",
-        "Name": "What if … indicatie"
+        "Position": "community organized",
+        "Borders": "judicial",
+        "place_id": "AR-5",
+        "Name": "Haven (gemeentelijk)"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:33"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
     }
   },
   {
     "n": {
-      "identity": 34,
+      "identity": 210,
       "labels": [
-        "Method"
+        "Area"
       ],
       "properties": {
-        "Doel": "organiseren",
-        "middel_id": "MD-2",
-        "Name": "Stakeholder indentificatie"
+        "Position": "government-organized",
+        "Borders": "judicial",
+        "place_id": "AR-6",
+        "Name": "Innovatiestrook Kloosters"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:34"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210"
     }
   },
   {
     "n": {
-      "identity": 35,
+      "identity": 211,
       "labels": [
-        "Method"
+        "Area"
       ],
       "properties": {
-        "Doel": "uitwisselen",
-        "middel_id": "MD-3",
-        "Name": "Structured interviews"
+        "Position": "community organized",
+        "Borders": "social",
+        "place_id": "AR-7",
+        "Name": "Straten"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:211"
     }
   },
   {
     "n": {
-      "identity": 36,
+      "identity": 212,
       "labels": [
-        "Method"
+        "Area"
       ],
       "properties": {
-        "Doel": "uitwisselen",
-        "middel_id": "MD-4",
-        "Name": "Unstructured interviews"
+        "Position": "community organized",
+        "Borders": "natural",
+        "place_id": "AR-8",
+        "Name": "Defensie"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:36"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:212"
     }
   },
   {
     "n": {
-      "identity": 37,
+      "identity": 213,
       "labels": [
-        "Method"
+        "Area"
       ],
       "properties": {
-        "middel_id": "MD-5",
-        "Name": "Web scraping"
+        "Position": "community organized",
+        "Borders": "natural",
+        "place_id": "AR-9",
+        "Name": "Brabants Landschap"
       },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:37"
-    }
-  },
-  {
-    "n": {
-      "identity": 38,
-      "labels": [
-        "Method"
-      ],
-      "properties": {
-        "middel_id": "MD-6",
-        "Name": "Mapping workshop"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:38"
-    }
-  },
-  {
-    "n": {
-      "identity": 39,
-      "labels": [
-        "Method"
-      ],
-      "properties": {
-        "middel_id": "MD-7",
-        "Name": "GIS analysis"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:39"
+      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:213"
     }
   }
 ]

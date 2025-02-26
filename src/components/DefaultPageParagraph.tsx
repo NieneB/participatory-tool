@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { HashLink } from 'react-router-hash-link';
 import Collapsible from "./Collapsible";
 import DefaultPageParagraphItem from "./DefaultPageParagraphItem";
@@ -36,10 +36,22 @@ const ElementContent = styled.div`
   }
 `
 
-const DefaultPageParagraph = ({ element }) => {
-  // Setting id as # in url 
+const DefaultPageParagraph = ({ element, active }) => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (active) {
+      console.log('#' + element.title.replace(/\s+/g, '-').toLowerCase(), active)
+      if ('#' + element.title.replace(/\s+/g, '-').toLowerCase() === active) {
+        setOpen(true)
+        console.log("open thisone", active)
+      } else { setOpen(false) }
+    }
+  }
+    , [active])
 
   // useEffect(() => {
+  //   let hash = window.location.hash
   //   const handleScroll = () => {
   //     const sections = document.querySelectorAll('section[id]');
   //     const scrollPosition = window.scrollY;
@@ -50,7 +62,8 @@ const DefaultPageParagraph = ({ element }) => {
   //       const sectionBottom = sectionTop + section.offsetHeight;
 
   //       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-  //         window.history.replaceState(null, null, `#${section.id}`);
+  //         // console.log(section)
+  //         // window.history.replaceState(null, null, `${hash}#${section.id}`);
   //       }
   //     });
   //   };
@@ -60,6 +73,7 @@ const DefaultPageParagraph = ({ element }) => {
   //   return () => {
   //     window.removeEventListener("scroll", handleScroll);
   //   };
+  // }, [])
 
 
   return (
@@ -71,7 +85,7 @@ const DefaultPageParagraph = ({ element }) => {
         {element.description && <p>{element.description}</p>}
       </ElementHeader>
       <ElementContent>
-        <Collapsible titel={element.title}>
+        <Collapsible open={open} setOpen={setOpen} titel={element.title}>
           {element.phase && <div className="gridded-p"><p><b>Connection to Phase:</b> </p><p><DefaultPageParagraphItem text={element.phase}></DefaultPageParagraphItem></p></div>}
           {element.approach && <div className="gridded-p"><p><b>Connection to Approach:</b> </p><p><DefaultPageParagraphItem text={element.approach}></DefaultPageParagraphItem></p></div>}
           {element.methods && <div className="gridded-p"><p><b>Connection to Methods:</b> </p><p><DefaultPageParagraphItem text={element.methods}></DefaultPageParagraphItem></p></div>}

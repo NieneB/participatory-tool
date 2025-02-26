@@ -33,7 +33,7 @@ const StyledSVG = styled.svg`
 
   text {
     font-family: arial;
-    font-size: 1rem;
+    font-size: 0.8rem;
     paint-order: stroke;
     stroke: #fff;
     stroke-width: 2px;
@@ -209,7 +209,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
             enter
               .append("circle")
               .classed("nodes", true)
-              .attr("id", (d) => `position-${d.identity}`)
+              .attr("id", (d) => `position-${d.identity || d.id}`)
               .attr("r", (d) => {
                 if (activeStory === "Actors") {
                   return d.properties.size === "organization"
@@ -233,7 +233,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
           },
           (update) =>
             update
-              .attr("id", (d) => `position-${d.identity}`)
+              .attr("id", (d) => `position-${d.identity || d.id}`)
               .attr("r", (d) => {
                 if (activeStory === "Actors" || activeStory === "Positions") {
                   return d.properties.size === "organization"

@@ -1,88 +1,176 @@
 ﻿[
-  
-   
-  
   {
     "p": {
       "start": {
-        "identity": 10,
+        "identity": 187,
         "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "overheid",
+          "Interest": "politics",
           "Belang": "politiek",
-          "Oorsprong": "in opdracht",
-          "Verplichting": "eis",
+          "size": "organization",
+          "Position": "government organized",
+          "Decision making": "representation",
+          "urgency": "demand",
           "Omvang": "groot",
           "Participatie": "informeren",
-          "Grootte": "organisatie",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-4",
-          "Name": "Rijkswaterstaat",
-          "Besluitvorming": "vertegenwoordiging"
+          "representation": "governance",
+          "stakeholder_id": "AC-1",
+          "Name": "Rijkswaterstaat"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187"
       },
       "end": {
-        "identity": 27,
+        "identity": 205,
         "labels": [
-          "Place"
+          "Area"
         ],
         "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-1",
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 187,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Categorie": "overheid",
+              "Interest": "politics",
+              "Belang": "politiek",
+              "size": "organization",
+              "Position": "government organized",
+              "Decision making": "representation",
+              "urgency": "demand",
+              "Omvang": "groot",
+              "Participatie": "informeren",
+              "representation": "governance",
+              "stakeholder_id": "AC-1",
+              "Name": "Rijkswaterstaat"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187"
+          },
+          "relationship": {
+            "identity": 111,
+            "start": 187,
+            "end": 205,
+            "type": "OWNS",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:111",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 187,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Categorie": "overheid",
+          "Interest": "politics",
+          "Belang": "politiek",
+          "size": "organization",
+          "Position": "government organized",
+          "Decision making": "representation",
+          "urgency": "demand",
+          "Omvang": "groot",
+          "Participatie": "informeren",
+          "representation": "governance",
+          "stakeholder_id": "AC-1",
+          "Name": "Rijkswaterstaat"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187"
+      },
+      "end": {
+        "identity": 207,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-3",
           "Name": "A58"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
       },
       "segments": [
         {
           "start": {
-            "identity": 10,
+            "identity": 187,
             "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "overheid",
+              "Interest": "politics",
               "Belang": "politiek",
-              "Oorsprong": "in opdracht",
-              "Verplichting": "eis",
+              "size": "organization",
+              "Position": "government organized",
+              "Decision making": "representation",
+              "urgency": "demand",
               "Omvang": "groot",
               "Participatie": "informeren",
-              "Grootte": "organisatie",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-4",
-              "Name": "Rijkswaterstaat",
-              "Besluitvorming": "vertegenwoordiging"
+              "representation": "governance",
+              "stakeholder_id": "AC-1",
+              "Name": "Rijkswaterstaat"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187"
           },
           "relationship": {
-            "identity": 12,
-            "start": 10,
-            "end": 27,
+            "identity": 112,
+            "start": 187,
+            "end": 207,
             "type": "OWNS",
             "properties": {
 
             },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:12",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:112",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
           },
           "end": {
-            "identity": 27,
+            "identity": 207,
             "labels": [
-              "Place"
+              "Area"
             ],
             "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-1",
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-3",
               "Name": "A58"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
           }
         }
       ],
@@ -92,84 +180,86 @@
   {
     "p": {
       "start": {
-        "identity": 10,
+        "identity": 187,
         "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "overheid",
+          "Interest": "politics",
           "Belang": "politiek",
-          "Oorsprong": "in opdracht",
-          "Verplichting": "eis",
+          "size": "organization",
+          "Position": "government organized",
+          "Decision making": "representation",
+          "urgency": "demand",
           "Omvang": "groot",
           "Participatie": "informeren",
-          "Grootte": "organisatie",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-4",
-          "Name": "Rijkswaterstaat",
-          "Besluitvorming": "vertegenwoordiging"
+          "representation": "governance",
+          "stakeholder_id": "AC-1",
+          "Name": "Rijkswaterstaat"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187"
       },
       "end": {
-        "identity": 28,
+        "identity": 210,
         "labels": [
-          "Place"
+          "Area"
         ],
         "properties": {
-          "Perspectief": "onderzoeker",
-          "Grenzen": "juridisch",
-          "place_id": "PL-2",
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-6",
           "Name": "Innovatiestrook Kloosters"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:28"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210"
       },
       "segments": [
         {
           "start": {
-            "identity": 10,
+            "identity": 187,
             "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "overheid",
+              "Interest": "politics",
               "Belang": "politiek",
-              "Oorsprong": "in opdracht",
-              "Verplichting": "eis",
+              "size": "organization",
+              "Position": "government organized",
+              "Decision making": "representation",
+              "urgency": "demand",
               "Omvang": "groot",
               "Participatie": "informeren",
-              "Grootte": "organisatie",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-4",
-              "Name": "Rijkswaterstaat",
-              "Besluitvorming": "vertegenwoordiging"
+              "representation": "governance",
+              "stakeholder_id": "AC-1",
+              "Name": "Rijkswaterstaat"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187"
           },
           "relationship": {
-            "identity": 13,
-            "start": 10,
-            "end": 28,
+            "identity": 113,
+            "start": 187,
+            "end": 210,
             "type": "OWNS",
             "properties": {
 
             },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:13",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:28"
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:113",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:187",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210"
           },
           "end": {
-            "identity": 28,
+            "identity": 210,
             "labels": [
-              "Place"
+              "Area"
             ],
             "properties": {
-              "Perspectief": "onderzoeker",
-              "Grenzen": "juridisch",
-              "place_id": "PL-2",
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-6",
               "Name": "Innovatiestrook Kloosters"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:28"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210"
           }
         }
       ],
@@ -179,412 +269,86 @@
   {
     "p": {
       "start": {
-        "identity": 10,
+        "identity": 184,
         "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "overheid",
+          "Interest": "politics",
           "Belang": "politiek",
-          "Oorsprong": "in opdracht",
-          "Verplichting": "eis",
+          "size": "organization",
+          "Position": "government organized",
+          "Decision making": "representation",
+          "urgency": "responsible",
           "Omvang": "groot",
           "Participatie": "informeren",
-          "Grootte": "organisatie",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-4",
-          "Name": "Rijkswaterstaat",
-          "Besluitvorming": "vertegenwoordiging"
+          "representation": "governance",
+          "stakeholder_id": "AC-5",
+          "Name": "Gemeente Oirschot"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184"
       },
       "end": {
-        "identity": 29,
+        "identity": 209,
         "labels": [
-          "Place"
+          "Area"
         ],
         "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
+          "Position": "community organized",
+          "Borders": "judicial",
+          "place_id": "AR-5",
+          "Name": "Haven (gemeentelijk)"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
       },
       "segments": [
         {
           "start": {
-            "identity": 10,
+            "identity": 184,
             "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "overheid",
+              "Interest": "politics",
               "Belang": "politiek",
-              "Oorsprong": "in opdracht",
-              "Verplichting": "eis",
+              "size": "organization",
+              "Position": "government organized",
+              "Decision making": "representation",
+              "urgency": "responsible",
               "Omvang": "groot",
               "Participatie": "informeren",
-              "Grootte": "organisatie",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-4",
-              "Name": "Rijkswaterstaat",
-              "Besluitvorming": "vertegenwoordiging"
+              "representation": "governance",
+              "stakeholder_id": "AC-5",
+              "Name": "Gemeente Oirschot"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184"
           },
           "relationship": {
-            "identity": 14,
-            "start": 10,
-            "end": 29,
+            "identity": 114,
+            "start": 184,
+            "end": 209,
             "type": "OWNS",
             "properties": {
 
             },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:14",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:10",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:114",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
           },
           "end": {
-            "identity": 29,
+            "identity": 209,
             "labels": [
-              "Place"
+              "Area"
             ],
             "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 8,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Categorie": "huishouden",
-          "Belang": "cultureel",
-          "Oorsprong": "natuurlijk ontstaan",
-          "Verplichting": "verwachting",
-          "Omvang": "klein",
-          "Participatie": "samen handelen",
-          "Grootte": "persoon",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-2",
-          "Name": "Men en Mev van O",
-          "Besluitvorming": "compromis"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
-      },
-      "end": {
-        "identity": 29,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 8,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Categorie": "huishouden",
-              "Belang": "cultureel",
-              "Oorsprong": "natuurlijk ontstaan",
-              "Verplichting": "verwachting",
-              "Omvang": "klein",
-              "Participatie": "samen handelen",
-              "Grootte": "persoon",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-2",
-              "Name": "Men en Mev van O",
-              "Besluitvorming": "compromis"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
-          },
-          "relationship": {
-            "identity": 15,
-            "start": 8,
-            "end": 29,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:15",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          },
-          "end": {
-            "identity": 29,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 9,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Belang": "cultureel",
-          "Oorsprong": "natuurlijk ontstaan",
-          "Omvang": "klein",
-          "stakeholder_id": "ST-3",
-          "Name": "Wilde Orchidee"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:9"
-      },
-      "end": {
-        "identity": 29,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 9,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Belang": "cultureel",
-              "Oorsprong": "natuurlijk ontstaan",
-              "Omvang": "klein",
-              "stakeholder_id": "ST-3",
-              "Name": "Wilde Orchidee"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:9"
-          },
-          "relationship": {
-            "identity": 16,
-            "start": 9,
-            "end": 29,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:16",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:9",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          },
-          "end": {
-            "identity": 29,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 12,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Categorie": "organisatie met winstoogmerk",
-          "Belang": "financieel",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
-          "Omvang": "middel",
-          "Grootte": "personen",
-          "stakeholder_id": "ST-7",
-          "Name": "City Carwash"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:12"
-      },
-      "end": {
-        "identity": 29,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 12,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Categorie": "organisatie met winstoogmerk",
-              "Belang": "financieel",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
-              "Omvang": "middel",
-              "Grootte": "personen",
-              "stakeholder_id": "ST-7",
-              "Name": "City Carwash"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:12"
-          },
-          "relationship": {
-            "identity": 17,
-            "start": 12,
-            "end": 29,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:17",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:12",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          },
-          "end": {
-            "identity": 29,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 11,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Categorie": "organisatie zonder winstoogmerk",
-          "Belang": "maatschappelijk",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
-          "Omvang": "klein",
-          "Participatie": "ondersteunen",
-          "Grootte": "personen",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-6",
-          "Name": "De Water Engel"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11"
-      },
-      "end": {
-        "identity": 30,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "bezitter",
-          "Grenzen": "juridisch",
-          "place_id": "PL-4",
-          "Name": "Haven (gemeentelijk)"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 11,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Categorie": "organisatie zonder winstoogmerk",
-              "Belang": "maatschappelijk",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
-              "Omvang": "klein",
-              "Participatie": "ondersteunen",
-              "Grootte": "personen",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-6",
-              "Name": "De Water Engel"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11"
-          },
-          "relationship": {
-            "identity": 18,
-            "start": 11,
-            "end": 30,
-            "type": "OWNS",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:18",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-          },
-          "end": {
-            "identity": 30,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "bezitter",
-              "Grenzen": "juridisch",
-              "place_id": "PL-4",
+              "Position": "community organized",
+              "Borders": "judicial",
+              "place_id": "AR-5",
               "Name": "Haven (gemeentelijk)"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
           }
         }
       ],
@@ -594,169 +358,86 @@
   {
     "p": {
       "start": {
-        "identity": 16,
+        "identity": 184,
         "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Categorie": "organisatie met winstoogmerk",
-          "Belang": "financieel",
-          "Oorsprong": "natuurlijk ontstaan",
-          "Verplichting": "wens",
-          "Omvang": "klein",
-          "Participatie": "consulteren",
-          "Grootte": "personen",
-          "Verantwoording": "natuur",
-          "stakeholder_id": "ST-11",
-          "Name": "Vijver winkel"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:16"
-      },
-      "end": {
-        "identity": 29,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 16,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Categorie": "organisatie met winstoogmerk",
-              "Belang": "financieel",
-              "Oorsprong": "natuurlijk ontstaan",
-              "Verplichting": "wens",
-              "Omvang": "klein",
-              "Participatie": "consulteren",
-              "Grootte": "personen",
-              "Verantwoording": "natuur",
-              "stakeholder_id": "ST-11",
-              "Name": "Vijver winkel"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:16"
-          },
-          "relationship": {
-            "identity": 19,
-            "start": 16,
-            "end": 29,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:19",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:16",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          },
-          "end": {
-            "identity": 29,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 7,
-        "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "overheid",
+          "Interest": "politics",
           "Belang": "politiek",
-          "Oorsprong": "vanuit institutie",
-          "Verplichting": "verantwoordelijkheid",
+          "size": "organization",
+          "Position": "government organized",
+          "Decision making": "representation",
+          "urgency": "responsible",
           "Omvang": "groot",
           "Participatie": "informeren",
-          "Grootte": "organisatie",
-          "Verantwoording": "politiek",
-          "stakeholder_id": "ST-1",
-          "Name": "Gemeente Oirschot",
-          "Besluitvorming": "vertegenwoordiging"
+          "representation": "governance",
+          "stakeholder_id": "AC-5",
+          "Name": "Gemeente Oirschot"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184"
       },
       "end": {
-        "identity": 31,
+        "identity": 206,
         "labels": [
-          "Place"
+          "Area"
         ],
         "properties": {
-          "Perspectief": "bestuurder",
-          "Grenzen": "administratief",
-          "place_id": "PL-5",
+          "Position": "government-organized",
+          "Borders": "administrative",
+          "place_id": "AR-2",
           "Name": "Gemeente Orischot"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:31"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:206"
       },
       "segments": [
         {
           "start": {
-            "identity": 7,
+            "identity": 184,
             "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "overheid",
+              "Interest": "politics",
               "Belang": "politiek",
-              "Oorsprong": "vanuit institutie",
-              "Verplichting": "verantwoordelijkheid",
+              "size": "organization",
+              "Position": "government organized",
+              "Decision making": "representation",
+              "urgency": "responsible",
               "Omvang": "groot",
               "Participatie": "informeren",
-              "Grootte": "organisatie",
-              "Verantwoording": "politiek",
-              "stakeholder_id": "ST-1",
-              "Name": "Gemeente Oirschot",
-              "Besluitvorming": "vertegenwoordiging"
+              "representation": "governance",
+              "stakeholder_id": "AC-5",
+              "Name": "Gemeente Oirschot"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184"
           },
           "relationship": {
-            "identity": 20,
-            "start": 7,
-            "end": 31,
+            "identity": 115,
+            "start": 184,
+            "end": 206,
             "type": "OWNS",
             "properties": {
 
             },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:20",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:31"
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:115",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:206"
           },
           "end": {
-            "identity": 31,
+            "identity": 206,
             "labels": [
-              "Place"
+              "Area"
             ],
             "properties": {
-              "Perspectief": "bestuurder",
-              "Grenzen": "administratief",
-              "place_id": "PL-5",
+              "Position": "government-organized",
+              "Borders": "administrative",
+              "place_id": "AR-2",
               "Name": "Gemeente Orischot"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:31"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:206"
           }
         }
       ],
@@ -766,794 +447,86 @@
   {
     "p": {
       "start": {
-        "identity": 20,
+        "identity": 185,
         "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Categorie": "organisatie met winstoogmerk",
-          "Belang": "financieel",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
-          "Omvang": "klein",
-          "Verantwoording": "natuur",
-          "stakeholder_id": "ST-15",
-          "Name": "Bomenteler - Bressers"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:20"
-      },
-      "end": {
-        "identity": 29,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 20,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Categorie": "organisatie met winstoogmerk",
-              "Belang": "financieel",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
-              "Omvang": "klein",
-              "Verantwoording": "natuur",
-              "stakeholder_id": "ST-15",
-              "Name": "Bomenteler - Bressers"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:20"
-          },
-          "relationship": {
-            "identity": 21,
-            "start": 20,
-            "end": 29,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:21",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:20",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          },
-          "end": {
-            "identity": 29,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 22,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Belang": "financieel",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
-          "Verantwoording": "natuur",
-          "stakeholder_id": "ST-17",
-          "Name": "Voedselbos kattenbergsebroek"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:22"
-      },
-      "end": {
-        "identity": 27,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-1",
-          "Name": "A58"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 22,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Belang": "financieel",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
-              "Verantwoording": "natuur",
-              "stakeholder_id": "ST-17",
-              "Name": "Voedselbos kattenbergsebroek"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:22"
-          },
-          "relationship": {
-            "identity": 22,
-            "start": 22,
-            "end": 27,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:22",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:22",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
-          },
-          "end": {
-            "identity": 27,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-1",
-              "Name": "A58"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 7,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Categorie": "overheid",
-          "Belang": "politiek",
-          "Oorsprong": "vanuit institutie",
-          "Verplichting": "verantwoordelijkheid",
-          "Omvang": "groot",
-          "Participatie": "informeren",
-          "Grootte": "organisatie",
-          "Verantwoording": "politiek",
-          "stakeholder_id": "ST-1",
-          "Name": "Gemeente Oirschot",
-          "Besluitvorming": "vertegenwoordiging"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7"
-      },
-      "end": {
-        "identity": 30,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "bezitter",
-          "Grenzen": "juridisch",
-          "place_id": "PL-4",
-          "Name": "Haven (gemeentelijk)"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 7,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Categorie": "overheid",
-              "Belang": "politiek",
-              "Oorsprong": "vanuit institutie",
-              "Verplichting": "verantwoordelijkheid",
-              "Omvang": "groot",
-              "Participatie": "informeren",
-              "Grootte": "organisatie",
-              "Verantwoording": "politiek",
-              "stakeholder_id": "ST-1",
-              "Name": "Gemeente Oirschot",
-              "Besluitvorming": "vertegenwoordiging"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7"
-          },
-          "relationship": {
-            "identity": 23,
-            "start": 7,
-            "end": 30,
-            "type": "OWNS",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:23",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-          },
-          "end": {
-            "identity": 30,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "bezitter",
-              "Grenzen": "juridisch",
-              "place_id": "PL-4",
-              "Name": "Haven (gemeentelijk)"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 13,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Categorie": "organisatie zonder winstoogmerk",
-          "Belang": "maatschappelijk",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
-          "Omvang": "middel",
-          "Participatie": "samen handelen",
-          "Grootte": "personen",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-8",
-          "Name": "Buurtgroep de Kemer",
-          "Besluitvorming": "vertegenwoordiging"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:13"
-      },
-      "end": {
-        "identity": 32,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "bewoner",
-          "Grenzen": "natuurlijk",
-          "place_id": "PL-7",
-          "Name": "De Kemmer"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 13,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Categorie": "organisatie zonder winstoogmerk",
-              "Belang": "maatschappelijk",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
-              "Omvang": "middel",
-              "Participatie": "samen handelen",
-              "Grootte": "personen",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-8",
-              "Name": "Buurtgroep de Kemer",
-              "Besluitvorming": "vertegenwoordiging"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:13"
-          },
-          "relationship": {
-            "identity": 24,
-            "start": 13,
-            "end": 32,
-            "type": "OWNS",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:24",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:13",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
-          },
-          "end": {
-            "identity": 32,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "bewoner",
-              "Grenzen": "natuurlijk",
-              "place_id": "PL-7",
-              "Name": "De Kemmer"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 19,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Belang": "cultureel",
-          "Oorsprong": "natuurlijk ontstaan",
-          "stakeholder_id": "ST-14",
-          "Name": "Groene en Bruine kikker"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:19"
-      },
-      "end": {
-        "identity": 29,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 19,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Belang": "cultureel",
-              "Oorsprong": "natuurlijk ontstaan",
-              "stakeholder_id": "ST-14",
-              "Name": "Groene en Bruine kikker"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:19"
-          },
-          "relationship": {
-            "identity": 25,
-            "start": 19,
-            "end": 29,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:25",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:19",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          },
-          "end": {
-            "identity": 29,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
- 
-  {
-    "p": {
-      "start": {
-        "identity": 35,
-        "labels": [
-          "Method"
-        ],
-        "properties": {
-          "Doel": "uitwisselen",
-          "middel_id": "MD-3",
-          "Name": "Structured interviews"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-      },
-      "end": {
-        "identity": 22,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Belang": "financieel",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
-          "Verantwoording": "natuur",
-          "stakeholder_id": "ST-17",
-          "Name": "Voedselbos kattenbergsebroek"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:22"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 35,
-            "labels": [
-              "Method"
-            ],
-            "properties": {
-              "Doel": "uitwisselen",
-              "middel_id": "MD-3",
-              "Name": "Structured interviews"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-          },
-          "relationship": {
-            "identity": 31,
-            "start": 35,
-            "end": 22,
-            "type": "INVOLVES",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:31",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:22"
-          },
-          "end": {
-            "identity": 22,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Belang": "financieel",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
-              "Verantwoording": "natuur",
-              "stakeholder_id": "ST-17",
-              "Name": "Voedselbos kattenbergsebroek"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:22"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 35,
-        "labels": [
-          "Method"
-        ],
-        "properties": {
-          "Doel": "uitwisselen",
-          "middel_id": "MD-3",
-          "Name": "Structured interviews"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-      },
-      "end": {
-        "identity": 21,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Belang": "financieel",
-          "Oorsprong": "vanuit belang",
-          "Verantwoording": "natuur",
-          "stakeholder_id": "ST-16",
-          "Name": "Heerlijke Oogst. Biologische boer - Oetelaar"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:21"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 35,
-            "labels": [
-              "Method"
-            ],
-            "properties": {
-              "Doel": "uitwisselen",
-              "middel_id": "MD-3",
-              "Name": "Structured interviews"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-          },
-          "relationship": {
-            "identity": 32,
-            "start": 35,
-            "end": 21,
-            "type": "INVOLVES",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:32",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:21"
-          },
-          "end": {
-            "identity": 21,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Belang": "financieel",
-              "Oorsprong": "vanuit belang",
-              "Verantwoording": "natuur",
-              "stakeholder_id": "ST-16",
-              "Name": "Heerlijke Oogst. Biologische boer - Oetelaar"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:21"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 35,
-        "labels": [
-          "Method"
-        ],
-        "properties": {
-          "Doel": "uitwisselen",
-          "middel_id": "MD-3",
-          "Name": "Structured interviews"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-      },
-      "end": {
-        "identity": 20,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Categorie": "organisatie met winstoogmerk",
-          "Belang": "financieel",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
-          "Omvang": "klein",
-          "Verantwoording": "natuur",
-          "stakeholder_id": "ST-15",
-          "Name": "Bomenteler - Bressers"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:20"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 35,
-            "labels": [
-              "Method"
-            ],
-            "properties": {
-              "Doel": "uitwisselen",
-              "middel_id": "MD-3",
-              "Name": "Structured interviews"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-          },
-          "relationship": {
-            "identity": 33,
-            "start": 35,
-            "end": 20,
-            "type": "INVOLVES",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:33",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:20"
-          },
-          "end": {
-            "identity": 20,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Categorie": "organisatie met winstoogmerk",
-              "Belang": "financieel",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
-              "Omvang": "klein",
-              "Verantwoording": "natuur",
-              "stakeholder_id": "ST-15",
-              "Name": "Bomenteler - Bressers"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:20"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 35,
-        "labels": [
-          "Method"
-        ],
-        "properties": {
-          "Doel": "uitwisselen",
-          "middel_id": "MD-3",
-          "Name": "Structured interviews"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-      },
-      "end": {
-        "identity": 12,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "Categorie": "organisatie met winstoogmerk",
-          "Belang": "financieel",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
-          "Omvang": "middel",
-          "Grootte": "personen",
-          "stakeholder_id": "ST-7",
-          "Name": "City Carwash"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:12"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 35,
-            "labels": [
-              "Method"
-            ],
-            "properties": {
-              "Doel": "uitwisselen",
-              "middel_id": "MD-3",
-              "Name": "Structured interviews"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-          },
-          "relationship": {
-            "identity": 34,
-            "start": 35,
-            "end": 12,
-            "type": "INVOLVES",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:34",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:12"
-          },
-          "end": {
-            "identity": 12,
-            "labels": [
-              "Stakeholder"
-            ],
-            "properties": {
-              "Categorie": "organisatie met winstoogmerk",
-              "Belang": "financieel",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
-              "Omvang": "middel",
-              "Grootte": "personen",
-              "stakeholder_id": "ST-7",
-              "Name": "City Carwash"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:12"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 36,
-        "labels": [
-          "Method"
-        ],
-        "properties": {
-          "Doel": "uitwisselen",
-          "middel_id": "MD-4",
-          "Name": "Unstructured interviews"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:36"
-      },
-      "end": {
-        "identity": 8,
-        "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "huishouden",
+          "Interest": "nature",
           "Belang": "cultureel",
-          "Oorsprong": "natuurlijk ontstaan",
-          "Verplichting": "verwachting",
+          "size": "person",
+          "Position": "non-organized",
+          "Decision making": "compromise",
+          "urgency": "expectation",
           "Omvang": "klein",
           "Participatie": "samen handelen",
-          "Grootte": "persoon",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-2",
-          "Name": "Men en Mev van O",
-          "Besluitvorming": "compromis"
+          "representation": "owner",
+          "stakeholder_id": "AC-4",
+          "Name": "Men en Mev van O"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
       },
       "segments": [
         {
           "start": {
-            "identity": 36,
+            "identity": 185,
             "labels": [
-              "Method"
-            ],
-            "properties": {
-              "Doel": "uitwisselen",
-              "middel_id": "MD-4",
-              "Name": "Unstructured interviews"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:36"
-          },
-          "relationship": {
-            "identity": 35,
-            "start": 36,
-            "end": 8,
-            "type": "INVOLVES",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:35",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:36",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
-          },
-          "end": {
-            "identity": 8,
-            "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "huishouden",
+              "Interest": "nature",
               "Belang": "cultureel",
-              "Oorsprong": "natuurlijk ontstaan",
-              "Verplichting": "verwachting",
+              "size": "person",
+              "Position": "non-organized",
+              "Decision making": "compromise",
+              "urgency": "expectation",
               "Omvang": "klein",
               "Participatie": "samen handelen",
-              "Grootte": "persoon",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-2",
-              "Name": "Men en Mev van O",
-              "Besluitvorming": "compromis"
+              "representation": "owner",
+              "stakeholder_id": "AC-4",
+              "Name": "Men en Mev van O"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185"
+          },
+          "relationship": {
+            "identity": 116,
+            "start": 185,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:116",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
           }
         }
       ],
@@ -1563,145 +536,250 @@
   {
     "p": {
       "start": {
-        "identity": 36,
+        "identity": 186,
         "labels": [
-          "Method"
+          "Actor"
         ],
         "properties": {
-          "Doel": "uitwisselen",
-          "middel_id": "MD-4",
-          "Name": "Unstructured interviews"
+          "Interest": "nature",
+          "Belang": "cultureel",
+          "size": "person",
+          "Position": "non-organized",
+          "urgency": "unknown",
+          "Omvang": "klein",
+          "representation": "owner",
+          "stakeholder_id": "AC-17",
+          "Name": "Wilde Orchidee"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:36"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:186"
       },
       "end": {
-        "identity": 11,
+        "identity": 205,
         "labels": [
-          "Stakeholder"
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 186,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Interest": "nature",
+              "Belang": "cultureel",
+              "size": "person",
+              "Position": "non-organized",
+              "urgency": "unknown",
+              "Omvang": "klein",
+              "representation": "owner",
+              "stakeholder_id": "AC-17",
+              "Name": "Wilde Orchidee"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:186"
+          },
+          "relationship": {
+            "identity": 117,
+            "start": 186,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:117",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:186",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 196,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Interest": "nature",
+          "Belang": "cultureel",
+          "size": "person",
+          "urgency": "unknown",
+          "Position": "non-organized",
+          "representation": "user",
+          "stakeholder_id": "AC-14",
+          "Name": "Groene en Bruine kikker"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:196"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 196,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Interest": "nature",
+              "Belang": "cultureel",
+              "size": "person",
+              "urgency": "unknown",
+              "Position": "non-organized",
+              "representation": "user",
+              "stakeholder_id": "AC-14",
+              "Name": "Groene en Bruine kikker"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:196"
+          },
+          "relationship": {
+            "identity": 118,
+            "start": 196,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:118",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:196",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 188,
+        "labels": [
+          "Actor"
         ],
         "properties": {
           "Categorie": "organisatie zonder winstoogmerk",
+          "Interest": "social",
           "Belang": "maatschappelijk",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
+          "size": "group",
+          "Position": "community organized",
+          "Decision making": "anticipation",
+          "urgency": "wish",
           "Omvang": "klein",
           "Participatie": "ondersteunen",
-          "Grootte": "personen",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-6",
+          "representation": "enforcer",
+          "stakeholder_id": "AC-19",
           "Name": "De Water Engel"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:188"
+      },
+      "end": {
+        "identity": 209,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "community organized",
+          "Borders": "judicial",
+          "place_id": "AR-5",
+          "Name": "Haven (gemeentelijk)"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
       },
       "segments": [
         {
           "start": {
-            "identity": 36,
+            "identity": 188,
             "labels": [
-              "Method"
-            ],
-            "properties": {
-              "Doel": "uitwisselen",
-              "middel_id": "MD-4",
-              "Name": "Unstructured interviews"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:36"
-          },
-          "relationship": {
-            "identity": 36,
-            "start": 36,
-            "end": 11,
-            "type": "INVOLVES",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:36",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:36",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11"
-          },
-          "end": {
-            "identity": 11,
-            "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "organisatie zonder winstoogmerk",
+              "Interest": "social",
               "Belang": "maatschappelijk",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
+              "size": "group",
+              "Position": "community organized",
+              "Decision making": "anticipation",
+              "urgency": "wish",
               "Omvang": "klein",
               "Participatie": "ondersteunen",
-              "Grootte": "personen",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-6",
+              "representation": "enforcer",
+              "stakeholder_id": "AC-19",
               "Name": "De Water Engel"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 37,
-        "labels": [
-          "Method"
-        ],
-        "properties": {
-          "middel_id": "MD-5",
-          "Name": "Web scraping"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:37"
-      },
-      "end": {
-        "identity": 23,
-        "labels": [
-          "Stakeholder"
-        ],
-        "properties": {
-          "stakeholder_id": "ST-18",
-          "Name": "Voetbalclub Oirschot vooruit"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:23"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 37,
-            "labels": [
-              "Method"
-            ],
-            "properties": {
-              "middel_id": "MD-5",
-              "Name": "Web scraping"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:37"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:188"
           },
           "relationship": {
-            "identity": 37,
-            "start": 37,
-            "end": 23,
-            "type": "INVOLVES",
+            "identity": 119,
+            "start": 188,
+            "end": 209,
+            "type": "OWNS",
             "properties": {
 
             },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:37",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:37",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:23"
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:119",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:188",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
           },
           "end": {
-            "identity": 23,
+            "identity": 209,
             "labels": [
-              "Stakeholder"
+              "Area"
             ],
             "properties": {
-              "stakeholder_id": "ST-18",
-              "Name": "Voetbalclub Oirschot vooruit"
+              "Position": "community organized",
+              "Borders": "judicial",
+              "place_id": "AR-5",
+              "Name": "Haven (gemeentelijk)"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:23"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
           }
         }
       ],
@@ -1711,78 +789,80 @@
   {
     "p": {
       "start": {
-        "identity": 35,
+        "identity": 189,
         "labels": [
-          "Method"
-        ],
-        "properties": {
-          "Doel": "uitwisselen",
-          "middel_id": "MD-3",
-          "Name": "Structured interviews"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-      },
-      "end": {
-        "identity": 15,
-        "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "organisatie met winstoogmerk",
+          "Interest": "financial",
           "Belang": "financieel",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "noodzaak",
-          "Omvang": "klein",
-          "Grootte": "personen",
-          "Verantwoording": "natuur",
-          "stakeholder_id": "ST-10",
-          "Name": "Biologische geiten boer"
+          "size": "group",
+          "urgency": "wish",
+          "Omvang": "middel",
+          "representation": "user",
+          "stakeholder_id": "AC-2",
+          "Name": "City Carwash"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:15"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:189"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
       },
       "segments": [
         {
           "start": {
-            "identity": 35,
+            "identity": 189,
             "labels": [
-              "Method"
-            ],
-            "properties": {
-              "Doel": "uitwisselen",
-              "middel_id": "MD-3",
-              "Name": "Structured interviews"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-          },
-          "relationship": {
-            "identity": 38,
-            "start": 35,
-            "end": 15,
-            "type": "INVOLVES",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:38",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:15"
-          },
-          "end": {
-            "identity": 15,
-            "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "organisatie met winstoogmerk",
+              "Interest": "financial",
               "Belang": "financieel",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "noodzaak",
-              "Omvang": "klein",
-              "Grootte": "personen",
-              "Verantwoording": "natuur",
-              "stakeholder_id": "ST-10",
-              "Name": "Biologische geiten boer"
+              "size": "group",
+              "urgency": "wish",
+              "Omvang": "middel",
+              "representation": "user",
+              "stakeholder_id": "AC-2",
+              "Name": "City Carwash"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:15"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:189"
+          },
+          "relationship": {
+            "identity": 120,
+            "start": 189,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:120",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:189",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
           }
         }
       ],
@@ -1792,301 +872,86 @@
   {
     "p": {
       "start": {
-        "identity": 35,
+        "identity": 190,
         "labels": [
-          "Method"
-        ],
-        "properties": {
-          "Doel": "uitwisselen",
-          "middel_id": "MD-3",
-          "Name": "Structured interviews"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-      },
-      "end": {
-        "identity": 13,
-        "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "organisatie zonder winstoogmerk",
+          "Interest": "cultural",
           "Belang": "maatschappelijk",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
+          "size": "group",
+          "Position": "community organized",
+          "Decision making": "representation",
+          "urgency": "wish",
           "Omvang": "middel",
           "Participatie": "samen handelen",
-          "Grootte": "personen",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-8",
-          "Name": "Buurtgroep de Kemer",
-          "Besluitvorming": "vertegenwoordiging"
+          "representation": "user",
+          "stakeholder_id": "AC-12",
+          "Name": "Buurtgroep de Kemer"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:13"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:190"
+      },
+      "end": {
+        "identity": 208,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "community organized",
+          "Borders": "natural",
+          "place_id": "AR-4",
+          "Name": "De Kemmer"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
       },
       "segments": [
         {
           "start": {
-            "identity": 35,
+            "identity": 190,
             "labels": [
-              "Method"
-            ],
-            "properties": {
-              "Doel": "uitwisselen",
-              "middel_id": "MD-3",
-              "Name": "Structured interviews"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35"
-          },
-          "relationship": {
-            "identity": 39,
-            "start": 35,
-            "end": 13,
-            "type": "INVOLVES",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:39",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:35",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:13"
-          },
-          "end": {
-            "identity": 13,
-            "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "organisatie zonder winstoogmerk",
+              "Interest": "cultural",
               "Belang": "maatschappelijk",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
+              "size": "group",
+              "Position": "community organized",
+              "Decision making": "representation",
+              "urgency": "wish",
               "Omvang": "middel",
               "Participatie": "samen handelen",
-              "Grootte": "personen",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-8",
-              "Name": "Buurtgroep de Kemer",
-              "Besluitvorming": "vertegenwoordiging"
+              "representation": "user",
+              "stakeholder_id": "AC-12",
+              "Name": "Buurtgroep de Kemer"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:13"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 27,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-1",
-          "Name": "A58"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
-      },
-      "end": {
-        "identity": 29,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 27,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-1",
-              "Name": "A58"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:190"
           },
           "relationship": {
-            "identity": 40,
-            "start": 27,
-            "end": 29,
-            "type": "CLOSE_TO",
+            "identity": 121,
+            "start": 190,
+            "end": 208,
+            "type": "OWNS",
             "properties": {
 
             },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:40",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:121",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:190",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
           },
           "end": {
-            "identity": 29,
+            "identity": 208,
             "labels": [
-              "Place"
+              "Area"
             ],
             "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 30,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "bezitter",
-          "Grenzen": "juridisch",
-          "place_id": "PL-4",
-          "Name": "Haven (gemeentelijk)"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-      },
-      "end": {
-        "identity": 29,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 30,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "bezitter",
-              "Grenzen": "juridisch",
-              "place_id": "PL-4",
-              "Name": "Haven (gemeentelijk)"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-          },
-          "relationship": {
-            "identity": 41,
-            "start": 30,
-            "end": 29,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:41",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          },
-          "end": {
-            "identity": 29,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 32,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "bewoner",
-          "Grenzen": "natuurlijk",
-          "place_id": "PL-7",
-          "Name": "De Kemmer"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
-      },
-      "end": {
-        "identity": 29,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-3",
-          "Name": "Whilhelmina kanaal"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 32,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "bewoner",
-              "Grenzen": "natuurlijk",
-              "place_id": "PL-7",
+              "Position": "community organized",
+              "Borders": "natural",
+              "place_id": "AR-4",
               "Name": "De Kemmer"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
-          },
-          "relationship": {
-            "identity": 42,
-            "start": 32,
-            "end": 29,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:42",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
-          },
-          "end": {
-            "identity": 29,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-3",
-              "Name": "Whilhelmina kanaal"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:29"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
           }
         }
       ],
@@ -2096,315 +961,1538 @@
   {
     "p": {
       "start": {
-        "identity": 27,
+        "identity": 191,
         "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-1",
-          "Name": "A58"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
-      },
-      "end": {
-        "identity": 28,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "onderzoeker",
-          "Grenzen": "juridisch",
-          "place_id": "PL-2",
-          "Name": "Innovatiestrook Kloosters"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:28"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 27,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-1",
-              "Name": "A58"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
-          },
-          "relationship": {
-            "identity": 43,
-            "start": 27,
-            "end": 28,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:43",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:28"
-          },
-          "end": {
-            "identity": 28,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "onderzoeker",
-              "Grenzen": "juridisch",
-              "place_id": "PL-2",
-              "Name": "Innovatiestrook Kloosters"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:28"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 32,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "bewoner",
-          "Grenzen": "natuurlijk",
-          "place_id": "PL-7",
-          "Name": "De Kemmer"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
-      },
-      "end": {
-        "identity": 27,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "beheerder",
-          "Grenzen": "juridisch",
-          "place_id": "PL-1",
-          "Name": "A58"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 32,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "bewoner",
-              "Grenzen": "natuurlijk",
-              "place_id": "PL-7",
-              "Name": "De Kemmer"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
-          },
-          "relationship": {
-            "identity": 44,
-            "start": 32,
-            "end": 27,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:44",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
-          },
-          "end": {
-            "identity": 27,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "beheerder",
-              "Grenzen": "juridisch",
-              "place_id": "PL-1",
-              "Name": "A58"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:27"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 32,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "bewoner",
-          "Grenzen": "natuurlijk",
-          "place_id": "PL-7",
-          "Name": "De Kemmer"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
-      },
-      "end": {
-        "identity": 30,
-        "labels": [
-          "Place"
-        ],
-        "properties": {
-          "Perspectief": "bezitter",
-          "Grenzen": "juridisch",
-          "place_id": "PL-4",
-          "Name": "Haven (gemeentelijk)"
-        },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-      },
-      "segments": [
-        {
-          "start": {
-            "identity": 32,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "bewoner",
-              "Grenzen": "natuurlijk",
-              "place_id": "PL-7",
-              "Name": "De Kemmer"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32"
-          },
-          "relationship": {
-            "identity": 45,
-            "start": 32,
-            "end": 30,
-            "type": "CLOSE_TO",
-            "properties": {
-
-            },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:45",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:32",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-          },
-          "end": {
-            "identity": 30,
-            "labels": [
-              "Place"
-            ],
-            "properties": {
-              "Perspectief": "bezitter",
-              "Grenzen": "juridisch",
-              "place_id": "PL-4",
-              "Name": "Haven (gemeentelijk)"
-            },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:30"
-          }
-        }
-      ],
-      "length": 1.0
-    }
-  },
-  {
-    "p": {
-      "start": {
-        "identity": 11,
-        "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "organisatie zonder winstoogmerk",
-          "Belang": "maatschappelijk",
-          "Oorsprong": "vanuit belang",
-          "Verplichting": "wens",
-          "Omvang": "klein",
-          "Participatie": "ondersteunen",
-          "Grootte": "personen",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-6",
-          "Name": "De Water Engel"
+          "Interest": "social",
+          "Belang": "politiek",
+          "size": "group",
+          "Position": "community organized",
+          "Decision making": "representation",
+          "urgency": "wish",
+          "Omvang": "middel",
+          "Participatie": "samen handelen",
+          "representation": "user",
+          "stakeholder_id": "AC-3",
+          "Name": "Cooperatie Kloostersland"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:191"
       },
       "end": {
-        "identity": 7,
+        "identity": 210,
         "labels": [
-          "Stakeholder"
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-6",
+          "Name": "Innovatiestrook Kloosters"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 191,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Categorie": "organisatie zonder winstoogmerk",
+              "Interest": "social",
+              "Belang": "politiek",
+              "size": "group",
+              "Position": "community organized",
+              "Decision making": "representation",
+              "urgency": "wish",
+              "Omvang": "middel",
+              "Participatie": "samen handelen",
+              "representation": "user",
+              "stakeholder_id": "AC-3",
+              "Name": "Cooperatie Kloostersland"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:191"
+          },
+          "relationship": {
+            "identity": 122,
+            "start": 191,
+            "end": 210,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:122",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:191",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210"
+          },
+          "end": {
+            "identity": 210,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-6",
+              "Name": "Innovatiestrook Kloosters"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 193,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Categorie": "organisatie met winstoogmerk",
+          "Interest": "financial",
+          "Belang": "financieel",
+          "size": "group",
+          "Position": "non-organized",
+          "urgency": "wish",
+          "Omvang": "klein",
+          "Participatie": "consulteren",
+          "representation": "owner",
+          "stakeholder_id": "AC-8",
+          "Name": "Vijver winkel"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:193"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 193,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Categorie": "organisatie met winstoogmerk",
+              "Interest": "financial",
+              "Belang": "financieel",
+              "size": "group",
+              "Position": "non-organized",
+              "urgency": "wish",
+              "Omvang": "klein",
+              "Participatie": "consulteren",
+              "representation": "owner",
+              "stakeholder_id": "AC-8",
+              "Name": "Vijver winkel"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:193"
+          },
+          "relationship": {
+            "identity": 123,
+            "start": 193,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:123",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:193",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 194,
+        "labels": [
+          "Actor"
         ],
         "properties": {
           "Categorie": "overheid",
+          "Interest": "politics",
           "Belang": "politiek",
-          "Oorsprong": "vanuit institutie",
-          "Verplichting": "verantwoordelijkheid",
-          "Omvang": "groot",
-          "Participatie": "informeren",
-          "Grootte": "organisatie",
-          "Verantwoording": "politiek",
-          "stakeholder_id": "ST-1",
-          "Name": "Gemeente Oirschot",
-          "Besluitvorming": "vertegenwoordiging"
+          "size": "organization",
+          "Position": "government organized",
+          "Decision making": "representation",
+          "urgency": "responsible",
+          "Omvang": "middel",
+          "Participatie": "ondersteunen",
+          "representation": "governance",
+          "stakeholder_id": "AC-20",
+          "Name": "Waterschap de Dommel"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:194"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
       },
       "segments": [
         {
           "start": {
-            "identity": 11,
+            "identity": 194,
             "labels": [
-              "Stakeholder"
+              "Actor"
+            ],
+            "properties": {
+              "Categorie": "overheid",
+              "Interest": "politics",
+              "Belang": "politiek",
+              "size": "organization",
+              "Position": "government organized",
+              "Decision making": "representation",
+              "urgency": "responsible",
+              "Omvang": "middel",
+              "Participatie": "ondersteunen",
+              "representation": "governance",
+              "stakeholder_id": "AC-20",
+              "Name": "Waterschap de Dommel"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:194"
+          },
+          "relationship": {
+            "identity": 124,
+            "start": 194,
+            "end": 205,
+            "type": "OWNS",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:124",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:194",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 195,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Categorie": "organisatie met winstoogmerk",
+          "Interest": "nature",
+          "Belang": "cultureel",
+          "size": "organization",
+          "Position": "government organized",
+          "Decision making": "representation",
+          "urgency": "necessity",
+          "Omvang": "middel",
+          "representation": "user",
+          "stakeholder_id": "AC-6",
+          "Name": "Brabants landschap"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:195"
+      },
+      "end": {
+        "identity": 211,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "community organized",
+          "Borders": "social",
+          "place_id": "AR-7",
+          "Name": "Straten"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:211"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 195,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Categorie": "organisatie met winstoogmerk",
+              "Interest": "nature",
+              "Belang": "cultureel",
+              "size": "organization",
+              "Position": "government organized",
+              "Decision making": "representation",
+              "urgency": "necessity",
+              "Omvang": "middel",
+              "representation": "user",
+              "stakeholder_id": "AC-6",
+              "Name": "Brabants landschap"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:195"
+          },
+          "relationship": {
+            "identity": 125,
+            "start": 195,
+            "end": 211,
+            "type": "OWNS",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:125",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:195",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:211"
+          },
+          "end": {
+            "identity": 211,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "community organized",
+              "Borders": "social",
+              "place_id": "AR-7",
+              "Name": "Straten"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:211"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 197,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Categorie": "organisatie met winstoogmerk",
+          "Interest": "financial",
+          "Belang": "financieel",
+          "size": "organization",
+          "Position": "community organized",
+          "urgency": "wish",
+          "Omvang": "klein",
+          "representation": "user",
+          "stakeholder_id": "AC-18",
+          "Name": "Bomenteler - Bressers"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:197"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 197,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Categorie": "organisatie met winstoogmerk",
+              "Interest": "financial",
+              "Belang": "financieel",
+              "size": "organization",
+              "Position": "community organized",
+              "urgency": "wish",
+              "Omvang": "klein",
+              "representation": "user",
+              "stakeholder_id": "AC-18",
+              "Name": "Bomenteler - Bressers"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:197"
+          },
+          "relationship": {
+            "identity": 126,
+            "start": 197,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:126",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:197",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 198,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Interest": "nature",
+          "Belang": "financieel",
+          "size": "organization",
+          "urgency": "wish",
+          "Position": "community organized",
+          "representation": "user",
+          "stakeholder_id": "AC-10",
+          "Name": "Heerlijke Oogst. Biologische boer - Oetelaar"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:198"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 198,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Interest": "nature",
+              "Belang": "financieel",
+              "size": "organization",
+              "urgency": "wish",
+              "Position": "community organized",
+              "representation": "user",
+              "stakeholder_id": "AC-10",
+              "Name": "Heerlijke Oogst. Biologische boer - Oetelaar"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:198"
+          },
+          "relationship": {
+            "identity": 127,
+            "start": 198,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:127",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:198",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 199,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Interest": "nature",
+          "Belang": "financieel",
+          "size": "organization",
+          "urgency": "wish",
+          "Position": "community organized",
+          "representation": "user",
+          "stakeholder_id": "AC-15",
+          "Name": "Voedselbos kattenbergsebroek"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:199"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 199,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Interest": "nature",
+              "Belang": "financieel",
+              "size": "organization",
+              "urgency": "wish",
+              "Position": "community organized",
+              "representation": "user",
+              "stakeholder_id": "AC-15",
+              "Name": "Voedselbos kattenbergsebroek"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:199"
+          },
+          "relationship": {
+            "identity": 128,
+            "start": 199,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:128",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:199",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 200,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Interest": "cultural",
+          "size": "organization",
+          "urgency": "unknown",
+          "Position": "community organized",
+          "representation": "user",
+          "stakeholder_id": "AC-13",
+          "Name": "Voetbalclub Oirschot vooruit"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:200"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 200,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Interest": "cultural",
+              "size": "organization",
+              "urgency": "unknown",
+              "Position": "community organized",
+              "representation": "user",
+              "stakeholder_id": "AC-13",
+              "Name": "Voetbalclub Oirschot vooruit"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:200"
+          },
+          "relationship": {
+            "identity": 129,
+            "start": 200,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:129",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:200",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 201,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Interest": "cultural",
+          "size": "organization",
+          "urgency": "unknown",
+          "Position": "community organized",
+          "representation": "user",
+          "stakeholder_id": "AC-7",
+          "Name": "Hockey club"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:201"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 201,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Interest": "cultural",
+              "size": "organization",
+              "urgency": "unknown",
+              "Position": "community organized",
+              "representation": "user",
+              "stakeholder_id": "AC-7",
+              "Name": "Hockey club"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:201"
+          },
+          "relationship": {
+            "identity": 130,
+            "start": 201,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:130",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:201",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 202,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Interest": "financial",
+          "size": "organization",
+          "urgency": "unknown",
+          "Position": "community organized",
+          "representation": "user",
+          "stakeholder_id": "AC-9",
+          "Name": "Bungalowpark stille wille"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:202"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 202,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Interest": "financial",
+              "size": "organization",
+              "urgency": "unknown",
+              "Position": "community organized",
+              "representation": "user",
+              "stakeholder_id": "AC-9",
+              "Name": "Bungalowpark stille wille"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:202"
+          },
+          "relationship": {
+            "identity": 131,
+            "start": 202,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:131",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:202",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 203,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Interest": "politics",
+          "size": "organization",
+          "Decision making": "unanimous",
+          "urgency": "necessity",
+          "Position": "government organized",
+          "representation": "governance",
+          "stakeholder_id": "AC-11",
+          "Name": "Defensie"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:203"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 203,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Interest": "politics",
+              "size": "organization",
+              "Decision making": "unanimous",
+              "urgency": "necessity",
+              "Position": "government organized",
+              "representation": "governance",
+              "stakeholder_id": "AC-11",
+              "Name": "Defensie"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:203"
+          },
+          "relationship": {
+            "identity": 132,
+            "start": 203,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:132",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:203",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 203,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Interest": "politics",
+          "size": "organization",
+          "Decision making": "unanimous",
+          "urgency": "necessity",
+          "Position": "government organized",
+          "representation": "governance",
+          "stakeholder_id": "AC-11",
+          "Name": "Defensie"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:203"
+      },
+      "end": {
+        "identity": 212,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "community organized",
+          "Borders": "natural",
+          "place_id": "AR-8",
+          "Name": "Defensie"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:212"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 203,
+            "labels": [
+              "Actor"
+            ],
+            "properties": {
+              "Interest": "politics",
+              "size": "organization",
+              "Decision making": "unanimous",
+              "urgency": "necessity",
+              "Position": "government organized",
+              "representation": "governance",
+              "stakeholder_id": "AC-11",
+              "Name": "Defensie"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:203"
+          },
+          "relationship": {
+            "identity": 133,
+            "start": 203,
+            "end": 212,
+            "type": "OWNS",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:133",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:203",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:212"
+          },
+          "end": {
+            "identity": 212,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "community organized",
+              "Borders": "natural",
+              "place_id": "AR-8",
+              "Name": "Defensie"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:212"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "end": {
+        "identity": 207,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-3",
+          "Name": "A58"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "relationship": {
+            "identity": 134,
+            "start": 205,
+            "end": 207,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:134",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+          },
+          "end": {
+            "identity": 207,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-3",
+              "Name": "A58"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 210,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-6",
+          "Name": "Innovatiestrook Kloosters"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210"
+      },
+      "end": {
+        "identity": 207,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-3",
+          "Name": "A58"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 210,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-6",
+              "Name": "Innovatiestrook Kloosters"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210"
+          },
+          "relationship": {
+            "identity": 135,
+            "start": 210,
+            "end": 207,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:135",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:210",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+          },
+          "end": {
+            "identity": 207,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-3",
+              "Name": "A58"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 208,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "community organized",
+          "Borders": "natural",
+          "place_id": "AR-4",
+          "Name": "De Kemmer"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
+      },
+      "end": {
+        "identity": 207,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-3",
+          "Name": "A58"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 208,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "community organized",
+              "Borders": "natural",
+              "place_id": "AR-4",
+              "Name": "De Kemmer"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
+          },
+          "relationship": {
+            "identity": 136,
+            "start": 208,
+            "end": 207,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:136",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+          },
+          "end": {
+            "identity": 207,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-3",
+              "Name": "A58"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:207"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 208,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "community organized",
+          "Borders": "natural",
+          "place_id": "AR-4",
+          "Name": "De Kemmer"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 208,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "community organized",
+              "Borders": "natural",
+              "place_id": "AR-4",
+              "Name": "De Kemmer"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
+          },
+          "relationship": {
+            "identity": 137,
+            "start": 208,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:137",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 209,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "community organized",
+          "Borders": "judicial",
+          "place_id": "AR-5",
+          "Name": "Haven (gemeentelijk)"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
+      },
+      "end": {
+        "identity": 205,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "government-organized",
+          "Borders": "judicial",
+          "place_id": "AR-1",
+          "Name": "Whilhelmina kanaal"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 209,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "community organized",
+              "Borders": "judicial",
+              "place_id": "AR-5",
+              "Name": "Haven (gemeentelijk)"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
+          },
+          "relationship": {
+            "identity": 138,
+            "start": 209,
+            "end": 205,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:138",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          },
+          "end": {
+            "identity": 205,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "government-organized",
+              "Borders": "judicial",
+              "place_id": "AR-1",
+              "Name": "Whilhelmina kanaal"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:205"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 209,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "community organized",
+          "Borders": "judicial",
+          "place_id": "AR-5",
+          "Name": "Haven (gemeentelijk)"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
+      },
+      "end": {
+        "identity": 208,
+        "labels": [
+          "Area"
+        ],
+        "properties": {
+          "Position": "community organized",
+          "Borders": "natural",
+          "place_id": "AR-4",
+          "Name": "De Kemmer"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 209,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "community organized",
+              "Borders": "judicial",
+              "place_id": "AR-5",
+              "Name": "Haven (gemeentelijk)"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209"
+          },
+          "relationship": {
+            "identity": 139,
+            "start": 209,
+            "end": 208,
+            "type": "CLOSETO",
+            "properties": {
+
+            },
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:139",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:209",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
+          },
+          "end": {
+            "identity": 208,
+            "labels": [
+              "Area"
+            ],
+            "properties": {
+              "Position": "community organized",
+              "Borders": "natural",
+              "place_id": "AR-4",
+              "Name": "De Kemmer"
+            },
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:208"
+          }
+        }
+      ],
+      "length": 1.0
+    }
+  },
+  {
+    "p": {
+      "start": {
+        "identity": 188,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Categorie": "organisatie zonder winstoogmerk",
+          "Interest": "social",
+          "Belang": "maatschappelijk",
+          "size": "group",
+          "Position": "community organized",
+          "Decision making": "anticipation",
+          "urgency": "wish",
+          "Omvang": "klein",
+          "Participatie": "ondersteunen",
+          "representation": "enforcer",
+          "stakeholder_id": "AC-19",
+          "Name": "De Water Engel"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:188"
+      },
+      "end": {
+        "identity": 184,
+        "labels": [
+          "Actor"
+        ],
+        "properties": {
+          "Categorie": "overheid",
+          "Interest": "politics",
+          "Belang": "politiek",
+          "size": "organization",
+          "Position": "government organized",
+          "Decision making": "representation",
+          "urgency": "responsible",
+          "Omvang": "groot",
+          "Participatie": "informeren",
+          "representation": "governance",
+          "stakeholder_id": "AC-5",
+          "Name": "Gemeente Oirschot"
+        },
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184"
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 188,
+            "labels": [
+              "Actor"
             ],
             "properties": {
               "Categorie": "organisatie zonder winstoogmerk",
+              "Interest": "social",
               "Belang": "maatschappelijk",
-              "Oorsprong": "vanuit belang",
-              "Verplichting": "wens",
+              "size": "group",
+              "Position": "community organized",
+              "Decision making": "anticipation",
+              "urgency": "wish",
               "Omvang": "klein",
               "Participatie": "ondersteunen",
-              "Grootte": "personen",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-6",
+              "representation": "enforcer",
+              "stakeholder_id": "AC-19",
               "Name": "De Water Engel"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:188"
           },
           "relationship": {
-            "identity": 46,
-            "start": 11,
-            "end": 7,
+            "identity": 140,
+            "start": 188,
+            "end": 184,
             "type": "COLLABORATES",
             "properties": {
 
             },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:46",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:11",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7"
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:140",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:188",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184"
           },
           "end": {
-            "identity": 7,
+            "identity": 184,
             "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "overheid",
+              "Interest": "politics",
               "Belang": "politiek",
-              "Oorsprong": "vanuit institutie",
-              "Verplichting": "verantwoordelijkheid",
+              "size": "organization",
+              "Position": "government organized",
+              "Decision making": "representation",
+              "urgency": "responsible",
               "Omvang": "groot",
               "Participatie": "informeren",
-              "Grootte": "organisatie",
-              "Verantwoording": "politiek",
-              "stakeholder_id": "ST-1",
-              "Name": "Gemeente Oirschot",
-              "Besluitvorming": "vertegenwoordiging"
+              "representation": "governance",
+              "stakeholder_id": "AC-5",
+              "Name": "Gemeente Oirschot"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:7"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:184"
           }
         }
       ],
@@ -2414,86 +2502,96 @@
   {
     "p": {
       "start": {
-        "identity": 8,
+        "identity": 185,
         "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "huishouden",
+          "Interest": "nature",
           "Belang": "cultureel",
-          "Oorsprong": "natuurlijk ontstaan",
-          "Verplichting": "verwachting",
+          "size": "person",
+          "Position": "non-organized",
+          "Decision making": "compromise",
+          "urgency": "expectation",
           "Omvang": "klein",
           "Participatie": "samen handelen",
-          "Grootte": "persoon",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-2",
-          "Name": "Men en Mev van O",
-          "Besluitvorming": "compromis"
+          "representation": "owner",
+          "stakeholder_id": "AC-4",
+          "Name": "Men en Mev van O"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185"
       },
       "end": {
-        "identity": 9,
+        "identity": 186,
         "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
+          "Interest": "nature",
           "Belang": "cultureel",
-          "Oorsprong": "natuurlijk ontstaan",
+          "size": "person",
+          "Position": "non-organized",
+          "urgency": "unknown",
           "Omvang": "klein",
-          "stakeholder_id": "ST-3",
+          "representation": "owner",
+          "stakeholder_id": "AC-17",
           "Name": "Wilde Orchidee"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:9"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:186"
       },
       "segments": [
         {
           "start": {
-            "identity": 8,
+            "identity": 185,
             "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "huishouden",
+              "Interest": "nature",
               "Belang": "cultureel",
-              "Oorsprong": "natuurlijk ontstaan",
-              "Verplichting": "verwachting",
+              "size": "person",
+              "Position": "non-organized",
+              "Decision making": "compromise",
+              "urgency": "expectation",
               "Omvang": "klein",
               "Participatie": "samen handelen",
-              "Grootte": "persoon",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-2",
-              "Name": "Men en Mev van O",
-              "Besluitvorming": "compromis"
+              "representation": "owner",
+              "stakeholder_id": "AC-4",
+              "Name": "Men en Mev van O"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185"
           },
           "relationship": {
-            "identity": 47,
-            "start": 8,
-            "end": 9,
-            "type": "CLOSE_TO",
+            "identity": 141,
+            "start": 185,
+            "end": 186,
+            "type": "CLOSETO",
             "properties": {
 
             },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:47",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:9"
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:141",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:186"
           },
           "end": {
-            "identity": 9,
+            "identity": 186,
             "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
+              "Interest": "nature",
               "Belang": "cultureel",
-              "Oorsprong": "natuurlijk ontstaan",
+              "size": "person",
+              "Position": "non-organized",
+              "urgency": "unknown",
               "Omvang": "klein",
-              "stakeholder_id": "ST-3",
+              "representation": "owner",
+              "stakeholder_id": "AC-17",
               "Name": "Wilde Orchidee"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:9"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:186"
           }
         }
       ],
@@ -2503,84 +2601,94 @@
   {
     "p": {
       "start": {
-        "identity": 8,
+        "identity": 185,
         "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
           "Categorie": "huishouden",
+          "Interest": "nature",
           "Belang": "cultureel",
-          "Oorsprong": "natuurlijk ontstaan",
-          "Verplichting": "verwachting",
+          "size": "person",
+          "Position": "non-organized",
+          "Decision making": "compromise",
+          "urgency": "expectation",
           "Omvang": "klein",
           "Participatie": "samen handelen",
-          "Grootte": "persoon",
-          "Verantwoording": "maatschappij",
-          "stakeholder_id": "ST-2",
-          "Name": "Men en Mev van O",
-          "Besluitvorming": "compromis"
+          "representation": "owner",
+          "stakeholder_id": "AC-4",
+          "Name": "Men en Mev van O"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185"
       },
       "end": {
-        "identity": 19,
+        "identity": 196,
         "labels": [
-          "Stakeholder"
+          "Actor"
         ],
         "properties": {
+          "Interest": "nature",
           "Belang": "cultureel",
-          "Oorsprong": "natuurlijk ontstaan",
-          "stakeholder_id": "ST-14",
+          "size": "person",
+          "urgency": "unknown",
+          "Position": "non-organized",
+          "representation": "user",
+          "stakeholder_id": "AC-14",
           "Name": "Groene en Bruine kikker"
         },
-        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:19"
+        "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:196"
       },
       "segments": [
         {
           "start": {
-            "identity": 8,
+            "identity": 185,
             "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
               "Categorie": "huishouden",
+              "Interest": "nature",
               "Belang": "cultureel",
-              "Oorsprong": "natuurlijk ontstaan",
-              "Verplichting": "verwachting",
+              "size": "person",
+              "Position": "non-organized",
+              "Decision making": "compromise",
+              "urgency": "expectation",
               "Omvang": "klein",
               "Participatie": "samen handelen",
-              "Grootte": "persoon",
-              "Verantwoording": "maatschappij",
-              "stakeholder_id": "ST-2",
-              "Name": "Men en Mev van O",
-              "Besluitvorming": "compromis"
+              "representation": "owner",
+              "stakeholder_id": "AC-4",
+              "Name": "Men en Mev van O"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185"
           },
           "relationship": {
-            "identity": 48,
-            "start": 8,
-            "end": 19,
-            "type": "CLOSE_TO",
+            "identity": 142,
+            "start": 185,
+            "end": 196,
+            "type": "CLOSETO",
             "properties": {
 
             },
-            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:48",
-            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:8",
-            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:19"
+            "elementId": "5:e8540ea9-38df-43d8-9917-804855aad011:142",
+            "startNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:185",
+            "endNodeElementId": "4:e8540ea9-38df-43d8-9917-804855aad011:196"
           },
           "end": {
-            "identity": 19,
+            "identity": 196,
             "labels": [
-              "Stakeholder"
+              "Actor"
             ],
             "properties": {
+              "Interest": "nature",
               "Belang": "cultureel",
-              "Oorsprong": "natuurlijk ontstaan",
-              "stakeholder_id": "ST-14",
+              "size": "person",
+              "urgency": "unknown",
+              "Position": "non-organized",
+              "representation": "user",
+              "stakeholder_id": "AC-14",
               "Name": "Groene en Bruine kikker"
             },
-            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:19"
+            "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:196"
           }
         }
       ],

@@ -23,13 +23,13 @@ const UploadFile = function ({ setDataSet, setIsOpenCustom }) {
       />
       {fileLoaded && (
         <>
-          {/* <h3 >
-            You uploaded the file: {fileName} <Xmark onClick={resetAll} alt="remove file" />
-          </h3> */}
           {fileLoaded && (
+            <>
+            <h1>Step 4. Your actor mapping will appear!</h1>
             <div onClick={() => setIsOpenCustom(false)}>
               <CustomActionButton text={`Start mapping ${fileName}`}> </CustomActionButton>
             </div>
+            </>
           )}
         </>
       )}
