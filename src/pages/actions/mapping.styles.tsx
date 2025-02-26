@@ -65,7 +65,9 @@ export const Story = styled.a`
     text-decoration: none;
     padding: 1rem 1.5rem;
     border: 1px solid var(--color-purple-main);
-    border-radius: 2px;
+    background-color: var(--color-background);
+
+    border-radius: 3px;
     color: var(--color-brown-main);
     cursor: pointer;
 

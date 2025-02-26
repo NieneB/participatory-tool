@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Circle, FastArrowLeft, FastArrowRight } from "iconoir-react";
+import { Circle } from "iconoir-react";
 
 const Container = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -10,7 +10,9 @@ const Container = styled.div`
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
   margin: 1rem 1rem 1rem 0rem;
-
+  p {
+    color:white;
+  }
   &.small {
     padding: 0.8rem;
     height: 66px;
@@ -28,7 +30,9 @@ const Container = styled.div`
 
 const ContainerHeader = styled.div`
 display : flex;
-justify-content: end;
+justify-content: space-between;
+margin-bottom: 1rem;
+
 `
 
 const Folding = styled.div`
@@ -42,6 +46,7 @@ const Folding = styled.div`
   align-items: center;
   width: 36px;
   height: 36px;
+
   &.small {
   }
 
@@ -54,10 +59,10 @@ const Folding = styled.div`
 `;
 
 const Content = styled.div`
-  grid-column: 1 / span 1;
+
 `;
 
-const InteractiveSidePanel = ({ id, extraCollapse, setExtraCollapse, children }) => {
+const InteractiveSidePanel = ({ id, extraCollapse, setExtraCollapse, children, title }) => {
   const [isCollapsed, setIsCollasped] = useState(false);
 
   const collapseOnClick = (e) => {
@@ -73,6 +78,7 @@ const InteractiveSidePanel = ({ id, extraCollapse, setExtraCollapse, children })
   return (
     <Container key={"1"} className={isCollapsed ? "small" : "large"}>
       <ContainerHeader >
+        { !isCollapsed && <h2>{title}</h2>}
         <Folding
           className={isCollapsed ? "small" : "large"}
           onClick={(e) => collapseOnClick(e)}

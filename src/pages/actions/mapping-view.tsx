@@ -90,64 +90,62 @@ const GraphView = () => {
           id="expl"
           extraCollapse={extraCollapse[0] === "expl" && extraCollapse[1]}
           setExtraCollapse={setExtraCollapse}
+          title={`Explanation ${activeStory}`}
         >
-          <>
-            <h2>Explanation {activeStory}</h2>
-            {!activeStory && <><p>
-              With this tool you can collect and organise the data with the goal to support, visualize and complement the possibilities for participation. Your actor mapping will always be in development, because your data will grow and change over time.
-            </p>
-              <p>
-                You can make, upload and adjust your actor network multiple times. There is no limit to the amount of downloads or uploads. </p>
-              {isOpenCustom ? <p>
-                You are looking at your own actor mapping.</p> : <p>
-                You are looking at the actor mapping this team created for the GO CAWH case study.</p>}</>
+          {!activeStory && <><p>
+            With this tool you can collect and organise the data with the goal to support, visualize and complement the possibilities for participation. Your actor mapping will always be in development, because your data will grow and change over time.
+          </p>
+            <p>
+              You can make, upload and adjust your actor network multiple times. There is no limit to the amount of downloads or uploads. </p>
+            {isOpenCustom ? <p>
+              You are looking at your own actor mapping.</p> : <p>
+              You are looking at the actor mapping this team created for the GO CAWH case study.</p>}</>
+          }
+          {activeStory && <p>
+            {stories.map((story) => {
+              return activeStory === story.shortTitle ? story.desc : ""
+            })
             }
-            {activeStory && <p>
-              {stories.map((story) => {
-                return activeStory === story.shortTitle ? story.desc : ""
-              })
-              }
-            </p>
-            }
-          </>
+          </p>
+          }
         </InteractivePanel>
         <InteractivePanel
           key="legend"
           id="legend"
           extraCollapse={extraCollapse[0] === "legend" && extraCollapse[1]}
           setExtraCollapse={setExtraCollapse}
+          title={`Legend`}
+
         >
-          <>
-            <h2>Legend</h2>
-            <Legend activeStory={activeStory} />
-          </>
+          <Legend activeStory={activeStory} />
         </InteractivePanel>
         <InteractivePanel
           key="info"
           id="info"
           extraCollapse={extraCollapse[0] === "info" && extraCollapse[1]}
           setExtraCollapse={setExtraCollapse}
+          title={
+            infoContent ?
+              `Clicked Node: ${infoContent.labels}`
+              : `Click on a Node to get more information`
+          }
         >
-          {infoContent ? <>
-            <h2>
-              Clicked Node {infoContent.labels && ": " + infoContent.labels[0]}
-            </h2>
-            <table>
-              {infoContent.properties &&
-                Object.keys(infoContent.properties).map(function (key) {
-                  return (
-                    <tr key={key}>
-                      <td>
-                        <h3 style={{ fontWeight: "bold" }}>{key}</h3>
-                      </td>
-                      <td style={{ paddingLeft: "1rem" }}>
-                        <p>{infoContent.properties[key]}</p>
-                      </td>
-                    </tr>
-                  );
-                })}
-            </table>
-          </> : <h3>Click on a Node to get more information</h3>}
+          <table>
+            {infoContent.properties &&
+              Object.keys(infoContent.properties).map(function (key) {
+                return (
+                  <tr key={key}>
+                    <td>
+                      <p style={{ fontWeight: "bold", textTransform: "capitalize" }}>{key}</p>
+                    </td>
+                    <td style={{ paddingLeft: "1rem", textTransform: "capitalize" }}>
+                      <p>{infoContent.properties[key]}</p>
+                    </td>
+                  </tr>
+                );
+              })}
+          </table>
+
         </InteractivePanel>
       </Styled.Left>
       <MappingDataContent inputDataSet={inputDataSet} activeStory={activeStory} setInfoContent={setInfoContent} setExtraCollapse={setExtraCollapse}> </MappingDataContent>
@@ -202,7 +200,7 @@ const GraphView = () => {
                 title="Template actor mapping GO CAWH">
                 <CustomActionButton text="Download the list of nodes, properties and values"></CustomActionButton>
               </div>
-          
+
             </Styled.Step>
             <Styled.Step>
               <h1>Step 2. Make your actor network </h1>

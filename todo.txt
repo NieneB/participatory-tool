@@ -106,33 +106,30 @@ d3 zoom toevoegen? ?
 auto collapse selected section ?? 
 
 
-- teksten vervangen 
-- 
-
-conditions sub tiel en de lijst in de dropdowon. 
-titel 
-subtitel
-description
-dropdown
-- details 
+X teksten vervangen 
 
 x img voor positions toevoegen!! 
 x img algemeen links uitlijnen en boven en onder marge 
 
 Mapping: 
-- bolletjes en tekst kleiner 
+X bolletjes en tekst kleiner 
 - in en uit zomen toevoegen? 
-- framework 2 voor download zetten. 
-- start your own mapping - info er in zetten. 
-- possibilities pas op de laatste knop er bij (wilde orchidee als possibility )
-- tekst in panelen alles wit. 
-- Anne maakt titel per story voor in paneel 
-- zwart vervangen door het hele donkere bruin. 
-- possibilities en connections opdraaien. 
-- roze bij positions nakijken!!! 
-- onderste paneel wit en zelfde lettertype ! 
-- legenda tekst wit !! 
-- regel afstand tussen titel en inhoud. 
-- titel omhoog in paneel 
+X framework 2 voor download zetten. 
+x start your own mapping - info er in zetten. 
+X possibilities pas op de laatste knop er bij 
+- (wilde orchidee als possibility )
+X tekst in panelen alles wit. 
+X Anne maakt titel per story voor in paneel 
+X zwart vervangen door het hele donkere bruin. 
+X possibilities en connections opdraaien. 
+X roze bij positions nakijken!!! 
+X onderste paneel wit en zelfde lettertype ! 
+X legenda tekst wit !! 
+X regel afstand tussen titel en inhoud. 
+X titel omhoog in paneel 
 
 - Overdracht -> handleiding schrijven voor ontwikkelaars README.md
+
+
+! donker bruin in legenda is niet contrasterend genoeg.. 
+! is wit op bruin wel contrasterend genoeg? 

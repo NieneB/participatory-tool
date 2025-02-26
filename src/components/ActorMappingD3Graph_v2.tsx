@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, act } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 import styled from "styled-components";
 
@@ -27,13 +27,13 @@ const StyledSVG = styled.svg`
   }
 
   .links {
-    stroke: var(--color-pink-main);
+    stroke: var(--color-brown-main);
     stroke-width: 1.2;
   }
 
   text {
     font-family: arial;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     paint-order: stroke;
     stroke: #fff;
     stroke-width: 2px;
@@ -41,6 +41,7 @@ const StyledSVG = styled.svg`
     stroke-linejoin: round;
     stroke-opacity: 0.8;
     font-weight: 800;
+    fill: var(--color-brown-main);
   }
 `;
 
@@ -51,7 +52,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
   const visual = useRef();
   const width = 1500;
   const height = 750;
-  const iconSize = 30;
+  const iconSize = 25;
 
   function cleanSelection() {
     setInfo("");
@@ -118,9 +119,9 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
     if (graphData.nodes && visual.current) {
       const positions = d3.group(graphData.nodes, (d) => d.properties.position);
       const colorPositions = d3.scaleOrdinal(positions.values(), [
-        "#ca619d",
-        "#5a70c0",
-        "#f1ae23",
+        "#e83c67",
+        "#6e72b4",
+        "#f2ac22",
       ]);
 
       simulation
@@ -250,9 +251,9 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
               .style("fill", (d) => {
                 if (activeStory === "Positions") {
                   let color = d3.color(colorPositions(d.properties.position));
-                  return d.labels[0] === "area" ? "#1a1a1a" : d.properties.position ? color : "none";
+                  return d.labels[0] === "area" ? "#3c351e" : d.properties.position ? color : "none";
                 } else if (activeStory === "Areas" || activeStory === "Actors") {
-                  return d.labels[0] === "area" ? "#1a1a1a" : "var(--color-pink-main)";
+                  return d.labels[0] === "area" ? "#3c351e" : "var(--color-pink-main)";
                 }  else {
                   return "var(--color-pink-main)";
                 }
@@ -444,7 +445,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
           markerHeight="5"
           orient="auto"
         >
-          <polygon points="0,5 1.67,2.5 0,0 5,2.5" fill="#1a1a1a"></polygon>
+          <polygon points="0,5 1.67,2.5 0,0 5,2.5" fill="#3c351e"></polygon>
         </marker>
 
         <pattern
