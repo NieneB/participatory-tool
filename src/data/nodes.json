@@ -418,18 +418,6 @@
   },
   {
     "n": {
-      "identity": 204,
-      "labels": [
-        "Actor"
-      ],
-      "properties": {
-        "stakeholder_id": "AC-21"
-      },
-      "elementId": "4:e8540ea9-38df-43d8-9917-804855aad011:204"
-    }
-  },
-  {
-    "n": {
       "identity": 205,
       "labels": [
         "Area"
