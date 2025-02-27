@@ -223,6 +223,11 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
           },
           (update) =>
             update
+              .style('display', (d) => {
+                if (activeStory !== "Possibilities") {
+                  return d.labels[0] === "possibilities" ? "none" : ""
+                }
+              })
               .attr("id", (d) => `position-${d.identity || d.id}`)
               .attr("r", (d) => {
                 if (activeStory === "Actors" || activeStory === "Positions" || activeStory === "Possibilities") {
@@ -246,9 +251,9 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                 }
                 else if (activeStory === "Positions") {
                   let color = d3.color(colorPositions(d.properties.position));
-                  return d.labels[0] === "area" ? "#3c351e" : d.properties.position ? color : "none";
+                  return d.labels[0] === "possibilities" ? "rgba(0,0,0,0)" : d.labels[0] === "area" ? "#3c351e" : d.properties.position ? color : "none";
                 } else if (activeStory === "Areas" || activeStory === "Actors") {
-                  return d.labels[0] === "area" ? "#3c351e" : "var(--color-pink-main)";
+                  return d.labels[0] === "possibilities" ? "rgba(0,0,0,0)" : d.labels[0] === "area" ? "#3c351e" : "var(--color-pink-main)";
                 } else {
                   return "var(--color-pink-main)";
                 }
@@ -321,6 +326,11 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
               .attr("id", (d) => `text${d.id}`)
               .text((d) => {
                 return d.properties.name;
+              })
+              .style('display', (d) => {
+                if (activeStory !== "Possibilities") {
+                  return d.labels[0] === "possibilities" ? "none" : ""
+                }
               })
               .attr("x", (d) => {
                 if (activeStory === "Actors") {
