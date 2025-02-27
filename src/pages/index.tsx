@@ -28,7 +28,7 @@ const Home = () => {
           <img style={{ height: "22px", width: "22px", margin: "0 0 0 5px", verticalAlign: "text-bottom" }} src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="" />
         </a>
       </p>
-      <p><a href='github.com/nieneb/participatory-tool'>Github repository</a></p>
+      <p><a href='https://github.com/NieneB/participatory-tool'>Github repository</a></p>
       <CustomNavButton linkTo="approach" text="enter" />
     </div>
   );

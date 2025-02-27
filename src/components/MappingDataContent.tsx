@@ -7,6 +7,7 @@ import { SimulationNodeDatum } from "d3";
 
 const MappingDataContent = ({ inputDataSet, activeStory, setExtraCollapse, setInfoContent }) => {
     const [defaultDataSet, setDefaultDataSet] = useState();
+    const [editedDataSet, setEditedDataSet] = useState();
     const [graphDataSet, setGraphDataSet] = useState();
 
 
@@ -42,22 +43,24 @@ const MappingDataContent = ({ inputDataSet, activeStory, setExtraCollapse, setIn
 
     useEffect(() => {
         // Initialize default dataset
-        if (!inputDataSet) {
+        if (nodeData && relationData) {
             const data = {
                 nodes: nodeData,
                 links: relationData,
             };
             setDefaultDataSet(data);
-        } else {
-            setDefaultDataSet(inputDataSet)
         }
-    }, [inputDataSet]);
+    }, [nodeData, relationData])
+
 
     useEffect(() => {
-        if (defaultDataSet) {
-            const newObj = toLowerCaseKeysAndValues(defaultDataSet);
-            if (newObj) {
+        console.log("Edit data for d3 network dataset")
+        // edits for inputDataset
+        if (inputDataSet) {
+            console.log("For Custom Input dataset")
 
+            const newObj = toLowerCaseKeysAndValues(inputDataSet);
+            if (newObj) {
                 interface CustomNode extends SimulationNodeDatum {
                     id: string;
                     name: string;
@@ -67,31 +70,7 @@ const MappingDataContent = ({ inputDataSet, activeStory, setExtraCollapse, setIn
                     links: [],
                     nodes: [],
                 };
-                // Edits for Default Dataset 
-                if (newObj.nodes.length && newObj.nodes[0].n) {
-                    newObj.links.map((element) => {
-                        element.source = element.p.start.elementid;
-                        element.target = element.p.end.elementid;
-                        element.value = 1;
-                        element.strength = 2;
-                    });
-                    newData.links = newObj.links;
-                    const initNodes: CustomNode[] = [
-                        newObj.nodes.map((d) => {
-                            d.n.id = d.n.elementid;
-                            d.n.label = d.n.labels[0];
-                            d.n.properties.connections = newObj.links.reduce((acc, l) => {
-                                if (l.source === d.n.id || l.target === d.n.id) {
-                                    acc = acc + 1;
-                                }
-                                return acc;
-                            }, 0);
-                            return newData.nodes.push(d.n);
-                        }),
-                    ];
-                    setGraphDataSet(newData);
-
-                } else if (newObj.nodes.length) {
+                if (newObj.nodes.length) {
                     // Edits for Input Dataset
                     newObj.nodes.map((element) => {
                         element.label = element.labels[0];
@@ -115,41 +94,93 @@ const MappingDataContent = ({ inputDataSet, activeStory, setExtraCollapse, setIn
                         }, 0);
                     }
                     )
-                    setGraphDataSet(newData);
-
-                } else {
-                    setGraphDataSet({})
+                    setEditedDataSet(newData);
                 }
             }
         }
-    }, [defaultDataSet]);
+        // edits for DefaulDataset 
+        else if (defaultDataSet) {
+            console.log("For Default Oirschot dataset")
+
+            const newObj = toLowerCaseKeysAndValues(defaultDataSet);
+            interface CustomNode extends SimulationNodeDatum {
+                id: string;
+                name: string;
+            }
+
+            let newData = {
+                links: [],
+                nodes: [],
+            };
+            if (newObj.nodes.length && newObj.nodes[0].n) {
+                newObj.links.map((element) => {
+                    element.source = element.p.start.elementid;
+                    element.target = element.p.end.elementid;
+                    element.value = 1;
+                    element.strength = 2;
+                });
+                newData.links = newObj.links;
+                const initNodes: CustomNode[] = [
+                    newObj.nodes.map((d) => {
+                        d.n.id = d.n.elementid;
+                        d.n.label = d.n.labels[0];
+                        d.n.properties.connections = newObj.links.reduce((acc, l) => {
+                            if (l.source === d.n.id || l.target === d.n.id) {
+                                acc = acc + 1;
+                            }
+                            return acc;
+                        }, 0);
+                        return newData.nodes.push(d.n);
+                    }),
+                ];
+                setEditedDataSet(newData);
+            }
+
+
+        }
+    }, [defaultDataSet, inputDataSet]);
 
 
     useEffect(() => {
-        if (activeStory && graphDataSet) {
-            // Filter data on story 
-            if (activeStory !== "Possibilities") {
-                
-                // const removedNodes = []
-                // graphDataSet.nodes = graphDataSet.nodes.filter((node) => {
-                //     if (node.label === "possibilities") {
-                //         removedNodes.push(node.id)
-                //     }
-                //     return node.label !== "possibilities"
-                // })
-                // console.log(graphDataSet.nodes)
-                // console.log(removedNodes)
-                // graphDataSet.links = graphDataSet.links.filter((link) => {
-                //     console.log(link.target, removedNodes.includes(link.target))
-                //     return link.target.label !== "possibilities" || !removedNodes.includes(link.target)
-                // })
-                // setGraphDataSet(
-                // )
-            } else {
-                setGraphDataSet(graphDataSet)
-            }
+        console.log("Check Story and set graphdataset to graph")
+        if (!activeStory && editedDataSet) {
+            setGraphDataSet(editedDataSet)
+        } else if (activeStory && editedDataSet && (activeStory !== "Possibilities" && activeStory !== 'Connections')) {
+
+            // console.log("If story is NOT possibilities, REMOVE POSSIBILITIES ")
+
+            // const removedNodes = []
+            // let newData = {
+            //     links: [],
+            //     nodes: [],
+            // };
+            // newData.nodes = editedDataSet.nodes.filter((node) => {
+            //     if (node.label !== "possibilities") {
+            //         removedNodes.push(node.id)
+            //     }
+            //     return node.label !== "possibilities"
+            // })
+            // // Links nog beter verwijderen! 
+            // newData.links = editedDataSet.links.filter((link) => {
+            //     console.log("remove links")
+            //     return removedNodes.forEach((nodeID) => {
+            //         if (link.toid) {
+            //             return link.toid !== nodeID
+            //         } else if (link.target) {
+            //             return link.target !== nodeID
+            //         }
+            //     })
+            // })
+            // console.log(editedDataSet, newData)
+            // setGraphDataSet(newData)
+            setGraphDataSet(editedDataSet)
+
+
+        } else if (activeStory && editedDataSet && activeStory === "Possibilities" || activeStory === 'Connections') {
+            console.log("test")
+            setGraphDataSet(editedDataSet)
         }
-    }, [activeStory, graphDataSet])
+    }, [activeStory, editedDataSet])
 
 
     return (

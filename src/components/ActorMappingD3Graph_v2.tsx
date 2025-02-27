@@ -117,6 +117,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
   // DRAW graph nodes and link here
   useEffect(() => {
     if (graphData.nodes && visual.current) {
+      console.log("DRAW MAPPING")
       const positions = d3.group(graphData.nodes, (d) => d.properties.position);
       const colorPositions = d3.scaleOrdinal(positions.values(), [
         "#e83c67",
@@ -182,7 +183,11 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
               .attr("y2", (d) => d.target.y);
           },
           (update) => {
-            update;
+            update
+              .attr("x1", (d) => d.source.x)
+              .attr("y1", (d) => d.source.y)
+              .attr("x2", (d) => d.target.x)
+              .attr("y2", (d) => d.target.y);
           },
           (exit) => exit.call((exit) => exit.transition().remove())
         );
@@ -220,7 +225,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
             update
               .attr("id", (d) => `position-${d.identity || d.id}`)
               .attr("r", (d) => {
-                if (activeStory === "Actors" || activeStory === "Positions") {
+                if (activeStory === "Actors" || activeStory === "Positions" || activeStory === "Possibilities") {
                   return d.properties.size === "organization"
                     ? iconSize + 10
                     : d.properties.size === "person"
@@ -233,7 +238,13 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                 }
               })
               .style("fill", (d) => {
-                if (activeStory === "Positions") {
+                if (activeStory === "Possibilities") {
+                  let color = d3.color(colorPositions(d.properties.position));
+                  color = d.labels[0] === "area" ? "#3c351e" : color || "none";
+                  color = d.labels[0] === "possibilities" ? "rgba(0,0,0,0)" : color;
+                  return color
+                }
+                else if (activeStory === "Positions") {
                   let color = d3.color(colorPositions(d.properties.position));
                   return d.labels[0] === "area" ? "#3c351e" : d.properties.position ? color : "none";
                 } else if (activeStory === "Areas" || activeStory === "Actors") {
@@ -243,13 +254,26 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                 }
               })
               .style("stroke", (d) => {
-                if (activeStory === "Positions") {
+                if (activeStory === "Possibilities") {
+                  return d.labels[0] === "possibilities" ? "#e83c67" : ""
+                } else if (activeStory === "Positions") {
                   return d3
                     .color(colorPositions(d.properties.position))
                     ?.darker(0.8);
                 } else {
                   return "var(--color-pink-dark)";
                 }
+              })
+              .style("stroke-width", (d) => {
+                if (activeStory === "Possibilities") {
+                  return d.labels[0] === "possibilities" ? 10 : 0
+                }
+              })
+              .attr("cx", function (d) {
+                return d.x;
+              })
+              .attr("cy", function (d) {
+                return d.y;
               })
               .on("click", (e, d) => setSelected(e, d)),
           (exit) =>
