@@ -86,9 +86,10 @@ const DefaultPageParagraph = ({ element, active }) => {
       </ElementHeader>
       <ElementContent>
         <Collapsible open={open} setOpen={setOpen} titel={element.title}>
+
           {element.phase && <div className="gridded-p"><p><b>Connection to Phase:</b> </p><p><DefaultPageParagraphItem text={element.phase}></DefaultPageParagraphItem></p></div>}
           {element.approach && <div className="gridded-p"><p><b>Connection to Approach:</b> </p><p><DefaultPageParagraphItem text={element.approach}></DefaultPageParagraphItem></p></div>}
-          {element.methods && <div className="gridded-p"><p><b>Connection to Methods:</b> </p><p><DefaultPageParagraphItem text={element.methods}></DefaultPageParagraphItem></p></div>}
+          {element.methods && <div className="gridded-p"><p><b>Connection to Methods & Tools:</b> </p><p><DefaultPageParagraphItem text={element.methods}></DefaultPageParagraphItem></p></div>}
           {element.mapping && <div className="gridded-p"><p><b>Connection to Mapping Approach:</b> </p><p><DefaultPageParagraphItem text={element.mapping}></DefaultPageParagraphItem></p></div>}
           {element.activation && <div className="gridded-p"><p><b>Connection to Activation:</b> </p><p><DefaultPageParagraphItem text={element.activation}></DefaultPageParagraphItem></p></div>}
 
@@ -97,11 +98,20 @@ const DefaultPageParagraph = ({ element, active }) => {
           {element.audience && <div className="gridded-p"><p><b>audience:</b> </p><p><DefaultPageParagraphItem text={element.audience}></DefaultPageParagraphItem></p></div>}
           {element.participants && <div className="gridded-p"><p><b>participants:</b> </p><p><DefaultPageParagraphItem text={element.participants}></DefaultPageParagraphItem></p></div>}
 
+          {element.organisation && <div className="gridded-p"><p><b>Organisation:</b> </p><p><DefaultPageParagraphItem text={element.organisation}></DefaultPageParagraphItem></p></div>}
+
           {element.assignment && <div className="gridded-p"><p><b>Assignment:</b> </p><p><DefaultPageParagraphItem text={element.assignment}></DefaultPageParagraphItem></p></div>}
           {element.output && <div className="gridded-p"><p><b>Output:</b> </p><p><DefaultPageParagraphItem text={element.output}></DefaultPageParagraphItem></p></div>}
           {element.iteration && <div className="gridded-p"><p><b>Iteration:</b> </p><p><DefaultPageParagraphItem text={element.iteration}></DefaultPageParagraphItem></p></div>}
           {element.role && <div className="gridded-p"><p><b>Role:</b> </p><p><DefaultPageParagraphItem text={element.role}></DefaultPageParagraphItem></p></div>}
+          {element.background && <div className="gridded-p"><p><b>Preferred background:</b> </p><p><DefaultPageParagraphItem text={element.background}></DefaultPageParagraphItem></p></div>}
           {element.links && <div className="gridded-p"><p><b>Link:</b> </p><p><DefaultPageParagraphItem text={element.links}></DefaultPageParagraphItem></p></div>}
+
+          {element.list && <ul>
+            {element.list.map((element) => {
+              return <li>{element}</li>
+            })}
+          </ul>}
         </Collapsible>
       </ElementContent>
     </Element>

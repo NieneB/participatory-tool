@@ -5,7 +5,7 @@ import { PanelBack } from "../pages/index.styles";
 import { useEffect, useState } from "react";
 import { SimulationNodeDatum } from "d3";
 
-const MappingDataContent = ({ inputDataSet, activeStory, setExtraCollapse , setInfoContent}) => {
+const MappingDataContent = ({ inputDataSet, activeStory, setExtraCollapse, setInfoContent }) => {
     const [defaultDataSet, setDefaultDataSet] = useState();
     const [graphDataSet, setGraphDataSet] = useState();
 
@@ -14,7 +14,7 @@ const MappingDataContent = ({ inputDataSet, activeStory, setExtraCollapse , setI
         setExtraCollapse(["info", element ? true : false]);
         setInfoContent(element);
     }
-    
+
     function toLowerCaseKeysAndValues(obj: any): any {
         if (typeof obj !== "object" || obj === null) {
             // If it's not an object, convert it to lowercase if it's a string.
@@ -123,6 +123,33 @@ const MappingDataContent = ({ inputDataSet, activeStory, setExtraCollapse , setI
             }
         }
     }, [defaultDataSet]);
+
+
+    useEffect(() => {
+        if (activeStory && graphDataSet) {
+            // Filter data on story 
+            if (activeStory !== "Possibilities") {
+                
+                // const removedNodes = []
+                // graphDataSet.nodes = graphDataSet.nodes.filter((node) => {
+                //     if (node.label === "possibilities") {
+                //         removedNodes.push(node.id)
+                //     }
+                //     return node.label !== "possibilities"
+                // })
+                // console.log(graphDataSet.nodes)
+                // console.log(removedNodes)
+                // graphDataSet.links = graphDataSet.links.filter((link) => {
+                //     console.log(link.target, removedNodes.includes(link.target))
+                //     return link.target.label !== "possibilities" || !removedNodes.includes(link.target)
+                // })
+                // setGraphDataSet(
+                // )
+            } else {
+                setGraphDataSet(graphDataSet)
+            }
+        }
+    }, [activeStory, graphDataSet])
 
 
     return (

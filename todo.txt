@@ -131,6 +131,3 @@ X titel omhoog in paneel
 - Overdracht -> handleiding schrijven voor ontwikkelaars README.md
 
 
-! donker bruin in legenda is niet contrasterend genoeg.. 
-! is wit op bruin wel contrasterend genoeg? 
-! pdf download gemaakt, lever vooral wat mooiers aan als je wilt :) 

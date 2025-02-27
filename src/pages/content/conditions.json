@@ -1,18 +1,43 @@
 [
     {
         "title": "Access",
-        "description": "To the information To the location To the actors To the resources To the internet"
+        "subtitle": "The availability and accessibility of the required input for the participatory process",
+        "list": [
+            "To the information ",
+            "To the location ",
+            "To the actors ",
+            "To the resources ",
+            "To the internet"
+        ]
     },
     {
         "title": "Exchange",
-        "description": "Of information available Of insights gathered Of decisions made Of sources"
+        "subtitle": "The shared responsibility for actively providing each other with information",
+        "list": [
+            "Of information available ",
+            "Of insights gathered ",
+            "Of decisions ",
+            "Of sources"
+        ]
     },
     {
         "title": "Communication",
-        "description": "Overview of contact information Overview of local languagesOverview of local customs Indication of possible tensions in the area"
+        "subtitle": "The possibility to connect to the team and the actors ",
+        "list": [
+            "Overview of contact information ",
+            "Overview of local languages",
+            "Overview of local customs ",
+            "Indication of possible tensions in the area"
+        ]
     },
     {
         "title": "Proces",
-        "description": "Agreed upon roles and role stability Agreed upon assignments and deliverables Agreed upon objectives and clear expectations Signed contracts/ agreements with all professionals involved"
+        "subtitle": " The necessary agreements to create a clear framework for the collaboration ",
+        "list": [
+            "Agreed upon roles and role stability ",
+            "Agreed upon assignments and deliverables ",
+            "Agreed upon objectives and clear expectations ",
+            "Signed contracts/ agreements with all professionals involved"
+        ]
     }
 ]

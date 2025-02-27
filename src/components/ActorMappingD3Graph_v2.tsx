@@ -133,22 +133,6 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
             .id((d) => d.id)
             .strength(0.3)
         )
-        // simulation.restart();
-
-        // if (activeStory === "Connections") {
-        //   console.log("R aan ");
-        //   simulation.force(
-        //     "collide",
-        //     d3
-        //       .forceCollide()
-        //       .radius((d) => {
-        //         return relationsWeightScale(d.properties.connections) * 1.5;
-        //       })
-        //       .iterations(1)
-        //   );
-        //   // simulation.restart();
-        // }
-
         .force(
           "link",
           d3
@@ -157,7 +141,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
             .distance(function (link) {
               let m =
                 link.source.properties.position ===
-                link.target.properties.position
+                  link.target.properties.position
                   ? 10
                   : 0;
               m =
@@ -181,7 +165,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
           //   return m;
           // })
         );
-      simulation.tick(300);
+      simulation.tick(600);
 
       const svg = d3.select(visual.current);
       svg
@@ -216,8 +200,8 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                   return d.properties.size === "organization"
                     ? iconSize + 10
                     : d.properties.size === "person"
-                    ? iconSize - 10
-                    : iconSize;
+                      ? iconSize - 10
+                      : iconSize;
                 } else {
                   return iconSize;
                 }
@@ -240,8 +224,8 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                   return d.properties.size === "organization"
                     ? iconSize + 10
                     : d.properties.size === "person"
-                    ? iconSize - 10
-                    : iconSize;
+                      ? iconSize - 10
+                      : iconSize;
                 } else if (activeStory === "Connections") {
                   return relationsWeightScale(d.properties.connections + 1);
                 } else {
@@ -254,7 +238,7 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                   return d.labels[0] === "area" ? "#3c351e" : d.properties.position ? color : "none";
                 } else if (activeStory === "Areas" || activeStory === "Actors") {
                   return d.labels[0] === "area" ? "#3c351e" : "var(--color-pink-main)";
-                }  else {
+                } else {
                   return "var(--color-pink-main)";
                 }
               })
@@ -291,8 +275,8 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                   return d.properties.size === "organization"
                     ? d.x + iconSize + 10
                     : d.properties.size === "person"
-                    ? d.x + iconSize - 10
-                    : d.x + iconSize;
+                      ? d.x + iconSize - 10
+                      : d.x + iconSize;
                 } else if (activeStory === "Connections") {
                   return (
                     d.x + relationsWeightScale(d.properties.connections + 1)
@@ -319,8 +303,8 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                   return d.properties.size === "organization"
                     ? d.x + iconSize + 10
                     : d.properties.size === "person"
-                    ? d.x + iconSize - 10
-                    : d.x + iconSize;
+                      ? d.x + iconSize - 10
+                      : d.x + iconSize;
                 } else if (activeStory === "Connections") {
                   return (
                     d.x + relationsWeightScale(d.properties.connections + 1)
@@ -367,8 +351,8 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                 return d.properties.size === "organization"
                   ? d.x + iconSize + 10
                   : d.properties.size === "person"
-                  ? d.x + iconSize - 10
-                  : d.x + iconSize;
+                    ? d.x + iconSize - 10
+                    : d.x + iconSize;
               } else if (activeStory === "Connections") {
                 return d.x + relationsWeightScale(d.properties.connections + 1);
               } else {

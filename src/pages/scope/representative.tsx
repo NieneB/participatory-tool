@@ -5,14 +5,21 @@ const Representative = () => {
 
   return (
     <DefaultPage title="Representative" dataset={dataset}>
-      <p>The goal of the participatory process is to include and connect all perspectives, but that doesn’t mean that everybody should be involved with everything. Respecting each other expertise, perspective, knowledge, biases, etcetera, is essential in a participatory approach. Where they overlap; we work together and support each other in the process, but we each have our own objective. Those objectives combined with the objectives of the initiator, creates a balanced process. To support the strengths and recognize the difference in expertise, each position has a representative that is connected to the project process. Each position has a process of their own and each representative has their contributions to the whole.
+
+      <p>
+        Each perspective has their own value to add, but they also have their limitations. The challenge is to balance all the approaches, so that they complement and reinforce each other, rather than conflict and contradict each other. The goal of the participatory process is to include and connect all perspectives, but that doesn’t mean that everybody should be involved with everything.
       </p>
       <p>
-        An important note for the participatory perspective; getting too deeply involved in the participatory process, may lead to a loss of objectivity; designers can get caught up in the specific dynamics of the community. Markus Miessen identifies this phenomenon in The Nightmare of Participation, in which designers risk becoming ́social workers ́, which can detract from the larger institutional interest and where designers' strengths lie.
+        Respecting each other expertise, perspective, knowledge, biases, etcetera, is essential in a participatory approach. Where activities overlap, we work together, but we each have our own objective. To support the strengths and to recognize the differences in expertise, each position has a representative that is connected to the project team, involved with the use case.
       </p>
       <p>
-        Each perspective has their own version of ‘The Nightmare of Participation’ and just like any other project, we believe that clearly defining the roles of the involved people, creates a work environment where people don’t have to guess who does what.
+        An important note for the participatory representative; getting too deeply involved in the participatory process, may lead to a loss of objectivity; designers can get caught up in the specific dynamics of the community. Markus Miessen identifies this phenomenon in The Nightmare of Participation, in which designers risk becoming ́social workers ́, which can detract from the larger institutional interest and where designers' strengths lie.
       </p>
+      <p>
+        Each perspective has their own version of ‘The Nightmare of Participation’ and just like any other project, we believe that clearly defining the roles of the involved people, creates a professional work environment where people don’t have to guess who does what and when.
+      </p>
+
+
       <img src="./img/representatives.png" />
     </DefaultPage>)
 };
