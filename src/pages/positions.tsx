@@ -27,6 +27,7 @@ const Positions = () => {
       <p>The participatory perspective aims to involve all actors in the decision making. To do so, they try to analyse and research the blind spots of the other perspectives. Different research methods help to uncover actors in the area that are usually overlooked or assumed to be informed. Since all actors have their strengths and weaknesses, no one actor has the best answer. Providing a diversity of actors and therefore knowledge, expertise and experiences, create far better and durable solutions then designs based on one person’s point of view. </p>
       <p>The participatory perspective provides the decision makers with the tools and training to actively invite other perspectives into their decision making. The representative of the perspective is not a spokesperson for diversity, but a designer of a process where diversity is the biggest quality a group can have.
       </p>
+      <div style={{marginBottom: "5rem"}}></div>
     </div>
   );
 };

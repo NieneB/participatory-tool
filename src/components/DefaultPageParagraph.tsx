@@ -90,7 +90,7 @@ const DefaultPageParagraph = ({ element, active }) => {
           {element.phase && <div className="gridded-p"><p><b>Connection to Phase:</b> </p><p><DefaultPageParagraphItem text={element.phase}></DefaultPageParagraphItem></p></div>}
           {element.approach && <div className="gridded-p"><p><b>Connection to Approach:</b> </p><p><DefaultPageParagraphItem text={element.approach}></DefaultPageParagraphItem></p></div>}
           {element.methods && <div className="gridded-p"><p><b>Connection to Methods & Tools:</b> </p><p><DefaultPageParagraphItem text={element.methods}></DefaultPageParagraphItem></p></div>}
-          {element.mapping && <div className="gridded-p"><p><b>Connection to Mapping Approach:</b> </p><p><DefaultPageParagraphItem text={element.mapping}></DefaultPageParagraphItem></p></div>}
+          {element.mapping && <div className="gridded-p"><p><b>Connection to Mapping Approach:</b> </p><p><Link to="/approach/actions/mapping"><DefaultPageParagraphItem text={element.mapping}></DefaultPageParagraphItem></Link></p></div>}
           {element.activation && <div className="gridded-p"><p><b>Connection to Activation:</b> </p><p><DefaultPageParagraphItem text={element.activation}></DefaultPageParagraphItem></p></div>}
 
           {element.objective && <div className="gridded-p"><p><b>objective:</b> </p><p><DefaultPageParagraphItem text={element.objective}></DefaultPageParagraphItem></p></div>}

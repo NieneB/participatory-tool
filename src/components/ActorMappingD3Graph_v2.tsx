@@ -223,11 +223,6 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
           },
           (update) =>
             update
-              .style('display', (d) => {
-                if (activeStory !== "Possibilities") {
-                  return d.labels[0] === "possibilities" ? "none" : ""
-                }
-              })
               .attr("id", (d) => `position-${d.identity || d.id}`)
               .attr("r", (d) => {
                 if (activeStory === "Actors" || activeStory === "Positions" || activeStory === "Possibilities") {
@@ -243,36 +238,36 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
                 }
               })
               .style("fill", (d) => {
-                if (activeStory === "Possibilities") {
+                // if (activeStory === "Possibilities") {
+                //   let color = d3.color(colorPositions(d.properties.position));
+                //   color = d.labels[0] === "area" ? "#3c351e" : color || "none";
+                //   color = d.labels[0] === "possibilities" ? "rgba(0,0,0,0)" : color;
+                //   return color
+                // }
+                if (activeStory === "Positions") {
                   let color = d3.color(colorPositions(d.properties.position));
-                  color = d.labels[0] === "area" ? "#3c351e" : color || "none";
-                  color = d.labels[0] === "possibilities" ? "rgba(0,0,0,0)" : color;
-                  return color
-                }
-                else if (activeStory === "Positions") {
-                  let color = d3.color(colorPositions(d.properties.position));
-                  return d.labels[0] === "possibilities" ? "rgba(0,0,0,0)" : d.labels[0] === "area" ? "#3c351e" : d.properties.position ? color : "none";
+                  return d.labels[0] === "possibilities" ? "rgba(0,0,0,0)" : d.labels[0] === "area" ? "#3c351e" : d.properties.position ? color : "#d2d2d2";
                 } else if (activeStory === "Areas" || activeStory === "Actors") {
                   return d.labels[0] === "possibilities" ? "rgba(0,0,0,0)" : d.labels[0] === "area" ? "#3c351e" : "var(--color-pink-main)";
                 } else {
-                  return "var(--color-pink-main)";
+                  return d.labels[0] === "possibilities" ? "rgba(0,0,0,0)" : "var(--color-pink-main)";
                 }
               })
               .style("stroke", (d) => {
                 if (activeStory === "Possibilities") {
                   return d.labels[0] === "possibilities" ? "#e83c67" : ""
                 } else if (activeStory === "Positions") {
-                  return d3
+                  return d.labels[0] === "possibilities" ? "#e83c67" : d3
                     .color(colorPositions(d.properties.position))
                     ?.darker(0.8);
                 } else {
-                  return "var(--color-pink-dark)";
+                  return d.labels[0] === "possibilities" ? "#e83c67" : "var(--color-pink-dark)";
                 }
               })
               .style("stroke-width", (d) => {
-                if (activeStory === "Possibilities") {
+                
                   return d.labels[0] === "possibilities" ? 10 : 0
-                }
+                
               })
               .attr("cx", function (d) {
                 return d.x;
@@ -326,11 +321,6 @@ const GraphD3 = ({ graphData, setInfo, activeStory }) => {
               .attr("id", (d) => `text${d.id}`)
               .text((d) => {
                 return d.properties.name;
-              })
-              .style('display', (d) => {
-                if (activeStory !== "Possibilities") {
-                  return d.labels[0] === "possibilities" ? "none" : ""
-                }
               })
               .attr("x", (d) => {
                 if (activeStory === "Actors") {
