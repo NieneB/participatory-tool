@@ -5,61 +5,61 @@
         "description": "Communicating a projectplan, constructed by examining the gathered insights, data and information through a text document, to check if all involved parties are aligned on their roles and expectations, is not only useful for project management purposes, but also very important to explicitly determine the expectations of the participation process and it’s representative. It is also a moment to check the reporting requests and demands.",
         "phase": "<a href='/approach/scope/phases#assesment-phase'> Assessment Phase </a> ",
         "mapping": "using the parameters of the <a href='approach/actions/mapping-approach'> actor network map </a> as input for the assessment",
-        "methods": "<a href='' >Structured interviews</a>, <a href='' >Participatory Mapping </a>",
-        "audience": "initiator, project team, representatives (underline: hyperlink to page representatives)"
+        "methods": "<a href='/approach/actions/methods#structured-interviews' >Structured interviews</a>, <a href='/approach/actions/methods#participatory-mapping' >Participatory Mapping </a>",
+        "audience": "initiator, project team, representatives"
     },
     {
         "title": "Sharing data",
         "subtitle": "Connecting and exchanging data with the other perspectives",
         "description": "Data visualization can easily identify patterns and anomalies from the data available. They allow the audience to quickly recognize an occurrence over time, follow your predications and support decision making. Well presented data can be a very persuasive tool to connect actors.",
-        "phase": "Exploration Phase (underline: hyperlink to page phases)",
+        "phase": "<a href='/approach/scope/phases#exploration-phase'>Exploration Phase</a>",
         "mapping": "filling up the generic template to create a contextual <a href=''> actor network map </a>",
-        "methods": "Actor Mapping, Surveys, Online Ethnography, Web Scraping Tool (underline: hyperlink to page methods & tools)",
+        "methods": "<a href='/approach/actions/methods#actor-mapping'> Actor Mapping</a>, <a href='/approach/actions/methods#surveys' >Surveys</a>, <a href='/approach/actions/methods#online-ethnography'>Online Ethnography</a>, <a href='/approach/actions/methods#web-scraping-tool'>Web Scraping Tool</a> ",
         "audience": "all internal and external actors"
     },
     {
         "title": "Onboarding",
         "subtitle": "Helping the actors understand the steps and possibilities ahead",
         "description": "Taking the time to actively inform the actors and other involved parties may prevent unwanted tensions. Involving the other perspectives in the process can be a key factor in the collaboration. Please be aware that this is a collective effort and not one only made or initiated by the participatory representative. ",
-        "phase": "Exploration Phase + Definition Phase (underline: hyperlink to page phases)",
-        "mapping": "analyzing the actor network map (underline: hyperlink to page mapping approach)",
-        "methods": "Mind Mapping, Personas, Journey Mapping, Relational Mapping, Focus Groups (underline: hyperlink to page methods & tools)",
-        "audience": "actors, initiator, project team, representatives (underline: hyperlink to page representatives)"
+        "phase": "<a href='/approach/scope/phases#exploration-phase'>Exploration Phase</a> + <a href='/approach/scope/phases#definition-phase'>Definition Phase</a>",
+        "mapping": "analyzing <a href='/approach/actions/mapping'>the actor network map</a>",
+        "methods": "<a href='/approach/actions/methods#mind-mapping'>Mind Mapping</a>, <a href='/approach/actions/methods#personas'>Personas</a>, <a href='/approach/actions/methods#journey-mapping'>Journey Mapping</a>, <a href='/approach/actions/methods#relational-mapping'>Relational Mapping</a>, <a href='/approach/actions/methods#focus-groups'>Focus Groups</a> ",
+        "audience": "actors, initiator, project team, representatives"
     },
     {
         "title": "Sharing insights",
         "subtitle": "Sharing the latest findings with the actors, the team and other use cases ",
         "description": "Taking the initiative to share insights with the other perspectives or actors is essential for a participatory collaboration. Not only for the sole purpose of informing, but also to spark important conversations and create new connections. By sharing findings, actors can be inspired to share stories or knowledge they have not yet before.",
-        "phase": "Research Phase (underline: hyperlink to page phases)",
-        "mapping": "using the available visual stories to identify the focus for the sessions (underline: hyperlink to page mapping approach)",
-        "methods": "Behavior Mapping, Data Visualization, Forecasting (underline: hyperlink to page methods & tools)",
-        "audience": "actors, initiator, project team, representatives (underline: hyperlink to page representatives)"
+        "phase": "<a href='/approach/scope/phases#research-phase'>Research Phase</a>",
+        "mapping": "using <a href='/approach/actions/mapping'>the available visual stories</a> to identify the focus for the sessions",
+        "methods": "<a href='/approach/actions/methods#behavior-mapping'>Behavior Mapping</a>, <a href='/approach/actions/methods#data-visualization'>Data Visualization</a>, <a href='/approach/actions/methods#forecasting'>Forecasting</a>",
+        "audience": "actors, initiator, project team, representatives"
     },
     {
         "title": "Feedback Sessions",
         "subtitle": "Creating space for the differences and connections between the actors and actively inviting them to reflect on a specified topic",
         "description": "Getting together with small groups in a structured setting to provide each other constructive feedback is essential for a successful iterative process. ",
-        "phase": "Co-creation Phase (underline: hyperlink to page phases)",
-        "mapping": "using the available visual stories for informative purposes (underline: hyperlink to page mapping approach)",
-        "methods": "Participatory Mapping, Scenario Building, Empathy Mapping, Serious Games, Tangible Tools, Cultural Probes (underline: hyperlink to page methods & tools)",
-        "audience": "actors, initiator, project team, representatives (underline: hyperlink to page representatives)"
+        "phase": "<a href='/approach/scope/phases#co-creation-phase'>Co-creation Phase</a>",
+        "mapping": "using <a href='/approach/actions/mapping'>the available visual stories</a> for informative purposes",
+        "methods": "<a href='/approach/actions/methods#participatory-mapping'>Participatory Mapping</a>, <a href='/approach/actions/methods#scenario-building'>Scenario Building</a>, <a href='/approach/actions/methods#empathy-mapping'>Empathy Mapping</a>, <a href='/approach/actions/methods#serious-games'>Serious Games</a>, <a href='/approach/actions/methods#tangible-tools'>Tangible Tools</a>, <a href='/approach/actions/methods#cultural-probes'>Cultural Probes</a> ",
+        "audience": "actors, initiator, project team, representatives"
     },
     {
         "title": "Presentation in person",
         "subtitle":"Presenting the insights to others so feedback and potential adaptations can be collected",
         "description": "Adapting the findings to a logical storyline, specifically targeted to the audience in mind. Giving a good presentation is a skill that requires preparation. Prepare in time, check the technical means and rehearse. Please keep in mind that (digital) presentations in person are not the same as proposals, reports or any of the other activations. When giving a presentation in the same format as a report, the audience will experience the presentation as the presentation of a report. Presenting is not meant for all audiences, so choose your design wisely, adjusted to the people who need to hear and understand what you have to say. ",
-        "phase": "Dessimination Phase (underline: hyperlink to page phases)",
-        "mapping": "using the available visual stories for illustrative purposes (underline: hyperlink to page mapping approach)",
-        "methods": "Data Visualization, Storytelling (underline: hyperlink to page methods & tools)",
+        "phase": "<a href='/approach/scope/phases#dessimination-phase'>Dessimination Phase </a>",
+        "mapping": "using <a href='/approach/actions/mapping'>the available visual stories</a> for illustrative purposes",
+        "methods": "<a href='/approach/actions/methods#data-visualization'>Data Visualization</a>, <a href='/approach/actions/methods#storytelling'>Storytelling</a> ",
         "audience": "actors, project team"
     },
     {
         "title": "Reporting",
-        "subtitle": "Sharing findings and the registration of the process that led to them, covering a specific timeframe test link",
+        "subtitle": "Sharing findings and the registration of the process that led to them, covering a specific time frame test link",
         "description": "Communicating the gathered insights, data and information by using a document, to reflect, inspire or deliver feedback on the process. The format of the document can be designed to the targeted context and audience, but please keep in mind the reporting requests and demands agreed upon in the beginning of the process. Reporting can be used as a conclusion of a collaboration or for a specific purpose, for example to share findings or ideas with a specific target audience.",
-        "phase": "Adaptation Phase (underline: hyperlink to page phases)",
-        "mapping": "using the collected data as input for the design team (underline: hyperlink to page mapping approach)",
-        "methods": "Backcasting, Prototyping (underline: hyperlink to page methods & tools)",
+        "phase": "<a href='/approach/scope/phases#adaptation-phase'>Adaptation Phase</a>",
+        "mapping": "using the collected data as input for the design team",
+        "methods": "<a href='/approach/actions/methods#backcasting'>Backcasting</a>, <a href='/approach/actions/methods#prototyping'>Prototyping</a> ",
         "audience": "initiator"
     }
 ]

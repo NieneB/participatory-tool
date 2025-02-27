@@ -3,193 +3,193 @@
         "title": "Structured Interviews ",
         "subtitle": "Collecting expectations for the participation process ahead",
         "description": "Only by asking questions you get answers. If we only collect what we already know or someone might say, we also agree to not knowing a lot. Not preparing ourselves can create a potentially very stressful for all participants, which does not support participation. This activation is not a replacement of a client brief or contract, it is a tool to gather information about the expectations and available resources (see conditions) so the representative(s) can make a clear estimation of the possibilities and necessities, before heading into the process. We suggest to use structured interview here because the objective is not to explore the unknown, but the known.",
-        "phase": " Assessment Phase (underline: hyperlink to page phases)",
-        "mapping": " using the parameters of the actor network map as input for the assessment (underline: hyperlink to page mapping approach)",
-        "activation": "Written proposal (underline: hyperlink to page activations)",
-        "participants": "initiator, project team, representatives (underline: hyperlink to pagerepresentatives)"
+        "phase": " <a href='/approach/scope/phases#assessment-phase'>Assessment Phase</a>",
+        "mapping": " using the parameters of <a href='/approach/actions/mapping'>the actor network map</a> as input for the assessment ",
+        "activation": "<a href='/approach/actions/activation#written-proposal'>Written proposal</a> ",
+        "participants": "initiator, project team, representatives"
     },
     {
         "title": "Participatory Mapping",
         "subtitle": "Collecting interpretations for the participation process ahead",
         "description": "Mapping problems or ideas to a physical location. In this exercise you start with giving each participant the same questions (for example; what defines the area we are working in?) and proceed to visually map out the differences and/or connections. This technique can be quite effective when the perspective of one position appears to the dominant perspective or there seems to be an assumption about a specific topic related to the area. This method can potentially uncover new tensions or connections that can be used as input for new workshops. Please be aware that the objective of this workshop is not to solve or pick a perspective, but the merely uncover the differences.",
-        "phase": " Assessment Phase + Co creation Phase (underline: hyperlink to page phases)",
-        "mapping": " using the parameters of the actor network map as input for the assessment (underline: hyperlink to page mapping approach)",
-        "activation": "Written proposal & Feedback Sessions  (underline: hyperlink to page activations)",
-        "participants": "initiator, project team, representatives (underline: hyperlink to page representatives) "
+        "phase": " <a href='/approach/scope/phases#assessment-phase'>Assessment Phase</a> + Co creation Phase",
+        "mapping": " using the parameters of <a href='/approach/actions/mapping'>the actor network map</a> as input for the assessment ",
+        "activation": "<a href='/approach/actions/activation#written-proposal'>Written proposal</a> & <a href='/approach/actions/activation#feedback-sessions'>Feedback Sessions</a>  ",
+        "participants": "initiator, project team, representatives "
     },
     {
         "title": "Actor Mapping",
         "subtitle": "Collecting data on the known actors and their relations in and to the area",
-        "description": "With this method the goal is to identify all actor who impacts or will be impacted by the project. The actor mapping tool developed for this process can be a very helpful tool to support this method. Please note that all perspectives involved benefit from an actor mapping, therefore collectively gathering and sharing data is essential and a key element in the participatory process.",
-        "phase": " Exploration Phase (underline: hyperlink to page phases)",
-        "mapping": " filling up the generic template to create a contextual actor network map (underline: hyperlink to page mapping approach)",
-        "activation": "Sharing Data (underline: hyperlink to page activations)",
+        "description": "With this method the goal is to identify all actor who impacts or will be impacted by the project. The actor mapping tool developed for this process can be a very helpful tool to support this method. Please note that all perspectives involved benefit from an actor mapping, therefore collectively gathering and <a href='/approach/actions/activation#sharing-data'>sharing data</a> is essential and a key element in the participatory process.",
+        "phase": " <a href='/approach/scope/phases#exploration-phase'>Exploration Phase</a>",
+        "mapping": " filling up the generic template to create a contextual actor network map ",
+        "activation": "<a href='/approach/actions/activation#sharing-data'>Sharing Data</a> ",
         "participants": "actors in the area "
     },
     {
         "title": "Surveys",
         "subtitle": "Collecting data on the known actors and their relations in and to the area",
         "description": "Providing participants with a list of specific questions is very useful to capture specific demographic information and insights into their experiences. Creating surveys with specific questions can activate reflection. Surveys can also be a tool to gather data on specific topics. We encourage to use surveys for more open questionnaires or to uncover blind spots. Please note that if multiple representatives are involved with creating the survey, the results possibly get steered too much towards a desired result. Surveys can be used by all perspectives, when used in moderation and anonymous, they can be very effective. Digital tools like 'google forms' or other available apps (depending of the available resources) can be very effective for a relatively quick gathering of data.",
-        "phase": " Exploration Phase  (underline: hyperlink to page phases)",
-        "mapping": " filling up the generic template to create a contextual actor network map (underline: hyperlink to page mapping approach)",
-        "activation": "Sharing Data (underline: hyperlink to page activations)",
+        "phase": " <a href='/approach/scope/phases#exploration-phase'>Exploration Phase</a> ",
+        "mapping": " filling up the generic template to create a contextual actor network map ",
+        "activation": "<a href='/approach/actions/activation#sharing-data'>Sharing Data</a> ",
         "participants": "actors in the area, (incl. initiator, project team) "
     },
     {
         "title": "Online ethnography  ",
         "subtitle": "Collecting data on the interaction between the known and unknown actors in and to the area",
         "description": "Collecting digital field notes regarding the interactions between actors on a chosen platform. This method is used when researching online. Text, images, videos and other content can be collected by using proper source registration and privacy laws in mind. Online ethnography can be used to uncover possible search terms to use for the act of web scraping or to uncover unknown connections between actors in the area.",
-        "mapping": " filling up the generic template to create a contextual actor network map (underline: hyperlink to page mapping approach)",
-        "activation": "Sharing Data (underline: hyperlink to page activations)",
-        "participants": "participatory representative (underline: hyperlink to page representatives)"
+        "mapping": " filling up the generic template to create a contextual actor network map ",
+        "activation": "<a href='/approach/actions/activation#sharing-data'>Sharing Data</a> ",
+        "participants": "participatory representative"
     },
     {
         "title": "Web scraping",
         "subtitle": "Collecting data on the unknown actors and their relations in and to the area",
         "description": "The act of manually scraping the web for unknown actors and/or connections to each other or the area, by using search terms related to the area. Collecting the results in an overview and the collecting of findings (see online ethnography) are possible input for the actor network mapping.",
-        "phase": " Exploration Phase  (underline: hyperlink to page phases)",
-        "mapping": " filling up the generic template to create a contextual actor network map (underline: hyperlink to page mapping approach)",
-        "activation": "Sharing Data (underline: hyperlink to page activations)",
-        "participants": "participatory representative (underline: hyperlink to page representatives)"
+        "phase": " <a href='/approach/scope/phases#exploration-phase'>Exploration Phase</a> ",
+        "mapping": " filling up the generic template to create a contextual actor network map ",
+        "activation": "<a href='/approach/actions/activation#sharing-data'>Sharing Data</a> ",
+        "participants": "participatory representative"
     },
     {
         "title": "Mind Mapping",
         "subtitle": "Connecting insights to uncover research needs or possibilities for participation",
         "description": "Creating a diagram of key  questions, issues or components by drawing links to represent the relationship between them. Mind mapping is a great tool for exploring, ideating and sense making. Spidermaps are the most common version of a mind map, but both circle maps or flow maps can be useful mind mapping formats as well. The great benefit of mind mapping is that it's fast, relatively well known and it doesn't require much materials.",
-        "phase": " Definition Phase  (underline: hyperlink to page phases)",
-        "mapping": " analyzing the actor network map (underline: hyperlink to page mapping approach)",
-        "activation": "Onboarding (underline: hyperlink to page activations)",
-        "participants": "project team, representatives (underline: hyperlink to page representatives)"
+        "phase": " <a href='/approach/scope/phases#definition-phase'>Definition Phase</a> ",
+        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
+        "participants": "project team, representatives"
     },
     {
         "title": "Personas",
         "subtitle": "Clustering the actors into groups based on common data entries",
         "description": "Creating personas can help identify lived experiences of the actors and support a brainstorm about how to better include each other in the decision making process. By creating a fictional character that represents a position or shared interest, useful insights in their needs, values and preferences can be collected. There are no limits to how many personas or how extensive the personas can be. Please do keep in mind that the purpose of creating fictional identities is to support decision making by connecting the actors by this method.",
-        "mapping": " analyzing the actor network map (underline: hyperlink to page mapping approach)",
-        "activation": "Onboarding (underline: hyperlink to page activations)",
-        "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
+        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
+        "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
     {
         "title": "Journey Mapping",
         "subtitle": "Identify potentials for participation by collectively sketching the proces ahead",
         "description": "Creating a visual story of how a specific actor would interact in a given scenario. This method can be used in many ways, depending on the context. The best place to start with a journey mapping is deciding on a time frame; it can be a future journey, a current one, a 'day in the life of' or perhaps of a journey from the past. ",
-        "phase": " Definition Phase (underline: hyperlink to page phases)",
-        "mapping": " analyzing the actor network map (underline: hyperlink to page mapping approach)",
-        "activation": "Onboarding (underline: hyperlink to page activations)",
-        "participants": "participatory representative (underline: hyperlink to page representatives)"
+        "phase": " <a href='/approach/scope/phases#definition-phase'>Definition Phase</a>",
+        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
+        "participants": "participatory representative"
     },
     {
         "title": "Relational Mapping  ",
         "subtitle": "Defining existing and missing relations between the actors",
-        "description": "By helping participants to defines the relation between the excisting actors, potential conflict of interests can rise to the surface. Actors that are not connection in reality, only by perception, can be uncovered by this method. The information gathered with this exercise is very useful data for the actor mapping tool. This tool can be used in many different occasions and act as a database for the project team. ",
-        "mapping": " analyzing the actor network map (underline: hyperlink to page mapping approach)",
-        "activation": "Onboarding (underline: hyperlink to page activations)",
-        "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
+        "description": "By helping participants to defines the relation between the existing actors, potential conflict of interests can rise to the surface. Actors that are not connection in reality, only by perception, can be uncovered by this method. The information gathered with this exercise is very useful data for the actor mapping tool. This tool can be used in many different occasions and act as a database for the project team. ",
+        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
+        "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
     {
         "title": "Focus Groups",
         "subtitle": "Identifying possibilities for participation or research needs",
         "description": "This technique can be very useful to support the designing of the final innovation. Gathering a small group of participants to engage in a free-flowing conversation about a chosen topic, with a clear focus on facilitating to better understand the lived experience. When presenting participants in a structured setting with targeted questions or scenario’s can prompt very effective feedback. ",
-        "phase": " Definition Phase (underline: hyperlink to page phases)",
-        "mapping": " analyzing the actor network map (underline: hyperlink to page mapping approach)",
-        "activation": "Onboarding (underline: hyperlink to page activations)",
+        "phase": " <a href='/approach/scope/phases#definition-phase'>Definition Phase</a>",
+        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
         "participants": "actors in the area"
     },
     {
         "title": "Behavior Mapping  ",
         "subtitle": "Filling in the knowledge gaps between the actors",
         "description": "The process of gathering of data through observations and data analysis and visualization can reveal the ways of presence of different targeted groups in the study area and their behaviour. By structuring the observation and by combining different techniques for documentation, behaviors in a defined space and chosen moments of time can be beautifully mapped. This method helps to explore the quantity and the quality of various activities performed at the place observed. ",
-        "phase": " Research Phase  (underline: hyperlink to page phases)",
-        "mapping": " using the available visual stories to identify the focus for the sessions (underline: hyperlink to page mapping approach)",
-        "activation": "Sharing Insights (underline: hyperlink to page activations)",
-        "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
+        "phase": " <a href='/approach/scope/phases#research-phase'>Research Phase</a> ",
+        "mapping": " using the available visual stories to identify the focus for the sessions ",
+        "activation": "<a href='/approach/actions/activation#sharing-insights'>Sharing Insights </a> ",
+        "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
     {
         "title": "Data visualisation  ",
         "subtitle": "Sharing the insights to connect the possibilities to the actors",
         "description": "Starting with a specific question or description and using the data to support, question or explain creates a much larger understanding. Data as a perspective can sometimes diffuse the tensions, assumptions or naivety of the participants. Please be aware that the correct visualization is used for the intended purpose. Depending on the present digital resources, open source data visualization libraries are widely available.",
-        "mapping": " using the available visual stories to identify the focus for the sessions (underline: hyperlink to page mapping approach)",
-        "activation": "Sharing Insights & Presentation in person (underline: hyperlink to page activations)",
-        "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
+        "mapping": " using the available visual stories to identify the focus for the sessions ",
+        "activation": "<a href='/approach/actions/activation#sharing-insights'>Sharing Insights </a> & <a href='/approach/actions/activation#presentation-in-person'>Presentation in person</a> ",
+        "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
     {
         "title": "Forecasting  ",
         "subtitle": "Researching possible outcomes for the area",
         "description": "Forecasting is a tool that can be very useful to uncover the potentials of the available actors, resources, etc. Having a specific gaol is sight and looking for the first connection that could possibly steer towards that point can create a world of possibilities. This method can be connected to the personas and other insights gathered. Please be aware that when using this method in a workshop setting, the situation needs to be under the direction of a workshop leader and the group should be very aware of the program. Not following clear steps can easily create a chaotic situation, which will leave participants more distanced than before the start of the workshop. ",
-        "phase": " Research Phase (underline: hyperlink to page phases)",
-        "mapping": " using the available visual stories to identify the focus for the sessions (underline: hyperlink to page mapping approach)",
-        "activation": "Sharing Insights (underline: hyperlink to page activations)",
-        "participants": "participatory representative (underline: hyperlink to page representatives)"
+        "phase": " <a href='/approach/scope/phases#research-phase'>Research Phase</a>",
+        "mapping": " using the available visual stories to identify the focus for the sessions ",
+        "activation": "<a href='/approach/actions/activation#sharing-insights'>Sharing Insights </a> ",
+        "participants": "participatory representative"
     },
     {
         "title": "Scenario Building  ",
         "subtitle": "Designing possible outcomes for the area",
         "description": "Scenario's can be created to explore, ideate, test, make sense or provoke. Scenario's can be stories, linked to the created personas or empathy mapping. By describing a number of different situations in which the innovation would be used, we create different versions of a future ahead. Depending on the audience the scenario building can be heavily scripted by presenting the actors with prompts.",
-        "mapping": " using the available visual stories for informative purposes (underline: hyperlink to page mapping approach)",
-        "activation": "Feedback sessions (underline: hyperlink to page activations)",
-        "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
+        "mapping": " using the available visual stories for informative purposes ",
+        "activation": "<a href='/approach/actions/activation#feedback-sessions'>Feedback sessions</a> ",
+        "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
     {
         "title": "Empathy Mapping",
         "subtitle": "Connecting the actors with each other's perspectives",
         "description": "This tool can be very useful to help the actors to step in each others shoes, by actively and mindfully considering what they are saying, doing, feeling and thinking empathy will grow. By directing questions towards exploring the reality of the chosen actor or subject, the audience is actively trying to consider the choices and issues the other actor is facing. Creating a drawing, map or mind map can support the understanding between the different stakeholders or supply a much needed nuance. Different types of stakeholders require different types of questions.",
-        "phase": " Co-creation Phase  (underline: hyperlink to page phases)",
-        "mapping": " using the available visual stories for informative purposes (underline: hyperlink to page mapping approach)",
-        "activation": "Feedback sessions (underline: hyperlink to page activations)",
-        "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
+        "phase": " <a href='/approach/scope/phases#co-creation-phase'>Co-creation Phase</a> ",
+        "mapping": " using the available visual stories for informative purposes ",
+        "activation": "<a href='/approach/actions/activation#feedback-sessions'>Feedback sessions</a> ",
+        "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
     {
         "title": "Serious Games  ",
         "subtitle": "Connecting the actors by facilitating a game",
         "description": "Having to work together in a playful setting supports a willingness to work together outside of the project, reveal tensions and even possibly be used to share knowledge. By designing a game for the actors to engage with each other in a collective quest can support collaboration and reveal possibilities for participation. ",
-        "phase": " Co-creation Phase  (underline: hyperlink to page phases)",
-        "mapping": " using the available visual stories for informative purposes (underline: hyperlink to page mapping approach)",
-        "activation": "Feedback sessions (underline: hyperlink to page activations)",
-        "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
+        "phase": " <a href='/approach/scope/phases#co-creation-phase'>Co-creation Phase</a> ",
+        "mapping": " using the available visual stories for informative purposes ",
+        "activation": "<a href='/approach/actions/activation#feedback-sessions'>Feedback sessions</a> ",
+        "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
     {
         "title": "Tangible Tools",
         "subtitle": "Creating physical prototypes to explore possibilities",
         "description": "Working together on a physical object can create valuable platform for the actors to share their skills and knowledge. When a rough sketch of an idea is created, early in the design process, it can spark the creativity of the actors involved. Depending on the available resources and contextual needs the prototype can be very playful or very serious in nature. Please keep in mind that prototyping has no technical purposes in this setting.",
-        "phase": " Co-creation Phase  (underline: hyperlink to page phases)",
-        "mapping": " using the available visual stories for informative purposes (underline: hyperlink to page mapping approach)",
-        "activation": "Feedback sessions (underline: hyperlink to page activations)",
+        "phase": " <a href='/approach/scope/phases#co-creation-phase'>Co-creation Phase</a> ",
+        "mapping": " using the available visual stories for informative purposes ",
+        "activation": "<a href='/approach/actions/activation#feedback-sessions'>Feedback sessions</a> ",
         "participants": "actors in the area "
     },
     {
         "title": "Cultural Probes",
         "subtitle": "Registration of the experiences of the actors",
         "description": "This documentation tool can be sent to actors tocapture their day-to-day experiences. The representative of the participatory perspective will design the cultural probe kit and interpret the returned outcomes. This helps by getting to know the actors by providing them with playful, low effort tasks. When using data and insights via a cultural probe, the story of a live experience can be easily shared with other actors.",
-        "phase": " Co-creation Phase  (underline: hyperlink to page phases)",
-        "mapping": " using the available visual stories for informative purposes (underline: hyperlink to page mapping approach)",
-        "activation": "Feedback sessions (underline: hyperlink to page activations)",
+        "phase": " <a href='/approach/scope/phases#co-creation-phase'>Co-creation Phase</a> ",
+        "mapping": " using the available visual stories for informative purposes ",
+        "activation": "<a href='/approach/actions/activation#feedback-sessions'>Feedback sessions</a> ",
         "participants": "actors in the area "
     },
     {
         "title": "Storytelling ",
         "subtitle": "Creating a collective story that connects the interests of the actors",
         "description": "Storytelling is a very effective method to involve and activate a group of actors. Stories engage more areas of the brain than data alone, making the information more memorable and impactful. For the participation process this tool can be used to transform the collected information to actionable insights, fitting the actors. Inviting the actors to share their stories of the area, supports the collaborative design of a clear and inviting storyline for the process. This narrative could for example be used in a setting where the actors take each other on tours where the stories are shared. It can support the communication to external parties, the possibilities are plenty for this tool. ",
-        "phase": " Dessimination Phase (underline: hyperlink to page phases)",
-        "mapping": " using the available visual stories for illustrative purposes (underline: hyperlink to page mapping approach)",
-        "activation": "Presentation in person (underline: hyperlink to page activations)",
-        "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
+        "phase": " <a href='/approach/scope/phases#dessimination-phase'>Dessimination Phase</a>",
+        "mapping": " using the available visual stories for illustrative purposes ",
+        "activation": "<a href='/approach/actions/activation#presentation-in-person'>Presentation in person</a> ",
+        "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
     {
         "title": "Backcasting",
         "subtitle": "Planning for a collective and desired future scenario",
         "description": "Starting the conversation with either a desired or a feared future and working your way back to today. Backcasting with a participatory perspective can be very supportive in uncovering the implicit fears or hopes of the actors. By making the implicit, explicit, there is a possibility for participation. When fears or hopes are left implicit, they do not cease to exist, but do tend to steer decision making without being known as motives to the group. Please be aware that when using this method in a workshop setting, the situation needs to be under the clear direction of a workshop leader and the group should be very aware of the program. Not following clear steps can create a chaotic situation, which will leave participants more insecure and distanced to each other than before the start of the workshop. ",
-        "phase": " Adaptation Phase (underline: hyperlink to page phases)",
-        "mapping": " using the collected data as input for the design team (underline: hyperlink to page mapping approach)",
-        "activation": "Reporting (underline: hyperlink to page activations)",
-        "participants": "initiator, project team, representatives (underline: hyperlink to pagerepresentatives)"
+        "phase": " <a href='/approach/scope/phases#adaptation-phase'>Adaptation Phase</a>",
+        "mapping": " using the collected data as input for the design team ",
+        "activation": "<a href='/approach/actions/activation#reporting'>Reporting</a> ",
+        "participants": "initiator, project team, representatives"
     },
     {
         "title": "Prototyping",
         "subtitle": "Creating physical prototypes to explore functionality",
         "description": "Co creating a rough draft can help bring the idea to life. You can use mock-ups, wireframes, models to test and present the different ideas. Depending on the available resources and contextual needs, the prototype can be either very playful or very serious in nature. Please keep in mind that prototyping has no technical purposes in this setting. In this context, prototyping is a tool for the actors to communicate their needs and include eachother in the decision making processes of the design.",
-        "phase": " Adaptation Phase  (underline: hyperlink to page phases)",
-        "mapping": " using the collected data as input for the design team (underline: hyperlink to page mapping approach)",
-        "activation": "Reporting (underline: hyperlink to page activations)",
-        "participants": "actors in the area, (incl. initiator, project team, representatives) (underline:hyperlink to page representatives)"
+        "phase": " <a href='/approach/scope/phases#adaptation-phase'>Adaptation Phase</a> ",
+        "mapping": " using the collected data as input for the design team ",
+        "activation": "<a href='/approach/actions/activation#reporting'>Reporting</a> ",
+        "participants": "actors in the area, (incl. initiator, project team, representatives)"
     }
 ]

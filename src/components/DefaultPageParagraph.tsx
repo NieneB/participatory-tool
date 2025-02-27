@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router';
 import Collapsible from "./Collapsible";
 import DefaultPageParagraphItem from "./DefaultPageParagraphItem";
 
@@ -95,8 +95,8 @@ const DefaultPageParagraph = ({ element, active }) => {
 
           {element.objective && <div className="gridded-p"><p><b>objective:</b> </p><p><DefaultPageParagraphItem text={element.objective}></DefaultPageParagraphItem></p></div>}
           {element.goal && <div className="gridded-p"><p><b>objective:</b> </p><p><DefaultPageParagraphItem text={element.goal}></DefaultPageParagraphItem></p></div>}
-          {element.audience && <div className="gridded-p"><p><b>audience:</b> </p><p><DefaultPageParagraphItem text={element.audience}></DefaultPageParagraphItem></p></div>}
-          {element.participants && <div className="gridded-p"><p><b>participants:</b> </p><p><DefaultPageParagraphItem text={element.participants}></DefaultPageParagraphItem></p></div>}
+          {element.audience && <div className="gridded-p"><p><b>audience:</b> </p><p><Link to="/approach/scope/representative"><DefaultPageParagraphItem text={element.audience}></DefaultPageParagraphItem></Link></p></div>}
+          {element.participants && <div className="gridded-p"><p><b>participants:</b> </p><p><Link to="/approach/scope/representative"><DefaultPageParagraphItem text={element.participants}></DefaultPageParagraphItem></Link></p></div>}
 
           {element.organisation && <div className="gridded-p"><p><b>Organisation:</b> </p><p><DefaultPageParagraphItem text={element.organisation}></DefaultPageParagraphItem></p></div>}
 
