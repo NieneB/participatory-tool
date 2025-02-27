@@ -4,7 +4,7 @@
         "subtitle": "In this phase we focus on the question: why are we starting this participation process?",
         "description": "Mapping the expectations of the participation process ahead by collecting and verifying the requirements available and/ or needed for the participation process.",
         "methods": "<a href='/approach/actions/methods/#structured-interviews'>structured interviews</a>,<a href='/approach/actions/methods/#participatory-mapping'> participatory mapping </a>",
-        "mapping": "using the parameters of the <a href='/approach/actions/mapping'>actor network map</a> as input for the assessment",
+        "mapping": "using the parameters of the actor network map as input for the assessment",
         "activation": "<a href='/approach/actions/activation#written-proposal'>Written proposal</a>: matching the requirements and expectations in a written project proposal to create a supported and realistic approach (underline: hyperlink to page activations)",
         "output": "collective expectation for the participation process ahead",
         "iteration": "discrepancy between the expectations of internal parties"
@@ -14,7 +14,7 @@
         "subtitle": "In this phase we focus on the question: who is here?",
         "description": "Studying what actors are there and how are they related by collecting and verifying the information regarding the area, actors and relations between the actors",
         "methods": "<a href='/approach/actions/methods#actor-mapping' > Actor Mapping </a>, <a href='/approach/actions/methods#surveys'> Surveys, </a> <a href='/approach/actions/methods#online-ethnography'> Online Ethnography </a>, <a href='/approach/actions/methods#web-scraping' > Web Scraping </a>",
-        "mapping": " filling up the generic template to create a contextual <a href='/approach/actions/mapping'>actor network map</a>",
+        "mapping": " filling up the generic template to create a contextual actor network map",
         "activation": "<a href='/approach/actions/activation#sharing-data' >Sharing data</a>: connecting and exchanging data with the other perspectives",
         "output": "overview of the area, the actors and relations",
         "iteration": "questions/ tensions/ assumptions about the definition of the area, actors or relations"
@@ -24,7 +24,7 @@
         "subtitle": "In this phase we focus on the question: who and what do we know and have?",
         "description": "Defining the potentials for participation by identifying the possibilities for participation",
         "methods": "<a href='/approach/actions/methods#mind-mapping'> Mind Mapping</a>, <a href='/approach/actions/methods#personas'> Personas </a>, <a href='/approach/actions/methods#journey -mapping'> Journey Mapping </a>, <a href='/approach/actions/methods#relational-mapping'> Relational Mapping </a>, <a href='/approach/actions/methods#focus-groups'> Focus Groups </a>",
-        "mapping": " analyzing the <a href='/approach/actions/mapping'>actor network map</a>",
+        "mapping": " analyzing the actor network map",
         "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a>: the actors for the participation process ahead",
         "iteration": "the area/ actors/ relations/ conditions have changed"
     },
@@ -33,7 +33,7 @@
         "subtitle": "In this phase we focus on the question: who and what don’t we know or have?",
         "description": "Defining the aim of the participation by filling in the knowledge gaps to turn the possibilities into participation chances",
         "methods": "<a href='/approach/actions/methods#behavior-mapping'>Behavior Mapping</a>, <a href='/approach/actions/methods#data-visualisation'>Data Visualisation</a>, <a href='/approach/actions/methods#forecasting'>Forecasting</a>",
-        "mapping": "using the available <a href='/approach/actions/mapping'>visual stories</a> to identify the focus for the sessions",
+        "mapping": "using the available visual stories to identify the focus for the sessions",
         "activation": "<a href='/approach/actions/activation#sharing-insights'>Sharing insights</a>: sharing new findings with the actors",
         "output": "participation chances to act on",
         "iteration": "discrepancy expectations of creating phase"
@@ -43,7 +43,7 @@
         "subtitle": "In this phase we focus on the question: what do we need for participation?",
         "description": "Co-creating space for the differences and connections between stakeholders by designing, producing en documenting participation sessions",
         "methods": "<a href='/approach/actions/methods#scenario-building'>Scenario Building</a>, <a href='/approach/actions/methods#empathy-mapping'>Empathy Mapping</a>, <a href='/approach/actions/methods#serious-games'>Serious Games</a>, <a href='/approach/actions/methods#tangible-tools'>Tangible Tools</a>, <a href='/approach/actions/methods#participatory-mapping'>Participatory Mapping</a>, <a href='/approach/actions/methods#cultural-probes'>Cultural Probes</a>",
-        "mapping": "<a href='/approach/actions/mapping'> using the available visual stories for informative purposes</a>",
+        "mapping": " using the available visual stories for informative purposes",
         "activation": "<a href='/approach/actions/activation#feedback-sessions'>Feedback sessions </a>",
         "iteration": "discrepancy between the expectations of external parties"
     },
@@ -52,7 +52,7 @@
         "subtitle": "In this phase we focus on the question: what did we learn?",
         "description": "Presenting the outcomes of the participation sessions by transforming the collected information to actionable insights fitting the audience",
         "methods": "<a href='/approach/actions/methods#storytelling'>Storytelling</a>, <a href='/approach/actions/methods#data-visualisation'>Data Visualisation</a>",
-        "mapping": "<a href='/approach/actions/mapping'>using the available visual stories for illustrative purposes</a>",
+        "mapping": "using the available visual stories for illustrative purposes",
         "activation": "<a href='/approach/actions/activation#presentation-in-person'>Presentation in person</a>: presenting the insights to other use cases by an interactive presentation (lecture/ workshop/ live presentation) where feedback and potential adaptations can be collected",
         "output": "collection of the findings and learnings",
         "iteration": "need for references"
@@ -62,7 +62,7 @@
         "subtitle": "In this phase the main focus is to answer the question: how can we act?",
         "description": "Applying the outcomes to the reality by defining the potential impact of the output",
         "methods": "<a href='/approach/actions/methods#backcasting'>Backcasting</a>, <a href='/approach/actions/methods#prototyping'>Prototyping</a>",
-        "mapping": "<a href='/approach/actions/mapping'>using the collected data as input for the design team</a>",
+        "mapping": "using the collected data as input for the design team",
         "activation": "<a href='/approach/actions/activation#reporting'>Reporting</a>: sharing a report with the design team, in collaboration with the other perspectives",
         "output": "guidance to apply findings and learnings",
         "iteration": "questions about the applicability"

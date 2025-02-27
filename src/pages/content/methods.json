@@ -4,7 +4,7 @@
         "subtitle": "Collecting expectations for the participation process ahead",
         "description": "Only by asking questions you get answers. If we only collect what we already know or someone might say, we also agree to not knowing a lot. Not preparing ourselves can create a potentially very stressful for all participants, which does not support participation. This activation is not a replacement of a client brief or contract, it is a tool to gather information about the expectations and available resources (see conditions) so the representative(s) can make a clear estimation of the possibilities and necessities, before heading into the process. We suggest to use structured interview here because the objective is not to explore the unknown, but the known.",
         "phase": " <a href='/approach/scope/phases#assessment-phase'>Assessment Phase</a>",
-        "mapping": " using the parameters of <a href='/approach/actions/mapping'>the actor network map</a> as input for the assessment ",
+        "mapping": " using the parameters of the actor network map as input for the assessment ",
         "activation": "<a href='/approach/actions/activation#written-proposal'>Written proposal</a> ",
         "participants": "initiator, project team, representatives"
     },
@@ -13,7 +13,7 @@
         "subtitle": "Collecting interpretations for the participation process ahead",
         "description": "Mapping problems or ideas to a physical location. In this exercise you start with giving each participant the same questions (for example; what defines the area we are working in?) and proceed to visually map out the differences and/or connections. This technique can be quite effective when the perspective of one position appears to the dominant perspective or there seems to be an assumption about a specific topic related to the area. This method can potentially uncover new tensions or connections that can be used as input for new workshops. Please be aware that the objective of this workshop is not to solve or pick a perspective, but the merely uncover the differences.",
         "phase": " <a href='/approach/scope/phases#assessment-phase'>Assessment Phase</a> + Co creation Phase",
-        "mapping": " using the parameters of <a href='/approach/actions/mapping'>the actor network map</a> as input for the assessment ",
+        "mapping": " using the parameters of the actor network map as input for the assessment ",
         "activation": "<a href='/approach/actions/activation#written-proposal'>Written proposal</a> & <a href='/approach/actions/activation#feedback-sessions'>Feedback Sessions</a>  ",
         "participants": "initiator, project team, representatives "
     },
@@ -57,7 +57,7 @@
         "subtitle": "Connecting insights to uncover research needs or possibilities for participation",
         "description": "Creating a diagram of key  questions, issues or components by drawing links to represent the relationship between them. Mind mapping is a great tool for exploring, ideating and sense making. Spidermaps are the most common version of a mind map, but both circle maps or flow maps can be useful mind mapping formats as well. The great benefit of mind mapping is that it's fast, relatively well known and it doesn't require much materials.",
         "phase": " <a href='/approach/scope/phases#definition-phase'>Definition Phase</a> ",
-        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "mapping": " analyzing the actor network map ",
         "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
         "participants": "project team, representatives"
     },
@@ -65,7 +65,7 @@
         "title": "Personas",
         "subtitle": "Clustering the actors into groups based on common data entries",
         "description": "Creating personas can help identify lived experiences of the actors and support a brainstorm about how to better include each other in the decision making process. By creating a fictional character that represents a position or shared interest, useful insights in their needs, values and preferences can be collected. There are no limits to how many personas or how extensive the personas can be. Please do keep in mind that the purpose of creating fictional identities is to support decision making by connecting the actors by this method.",
-        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "mapping": " analyzing the actor network map ",
         "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
         "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
@@ -74,7 +74,7 @@
         "subtitle": "Identify potentials for participation by collectively sketching the proces ahead",
         "description": "Creating a visual story of how a specific actor would interact in a given scenario. This method can be used in many ways, depending on the context. The best place to start with a journey mapping is deciding on a time frame; it can be a future journey, a current one, a 'day in the life of' or perhaps of a journey from the past. ",
         "phase": " <a href='/approach/scope/phases#definition-phase'>Definition Phase</a>",
-        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "mapping": " analyzing the actor network map ",
         "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
         "participants": "participatory representative"
     },
@@ -82,7 +82,7 @@
         "title": "Relational Mapping  ",
         "subtitle": "Defining existing and missing relations between the actors",
         "description": "By helping participants to defines the relation between the existing actors, potential conflict of interests can rise to the surface. Actors that are not connection in reality, only by perception, can be uncovered by this method. The information gathered with this exercise is very useful data for the actor mapping tool. This tool can be used in many different occasions and act as a database for the project team. ",
-        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "mapping": " analyzing the actor network map ",
         "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
         "participants": "actors in the area, (incl. initiator, project team, representatives)"
     },
@@ -91,7 +91,7 @@
         "subtitle": "Identifying possibilities for participation or research needs",
         "description": "This technique can be very useful to support the designing of the final innovation. Gathering a small group of participants to engage in a free-flowing conversation about a chosen topic, with a clear focus on facilitating to better understand the lived experience. When presenting participants in a structured setting with targeted questions or scenario’s can prompt very effective feedback. ",
         "phase": " <a href='/approach/scope/phases#definition-phase'>Definition Phase</a>",
-        "mapping": " analyzing <a href='/approach/actions/mapping'>the actor network map</a> ",
+        "mapping": " analyzing the actor network map ",
         "activation": "<a href='/approach/actions/activation#onboarding'>Onboarding</a> ",
         "participants": "actors in the area"
     },
